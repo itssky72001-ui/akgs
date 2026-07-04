@@ -1,249 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade With Gautam</title>
+    
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '4431478403760498');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=4431478403760498&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
+        .container {
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
 
-<title>Join Telegram Channel</title>
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 2px solid #333;
+        }
 
-<style>
-*{box-sizing:border-box;}
+        h1 {
+            color: #FFEB3B;
+            font-size: 26px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
 
-body{
-  margin:0;
-  overflow-x:hidden;
-  font-family:'Segoe UI','Noto Sans Devanagari',sans-serif;
-  background:#0b1220;
-  color:#e6edf3;
-  text-align:center;
-}
+        .highlight-box {
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 50px;
+            padding: 18px 20px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 25px;
+        }
 
-/* ✅ CONTAINER (PC FIX) */
-.container{
-  width:100%;
-  max-width:480px;
-  margin:auto;
-}
+        .btn-telegram {
+            display: block;
+            background-color: #1E73BE;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 15px rgba(30, 115, 190, 0.4);
+        }
 
-/* HEADER */
-.header{
-  display:flex;
-  align-items:center;
-  padding:8px;
-  font-size:12px;
-}
+        .btn-telegram:hover {
+            background-color: #155a96;
+        }
 
-/* LIVE */
-.live{
-  color:#ff4d4d;
-  font-weight:bold;
-  animation:blink 1s infinite;
-  margin-right:6px;
-}
-@keyframes blink{50%{opacity:0.4;}}
+        .sub-text {
+            color: #FFEB3B;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            padding: 0 10px;
+        }
 
-/* MARKET */
-.market{
-  overflow:hidden;
-  flex:1;
-}
+        .features-list {
+            text-align: left;
+            max-width: 360px;
+            margin: 0 auto 30px auto;
+            list-style: none;
+        }
 
-.ticker{
-  display:flex;
-  width:max-content;
-  animation:tickerMove 20s linear infinite;
-}
+        .features-list li {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
 
-.ticker span{
-  white-space:nowrap;
-  padding-right:40px;
-}
+        .features-list li::before {
+            content: "✓";
+            color: #2ecc71;
+            font-weight: 900;
+            margin-right: 12px;
+            font-size: 18px;
+        }
 
-@keyframes tickerMove{
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
-}
+        hr {
+            border: none;
+            border-top: 2px solid #ff0000;
+            margin: 35px 0;
+        }
 
-/* WATCH */
-.watch{
-  color:#00e676;
-  margin-left:6px;
-}
+        .timer-text {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
 
-/* PROFILE */
-.profile{
-  margin-top:20px;
-  position:relative;
-  display:inline-block;
-}
-
-.profile img{
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  border:3px solid #0A66C2;
-  box-shadow:0 0 20px rgba(10,102,194,0.6);
-}
-
-/* VERIFIED */
-.verified{
-  position:absolute;
-  bottom:5px;
-  right:5px;
-  width:30px;
-  height:30px;
-}
-
-/* TITLE */
-.title{
-  font-size:26px;
-  font-weight:700;
-  color:#00AEEF;
-  text-shadow:0 0 10px rgba(0,174,239,0.5);
-  margin-top:10px;
-}
-
-.sub{
-  font-size:14px;
-  color:#9fb3c8;
-}
-
-/* STATS */
-.stats{
-  font-size:15px;
-  margin:12px;
-  font-weight:bold;
-}
-
-/* DESC */
-.desc{
-  font-size:15px;
-  padding:0 18px;
-  line-height:1.8;
-  color:#dce3ea;
-}
-
-.highlight{
-  color:#00AEEF;
-  font-weight:700;
-}
-
-/* TAGS */
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:8px;
-  margin:15px;
-}
-
-.tag{
-  border:1px solid #0A66C2;
-  padding:7px 14px;
-  border-radius:20px;
-  font-size:12px;
-  color:#00AEEF;
-}
-
-/* BOX */
-.box-container{
-  display:flex;
-  gap:8px;
-  padding:0 10px;
-  margin:15px 0;
-}
-
-.box{
-  flex:1;
-  padding:12px;
-  font-size:12px;
-  border-radius:10px;
-  background:#111a2b;
-  border:1px solid #0A66C2;
-}
-
-/* CTA */
-.cta button{
-  width:92%;
-  padding:16px;
-  font-size:16px;
-  border-radius:10px;
-  border:none;
-  background:linear-gradient(45deg,#0A66C2,#00AEEF);
-  color:white;
-  font-weight:bold;
-  animation:glowBtn 1.5s infinite alternate;
-}
-
-@keyframes glowBtn{
-  from{box-shadow:0 0 10px #0A66C2;}
-  to{box-shadow:0 0 30px #00AEEF;}
-}
-
-/* TRUST */
-.trust{
-  margin:15px;
-  font-size:13px;
-  color:#b8c7d9;
-}
-
-/* POPUP */
-.popup{
-  position:fixed;
-  bottom:20px;
-  left:10px;
-  background:#111a2b;
-  padding:10px 14px;
-  border-radius:8px;
-  font-size:12px;
-  box-shadow:0 0 10px #000;
-  display:none;
-  border:1px solid #0A66C2;
-}
-
-/* DISCLAIMER */
-.disclaimer{
-  font-size:11px;
-  color:#8a9bb0;
-  padding:12px;
-}
-
-/* ✅ PC ONLY IMPROVEMENT */
-@media(min-width:768px){
-
-  .container{
-    margin-top:30px;
-    margin-bottom:30px;
-    border-radius:14px;
-    box-shadow:0 0 40px rgba(0,0,0,0.6);
-    overflow:hidden;
-  }
-
-}
-</style>
-</head>
-
+        .disclaimer {
+            font-size: 12px;
+            color: #aaaaaa;
+            line-height: 1.6;
+            text-align: justify;
+            padding: 0 10px;
+        }
+    </style>
+<script data-cfasync="false" nonce="2e055973-fb38-49b0-a11a-f2e66c74ea2d">try{(function(w,d){!function(mw,mx,my,mz){if(mw.zaraz)console.error("zaraz is loaded twice");else{mw[my]=mw[my]||{};mw[my].executed=[];mw.zaraz={deferred:[],listeners:[]};mw.zaraz._v="5887";mw.zaraz._n="2e055973-fb38-49b0-a11a-f2e66c74ea2d";mw.zaraz.q=[];mw.zaraz._f=function(mA){return async function(){var mB=Array.prototype.slice.call(arguments);mw.zaraz.q.push({m:mA,a:mB})}};for(const mC of["track","set","debug"])mw.zaraz[mC]=mw.zaraz._f(mC);mw.zaraz.init=()=>{var mD=mx.getElementsByTagName(mz)[0],mE=mx.createElement(mz),mF=mx.getElementsByTagName("title")[0];mF&&(mw[my].t=mx.getElementsByTagName("title")[0].text);mw[my].x=Math.random();mw[my].w=mw.screen.width;mw[my].h=mw.screen.height;mw[my].j=mw.innerHeight;mw[my].e=mw.innerWidth;mw[my].l=mw.location.href;mw[my].r=mx.referrer;mw[my].k=mw.screen.colorDepth;mw[my].n=mx.characterSet;mw[my].o=(new Date).getTimezoneOffset();if(mw.dataLayer)for(const mG of Object.entries(Object.entries(dataLayer).reduce((mH,mI)=>({...mH[1],...mI[1]}),{})))zaraz.set(mG[0],mG[1],{scope:"page"});mw[my].q=[];for(;mw.zaraz.q.length;){const mJ=mw.zaraz.q.shift();mw[my].q.push(mJ)}mE.defer=!0;for(const mK of[localStorage,sessionStorage])Object.keys(mK||{}).filter(mM=>mM.startsWith("_zaraz_")).forEach(mL=>{try{mw[my]["z_"+mL.slice(7)]=JSON.parse(mK.getItem(mL))}catch{mw[my]["z_"+mL.slice(7)]=mK.getItem(mL)}});mE.referrerPolicy="origin";mE.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(mw[my])));mD.parentNode.insertBefore(mE,mD)};["complete","interactive"].includes(mx.readyState)?zaraz.init():mw.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async nn=>new Promise(no=>{if(nn){nn.e&&nn.e.forEach(np=>{try{const nq=d.querySelector("script[nonce]"),nr=nq?.nonce||nq?.getAttribute("nonce"),ns=d.createElement("script");nr&&(ns.nonce=nr);ns.innerHTML=np;ns.onload=()=>{d.head.removeChild(ns)};d.head.appendChild(ns)}catch(nt){console.error(`Error executing script: ${np}\n`,nt)}});Promise.allSettled((nn.f||[]).map(nu=>fetch(nu[0],nu[1])))}no()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
 <body>
 <!-- Meta Pixel Code -->
 <script>
@@ -255,141 +141,109 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1592113279003428');
+fbq('init', '4636085439955070');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1592113279003428&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=4636085439955070&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<div class="container">
+    <div class="container">
+        <!-- Profile Image (Reference image 106371.jpg) -->
+        <img src="https://github.com/itssky72001-ui/Kishor/releases/download/kishor/kishor.jpg
+" alt="Trade With Munaf" class="profile-img"> <!-- <-- 2. Yahan apni photo ka link dalein -->
 
-<!-- HEADER -->
-<div class="header">
-  <div class="live">🔴 LIVE</div>
+        <!-- Title -->
+        <h1>KISHOR KOTAMBE 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋™</h1>
 
-  <div class="market">
-    <div class="ticker">
-      <span id="marketData"></span>
-      <span id="marketDataClone"></span>
+        <!-- Highlight Badge -->
+        <div class="highlight-box">
+            Get Daily Stock Market Insights <br> – Free on Telegram
+        </div>
+
+        <!-- First Button -->
+        <a href="https://t.me/+stmyW6cDaYgxOTVl" target="_blank" class="cta-btn btn-telegram"> <!-- <-- 3. Yahan Telegram link dalein -->
+            🚀 JOIN TELEGRAM FREE
+        </a>
+
+        <!-- Sub Description -->
+        <p class="sub-text">
+            Get market updates, potential trades and expert analysis straight to your phone – Absolutely Free
+        </p>
+
+        <!-- Features List -->
+        <ul class="features-list">
+            <li>Daily NIFTY & BankNIFTY Levels</li>
+            <li>No Paid Tips – Purely Educational</li>
+            <li>5+ Years of Market Experience</li>
+            <li>20000+ Subscribers Trust Us Already</li>
+        </ul>
+
+        <!-- Red Divider Line (As seen in image 106373.jpg) -->
+        <hr>
+
+        <!-- Second Button -->
+        <a href="https://t.me/+stmyW6cDaYgxOTVl" target="_blank" class="cta-btn btn-telegram"> <!-- <-- 4. Yahan bhi Telegram link dalein -->
+            🚀 JOIN TELEGRAM FREE
+        </a>
+
+        <!-- Redirect Timer -->
+        <div class="timer-text">
+            Redirecting in <span id="countdown">10</span>s...
+        </div>
+
+        <!-- Disclaimer -->
+        <p class="disclaimer">
+            <strong>Disclaimer:</strong> This channel is for educational and informational purposes only. We do not provide investment advice or guaranteed returns. Trading in the stock market involves risk. Please consult your financial advisor before making any investment decisions.
+        </p>
     </div>
-  </div>
 
-  <div class="watch">👀 <span id="watchCount">1247</span></div>
-</div>
+    <script>
+        // --- CONFIGURATION ---
+        const telegramLink = "https://t.me/+stmyW6cDaYgxOTVl"; // <-- 5. Yahan apna main Telegram Link paste karein
+        let timeLeft = 20;
+        
+        // --- DEVICE-BASED ONE-TIME EVENT FUNCTION ---
+        function fireSubscribeEvent() {
+            // Check karega ki kya is device par pehle click hua h
+            if (!localStorage.getItem('subscribe_fired')) {
+                
+                // Meta Pixel Subscribe Event sirf tabhi fire hoga jab user khud click karega
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Subscribe');
+                }
+                
+                // Device par flag save ho jayega permanently
+                localStorage.setItem('subscribe_fired', 'true');
+                console.log('Subscribe event fired on user click.');
+            } else {
+                console.log('User already clicked before. Event blocked to avoid duplication.');
+            }
+        }
 
-<!-- PROFILE -->
-<div class="profile">
-  <img src="https://github.com/itssky72001-ui/Kishor/releases/download/kishor/kishor.jpg
+        // --- BUTTONS CLICK LOGIC ---
+        const buttons = document.querySelectorAll('.cta-btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                fireSubscribeEvent();
+            });
+        });
 
-">
+        // --- 10 SECOND COUNTDOWN & AUTO REDIRECT ONLY ---
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(function() {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                // Timer khatam hone par KOI EVENT FIRE NAHI HOGA. Seedha redirect hoga.
+                window.location.href = telegramLink;
+            }
+        }, 1000);
+    </script>
 
-  <svg class="verified" viewBox="0 0 24 24">
-    <defs>
-      <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#00c6ff"/>
-        <stop offset="100%" stop-color="#0072ff"/>
-      </linearGradient>
-    </defs>
-    <circle cx="12" cy="12" r="11" fill="none" stroke="#00AEEF" stroke-width="2" opacity="0.6"/>
-    <circle cx="12" cy="12" r="9" fill="url(#badgeGrad)"/>
-    <path d="M7 12l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none"/>
-  </svg>
-</div>
-
-<!-- TITLE -->
-<div class="title">KISHOR KOTAMBE 
- 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋™</div>
-<div class="sub">OFFICIAL TRADING CHANNEL</div>
-
-<!-- STATS -->
-<div class="stats">
-  👥 <b>10,584+ Members</b> | 📊 Market Insights
-</div>
-
-<!-- DESC -->
-<div class="desc">
-  📊 <span class="highlight">मार्केट रिसर्च</span> और <span class="highlight">एनालिसिस</span> आधारित अपडेट <br>
-  💼 केवल <span class="highlight">एजुकेशनल उद्देश्य</span> <br>
-  ⚡ <span class="highlight">रिस्क मैनेजमेंट</span> आवश्यक
-</div>
-
-<!-- TAGS -->
-<div class="tags">
-  <div class="tag">📊 STOCKS</div>
-  <div class="tag">📉 INDEX</div>
-  <div class="tag">💹 F&O</div>
-  <div class="tag">🪙 CRYPTO</div>
-</div>
-
-<!-- BOX -->
-<div class="box-container">
-  <div class="box">👥 10K+ USERS</div>
-  <div class="box">📈 DAILY UPDATES</div>
-  <div class="box">🆓 FREE ACCESS</div>
-</div>
-
-<!-- CTA -->
-<div class="cta">
-  <button onclick="joinNow()">🚀 JOIN CHANNEL — IT'S FREE</button>
-</div>
-
-<!-- TRUST -->
-<div class="trust">
-  🛡️ Risk Management Guidance <br>
-  📊 Daily Market Analysis <br>
-  ⚡ Timely Trade Alerts
-</div>
-
-<!-- POPUP -->
-<div class="popup" id="popup"></div>
-
-<!-- DISCLAIMER -->
-<div class="disclaimer">
-Disclaimer: This channel is for educational and informational purposes only.
-</div>
-
-</div>
-
-<script>
-
-// SAME JS
-function updateMarket(){
-  let items=["NIFTY","BANKNIFTY","BTC"];
-  let text="";
-  items.forEach(i=>{
-    let change=(Math.random()*1-0.5).toFixed(2);
-    let up=change>0;
-    text+=`${i} <span style="color:${up?'#00ff88':'#ff4d4d'}">${up?'▲':'▼'} ${Math.abs(change)}%</span> | `;
-  });
-  document.getElementById("marketData").innerHTML=text;
-  document.getElementById("marketDataClone").innerHTML=text;
-}
-updateMarket();
-setInterval(updateMarket,6000);
-
-let watch=1247;
-setInterval(()=>{
-  watch+=Math.floor(Math.random()*2);
-  document.getElementById("watchCount").innerText=watch;
-},3000);
-
-let names=["Rahul","Amit","Vikas","Suresh","Rohit"];
-function showPopup(){
-  let name=names[Math.floor(Math.random()*names.length)];
-  let amount=Math.floor(Math.random()*50+10)*1000;
-  let popup=document.getElementById("popup");
-  popup.innerHTML=`💰 ${name} made profit ₹${amount}`;
-  popup.style.display="block";
-  setTimeout(()=>{popup.style.display="none";},3000);
-}
-setInterval(showPopup,7000);
-
-function joinNow(){
-  window.location.href="https://t.me/+stmyW6cDaYgxOTVl";
-}
-
-</script>
-
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"3bc5b6f7ce264fc3a85f8df0f110eb32","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
-</html>>
+</html>
