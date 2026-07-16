@@ -15,9 +15,10 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '866707539454410');
 fbq('track', 'PageView');
-fbq('track','ViewContent');
+fbq('track', 'ViewContent');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=866707539454410&ev=PageView&noscript=1"/></noscript>
@@ -30,17 +31,34 @@ img{display:block;margin:auto;width:110px;height:110px;border-radius:20px;border
 h1,h2{text-align:center}p,li{line-height:1.6;color:#d1d5db}
 .btn{display:block;text-align:center;background:#2563eb;color:#fff;padding:16px;border-radius:12px;text-decoration:none;font-weight:bold}
 </style>
+
 <script>
 let interacted=false;
-["mousemove","scroll","touchstart","keydown"].forEach(e=>addEventListener(e,()=>interacted=true,{once:true}));
+["mousemove","scroll","touchstart","keydown"].forEach(e=>{
+ window.addEventListener(e,()=>interacted=true,{once:true});
+});
+
 function joinTG(){
  const b=document.getElementById("join");
+ if(b.dataset.clicked==="1") return;
+ b.dataset.clicked="1";
  b.style.pointerEvents="none";
- b.innerHTML="Opening Telegram...";
- if(typeof fbq!=="undefined"&&interacted){
-   fbq("track","Subscribe",{content_name:"Telegram Community"});
+ b.innerHTML="⏳ Opening Telegram...";
+
+ if(typeof fbq!=="undefined"){
+   fbq('track','Subscribe',{
+      content_name:'Telegram Community',
+      content_category:'Telegram',
+      value:1,
+      currency:'INR'
+   },{
+      eventID:'telegram_subscribe_'+Date.now()
+   });
  }
- setTimeout(()=>location.href="https://telegram.me/+jCf2DKVmmAw1MDg1",250);
+
+ setTimeout(function(){
+   window.location.href="https://telegram.me/+jCf2DKVmmAw1MDg1";
+ },300);
 }
 </script>
 </head>
@@ -49,6 +67,7 @@ function joinTG(){
 <img src="https://github.com/siyalshivam690-maker/harmimg/releases/download/harman/harmancolic.jpg">
 <h1>TAMIL HARMONIC TRADER RAJ</h1>
 <p style="text-align:center">Learn in a systematic way rather than relying on guesswork.</p>
+
 <h2>Why Join?</h2>
 <ul>
 <li>⭐ 20,337+ Students Already Joined</li>
@@ -57,6 +76,7 @@ function joinTG(){
 <li>🎯 Technical Analysis & Research</li>
 <li>🤝 Community Support</li>
 </ul>
+
 <h2>What You Receive</h2>
 <ul>
 <li>Pre-market analysis</li>
@@ -64,9 +84,13 @@ function joinTG(){
 <li>Learning resources</li>
 <li>Market insights</li>
 </ul>
-<a id="join" href="javascript:joinTG()" class="btn">🚀 JOIN FREE TELEGRAM CHANNEL</a>
+
+<a id="join" href="javascript:void(0)" onclick="joinTG()" class="btn">🚀 JOIN FREE TELEGRAM CHANNEL</a>
+
 <p><strong>Disclaimer:</strong> This platform is for educational purposes only and is not investment advice.</p>
 <p style="text-align:center">Advertised by <strong>SRS Marketing Agency</strong><br>
 <a href="https://t.me/srsagency" style="color:#38bdf8">https://t.me/srsagency</a></p>
+
 </div></div>
-</body></html>
+</body>
+</html>
