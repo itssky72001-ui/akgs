@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SRS ADS AGENCY</title>
+<title>Pankaj Bhardwaj Official </title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -25,151 +26,182 @@ body{
     justify-content:center;
     align-items:center;
     padding:20px;
-    color:#f1f5f9;
+    color:#fff;
     overflow-x:hidden;
-    /* New Variant Theme: Obsidian Dark, Electric Indigo & Neon Violet Glow */
-    background: radial-gradient(circle at center, #1e1b4b 0%, #0f172a 50%, #020617 100%);
+
+    /* Theme Change: Deep Emerald & Charcoal background */
+    background:
+    radial-gradient(circle at top,
+    #059669 0%,
+    #064e3b 25%,
+    #022c22 60%,
+    #011410 100%);
 }
 
 .wrapper{
     width:100%;
-    max-width:550px; /* Perfectly balanced width for absolute symmetry */
+    max-width:450px;
     text-align:center;
 }
 
 .card{
     position:relative;
     overflow:hidden;
-    padding:45px 32px;
-    border-radius:28px;
-    background: rgba(10, 10, 18, 0.85);
-    backdrop-filter:blur(30px);
-    -webkit-backdrop-filter:blur(30px);
-    border: 1px solid rgba(139, 92, 246, 0.25); /* Violet Subtle Border */
-    box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 50px rgba(99, 102, 241, 0.1);
+    padding:40px 28px;
+    border-radius:30px;
+
+    background:rgba(6, 18, 15, 0.88);
+    backdrop-filter:blur(20px);
+
+    /* Theme Change: Mint Green border */
+    border:1px solid rgba(52, 211, 153, 0.25);
+
+    /* Theme Change: Mint glow shadow */
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.6),
+    0 0 40px rgba(52, 211, 153, 0.1);
+
+    animation:float 4s ease-in-out infinite;
 }
 
-/* Cyber Glow Ambient Spheres */
 .card::before{
     content:"";
     position:absolute;
-    width:280px;
-    height:280px;
-    background:#6366f1;
+    width:250px;
+    height:250px;
+    background:#34d399;
     border-radius:50%;
-    filter:blur(140px);
+    filter:blur(120px);
     opacity:.15;
-    top:-100px;
-    right:-100px;
+    top:-120px;
+    right:-120px;
 }
 
 .card::after{
     content:"";
     position:absolute;
-    width:280px;
-    height:280px;
-    background:#a855f7;
+    width:220px;
+    height:220px;
+    background:#059669;
     border-radius:50%;
-    filter:blur(140px);
+    filter:blur(120px);
     opacity:.12;
-    bottom:-100px;
-    left:-100px;
+    bottom:-120px;
+    left:-120px;
 }
 
-.identity-section {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
 }
 
 .profile{
-    width:120px;
-    height:120px;
+    width:125px;
+    height:125px;
     border-radius:50%;
     object-fit:cover;
-    border: 4px solid rgba(168, 85, 247, 0.8);
-    box-shadow: 0 0 35px rgba(168, 85, 247, 0.35);
+
+    /* Theme Change: Profile border & glow color */
+    border:4px solid #34d399;
+
+    box-shadow:
+    0 0 30px rgba(52, 211, 153, 0.4),
+    0 0 60px rgba(5, 150, 105, 0.2);
+
+    position:relative;
+    z-index:2;
 }
 
 .verify{
-    margin-top:16px;
-    color:#a855f7;
-    font-size:12px;
+    margin-top:10px;
+    color:#34d399;
+    font-size:14px;
     font-weight:700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: rgba(168, 85, 247, 0.12);
-    border: 1px solid rgba(168, 85, 247, 0.2);
-    padding: 6px 16px;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
 }
 
 .verify i{
-    color:#22c55e;
+    color:#10b981;
 }
 
 h2{
-    margin-top:16px;
-    font-size:26px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    margin-top:15px;
+    font-size:28px;
     color:#fff;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    position:relative;
+    z-index:2;
 }
 
 .stats{
-    margin-top:18px;
-    color:#cbd5e1;
-    font-size:13px;
-    line-height: 2;
-    font-weight:600;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 14px 20px;
-    border-radius: 18px;
-    width: 100%;
+    margin-top:15px;
+    color:#34d399;
+    font-size:14px;
+    line-height:1.8;
+    font-weight:700;
 }
 
-/* Center Placed Premium CTA */
-.btn-wrapper {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    margin: 30px 0;
+.text{
+    margin-top:20px;
+    line-height:1.9;
+    font-size:15px;
+    color:#e2e8f0;
+}
+
+.benefits{
+    margin-top:22px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(52, 211, 153, 0.15);
+    border-radius:18px;
+    padding:18px;
+    text-align:left;
+}
+
+.benefits div{
+    padding:8px 0;
+    color:#f8fafc;
+    font-size:14px;
 }
 
 .btn{
+    margin-top:25px;
+
     display:flex;
     align-items:center;
     justify-content:center;
     gap:12px;
+
     width:100%;
     padding:18px;
-    border-radius:16px;
+
+    border-radius:60px;
     text-decoration:none;
-    color:#fff;
-    font-size:16px;
+
+    color:#022c22;
+    font-size:17px;
     font-weight:800;
-    letter-spacing: 0.5px;
-    /* Electric Neon Gradient Theme */
-    background: linear-gradient(135deg, #7c3aed, #6366f1, #06b6d4);
-    box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
-    transition: .3s all ease;
+
+    /* Theme Change: Vibrant Gradient Button */
+    background:linear-gradient(
+    135deg,
+    #a7f3d0,
+    #34d399,
+    #059669
+    );
+
+    box-shadow:
+    0 10px 40px rgba(52, 211, 153, 0.35);
+
+    transition:.4s;
+
     position:relative;
     overflow:hidden;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
+    transform:translateY(-3px) scale(1.03);
 }
 
 .btn::before{
@@ -179,99 +211,58 @@ h2{
     left:-100%;
     width:100%;
     height:100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
-    transition:.6s;
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.5),
+    transparent
+    );
+    transition:.8s;
 }
 
 .btn:hover::before{
     left:100%;
 }
 
-.content-section {
-    position: relative;
-    z-index: 2;
-    text-align: left;
-}
-
-.text{
-    line-height:1.7;
-    font-size:14.5px;
-    color:#94a3b8;
-    text-align: center;
-    margin-bottom: 22px;
-}
-
-.benefits{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.benefits div{
-    padding:14px 18px;
-    color:#f1f5f9;
-    font-size:14px;
-    font-weight: 500;
-    background: rgba(255, 255, 255, 0.02);
-    border-left: 3px solid #a855f7; /* Accent bar indicator */
-    border-top: 1px solid rgba(255,255,255,0.03);
-    border-right: 1px solid rgba(255,255,255,0.03);
-    border-bottom: 1px solid rgba(255,255,255,0.03);
-    border-radius: 0 12px 12px 0;
-    transition: all 0.3s ease;
-}
-
-.benefits div:hover {
-    background: rgba(168, 85, 247, 0.06);
-    transform: translateX(4px);
-}
-
 .timer{
-    margin-top:25px;
-    color:#64748b;
-    font-size:13px;
-    font-weight: 500;
-    position: relative;
-    z-index: 2;
-}
-
-#count {
-    color: #a855f7;
-    font-weight: 700;
+    margin-top:18px;
+    color:#cbd5e1;
+    font-size:14px;
 }
 
 .disclaimer{
-    margin-top:30px;
+    margin-top:25px;
     font-size:11px;
-    line-height:1.7;
-    color:#475569;
+    line-height:1.8;
+    color:#cbd5e1;
+    opacity:.8;
     padding:0 10px;
 }
 
 @media(max-width:480px){
-    .card{
-        padding:35px 20px;
-    }
-    h2{
-        font-size:23px;
-    }
-    .profile{
-        width:110px;
-        height:110px;
-    }
-    .btn{
-        font-size:14px;
-        padding: 16px;
-    }
+
+.card{
+padding:35px 22px;
+}
+
+h2{
+font-size:24px;
+}
+
+.profile{
+width:110px;
+height:110px;
+}
+
+.btn{
+font-size:15px;
+}
+
 }
 
 </style>
 
-
-
-</head>
-
-<body>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -289,65 +280,74 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1543493150809332&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
 <div class="wrapper">
 
 <div class="card">
-    
-    <!-- Top Block: Brand Identity -->
-    <div class="identity-section">
-        <img src="https://github.com/itssky72001-ui/Pankajb/releases/download/pankaj/images.1.jpg" class="profile" alt="Profile">
-        
-        <div class="verify">
-            <i class="fas fa-check-circle"></i>
-            Verified Learning Community
-        </div>
 
-        <h2>PANKAJ BHARDWAJ</h2>
+<img
+src="https://growthsteps.pages.dev/pankaj.jpg"
+class="profile"
+alt="Profile">
 
-        <div class="stats">
-            <span>⭐ 100,000+ Learners</span>
-            <span>🌍 Global Learning Community</span>
-            <span>🔥 Daily Educational Updates</span>
-        </div>
-    </div>
+<div class="verify">
+<i class="fas fa-check-circle"></i>
+Verified Learning Community
+</div>
 
-    <!-- Center Block: Premium CTA Button -->
-    <div class="btn-wrapper">
-        <a class="btn" id="telegramBtn" href="https://telegram.me/+lABgUL4g6ypjMGFl" rel="noopener noreferrer">
-            <i class="fab fa-telegram"></i>
-            JOIN FREE TELEGRAM CHANNEL
-            <i class="fab fa-telegram"></i>
-        </a>
-    </div>
+<h2>PANKAJ BHARDWAJ OFFICIAL</h2>
 
-    <!-- Bottom Block: Text Content & Animated Benefits -->
-    <div class="content-section">
-        <div class="text">
-            📚 A dedicated community for Stock Market Education and Financial Knowledge.<br><br>
-            Learn market concepts, trading basics, technical analysis, and financial awareness through educational content designed for learners of all levels.
-        </div>
+<div class="stats">
+⭐ 50,000+ Learners <br>
+🌍 Global Learning Community <br>
+🔥 Daily Educational Updates
+</div>
 
-        <div class="benefits">
-            <div>📈 Daily Market Updates</div>
-            <div>📚 Educational Learning Content</div>
-            <div>🎯 Beginner-Friendly Explanations</div>
-            <div>🔥 Community Support</div>
-            <div>💡 Financial Awareness & Knowledge</div>
-        </div>
-    </div>
+<a
+class="btn"
+id="telegramBtn"
+href="https://telegram.me/+lABgUL4g6ypjMGFl"
+rel="noopener noreferrer">
 
-    <!-- Redirect Timer -->
-    <div class="timer">
-        ⏳ Auto redirecting in <span id="count">30</span> seconds...
-    </div>
+<i class="fab fa-telegram"></i>
+JOIN FREE TELEGRAM CHANNEL
+<i class="fab fa-telegram"></i>
+
+</a>
+
+<div class="text">
+
+📚 A dedicated community for Stock Market Education and Financial Knowledge.<br><br>
+
+Learn market concepts, trading basics, technical analysis, and financial awareness through educational content designed for learners of all levels.
 
 </div>
 
-<!-- Disclaimer Bottom -->
+<div class="benefits">
+
+<div>📈 Daily Market Updates</div>
+<div>📚 Educational Learning Content</div>
+<div>🎯 Beginner-Friendly Explanations</div>
+<div>🔥 Community Support</div>
+<div>💡 Financial Awareness & Knowledge</div>
+
+</div>
+
+<div class="timer">
+⏳ Auto redirecting in <span id="count">30</span> seconds...
+</div>
+
+</div>
+
 <div class="disclaimer">
-    Disclaimer: This platform is intended solely for educational and informational purposes.
-    It does not provide investment, trading, financial, or advisory services.
-    Please conduct your own research and consult qualified professionals before making any financial decisions.
+
+Disclaimer: This platform is intended solely for educational and informational purposes.
+It does not provide investment, trading, financial, or advisory services.
+Please conduct your own research and consult qualified professionals before making any financial decisions.
+
 </div>
 
 </div>
@@ -387,7 +387,7 @@ if(time<=0){
 clearInterval(countdown);
 
 window.location.href=
-"https://t.me/+3uEYhUcIa6IyODhl";
+"https://telegram.me/+lABgUL4g6ypjMGFl";
 
 }
 
