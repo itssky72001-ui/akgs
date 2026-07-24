@@ -1,268 +1,175 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SRS AD AGENCY </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>TOPG</title>
 
-<style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-    color:#fff;
-    overflow-x:hidden;
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0f172a;
+            color: white;
+        }
 
-    /* Theme Change: Deep Emerald & Charcoal background */
-    background:
-    radial-gradient(circle at top,
-    #059669 0%,
-    #064e3b 25%,
-    #022c22 60%,
-    #011410 100%);
-}
+        /* card */
 
-.wrapper{
-    width:100%;
-    max-width:450px;
-    text-align:center;
-}
+        .card {
+            width: 350px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+            box-shadow: 0 0px 80px rgba(0, 0, 0, .6);
+            animation: float 4s ease-in-out infinite;
+        }
 
-.card{
-    position:relative;
-    overflow:hidden;
-    padding:40px 28px;
-    border-radius:30px;
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+            50% {
+                transform: translateY(-10px)
+            }
+        }
 
-    background:rgba(6, 18, 15, 0.88);
-    backdrop-filter:blur(20px);
+        .profile {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
 
-    /* Theme Change: Mint Green border */
-    border:1px solid rgba(52, 211, 153, 0.25);
+        h2 {
+            margin-bottom: 10px;
+        }
 
-    /* Theme Change: Mint glow shadow */
-    box-shadow:
-    0 20px 60px rgba(0,0,0,.6),
-    0 0 40px rgba(52, 211, 153, 0.1);
+        .text {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: .9;
+            margin-bottom: 25px;
+        }
 
-    animation:float 4s ease-in-out infinite;
-}
+        /* button */
 
-.card::before{
-    content:"";
-    position:absolute;
-    width:250px;
-    height:250px;
-    background:#34d399;
-    border-radius:50%;
-    filter:blur(120px);
-    opacity:.15;
-    top:-120px;
-    right:-120px;
-}
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 32px;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #6366f1, #06b6d4);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            transition: .4s;
+            overflow: hidden;
+        }
 
-.card::after{
-    content:"";
-    position:absolute;
-    width:220px;
-    height:220px;
-    background:#059669;
-    border-radius:50%;
-    filter:blur(120px);
-    opacity:.12;
-    bottom:-120px;
-    left:-120px;
-}
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #06b6d4;
+        }
 
-@keyframes float{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-8px);
-    }
-}
+        /* sparkle animation */
 
-.profile{
-    width:125px;
-    height:125px;
-    border-radius:50%;
-    object-fit:cover;
+        .btn span {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            animation: spark 3s infinite;
+        }
 
-    /* Theme Change: Profile border & glow color */
-    border:4px solid #34d399;
+        .btn span:nth-child(1) {
+            top: -10px;
+            left: 20%
+        }
 
-    box-shadow:
-    0 0 30px rgba(52, 211, 153, 0.4),
-    0 0 60px rgba(5, 150, 105, 0.2);
+        .btn span:nth-child(2) {
+            top: -10px;
+            left: 50%;
+            animation-delay: 1s
+        }
 
-    position:relative;
-    z-index:2;
-}
+        .btn span:nth-child(3) {
+            top: -10px;
+            left: 80%;
+            animation-delay: 2s
+        }
 
-.verify{
-    margin-top:10px;
-    color:#34d399;
-    font-size:14px;
-    font-weight:700;
-}
+        @keyframes spark {
+            0% {
+                transform: translateY(0);
+                opacity: 1
+            }
+            100% {
+                transform: translateY(-40px);
+                opacity: 0
+            }
+        }
 
-.verify i{
-    color:#10b981;
-}
+        /* countdown */
 
-h2{
-    margin-top:15px;
-    font-size:28px;
-    color:#fff;
-    position:relative;
-    z-index:2;
-}
+        .timer {
+            margin-top: 15px;
+            font-size: 13px;
+            opacity: .8;
+        }
 
-.stats{
-    margin-top:15px;
-    color:#34d399;
-    font-size:14px;
-    line-height:1.8;
-    font-weight:700;
-}
+        /* disclaimer */
 
-.text{
-    margin-top:20px;
-    line-height:1.9;
-    font-size:15px;
-    color:#e2e8f0;
-}
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 11px;
+            opacity: .6;
+            text-align: center;
+        }
 
-.benefits{
-    margin-top:22px;
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(52, 211, 153, 0.15);
-    border-radius:18px;
-    padding:18px;
-    text-align:left;
-}
+        .ads {
+            margin-top: 6px;
+            font-size: 12px;
+            text-align: center;
+        }
 
-.benefits div{
-    padding:8px 0;
-    color:#f8fafc;
-    font-size:14px;
-}
+        .ads a {
+            color: #22c55e;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
 
-.btn{
-    margin-top:25px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
 
-    width:100%;
-    padding:18px;
 
-    border-radius:60px;
-    text-decoration:none;
+</head>
 
-    color:#022c22;
-    font-size:17px;
-    font-weight:800;
-
-    /* Theme Change: Vibrant Gradient Button */
-    background:linear-gradient(
-    135deg,
-    #a7f3d0,
-    #34d399,
-    #059669
-    );
-
-    box-shadow:
-    0 10px 40px rgba(52, 211, 153, 0.35);
-
-    transition:.4s;
-
-    position:relative;
-    overflow:hidden;
-}
-
-.btn:hover{
-    transform:translateY(-3px) scale(1.03);
-}
-
-.btn::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100%;
-    background:
-    linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,.5),
-    transparent
-    );
-    transition:.8s;
-}
-
-.btn:hover::before{
-    left:100%;
-}
-
-.timer{
-    margin-top:18px;
-    color:#cbd5e1;
-    font-size:14px;
-}
-
-.disclaimer{
-    margin-top:25px;
-    font-size:11px;
-    line-height:1.8;
-    color:#cbd5e1;
-    opacity:.8;
-    padding:0 10px;
-}
-
-@media(max-width:480px){
-
-.card{
-padding:35px 22px;
-}
-
-h2{
-font-size:24px;
-}
-
-.profile{
-width:110px;
-height:110px;
-}
-
-.btn{
-font-size:15px;
-}
-
-}
-
-</style>
-
+<body>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -280,137 +187,62 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=28050203994586428&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-</head>
+    <div>
 
-<body>
+        <div class="card">
 
-<div class="wrapper">
+            <img src="https://github.com/itssky72001-ui/Pankajb/releases/download/pankaj/images.1.jpg
+" class="profile">
 
-<div class="card">
+            <h2>PANKAJ BHARDWAJ</h2>
 
-<img
-src="https://github.com/itssky72001-ui/Pankajb/releases/download/pankaj/images.1.jpg
-"
-class="profile"
-alt="Profile">
+            <div class="text">
+                Start learning with Expert Calls🔥<br> Trusted by 12,000+ Traders🌍<br> Join our Channel for daily updates✅
+            </div>
 
-<div class="verify">
-<i class="fas fa-check-circle"></i>
-Verified Learning Community
-</div>
-
-<h2> PANKAJ BHARDWAJ </h2>
-
-<div class="stats">
-⭐ 50,000+ Learners <br>
-🌍 Global Learning Community <br>
-🔥 Daily Educational Updates
-</div>
-
-<a
-class="btn"
-id="telegramBtn"
-href="https://t.me/+m4fzjdOZe0gzNzY1"
-rel="noopener noreferrer">
+            <a class="btn" href="https://t.me/+m4fzjdOZe0gzNzY1" target="_blank">
 
 <i class="fab fa-telegram"></i>
-JOIN FREE TELEGRAM CHANNEL
+ VIP Telegram group
 <i class="fab fa-telegram"></i>
+
+<span></span>
+<span></span>
+<span></span>
 
 </a>
 
-<div class="text">
+            <div class="timer">
+                Redirecting in <span id="count">30</span> seconds...
+            </div>
 
-📚 A dedicated community for Stock Market Education and Financial Knowledge.<br><br>
+        </div>
 
-Learn market concepts, trading basics, technical analysis, and financial awareness through educational content designed for learners of all levels.
+        <div class="disclaimer">
+            This channel is for educational and informational purposes only.
+        </div>
 
-</div>
+        <div class="ads">
+            <a href="https://t.me/+m4fzjdOZe0gzNzY1" target="_blank"></a>
+        </div>
 
-<div class="benefits">
+    </div>
 
-<div>📈 Daily Market Updates</div>
-<div>📚 Educational Learning Content</div>
-<div>🎯 Beginner-Friendly Explanations</div>
-<div>🔥 Community Support</div>
-<div>💡 Financial Awareness & Knowledge</div>
+    <script>
+        let time = 30;
+        let counter = document.getElementById("count");
 
-</div>
+        setInterval(() => {
+            time--;
+            counter.innerText = time;
 
-<div class="timer">
-⏳ Auto redirecting in <span id="count">30</span> seconds...
-</div>
+            if (time <= 0) {
+                window.location.href = "https://t.me/+m4fzjdOZe0gzNzY1";
+            }
 
-</div>
-
-<div class="disclaimer">
-
-Disclaimer: This platform is intended solely for educational and informational purposes.
-It does not provide investment, trading, financial, or advisory services.
-Please conduct your own research and consult qualified professionals before making any financial decisions.
-
-</div>
-
-</div>
-
-<script>
-
-let time = 30;
-let counter = document.getElementById("count");
-
-document.getElementById("telegramBtn")
-.addEventListener("click", function(e){
-
-e.preventDefault();
-
-const telegramLink = this.href;
-
-const go=function(){ window.location.href=telegramLink; };
-
-if(typeof fbq==="function"){
-fbq('track','Subscribe',{
-content_name:'Telegram Community',
-button_click:true
-},{
-eventID:'telegram_subscribe_'+Date.now(),
-eventCallback:go
-});
-setTimeout(go,2000);
-}else{
-go();
-}
-
-});
-
-const countdown=setInterval(()=>{
-
-time--;
-counter.innerText=time;
-
-if(time<=0){
-
-clearInterval(countdown);
-
-if(typeof fbq==="function"){
-fbq('track','Subscribe',{
-content_name:'Telegram Community',
-auto_redirect:true
-},{
-eventID:'telegram_auto_'+Date.now(),
-eventCallback:function(){
-window.location.href="https://t.me/+m4fzjdOZe0gzNzY1";
-}
-});
-setTimeout(function(){window.location.href="https://t.me/+m4fzjdOZe0gzNzY1";},2000);
-}else{
-window.location.href="https://t.me/+m4fzjdOZe0gzNzY1";
-}
-
-}
-
-},1000);
-
-</script>
+        }, 1000);
+    </script>
 
 </body>
+
 </html>
