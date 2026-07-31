@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#05070d">
+
+<title>Pankaj Bhardwaj — Official Trading & Education Channel</title>
+<meta name="description" content="Join Pankaj Bhardwaj Official — Stock Market Education, Daily Market Updates & Financial Awareness Community.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- REPLACE_META_PIXEL_HERE -->
+<!-- Apna Facebook/Meta Pixel code yahan paste karo -->
+<!-- Agar abhi nahi chahiye toh poora block delete kar do -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<script>
+
+</script>
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#05070d;
+  --card:#0b1220;
+  --card-2:#0f172a;
+  --accent:#00d4ff;
+  --accent-2:#3b82f6;
+  --text:#f8fafc;
+  --muted:#94a3b8;
+  --success:#22c55e;
+  --warning:#f59e0b;
+  --danger:#ef4444;
+  --glow:0 0 40px rgba(0,212,255,.25);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter','Noto Sans Devanagari',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+.wrap{
+  width:100%;
+  max-width:100%;
+  padding:0 16px;
+  margin:0 auto;
+}
+.hero{
+  min-height:100vh;
+  min-height:100dvh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0,212,255,.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(59,130,246,.08) 0%, transparent 40%),
+    var(--bg);
+  position:relative;
+}
+.live-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(34,197,94,.12);
+  border:1px solid rgba(34,197,94,.25);
+  color:#4ade80;
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:24px;
+  animation:pulse 2s infinite;
+}
+.dot{
+  width:8px;
+  height:8px;
+  background:#4ade80;
+  border-radius:50%;
+  box-shadow:0 0 12px #4ade80;
+}
+@keyframes pulse{
+  0%,100%{opacity:1}
+  50%{opacity:.65}
+}
+.avatar-wrap{
+  position:relative;
+  width:140px;
+  height:140px;
+  margin:0 auto 24px;
+}
+.avatar{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid rgba(0,212,255,.4);
+  box-shadow:var(--glow);
+  position:relative;
+  z-index:2;
+}
+.avatar-ring{
+  position:absolute;
+  inset:-8px;
+  border-radius:50%;
+  border:2px solid transparent;
+  border-top-color:var(--accent);
+  border-right-color:var(--accent-2);
+  animation:spin 3s linear infinite;
+  z-index:1;
+}
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+.brand{
+  font-size:32px;
+  font-weight:900;
+  letter-spacing:-0.5px;
+  margin-bottom:8px;
+  background:linear-gradient(135deg,#fff 0%,#7dd3fc 50%,#60a5fa 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.subtitle{
+  color:var(--muted);
+  font-size:16px;
+  max-width:340px;
+  margin:0 auto 24px;
+}
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  margin-bottom:32px;
+  flex-wrap:wrap;
+}
+.stat{
+  text-align:center;
+}
+.stat-num{
+  font-size:26px;
+  font-weight:800;
+  color:var(--accent);
+}
+.stat-label{
+  font-size:12px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+.risk-line{
+  color:var(--warning);
+  font-size:15px;
+  font-weight:700;
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+.btn-telegram{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  max-width:380px;
+  padding:18px 28px;
+  border-radius:16px;
+  font-size:18px;
+  font-weight:800;
+  text-decoration:none;
+  color:#fff;
+  background:linear-gradient(135deg, #00d4ff 0%, #3b82f6 50%, #2563eb 100%);
+  box-shadow:0 8px 32px rgba(0,212,255,.35), 0 0 60px rgba(59,130,246,.2);
+  border:none;
+  cursor:pointer;
+  transition:transform .2s, box-shadow .2s;
+  margin-bottom:14px;
+}
+.btn-telegram:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 40px rgba(0,212,255,.45), 0 0 80px rgba(59,130,246,.3);
+}
+.btn-telegram svg{
+  width:24px;
+  height:24px;
+  flex-shrink:0;
+}
+.btn-secondary{
+  background:transparent;
+  border:2px solid rgba(0,212,255,.4);
+  box-shadow:0 4px 20px rgba(0,212,255,.1);
+}
+.btn-secondary:hover{
+  background:rgba(0,212,255,.08);
+}
+.section{
+  padding:50px 0;
+  background:var(--card);
+}
+.section-title{
+  font-size:22px;
+  font-weight:800;
+  text-align:center;
+  margin-bottom:28px;
+}
+.card{
+  background:var(--card-2);
+  border:1px solid rgba(148,163,184,.12);
+  border-radius:20px;
+  padding:24px;
+  margin-bottom:20px;
+}
+.card h3{
+  font-size:18px;
+  margin-bottom:12px;
+  color:var(--accent);
+}
+.bullet-list{
+  list-style:none;
+}
+.bullet-list li{
+  padding:10px 0;
+  padding-left:32px;
+  position:relative;
+  color:#e2e8f0;
+  font-size:15px;
+  border-bottom:1px solid rgba(148,163,184,.08);
+}
+.bullet-list li:last-child{border-bottom:none}
+.bullet-list li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:10px;
+  width:22px;
+  height:22px;
+  background:rgba(34,197,94,.15);
+  color:#4ade80;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:700;
+}
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+.tag{
+  background:rgba(59,130,246,.12);
+  color:#93c5fd;
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+}
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+.feature{
+  background:var(--card-2);
+  border:1px solid rgba(148,163,184,.1);
+  border-radius:16px;
+  padding:18px;
+  text-align:center;
+}
+.feature-icon{
+  font-size:28px;
+  margin-bottom:8px;
+}
+.feature-title{
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:4px;
+}
+.feature-desc{
+  font-size:12px;
+  color:var(--muted);
+}
+.trust{
+  text-align:center;
+  padding:40px 0;
+  background:var(--bg);
+}
+.trust-title{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:16px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.trust-grid{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  font-size:13px;
+  color:#cbd5e1;
+}
+.disclaimer{
+  background:rgba(239,68,68,.08);
+  border:1px solid rgba(239,68,68,.2);
+  color:#fca5a5;
+  padding:16px;
+  border-radius:12px;
+  font-size:12px;
+  text-align:center;
+  margin-top:24px;
+  line-height:1.5;
+}
+@media(min-width:640px){
+  .wrap{max-width:600px}
+  .brand{font-size:40px}
+  .subtitle{font-size:18px;max-width:460px}
+  .grid-2{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1543493150809332');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1543493150809332&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+<div class="hero">
+  <div class="wrap">
+    <div class="live-pill">
+      <span class="dot"></span>
+      Live Market Updates Daily
+    </div>
+
+    <div class="avatar-wrap">
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <!-- REPLACE_PROFILE_PIC_HERE -->
+      <!-- Apni profile image URL yahan daalo -->
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <img src="https://growthsteps.pages.dev/pankaj.jpg
+" alt="Profile" class="avatar">
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <div class="avatar-ring"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- REPLACE_BRAND_NAME_HERE -->
+    <!-- Apna brand/channel name yahan likho -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <h1 class="brand">PANKAJ BHARDWAJ</h1>
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <p class="subtitle">Official Stock Market Education & Trading Awareness Channel</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">50K+</div>
+        <div class="stat-label">Members</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Daily</div>
+        <div class="stat-label">Updates</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Free</div>
+        <div class="stat-label">Learning</div>
+      </div>
+    </div>
+
+    <div class="risk-line">
+      <span>⚡</span>
+      <span>रिस्क मैनेजमेंट आवश्यक</span>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- REPLACE_TELEGRAM_BUTTON_1_HERE -->
+    <!-- Pehle button ka Telegram link yahan daalo -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <a href="https://telegram.me/+lABgUL4g6ypjMGFl" class="btn-telegram">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.505-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.78-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.225.007-.032.015-.15-.056-.212s-.174-.041-.249-.024c-.1.024-1.639 1.042-4.628 3.053-.438.301-.835.447-1.19.44-.392-.008-1.147-.222-1.708-.404-.688-.226-1.234-.346-1.187-.732.024-.203.305-.409.843-.617 3.29-1.43 5.488-2.373 6.593-2.829 3.14-1.292 3.793-1.516 4.22-1.516.093 0 .191.014.276.05.096.04.174.104.228.186.06.09.084.2.07.31-.003.031-.004.061-.007.091z"/></svg>
+      Join Telegram Channel
+    </a>
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- REPLACE_TELEGRAM_BUTTON_2_HERE -->
+    <!-- Dusre button ka Telegram link yahan daalo -->
+    <!-- Dono buttons same ya alag link de sakte ho -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+   
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="wrap">
+    <h2 class="section-title">What You Get Inside</h2>
+
+    <div class="card">
+      <h3>📚 Stock Market Education</h3>
+      <ul class="bullet-list">
+        <li>Daily market updates & analysis</li>
+        <li>Beginner-friendly learning content</li>
+        <li>Price action & chart reading basics</li>
+        <li>Risk management & psychology</li>
+        <li>Financial awareness for everyone</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">#StockMarket</span>
+        <span class="tag">#Trading</span>
+        <span class="tag">#Learning</span>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="feature">
+        <div class="feature-icon">📈</div>
+        <div class="feature-title">Market Updates</div>
+        <div class="feature-desc">Daily analysis</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-title">Beginner Friendly</div>
+        <div class="feature-desc">Easy explanations</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🛡️</div>
+        <div class="feature-title">Risk Management</div>
+        <div class="feature-desc">Capital safety first</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💬</div>
+        <div class="feature-title">Community Support</div>
+        <div class="feature-desc">Learn together</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔥</div>
+        <div class="feature-title">Free Content</div>
+        <div class="feature-desc">No paid calls</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💡</div>
+        <div class="feature-title">Financial Awareness</div>
+        <div class="feature-desc">Smart decisions</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-title">Trusted By Learners</div>
+    <div class="trust-grid">
+      <span>✓ Educational Only</span>
+      <span>✓ No Paid Calls</span>
+      <span>✓ Daily Updates</span>
+      <span>✓ Community First</span>
+    </div>
+
+    
+     <a href="https://telegram.me/+lABgUL4g6ypjMGFl" class="btn-telegram btn-secondary">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.505-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.78-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.225.007-.032.015-.15-.056-.212s-.174-.041-.249-.024c-.1.024-1.639 1.042-4.628 3.053-.438.301-.835.447-1.19.44-.392-.008-1.147-.222-1.708-.404-.688-.226-1.234-.346-1.187-.732.024-.203.305-.409.843-.617 3.29-1.43 5.488-2.373 6.593-2.829 3.14-1.292 3.793-1.516 4.22-1.516.093 0 .191.014.276.05.096.04.174.104.228.186.06.09.084.2.07.31-.003.031-.004.061-.007.091z"/></svg>
+      Join Telegram Channel
+    </a>
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <div class="disclaimer">
+      Disclaimer: This channel is for educational and informational purposes only. It does not provide any buy/sell recommendations or investment advice. Trading involves risk — please consult a SEBI-registered advisor before making any financial decision.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
