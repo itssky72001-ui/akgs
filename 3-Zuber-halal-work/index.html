@@ -1,132 +1,153 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Join Free Telegram Channel</title>
+<title>Halal Stock Market Education</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow: hidden;
-  background: radial-gradient(circle at top, #243b55 0%, #2755aa 45%, #000 100%);
+body{
+background:linear-gradient(180deg,#0b4228,#052015);
+color:#fff;
+overflow-x:hidden;
+-webkit-text-size-adjust:100%;
 }
 
-.card {
-  width: 350px;
-  padding: 25px;
-  border-radius: 20px;
-  text-align: center;
-  color: #fff;
-  background: rgba(20, 30, 50, 0.92);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+.container{
+max-width:430px;
+margin:auto;
+padding:12px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.card img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.3);
-  margin-bottom: 10px;
+.card{
+width:100%;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(212,175,55,.20);
+border-radius:22px;
+padding:22px 18px;
+text-align:center;
+backdrop-filter:blur(10px);
+box-shadow:0 0 35px rgba(212,175,55,.12);
 }
 
-h2 {
-  font-size: 18px;
-  font-weight: bold;
+.logo{
+width:90px;
+height:90px;
+border-radius:50%;
+overflow:hidden;
+margin:auto;
+border:3px solid #d4af37;
+box-shadow:0 0 20px rgba(212,175,55,.35);
 }
 
-.sub {
-  color: #4ade80;
-  font-size: 13px;
-  margin-bottom: 8px;
-  line-height: 1.5;
+.logo img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-.exp {
-  background: linear-gradient(90deg,#ff6a00,#ff3c00);
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  display: inline-block;
-  margin: 10px 0;
+.badge{
+display:inline-block;
+margin-top:14px;
+background:#d4af37;
+color:#08351f;
+padding:7px 15px;
+border-radius:50px;
+font-size:12px;
+font-weight:700;
 }
 
-.arrows {
-  color: #facc15;
-  margin: 8px 0;
-  font-size: 18px;
+h1{
+font-size:24px;
+margin-top:15px;
+line-height:1.3;
+color:#d4af37;
+font-weight:800;
 }
 
-.cta {
-  display: block;
-  background: linear-gradient(90deg,#06b6d4,#3b82f6);
-  padding: 12px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  margin: 10px 0;
-  box-shadow: 0 0 15px rgba(59,130,246,0.6);
-  transition: 0.2s ease;
+.desc{
+margin-top:14px;
+font-size:15px;
+line-height:1.6;
+color:#f2f2f2;
 }
 
-.cta:hover {
-  transform: translateY(-2px);
+.highlight{
+color:#d4af37;
+font-weight:bold;
 }
 
-.hindi {
-  font-size: 13px;
-  margin-top: 10px;
+.cta-btn{
+margin-top:18px;
+width:100%;
+display:inline-block;
+text-decoration:none;
+background:linear-gradient(90deg,#d4af37,#f3d26a);
+color:#08351f;
+padding:16px;
+font-size:18px;
+font-weight:800;
+border-radius:60px;
+box-shadow:0 10px 25px rgba(212,175,55,.30);
+transition:.3s;
 }
 
-.hindi-red {
-  color: #f87171;
-  font-weight: 600;
-  font-size: 13px;
+.cta-btn:hover{
+transform:scale(1.02);
 }
 
-.badge {
-  background: #2563eb;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 4px 10px;
-  border-radius: 8px;
-  display: inline-block;
-  margin: 10px 0;
+.note{
+margin-top:14px;
+font-size:12px;
+line-height:1.6;
+color:#ddd;
 }
 
-.list {
-  text-align: left;
-  font-size: 13px;
-  margin-top: 10px;
+.footer{
+margin-top:15px;
+font-size:11px;
+color:#bbb;
 }
 
-.list p {
-  margin: 6px 0;
+@media(max-width:480px){
+
+.card{
+padding:18px 15px;
 }
 
-.disclaimer {
-  font-size: 11px;
-  color: #ccc;
-  margin-top: 10px;
+.logo{
+width:80px;
+height:80px;
+}
+
+h1{
+font-size:22px;
+}
+
+.desc{
+font-size:14px;
+}
+
+.cta-btn{
+font-size:17px;
+padding:15px;
+}
 }
 </style>
-
-</head>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -144,61 +165,100 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=891494404014388&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+</head>
+
 <body>
+
+<div class="container">
 
 <div class="card">
 
-  <img src="https://github.com/itssky72001-ui/halal-work/releases/download/halal/halal.workk.jpg" loading="eager" decoding="async" alt="Profile">
+<div class="logo">
+<img src="https://github.com/itssky72001-ui/halal-work/releases/download/halal/halal.workk.jpg" alt="Logo">
+</div>
 
-  <h2>
-MUFTI SHOIAB TRADER (HALAL WORK)</h2>
+<div class="badge">
+📚 100% Educational Purpose
+</div>
 
-  <div class="sub">(SEBI REGISTERED) 🏆</div>
+<h1>
+📊 MUFTI SHOIAB TRADER (Halal Work)
 
-  <div class="sub">
-📊 اخلاقی اور معلوماتی اسٹاک مارکیٹ لرننگ مسلم کمیونٹی کے لیے
+</h1>
 
-🔥 2392 افراد نے 24 گھنٹوں میں جوائن کیا
+<p class="desc">
+<b>Assalamu Alaikum 🤍</b>
+<br><br>
 
-محدود رسائی ابھی دستیاب ہے:
-  </div>
+Agar aap
+<span class="highlight">Stock Market</span>
+ko
+<span class="highlight">Islamic & Halal Perspective</span>
+se seekhna chahte hain to hamare free educational community ko join karein.
 
-  <div class="exp">📊 9 Years Trading Experience</div>
+<br><br>
 
-  <div class="arrows">👇👇👇</div>
+Yahan aapko
+<span class="highlight">
+Stock Market Education,
+Risk Management,
+Market Learning
+</span>
+aur simple language me educational content milega.
+</p>
 
-  <a class="cta"
-     href="https://t.me/+4rkSysxCDvRiM2Q1"
-     target="_blank"
-     onclick="fbq('track','Lead');">
-    🚀 JOIN FREE TELEGRAM CHANNEL
-  </a>
+<a href="https://t.me/+4rkSysxCDvRiM2Q1"
+id="telegramBtn"
+class="cta-btn">
+🚀 JOIN FREE TELEGRAM CHANNEL
+</a>
 
-  <div class="hindi">
-    क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?
-  </div>
+<p class="note">
+⚠️ Ye sirf
+<span class="highlight">Educational Purpose</span>
+ke liye hai.
+Hum koi financial advice ya guaranteed profit claim nahi karte.
+Always do your own research.
+</p>
 
-  <div class="hindi-red">
-    अगर हां, तो ऊपर दिए गए Telegram बटन पर क्लिक करें 🚀
-  </div>
-
-  <div class="badge">
-    💎 DAILY PROFIT GUARANTEE 💎
-  </div>
-
-  <div class="list">
-    <p>📊 Live Daily Trades directly from my portfolio</p>
-    <p>📊 Live Daily Trades directly from my portfolio</p>
-    <p>🔥 Exclusive Signals used by professionals</p>
-    <p>💯 High Accuracy with proven consistency</p>
-    <p>⚡ Instant Updates with real-time alerts</p>
-  </div>
-
-  <div class="disclaimer">
-    Disclaimer: For educational purposes only. Trading involves risk.
-  </div>
+<div class="footer">
+© 2026 Halal Trading Education
+</div>
 
 </div>
 
+</div>
+
+<script>
+document.getElementById('telegramBtn')
+.addEventListener('click',function(){
+
+const fired=localStorage.getItem(
+'subscribe_event_fired'
+);
+
+if(!fired){
+
+fbq('track','Subscribe',{
+content_name:'Telegram Join'
+});
+
+localStorage.setItem(
+'subscribe_event_fired',
+'true'
+);
+
+console.log('Subscribe Fired Once');
+
+}else{
+
+console.log('Already Fired');
+
+}
+
+});
+</script>
+
 </body>
-</html>>
+</html>
+
