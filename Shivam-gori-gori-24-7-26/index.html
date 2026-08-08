@@ -1,277 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Join Nitin Muraka — free stock market education community on Telegram.">
+<title>TRADE WITH MUNAAF | Official Community</title>
 
-<title>SRS ADS AGENCY</title>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
 <style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html, body { height: 100%; }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #eaf6ff;
+  background: #060D16;
 }
 
-body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-    color:#f1f5f9;
-    overflow-x:hidden;
-    /* New Variant Theme: Obsidian Dark, Electric Indigo & Neon Violet Glow */
-    background: radial-gradient(circle at center, #1e1b4b 0%, #0f172a 50%, #020617 100%);
+.wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding-bottom: 92px;
+  position: relative;
 }
 
-.wrapper{
-    width:100%;
-    max-width:550px; /* Perfectly balanced width for absolute symmetry */
-    text-align:center;
+.card { padding: 20px 20px 8px; }
+
+/* Slim top mini bar */
+.mini-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #2AABEE;
+  margin-bottom: 20px;
+}
+.mini-bar i { font-size: 9px; }
+
+.hero-center { text-align: center; margin-bottom: 20px; }
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2AABEE;
+  background: #12314a;
+  margin: 0 auto 12px;
+  display: block;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+.subtitle {
+  font-size: 12px;
+  color: #9fc4de;
 }
 
-.card{
-    position:relative;
-    overflow:hidden;
-    padding:45px 32px;
-    border-radius:28px;
-    background: rgba(10, 10, 18, 0.85);
-    backdrop-filter:blur(30px);
-    -webkit-backdrop-filter:blur(30px);
-    border: 1px solid rgba(139, 92, 246, 0.25); /* Violet Subtle Border */
-    box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 50px rgba(99, 102, 241, 0.1);
+/* Horizontal scroll-style feature strip */
+.feature-strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 4px 2px 16px;
+  margin-bottom: 4px;
+  scrollbar-width: none;
+}
+.feature-strip::-webkit-scrollbar { display: none; }
+.feature-card {
+  flex: 0 0 auto;
+  width: 118px;
+  background: rgba(42, 171, 238, 0.06);
+  border: 1px solid rgba(42, 171, 238, 0.2);
+  border-radius: 14px;
+  padding: 14px 12px;
+  text-align: center;
+}
+.feature-card .ic {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(42, 171, 238, 0.12);
+  color: #2AABEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin: 0 auto 8px;
+}
+.feature-card span {
+  font-size: 10.5px;
+  color: #d7e9f5;
+  line-height: 1.35;
 }
 
-/* Cyber Glow Ambient Spheres */
-.card::before{
-    content:"";
-    position:absolute;
-    width:280px;
-    height:280px;
-    background:#6366f1;
-    border-radius:50%;
-    filter:blur(140px);
-    opacity:.15;
-    top:-100px;
-    right:-100px;
+/* Inline stat numbers */
+.stat-line {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding: 14px 0;
+  margin-bottom: 16px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.stat-line .s { text-align: center; }
+.stat-line .s strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 900;
+  color: #2AABEE;
+}
+.stat-line .s span {
+  font-size: 9.5px;
+  color: #7fa9c4;
 }
 
-.card::after{
-    content:"";
-    position:absolute;
-    width:280px;
-    height:280px;
-    background:#a855f7;
-    border-radius:50%;
-    filter:blur(140px);
-    opacity:.12;
-    bottom:-100px;
-    left:-100px;
+/* Testimonial one-liner with dots */
+.testimonial {
+  text-align: center;
+  padding: 0 12px;
+  margin-bottom: 16px;
+}
+.testimonial p {
+  font-size: 11.5px;
+  font-style: italic;
+  color: #c7e0f0;
+  margin-bottom: 8px;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(42, 171, 238, 0.3);
+}
+.dots span.active { background: #2AABEE; }
+
+.disclaimer {
+  font-size: 10px;
+  line-height: 1.6;
+  color: #3d5468;
+  text-align: center;
+  padding: 4px 8px 0;
 }
 
-.identity-section {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Sticky bottom CTA - mobile app style */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, rgba(6,16,24,0) 0%, #060D16 35%);
+  z-index: 10;
 }
-
-.profile{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit:cover;
-    border: 4px solid rgba(168, 85, 247, 0.8);
-    box-shadow: 0 0 35px rgba(168, 85, 247, 0.35);
+.sticky-cta-inner { width: 100%; max-width: 388px; }
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2AABEE 0%, #0088CC 100%);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 5px rgba(42, 171, 238, 0.15), 0 16px 34px rgba(42, 171, 238, 0.4);
+  animation: pulse-glow 1.8s ease-in-out infinite;
+  transition: transform 0.15s ease;
+  cursor: pointer;
 }
-
-.verify{
-    margin-top:16px;
-    color:#a855f7;
-    font-size:12px;
-    font-weight:700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: rgba(168, 85, 247, 0.12);
-    border: 1px solid rgba(168, 85, 247, 0.2);
-    padding: 6px 16px;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+.cta-btn:active { transform: scale(0.96); }
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 5px rgba(42, 171, 238, 0.15), 0 16px 34px rgba(42, 171, 238, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(42, 171, 238, 0.25), 0 16px 40px rgba(42, 171, 238, 0.6); }
 }
-
-.verify i{
-    color:#22c55e;
+.timer-text {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #4d7189;
 }
-
-h2{
-    margin-top:16px;
-    font-size:26px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    color:#fff;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-.stats{
-    margin-top:18px;
-    color:#cbd5e1;
-    font-size:13px;
-    line-height: 2;
-    font-weight:600;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 14px 20px;
-    border-radius: 18px;
-    width: 100%;
-}
-
-/* Center Placed Premium CTA */
-.btn-wrapper {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    margin: 30px 0;
-}
-
-.btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    width:100%;
-    padding:18px;
-    border-radius:16px;
-    text-decoration:none;
-    color:#fff;
-    font-size:16px;
-    font-weight:800;
-    letter-spacing: 0.5px;
-    /* Electric Neon Gradient Theme */
-    background: linear-gradient(135deg, #7c3aed, #6366f1, #06b6d4);
-    box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
-    transition: .3s all ease;
-    position:relative;
-    overflow:hidden;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
-}
-
-.btn::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
-    transition:.6s;
-}
-
-.btn:hover::before{
-    left:100%;
-}
-
-.content-section {
-    position: relative;
-    z-index: 2;
-    text-align: left;
-}
-
-.text{
-    line-height:1.7;
-    font-size:14.5px;
-    color:#94a3b8;
-    text-align: center;
-    margin-bottom: 22px;
-}
-
-.benefits{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.benefits div{
-    padding:14px 18px;
-    color:#f1f5f9;
-    font-size:14px;
-    font-weight: 500;
-    background: rgba(255, 255, 255, 0.02);
-    border-left: 3px solid #a855f7; /* Accent bar indicator */
-    border-top: 1px solid rgba(255,255,255,0.03);
-    border-right: 1px solid rgba(255,255,255,0.03);
-    border-bottom: 1px solid rgba(255,255,255,0.03);
-    border-radius: 0 12px 12px 0;
-    transition: all 0.3s ease;
-}
-
-.benefits div:hover {
-    background: rgba(168, 85, 247, 0.06);
-    transform: translateX(4px);
-}
-
-.timer{
-    margin-top:25px;
-    color:#64748b;
-    font-size:13px;
-    font-weight: 500;
-    position: relative;
-    z-index: 2;
-}
-
-#count {
-    color: #a855f7;
-    font-weight: 700;
-}
-
-.disclaimer{
-    margin-top:30px;
-    font-size:11px;
-    line-height:1.7;
-    color:#475569;
-    padding:0 10px;
-}
-
-@media(max-width:480px){
-    .card{
-        padding:35px 20px;
-    }
-    h2{
-        font-size:23px;
-    }
-    .profile{
-        width:110px;
-        height:110px;
-    }
-    .btn{
-        font-size:14px;
-        padding: 16px;
-    }
-}
-
+.timer-text span { color: #2AABEE; font-weight: 700; }
 </style>
 
-
-
 </head>
-
 <body>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -282,117 +220,100 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1948340435841991');
+fbq('init', '1767398904286146');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1948340435841991&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1767398904286146&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
 <div class="wrapper">
+  <div class="card">
 
-<div class="card">
-    
-    <!-- Top Block: Brand Identity -->
-    <div class="identity-section">
-        <img src="https://github.com/itssky72001-ui/munaff/releases/download/munaff/munaf.jpg" class="profile" alt="Profile">
-        
-        <div class="verify">
-            <i class="fas fa-check-circle"></i>
-            Verified Learning Community
-        </div>
+    <div class="mini-bar"><i class="fas fa-shield-halved"></i> Verified Official Community</div>
 
-        <h2>TRADE WITH MUNAAF ™🔵 (OFFICIAL)</h2>
-
-        <div class="stats">
-            <span>⭐ 100,000+ Learners</span>
-            <span>🌍 Global Learning Community</span>
-            <span>🔥 Daily Educational Updates</span>
-        </div>
+    <div class="hero-center">
+      <img src="https://github.com/itssky72001-ui/Munaf/releases/download/munaf/munaf.1.jpg" class="avatar" alt="Profile Image" width="88" height="88" decoding="async" fetchpriority="high">
+      <h1>TRADE WITH MUNAAF ™🔵 (OFFICIAL)</h1>
+      <p class="subtitle">Stock Market &amp; Financial Educator</p>
     </div>
 
-    <!-- Center Block: Premium CTA Button -->
-    <div class="btn-wrapper">
-        <a class="btn" id="telegramBtn" href="https://t.me/+GXzwSjFn0wo0NmU1" rel="noopener noreferrer">
-            <i class="fab fa-telegram"></i>
-            JOIN FREE TELEGRAM CHANNEL
-            <i class="fab fa-telegram"></i>
-        </a>
+    <!-- Horizontal scroll feature strip -->
+    <div class="feature-strip">
+      <div class="feature-card">
+        <div class="ic"><i class="fas fa-chart-line"></i></div>
+        <span>Daily Market Updates</span>
+      </div>
+      <div class="feature-card">
+        <div class="ic"><i class="fas fa-book-open"></i></div>
+        <span>Free Educational Content</span>
+      </div>
+      <div class="feature-card">
+        <div class="ic"><i class="fas fa-bullseye"></i></div>
+        <span>Beginner-Friendly Explanations</span>
+      </div>
+      <div class="feature-card">
+        <div class="ic"><i class="fas fa-users"></i></div>
+        <span>Full Community Support</span>
+      </div>
     </div>
 
-    <!-- Bottom Block: Text Content & Animated Benefits -->
-    <div class="content-section">
-        <div class="text">
-            📚 A dedicated community for Stock Market Education and Financial Knowledge.<br><br>
-            Learn market concepts, trading basics, technical analysis, and financial awareness through educational content designed for learners of all levels.
-        </div>
-
-        <div class="benefits">
-            <div>📈 Daily Market Updates</div>
-            <div>📚 Educational Learning Content</div>
-            <div>🎯 Beginner-Friendly Explanations</div>
-            <div>🔥 Community Support</div>
-            <div>💡 Financial Awareness & Knowledge</div>
-        </div>
+    <div class="stat-line">
+      <div class="s"><strong>100%</strong><span>Beginner</span></div>
+      <div class="s"><strong>Daily</strong><span>Updates</span></div>
+      <div class="s"><strong>Free</strong><span>Access</span></div>
     </div>
 
-    <!-- Redirect Timer -->
-    <div class="timer">
-        ⏳ Auto redirecting in <span id="count">30</span> seconds...
+    <div class="testimonial">
+      <p>"Clear, honest market breakdowns every single day — no fluff."</p>
+      <div class="dots"><span class="active"></span><span></span><span></span></div>
     </div>
+  </div>
 
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> This platform is for educational and informational purposes only. We do not provide any financial advice. Please do your own research before making any investment decisions.
+  </div>
 </div>
 
-<!-- Disclaimer Bottom -->
-<div class="disclaimer">
-    Disclaimer: This platform is intended solely for educational and informational purposes.
-    It does not provide investment, trading, financial, or advisory services.
-    Please conduct your own research and consult qualified professionals before making any financial decisions.
-</div>
-
+<!-- Sticky bottom CTA -->
+<div class="sticky-cta">
+  <div class="sticky-cta-inner">
+    <a class="cta-btn" id="telegramBtn" href="https://t.me/+GXzwSjFn0wo0NmU1" rel="noopener noreferrer">
+      <i class="fab fa-telegram-plane"></i> JOIN NOW — IT'S FREE
+    </a>
+    <div class="timer-text">
+      ⏳ Auto-redirecting in <span id="count">8</span>s...
+    </div>
+  </div>
 </div>
 
 <script>
+(function() {
+  const telegramLink = "https://t.me/+GXzwSjFn0wo0NmU1";
+  let time = 8;
+  const counter = document.getElementById("count");
+  const telegramBtn = document.getElementById("telegramBtn");
 
-let time = 30;
-let counter = document.getElementById("count");
+  telegramBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (window.fbq) {
+      fbq('track', 'Subscribe', { content_name: 'Telegram Community', button_click: true }, { eventID: 'telegram_subscribe_' + Date.now() });
+    }
+    setTimeout(() => {
+      window.location.href = telegramLink;
+    }, 200);
+  });
 
-document.getElementById("telegramBtn")
-.addEventListener("click", function(e){
-
-e.preventDefault();
-
-const telegramLink = this.href;
-
-fbq('track','Subscribe',{
-content_name:'Telegram Community',
-button_click:true
-},{
-eventID:'telegram_subscribe_'+Date.now()
-});
-
-setTimeout(()=>{
-window.location.href=telegramLink;
-},700);
-
-});
-
-const countdown=setInterval(()=>{
-
-time--;
-counter.innerText=time;
-
-if(time<=0){
-
-clearInterval(countdown);
-
-window.location.href=
-"https://t.me/+GXzwSjFn0wo0NmU1";
-
-}
-
-},1000);
-
+  const countdown = setInterval(() => {
+    time--;
+    counter.textContent = time;
+    if (time <= 0) {
+      clearInterval(countdown);
+      window.location.href = telegramLink;
+    }
+  }, 1000);
+})();
 </script>
 
 </body>
