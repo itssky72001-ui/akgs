@@ -1,235 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Join Nitin Muraka — free stock market education community on Telegram.">
+<title>PANKAJ BHARDWAJ  | Official Community</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
-
-<title>Join Telegram Channel</title>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
 <style>
-*{box-sizing:border-box;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html, body { height: 100%; }
 
-body{
-  margin:0;
-  overflow-x:hidden;
-  font-family:'Segoe UI','Noto Sans Devanagari',sans-serif;
-  background:#0b1220;
-  color:#e6edf3;
-  text-align:center;
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #eaf6ff;
+  background: #060D16;
 }
 
-/* ✅ CONTAINER (PC FIX) */
-.container{
-  width:100%;
-  max-width:480px;
-  margin:auto;
+.wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding-bottom: 92px;
+  position: relative;
 }
 
-/* HEADER */
-.header{
-  display:flex;
-  align-items:center;
-  padding:8px;
-  font-size:12px;
+.card { padding: 20px 20px 8px; }
+
+/* Slim top mini bar */
+.mini-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #2AABEE;
+  margin-bottom: 20px;
+}
+.mini-bar i { font-size: 9px; }
+
+.hero-center { text-align: center; margin-bottom: 20px; }
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2AABEE;
+  background: #12314a;
+  margin: 0 auto 12px;
+  display: block;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+.subtitle {
+  font-size: 12px;
+  color: #9fc4de;
 }
 
-/* LIVE */
-.live{
-  color:#ff4d4d;
-  font-weight:bold;
-  animation:blink 1s infinite;
-  margin-right:6px;
+/* Horizontal scroll-style feature strip */
+.feature-strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 4px 2px 16px;
+  margin-bottom: 4px;
+  scrollbar-width: none;
 }
-@keyframes blink{50%{opacity:0.4;}}
-
-/* MARKET */
-.market{
-  overflow:hidden;
-  flex:1;
+.feature-strip::-webkit-scrollbar { display: none; }
+.feature-card {
+  flex: 0 0 auto;
+  width: 118px;
+  background: rgba(42, 171, 238, 0.06);
+  border: 1px solid rgba(42, 171, 238, 0.2);
+  border-radius: 14px;
+  padding: 14px 12px;
+  text-align: center;
 }
-
-.ticker{
-  display:flex;
-  width:max-content;
-  animation:tickerMove 20s linear infinite;
+.feature-card .ic {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(42, 171, 238, 0.12);
+  color: #2AABEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin: 0 auto 8px;
 }
-
-.ticker span{
-  white-space:nowrap;
-  padding-right:40px;
-}
-
-@keyframes tickerMove{
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
-}
-
-/* WATCH */
-.watch{
-  color:#00e676;
-  margin-left:6px;
-}
-
-/* PROFILE */
-.profile{
-  margin-top:20px;
-  position:relative;
-  display:inline-block;
+.feature-card span {
+  font-size: 10.5px;
+  color: #d7e9f5;
+  line-height: 1.35;
 }
 
-.profile img{
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  border:3px solid #0A66C2;
-  box-shadow:0 0 20px rgba(10,102,194,0.6);
+/* Inline stat numbers */
+.stat-line {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding: 14px 0;
+  margin-bottom: 16px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.stat-line .s { text-align: center; }
+.stat-line .s strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 900;
+  color: #2AABEE;
+}
+.stat-line .s span {
+  font-size: 9.5px;
+  color: #7fa9c4;
 }
 
-/* VERIFIED */
-.verified{
-  position:absolute;
-  bottom:5px;
-  right:5px;
-  width:30px;
-  height:30px;
+/* Testimonial one-liner with dots */
+.testimonial {
+  text-align: center;
+  padding: 0 12px;
+  margin-bottom: 16px;
+}
+.testimonial p {
+  font-size: 11.5px;
+  font-style: italic;
+  color: #c7e0f0;
+  margin-bottom: 8px;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(42, 171, 238, 0.3);
+}
+.dots span.active { background: #2AABEE; }
+
+.disclaimer {
+  font-size: 10px;
+  line-height: 1.6;
+  color: #3d5468;
+  text-align: center;
+  padding: 4px 8px 0;
 }
 
-/* TITLE */
-.title{
-  font-size:26px;
-  font-weight:700;
-  color:#00AEEF;
-  text-shadow:0 0 10px rgba(0,174,239,0.5);
-  margin-top:10px;
+/* Sticky bottom CTA - mobile app style */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, rgba(6,16,24,0) 0%, #060D16 35%);
+  z-index: 10;
 }
-
-.sub{
-  font-size:14px;
-  color:#9fb3c8;
+.sticky-cta-inner { width: 100%; max-width: 388px; }
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2AABEE 0%, #0088CC 100%);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 5px rgba(42, 171, 238, 0.15), 0 16px 34px rgba(42, 171, 238, 0.4);
+  animation: pulse-glow 1.8s ease-in-out infinite;
+  transition: transform 0.15s ease;
+  cursor: pointer;
 }
-
-/* STATS */
-.stats{
-  font-size:15px;
-  margin:12px;
-  font-weight:bold;
+.cta-btn:active { transform: scale(0.96); }
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 5px rgba(42, 171, 238, 0.15), 0 16px 34px rgba(42, 171, 238, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(42, 171, 238, 0.25), 0 16px 40px rgba(42, 171, 238, 0.6); }
 }
-
-/* DESC */
-.desc{
-  font-size:15px;
-  padding:0 18px;
-  line-height:1.8;
-  color:#dce3ea;
+.timer-text {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #4d7189;
 }
-
-.highlight{
-  color:#00AEEF;
-  font-weight:700;
-}
-
-/* TAGS */
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:8px;
-  margin:15px;
-}
-
-.tag{
-  border:1px solid #0A66C2;
-  padding:7px 14px;
-  border-radius:20px;
-  font-size:12px;
-  color:#00AEEF;
-}
-
-/* BOX */
-.box-container{
-  display:flex;
-  gap:8px;
-  padding:0 10px;
-  margin:15px 0;
-}
-
-.box{
-  flex:1;
-  padding:12px;
-  font-size:12px;
-  border-radius:10px;
-  background:#111a2b;
-  border:1px solid #0A66C2;
-}
-
-/* CTA */
-.cta button{
-  width:92%;
-  padding:16px;
-  font-size:16px;
-  border-radius:10px;
-  border:none;
-  background:linear-gradient(45deg,#0A66C2,#00AEEF);
-  color:white;
-  font-weight:bold;
-  animation:glowBtn 1.5s infinite alternate;
-}
-
-@keyframes glowBtn{
-  from{box-shadow:0 0 10px #0A66C2;}
-  to{box-shadow:0 0 30px #00AEEF;}
-}
-
-/* TRUST */
-.trust{
-  margin:15px;
-  font-size:13px;
-  color:#b8c7d9;
-}
-
-/* POPUP */
-.popup{
-  position:fixed;
-  bottom:20px;
-  left:10px;
-  background:#111a2b;
-  padding:10px 14px;
-  border-radius:8px;
-  font-size:12px;
-  box-shadow:0 0 10px #000;
-  display:none;
-  border:1px solid #0A66C2;
-}
-
-/* DISCLAIMER */
-.disclaimer{
-  font-size:11px;
-  color:#8a9bb0;
-  padding:12px;
-}
-
-/* ✅ PC ONLY IMPROVEMENT */
-@media(min-width:768px){
-
-  .container{
-    margin-top:30px;
-    margin-bottom:30px;
-    border-radius:14px;
-    box-shadow:0 0 40px rgba(0,0,0,0.6);
-    overflow:hidden;
-  }
-
-}
+.timer-text span { color: #2AABEE; font-weight: 700; }
 </style>
-</head>
 
+</head>
 <body>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -247,133 +227,95 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1639869531473248&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<div class="container">
 
-<!-- HEADER -->
-<div class="header">
-  <div class="live">🔴 LIVE</div>
+<div class="wrapper">
+  <div class="card">
 
-  <div class="market">
-    <div class="ticker">
-      <span id="marketData"></span>
-      <span id="marketDataClone"></span>
+    <div class="mini-bar"><i class="fas fa-shield-halved"></i> Verified Official Community</div>
+
+    <div class="hero-center">
+      <img src="https://github.com/itssky72001-ui/Pankajb/releases/download/pankaj/images.1.jpg" 
+      class="avatar" alt="Profile Image" width="88" height="88" decoding="async" fetchpriority="high">
+      <h1>PANKAJ BHARDWAJ (OFFICIAL)✈️</h1>
+      <p class="subtitle">Stock Market &amp; Financial Educator</p>
+    </div>
+
+    <!-- Horizontal scroll feature strip -->
+    <div class="feature-strip">
+      <div class="feature-card">
+        <div class="ic"><i class="fas fa-chart-line"></i></div>
+        <span>Daily Market Updates</span>
+      </div>
+      <div class="feature-card">
+        <div class="ic"><i class="fas fa-book-open"></i></div>
+        <span>Free Educational Content</span>
+      </div>
+      <div class="feature-card">
+        <div class="ic"><i class="fas fa-bullseye"></i></div>
+        <span>Beginner-Friendly Explanations</span>
+      </div>
+      <div class="feature-card">
+        <div class="ic"><i class="fas fa-users"></i></div>
+        <span>Full Community Support</span>
+      </div>
+    </div>
+
+    <div class="stat-line">
+      <div class="s"><strong>100%</strong><span>Beginner</span></div>
+      <div class="s"><strong>Daily</strong><span>Updates</span></div>
+      <div class="s"><strong>Free</strong><span>Access</span></div>
+    </div>
+
+    <div class="testimonial">
+      <p>"Clear, honest market breakdowns every single day — no fluff."</p>
+      <div class="dots"><span class="active"></span><span></span><span></span></div>
     </div>
   </div>
 
-  <div class="watch">👀 <span id="watchCount">1247</span></div>
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> This platform is for educational and informational purposes only. We do not provide any financial advice. Please do your own research before making any investment decisions.
+  </div>
 </div>
 
-<!-- PROFILE -->
-<div class="profile">
-  <img src=https://github.com/itssky72001-ui/Pankajb/releases/download/pankaj/images.1.jpg
-  
-  ">
-
-  <svg class="verified" viewBox="0 0 24 24">
-    <defs>
-      <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#00c6ff"/>
-        <stop offset="100%" stop-color="#0072ff"/>
-      </linearGradient>
-    </defs>
-    <circle cx="12" cy="12" r="11" fill="none" stroke="#00AEEF" stroke-width="2" opacity="0.6"/>
-    <circle cx="12" cy="12" r="9" fill="url(#badgeGrad)"/>
-    <path d="M7 12l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none"/>
-  </svg>
-</div>
-
-<!-- TITLE -->
-<div class="title">PANKAJ BHARDWAJ (OFFICIAL)✈️ </div>
-<div class="sub">OFFICIAL TRADING CHANNEL</div>
-
-<!-- STATS -->
-<div class="stats">
-  👥 <b>10,584+ Members</b> | 📊 Market Insights
-</div>
-
-<!-- DESC -->
-<div class="desc">
-  📊 <span class="highlight">मार्केट रिसर्च</span> और <span class="highlight">एनालिसिस</span> आधारित अपडेट <br>
-  💼 केवल <span class="highlight">एजुकेशनल उद्देश्य</span> <br>
-  ⚡ <span class="highlight">रिस्क मैनेजमेंट</span> आवश्यक
-</div>
-
-<!-- TAGS -->
-<div class="tags">
-  <div class="tag">📊 STOCKS</div>
-  <div class="tag">📉 INDEX</div>
-  <div class="tag">💹 F&O</div>
-  <div class="tag">🪙 CRYPTO</div>
-</div>
-
-<!-- BOX -->
-<div class="box-container">
-  <div class="box">👥 10K+ USERS</div>
-  <div class="box">📈 DAILY UPDATES</div>
-  <div class="box">🆓 FREE ACCESS</div>
-</div>
-
-<!-- CTA -->
-<div class="cta">
-  <button onclick="joinNow()">🚀 JOIN CHANNEL — IT'S FREE</button>
-</div>
-
-<!-- TRUST -->
-<div class="trust">
-  🛡️ Risk Management Guidance <br>
-  📊 Daily Market Analysis <br>
-  ⚡ Timely Trade Alerts
-</div>
-
-<!-- POPUP -->
-<div class="popup" id="popup"></div>
-
-<!-- DISCLAIMER -->
-<div class="disclaimer">
-Disclaimer: This channel is for educational and informational purposes only.
-</div>
-
+<!-- Sticky bottom CTA -->
+<div class="sticky-cta">
+  <div class="sticky-cta-inner">
+    <a class="cta-btn" id="telegramBtn" href="https://t.me/+0ziCoBwCYcUzZGZh" rel="noopener noreferrer">
+      <i class="fab fa-telegram-plane"></i> JOIN NOW — IT'S FREE
+    </a>
+    <div class="timer-text">
+      ⏳ Auto-redirecting in <span id="count">8</span>s...
+    </div>
+  </div>
 </div>
 
 <script>
+(function() {
+  const telegramLink = "https://t.me/+0ziCoBwCYcUzZGZh";
+  let time = 8;
+  const counter = document.getElementById("count");
+  const telegramBtn = document.getElementById("telegramBtn");
 
-// SAME JS
-function updateMarket(){
-  let items=["NIFTY","BANKNIFTY","BTC"];
-  let text="";
-  items.forEach(i=>{
-    let change=(Math.random()*1-0.5).toFixed(2);
-    let up=change>0;
-    text+=`${i} <span style="color:${up?'#00ff88':'#ff4d4d'}">${up?'▲':'▼'} ${Math.abs(change)}%</span> | `;
+  telegramBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (window.fbq) {
+      fbq('track', 'Subscribe', { content_name: 'Telegram Community', button_click: true }, { eventID: 'telegram_subscribe_' + Date.now() });
+    }
+    setTimeout(() => {
+      window.location.href = telegramLink;
+    }, 200);
   });
-  document.getElementById("marketData").innerHTML=text;
-  document.getElementById("marketDataClone").innerHTML=text;
-}
-updateMarket();
-setInterval(updateMarket,6000);
 
-let watch=1247;
-setInterval(()=>{
-  watch+=Math.floor(Math.random()*2);
-  document.getElementById("watchCount").innerText=watch;
-},3000);
-
-let names=["Rahul","Amit","Vikas","Suresh","Rohit"];
-function showPopup(){
-  let name=names[Math.floor(Math.random()*names.length)];
-  let amount=Math.floor(Math.random()*50+10)*1000;
-  let popup=document.getElementById("popup");
-  popup.innerHTML=`💰 ${name} made profit ₹${amount}`;
-  popup.style.display="block";
-  setTimeout(()=>{popup.style.display="none";},3000);
-}
-setInterval(showPopup,7000);
-
-function joinNow(){
-  window.location.href="https://t.me/+0ziCoBwCYcUzZGZh";
-}
-
+  const countdown = setInterval(() => {
+    time--;
+    counter.textContent = time;
+    if (time <= 0) {
+      clearInterval(countdown);
+      window.location.href = telegramLink;
+    }
+  }, 1000);
+})();
 </script>
 
 </body>
-</html>>>
+</html>
