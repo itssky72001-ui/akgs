@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Join Pankaj Bhardwaj — free stock market education community on Telegram.">
+
+<meta name="description"
+content="Join Pankaj Bhardwaj — free stock market education community on Telegram.">
 
 <title>Pankaj Bhardwaj | Stock Market Education</title>
 
 
 <!-- =====================================================
      META PIXEL
-     PIXEL ID: 1532516494734267
      ONLY ONE PIXEL
+     PIXEL ID: 1532516494734267
      ===================================================== -->
 
 <script>
@@ -22,7 +25,7 @@
     n=f.fbq=function(){
         n.callMethod ?
         n.callMethod.apply(n,arguments) :
-        n.queue.push(arguments);
+        n.queue.push(arguments)
     };
 
     if(!f._fbq)f._fbq=n;
@@ -43,14 +46,7 @@
 (window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-
-/* ONLY ONE PIXEL INITIALIZATION */
-
 fbq('init', '1532516494734267');
-
-
-/* PAGE VIEW */
-
 fbq('track', 'PageView');
 
 </script>
@@ -58,10 +54,10 @@ fbq('track', 'PageView');
 
 <noscript>
 <img
-height="1"
-width="1"
-style="display:none"
-src="https://www.facebook.com/tr?id=1532516494734267&ev=PageView&noscript=1"
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=1532516494734267&ev=PageView&noscript=1"
 />
 </noscript>
 
@@ -91,8 +87,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     box-sizing:border-box;
 }
 
-html,
-body{
+html,body{
     min-height:100%;
 }
 
@@ -118,7 +113,6 @@ body{
     background:#060D16;
 
     overflow-x:hidden;
-
 }
 
 
@@ -187,7 +181,6 @@ body{
 
 }
 
-
 .avatar{
 
     width:88px;
@@ -211,7 +204,6 @@ body{
 
 }
 
-
 h1{
 
     font-size:20px;
@@ -223,7 +215,6 @@ h1{
     margin-bottom:4px;
 
 }
-
 
 .subtitle{
 
@@ -518,13 +509,18 @@ h1{
 
 
 .cta-btn:active{
+
     transform:scale(.97);
+
 }
 
 
 .cta-btn.processing{
+
     opacity:.65;
+
     pointer-events:none;
+
 }
 
 
@@ -548,17 +544,22 @@ h1{
 @media(min-width:768px){
 
     body{
+
         padding-top:30px;
+
         padding-bottom:30px;
+
     }
 
     .wrapper{
+
         border-radius:16px;
 
         box-shadow:
             0 0 40px rgba(0,0,0,.6);
 
         overflow:hidden;
+
     }
 
 }
@@ -606,9 +607,11 @@ h1{
         fetchpriority="high"
     >
 
+
     <h1>
         📊 PANKAJ BHARDWAJ
     </h1>
+
 
     <p class="subtitle">
         Stock Market &amp; Financial Educator
@@ -729,7 +732,7 @@ h1{
 
 
 <!-- =========================
-     INFORMATION
+     INFO
      ========================= -->
 
 <div class="info">
@@ -817,135 +820,34 @@ h1{
 const TELEGRAM_LINK =
     "https://t.me/+TdkwxQKz5wsxYzE9";
 
-
-/* =========================================================
-   SUBSCRIBE SESSION KEY
-   ========================================================= */
-
-const SUBSCRIBE_KEY =
-    "tg_subscribe_1532516494734267";
-
-
-/* =========================================================
-   CTA
-   ========================================================= */
-
 const telegramBtn =
-    document.getElementById(
-        "telegramBtn"
-    );
-
+    document.getElementById("telegramBtn");
 
 let clickLocked = false;
 
 
 /* =========================================================
-   EVENT ID
+   SINGLE SUBSCRIBE EVENT
    ========================================================= */
 
-function createEventId(){
+function trackTelegramSubscribe(){
 
-    return (
-        "tg_" +
-        Date.now() +
-        "_" +
-        Math.random()
-            .toString(36)
-            .substring(2,10)
-    );
-
-}
-
-
-/* =========================================================
-   CHECK IF ALREADY TRACKED
-   ========================================================= */
-
-function hasTrackedSubscribe(){
-
-    try{
-
-        return (
-            sessionStorage.getItem(
-                SUBSCRIBE_KEY
-            ) === "1"
-        );
-
-    }catch(error){
-
-        return false;
-
-    }
-
-}
-
-
-/* =========================================================
-   SAVE TRACKING STATE
-   ========================================================= */
-
-function saveSubscribeState(){
-
-    try{
-
-        sessionStorage.setItem(
-            SUBSCRIBE_KEY,
-            "1"
-        );
-
-    }catch(error){
-
-        /* Continue normally if storage unavailable */
-
-    }
-
-}
-
-
-/* =========================================================
-   FIRE SUBSCRIBE
-   ========================================================= */
-
-function fireSubscribe(){
-
-    /*
-     * Prevent duplicate Subscribe
-     * in the same browser session.
-     */
-
-    if(hasTrackedSubscribe()){
-
-        console.log(
-            "Subscribe already tracked."
-        );
-
-        return;
-
-    }
-
-
-    /*
-     * Make sure Pixel loaded.
-     */
-
-    if(typeof window.fbq !== "function"){
+    if(
+        typeof window.fbq !== "function"
+    ){
 
         console.warn(
             "Meta Pixel is not available."
         );
 
-        return;
+        return false;
 
     }
 
 
-    const eventId =
-        createEventId();
-
-
     /*
-     * Subscribe represents
-     * an intentional Telegram CTA click.
+     * One Subscribe event for
+     * one intentional CTA click.
      */
 
     fbq(
@@ -960,33 +862,21 @@ function fireSubscribe(){
 
             button_location:
                 "sticky_cta"
-        },
-        {
-            eventID:
-                eventId
         }
     );
 
 
-    /*
-     * Save immediately so a
-     * second click cannot create
-     * another Subscribe.
-     */
-
-    saveSubscribeState();
-
-
     console.log(
-        "Subscribe event sent:",
-        eventId
+        "Subscribe event sent."
     );
+
+    return true;
 
 }
 
 
 /* =========================================================
-   TELEGRAM BUTTON HANDLER
+   TELEGRAM BUTTON
    ========================================================= */
 
 if(telegramBtn){
@@ -996,7 +886,8 @@ if(telegramBtn){
         function(event){
 
             /*
-             * Block rapid repeated clicks.
+             * Block accidental
+             * double-clicks.
              */
 
             if(clickLocked){
@@ -1020,15 +911,15 @@ if(telegramBtn){
 
 
             /*
-             * Track conversion.
+             * Fire ONE Subscribe event.
              */
 
-            fireSubscribe();
+            trackTelegramSubscribe();
 
 
             /*
-             * Allow Pixel request to
-             * start before Telegram opens.
+             * Give Pixel request a short
+             * time to leave the browser.
              */
 
             setTimeout(
@@ -1048,24 +939,6 @@ if(telegramBtn){
     );
 
 }
-
-
-/* =========================================================
-   DEBUG INFORMATION
-   ========================================================= */
-
-console.log(
-    "Landing Page Loaded"
-);
-
-console.log(
-    "Meta Pixel: 1532516494734267"
-);
-
-console.log(
-    "Telegram:",
-    TELEGRAM_LINK
-);
 
 </script>
 
