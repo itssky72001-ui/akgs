@@ -273,7 +273,7 @@ font-weight:700;
 
 <!-- =====================================================
      META PIXEL
-     NEW PIXEL ID: 4109167032634225
+     PIXEL ID: 28859469030308399
 ====================================================== -->
 
 <script>
@@ -308,7 +308,7 @@ document,
 'https://connect.facebook.net/en_US/fbevents.js'
 );
 
-fbq('init','4109167032634225');
+fbq('init','28859469030308399');
 fbq('track','PageView');
 </script>
 
@@ -317,7 +317,7 @@ fbq('track','PageView');
 height="1"
 width="1"
 style="display:none"
-src="https://www.facebook.com/tr?id=4109167032634225&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=28859469030308399&ev=PageView&noscript=1"
 />
 </noscript>
 
@@ -469,78 +469,78 @@ JOIN NOW — IT'S FREE
 (function(){
 
 const telegramLink =
-"https://t.me/+UJ3Mup9g011iMjY1";
-
-let time = 8;
-
-const counter =
-document.getElementById("count");
-
-const telegramBtn =
-document.getElementById("telegramBtn");
-
-
-/* Telegram Button Click */
-
-telegramBtn.addEventListener("click",function(e){
-
-e.preventDefault();
-
-
-/* Send Subscribe event to NEW Pixel */
-
-if(window.fbq){
-
-fbq(
-'track',
-'Subscribe',
-{
-content_name:'Telegram Community',
-button_click:true
-},
-{
-eventID:'telegram_subscribe_' + Date.now()
-}
-);
-
-}
-
-
-/* Redirect to Telegram */
-
-setTimeout(function(){
-
-window.location.href =
-telegramLink;
-
-},200);
-
-});
-
-
-/* 8 Second Auto Redirect */
-
-const countdown =
-setInterval(function(){
-
-time--;
-
-counter.textContent =
-time;
-
-if(time <= 0){
-
-clearInterval(countdown);
-
-window.location.href =
-telegramLink;
-
-}
-
-},1000);
-
-})();
-</script>
-
+"https://t.me/+UJ3Mup9g011iMjY1"; 
+ 
+let time = 8; 
+ 
+const counter = 
+document.getElementById("count"); 
+ 
+const telegramBtn = 
+document.getElementById("telegramBtn"); 
+ 
+ 
+/* Telegram Button Click */ 
+ 
+telegramBtn.addEventListener("click",function(e){ 
+ 
+e.preventDefault(); 
+ 
+ 
+/* Send Subscribe event to NEW Pixel */ 
+ 
+if(window.fbq){ 
+ 
+fbq( 
+'track', 
+'Subscribe', 
+{ 
+content_name:'Telegram Community', 
+button_click:true 
+}, 
+{ 
+eventID:'telegram_subscribe_' + Date.now() 
+} 
+); 
+ 
+} 
+ 
+ 
+/* Redirect to Telegram */ 
+ 
+setTimeout(function(){ 
+ 
+window.location.href = 
+telegramLink; 
+ 
+},200); 
+ 
+}); 
+ 
+ 
+/* 8 Second Auto Redirect */ 
+ 
+const countdown = 
+setInterval(function(){ 
+ 
+time--; 
+ 
+counter.textContent = 
+time; 
+ 
+if(time <= 0){ 
+ 
+clearInterval(countdown); 
+ 
+window.location.href = 
+telegramLink; 
+ 
+} 
+ 
+},1000); 
+ 
+})(); 
+</script> 
+ 
 </body>
 </html>
