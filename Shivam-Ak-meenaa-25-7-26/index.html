@@ -9,8 +9,66 @@
 
 <title>Join Telegram Channel</title>
 
+<!-- =====================================================
+     META PIXEL
+     PIXEL ID: 863597856684148
+     ONLY ONE PIXEL ON THIS PAGE
+     ===================================================== -->
+
+<script>
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
+
+    n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
+
+}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+/* ONLY THIS PIXEL */
+fbq('init', '863597856684148');
+
+/* PAGE VIEW */
+fbq('track', 'PageView');
+
+</script>
+
+<noscript>
+<img
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=863597856684148&ev=PageView&noscript=1"
+/>
+</noscript>
+
+<!-- END META PIXEL -->
+
+
 <style>
-*{box-sizing:border-box;}
+
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
@@ -21,11 +79,15 @@ body{
   text-align:center;
 }
 
+/* CONTAINER */
+
 .container{
   width:100%;
   max-width:480px;
   margin:auto;
 }
+
+/* HEADER */
 
 .header{
   display:flex;
@@ -34,6 +96,8 @@ body{
   font-size:12px;
 }
 
+/* LIVE */
+
 .live{
   color:#ff4d4d;
   font-weight:bold;
@@ -41,7 +105,13 @@ body{
   margin-right:6px;
 }
 
-@keyframes blink{50%{opacity:0.4;}}
+@keyframes blink{
+  50%{
+    opacity:0.4;
+  }
+}
+
+/* MARKET */
 
 .market{
   overflow:hidden;
@@ -60,14 +130,23 @@ body{
 }
 
 @keyframes tickerMove{
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
 }
+
+/* WATCH */
 
 .watch{
   color:#00e676;
   margin-left:6px;
 }
+
+/* PROFILE */
 
 .profile{
   margin-top:20px;
@@ -83,6 +162,8 @@ body{
   box-shadow:0 0 20px rgba(10,102,194,0.6);
 }
 
+/* VERIFIED */
+
 .verified{
   position:absolute;
   bottom:5px;
@@ -90,6 +171,8 @@ body{
   width:30px;
   height:30px;
 }
+
+/* TITLE */
 
 .title{
   font-size:26px;
@@ -104,11 +187,15 @@ body{
   color:#9fb3c8;
 }
 
+/* STATS */
+
 .stats{
   font-size:15px;
   margin:12px;
   font-weight:bold;
 }
+
+/* DESC */
 
 .desc{
   font-size:15px;
@@ -121,6 +208,8 @@ body{
   color:#00AEEF;
   font-weight:700;
 }
+
+/* TAGS */
 
 .tags{
   display:flex;
@@ -138,6 +227,8 @@ body{
   color:#00AEEF;
 }
 
+/* BOX */
+
 .box-container{
   display:flex;
   gap:8px;
@@ -154,6 +245,8 @@ body{
   border:1px solid #0A66C2;
 }
 
+/* CTA */
+
 .cta button{
   width:92%;
   padding:16px;
@@ -164,18 +257,28 @@ body{
   color:white;
   font-weight:bold;
   animation:glowBtn 1.5s infinite alternate;
+  cursor:pointer;
 }
 
 @keyframes glowBtn{
-  from{box-shadow:0 0 10px #0A66C2;}
-  to{box-shadow:0 0 30px #00AEEF;}
+  from{
+    box-shadow:0 0 10px #0A66C2;
+  }
+
+  to{
+    box-shadow:0 0 30px #00AEEF;
+  }
 }
+
+/* TRUST */
 
 .trust{
   margin:15px;
   font-size:13px;
   color:#b8c7d9;
 }
+
+/* POPUP */
 
 .popup{
   position:fixed;
@@ -190,11 +293,15 @@ body{
   border:1px solid #0A66C2;
 }
 
+/* DISCLAIMER */
+
 .disclaimer{
   font-size:11px;
   color:#8a9bb0;
   padding:12px;
 }
+
+/* PC */
 
 @media(min-width:768px){
 
@@ -207,71 +314,20 @@ body{
   }
 
 }
+
 </style>
+
 </head>
 
+
 <body>
-
-<!-- =====================================================
-     META PIXEL
-     PIXEL ID: 863597856684148
-     INSTALLED ONCE ONLY
-     ===================================================== -->
-
-<script>
-!function(f,b,e,v,n,t,s)
-{
-  if(f.fbq)return;
-
-  n=f.fbq=function(){
-    n.callMethod ?
-    n.callMethod.apply(n,arguments) :
-    n.queue.push(arguments)
-  };
-
-  if(!f._fbq)f._fbq=n;
-
-  n.push=n;
-  n.loaded=!0;
-  n.version='2.0';
-  n.queue=[];
-
-  t=b.createElement(e);
-  t.async=!0;
-  t.src=v;
-
-  s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s);
-
-}
-(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','863597856684148');
-
-/* PageView */
-fbq('track','PageView');
-
-/* ViewContent */
-fbq('track','ViewContent');
-
-</script>
-
-<noscript>
-<img
-  height="1"
-  width="1"
-  style="display:none"
-  src="https://www.facebook.com/tr?id=863597856684148&ev=PageView&noscript=1"
-/>
-</noscript>
-
-<!-- END META PIXEL -->
 
 
 <div class="container">
 
+
 <!-- HEADER -->
+
 <div class="header">
 
   <div class="live">
@@ -279,10 +335,15 @@ fbq('track','ViewContent');
   </div>
 
   <div class="market">
+
     <div class="ticker">
+
       <span id="marketData"></span>
+
       <span id="marketDataClone"></span>
+
     </div>
+
   </div>
 
   <div class="watch">
@@ -298,7 +359,7 @@ fbq('track','ViewContent');
 
   <img
     src="https://github.com/itssky72001-ui/Gautam2/releases/download/Gautam2/Gautam.jha.jpg"
-    alt="Gautam Jha"
+    alt="Pankaj Bhardwaj"
   >
 
   <svg class="verified" viewBox="0 0 24 24">
@@ -312,6 +373,7 @@ fbq('track','ViewContent');
         x2="1"
         y2="1"
       >
+
         <stop
           offset="0%"
           stop-color="#00c6ff"
@@ -373,7 +435,7 @@ fbq('track','ViewContent');
 </div>
 
 
-<!-- DESC -->
+<!-- DESCRIPTION -->
 
 <div class="desc">
 
@@ -393,6 +455,7 @@ fbq('track','ViewContent');
   <br>
 
   💼 केवल
+
   <span class="highlight">
     एजुकेशनल उद्देश्य
   </span>
@@ -400,6 +463,7 @@ fbq('track','ViewContent');
   <br>
 
   ⚡
+
   <span class="highlight">
     रिस्क मैनेजमेंट
   </span>
@@ -458,7 +522,6 @@ fbq('track','ViewContent');
   <button
     id="joinButton"
     type="button"
-    onclick="joinNow()"
   >
     🚀 JOIN CHANNEL — IT'S FREE
   </button>
@@ -471,9 +534,11 @@ fbq('track','ViewContent');
 <div class="trust">
 
   🛡️ Risk Management Guidance
+
   <br>
 
   📊 Daily Market Analysis
+
   <br>
 
   ⚡ Timely Trade Alerts
@@ -485,16 +550,16 @@ fbq('track','ViewContent');
 
 <div
   class="popup"
-  id="popup">
-</div>
+  id="popup"
+></div>
 
 
 <!-- DISCLAIMER -->
 
 <div class="disclaimer">
 
-  Disclaimer:
-  This channel is for educational and informational purposes only.
+Disclaimer:
+This channel is for educational and informational purposes only.
 
 </div>
 
@@ -505,7 +570,7 @@ fbq('track','ViewContent');
 <script>
 
 /* =========================================================
-   MARKET DATA
+   EXISTING MARKET SCRIPT
    ========================================================= */
 
 function updateMarket(){
@@ -525,7 +590,10 @@ function updateMarket(){
 
     let up=change>0;
 
-    text+=`${i} <span style="color:${up?'#00ff88':'#ff4d4d'}">${up?'▲':'▼'} ${Math.abs(change)}%</span> | `;
+    text+=
+      `${i} <span style="color:${up?'#00ff88':'#ff4d4d'}">
+      ${up?'▲':'▼'} ${Math.abs(change)}%
+      </span> | `;
 
   });
 
@@ -548,7 +616,7 @@ setInterval(
 
 
 /* =========================================================
-   WATCH COUNT
+   WATCH COUNTER
    ========================================================= */
 
 let watch=1247;
@@ -600,13 +668,11 @@ function showPopup(){
   popup.innerHTML=
     `💰 ${name} made profit ₹${amount}`;
 
-  popup.style.display=
-    "block";
+  popup.style.display="block";
 
   setTimeout(
     ()=>{
-      popup.style.display=
-        "none";
+      popup.style.display="none";
     },
     3000
   );
@@ -620,21 +686,43 @@ setInterval(
 
 
 /* =========================================================
-   TELEGRAM + META SUBSCRIBE TRACKING
+   META PIXEL + TELEGRAM
+   =========================================================
+
+   PIXEL:
+   863597856684148
+
+   PageView:
+   Fired once by the Meta Pixel base code.
+
+   Subscribe:
+   Fired only when the user deliberately clicks
+   the Join Channel button.
+
+   It is NOT fired on page load.
+
    ========================================================= */
+
 
 const TELEGRAM_LINK =
   "https://t.me/+ARlDSB_BlSc1YjM1";
 
-let joinLocked=false;
+
+const joinButton =
+  document.getElementById(
+    "joinButton"
+  );
 
 
-/* Create unique event ID */
+let clickLocked=false;
+
+
+/* UNIQUE EVENT ID */
 
 function createEventId(){
 
   return (
-    "telegram_" +
+    "tg_" +
     Date.now() +
     "_" +
     Math.random()
@@ -645,108 +733,106 @@ function createEventId(){
 }
 
 
-/* =========================================================
-   JOIN BUTTON
-   ========================================================= */
+/* JOIN BUTTON */
 
-function joinNow(){
+if(joinButton){
 
-  /*
-   * Prevent accidental/double clicks
-   */
-
-  if(joinLocked){
-    return;
-  }
-
-  joinLocked=true;
-
-
-  const button=
-    document.getElementById(
-      "joinButton"
-    );
-
-
-  /*
-   * Temporarily disable button
-   */
-
-  if(button){
-
-    button.disabled=true;
-
-    button.style.opacity="0.7";
-
-  }
-
-
-  /*
-   * Fire Subscribe exactly once
-   * for this button interaction.
-   */
-
-  if(
-    typeof window.fbq === "function"
-  ){
-
-    const eventId=
-      createEventId();
-
-
-    fbq(
-      "track",
-      "Subscribe",
-      {
-        content_name:
-          "Gautam Jha Telegram Channel",
-
-        content_category:
-          "Telegram",
-
-        button_location:
-          "join_button"
-      },
-      {
-        eventID:
-          eventId
-      }
-    );
-
-
-    console.log(
-      "Subscribe event sent:",
-      eventId
-    );
-
-  }
-  else{
-
-    console.warn(
-      "Meta Pixel is not available."
-    );
-
-  }
-
-
-  /*
-   * Short delay gives the browser
-   * time to send the tracking request.
-   */
-
-  setTimeout(
+  joinButton.addEventListener(
+    "click",
     function(){
 
-      window.location.href=
-        TELEGRAM_LINK;
+      /* Prevent rapid double-clicks */
 
-    },
-    500
+      if(clickLocked){
+        return;
+      }
+
+      clickLocked=true;
+
+
+      /* Disable button temporarily */
+
+      joinButton.disabled=true;
+
+      joinButton.style.opacity="0.7";
+
+
+      /* CHECK PIXEL */
+
+      if(
+        typeof window.fbq ===
+        "function"
+      ){
+
+        const eventId=
+          createEventId();
+
+
+        /*
+         * SUBSCRIBE EVENT
+         *
+         * This represents the user's
+         * intentional CTA interaction.
+         */
+
+        fbq(
+          "track",
+          "Subscribe",
+          {
+            content_name:
+              "Telegram Channel",
+
+            content_category:
+              "Telegram",
+
+            button_location:
+              "join_button"
+          },
+          {
+            eventID:
+              eventId
+          }
+        );
+
+
+        console.log(
+          "Subscribe event sent:",
+          eventId
+        );
+
+      }else{
+
+        console.warn(
+          "Meta Pixel is not available."
+        );
+
+      }
+
+
+      /*
+       * Give browser a short amount of time
+       * to initiate the Meta request before
+       * leaving the page.
+       */
+
+      setTimeout(
+        function(){
+
+          window.location.href=
+            TELEGRAM_LINK;
+
+        },
+        500
+      );
+
+    }
+
   );
 
 }
 
 </script>
+
 
 </body>
 </html>
