@@ -1,240 +1,854 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Join Gautam Kumar Jha — free stock market education community on Telegram.">
 <title>GAUTAM KUMAR JHA | Official Community</title>
 
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+<!-- =====================================================
+     META PIXEL
+     PIXEL ID: 2175580793303485
+     INSTALLED ONCE ONLY
+     ===================================================== -->
+
+<script>
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
+
+    n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
+
+}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+
+/* ONLY ONE PIXEL INITIALIZATION */
+fbq('init', '2175580793303485');
+
+
+/* PAGEVIEW — FIRES ONCE */
+fbq('track', 'PageView');
+
+</script>
+
+
+<noscript>
+<img
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=2175580793303485&ev=PageView&noscript=1"
+/>
+</noscript>
+
+<!-- END META PIXEL -->
+
+
+<link
+    rel="preload"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+>
+
+<noscript>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+>
+</noscript>
+
 
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+}
+
 
 /* Full-screen, no card wrapper */
+
 body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 32px 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #fdf3f0;
-  background: radial-gradient(circle at 50% 15%, #3a0f14 0%, #100608 60%);
-  text-align: center;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:32px 24px;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    color:#fdf3f0;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            #3a0f14 0%,
+            #100608 60%
+        );
+
+    text-align:center;
+
 }
 
-.content { width: 100%; max-width: 440px; }
 
-.top-line {
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #B91C3C, #D4AF37);
-  border-radius: 3px;
-  margin: 0 auto 18px;
-}
+.content{
 
-.avatar {
-  width: 116px;
-  height: 116px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #B91C3C;
-  background: #2a1418;
-  margin: 0 auto 18px;
-  display: block;
-  box-shadow: 0 0 0 8px rgba(185, 28, 60, 0.08);
+    width:100%;
+
+    max-width:440px;
+
 }
 
-h1 {
-  font-size: 27px;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  color: #ffffff;
-  margin-bottom: 6px;
-}
-.subtitle {
-  font-size: 13.5px;
-  color: #d1a8a8;
-  margin-bottom: 22px;
+
+.top-line{
+
+    width:60px;
+
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #B91C3C,
+            #D4AF37
+        );
+
+    border-radius:3px;
+
+    margin:0 auto 18px;
+
 }
 
-.verified-line {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11.5px;
-  color: #e8d28a;
-  margin-bottom: 26px;
-}
-.verified-line i { color: #D4AF37; }
 
-.stat-row {
-  display: flex;
-  justify-content: center;
-  gap: 26px;
-  margin-bottom: 28px;
-  padding: 16px 0;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.stat-row .s strong {
-  display: block;
-  font-size: 19px;
-  font-weight: 900;
-  color: #B91C3C;
-}
-.stat-row .s span { font-size: 10.5px; color: #a87b7b; }
+.avatar{
 
-/* Full-width, extra-large CTA - official Telegram blue */
-.cta-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  width: 100%;
-  padding: 25px;
-  border-radius: 18px;
-  background: #0088CC;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 900;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  box-shadow: 0 16px 40px rgba(0, 136, 204, 0.45);
-  transition: transform 0.15s ease, filter 0.2s ease;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-.cta-btn:active { transform: scale(0.97); }
-.cta-btn:hover { filter: brightness(1.1); }
-.cta-btn i.plane { font-size: 20px; }
+    width:116px;
 
-.timer-text {
-  font-size: 12.5px;
-  color: #8a6c6c;
-  margin-bottom: 26px;
-}
-.timer-text span { color: #B91C3C; font-weight: 700; }
+    height:116px;
 
-.checklist {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-  text-align: left;
-  margin-bottom: 8px;
-}
-.check-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13.5px;
-  color: #f0dcdc;
-}
-.check-item i { color: #D4AF37; font-size: 13px; flex-shrink: 0; }
+    border-radius:50%;
 
-.disclaimer {
-  margin-top: 24px;
-  font-size: 10.5px;
-  line-height: 1.7;
-  color: #5c4040;
-  padding: 14px 6px 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
+    object-fit:cover;
+
+    border:4px solid #B91C3C;
+
+    background:#2a1418;
+
+    margin:0 auto 18px;
+
+    display:block;
+
+    box-shadow:
+        0 0 0 8px rgba(185,28,60,0.08);
+
 }
+
+
+h1{
+
+    font-size:27px;
+
+    font-weight:900;
+
+    letter-spacing:-0.5px;
+
+    color:#ffffff;
+
+    margin-bottom:6px;
+
+}
+
+
+.subtitle{
+
+    font-size:13.5px;
+
+    color:#d1a8a8;
+
+    margin-bottom:22px;
+
+}
+
+
+.verified-line{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:11.5px;
+
+    color:#e8d28a;
+
+    margin-bottom:26px;
+
+}
+
+
+.verified-line i{
+
+    color:#D4AF37;
+
+}
+
+
+.stat-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:26px;
+
+    margin-bottom:28px;
+
+    padding:16px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+}
+
+
+.stat-row .s strong{
+
+    display:block;
+
+    font-size:19px;
+
+    font-weight:900;
+
+    color:#B91C3C;
+
+}
+
+
+.stat-row .s span{
+
+    font-size:10.5px;
+
+    color:#a87b7b;
+
+}
+
+
+/* Full-width, extra-large CTA */
+
+.cta-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    width:100%;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:#0088CC;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:900;
+
+    text-decoration:none;
+
+    letter-spacing:0.3px;
+
+    box-shadow:
+        0 16px 40px rgba(0,136,204,0.45);
+
+    transition:
+        transform 0.15s ease,
+        filter 0.2s ease,
+        opacity 0.2s ease;
+
+    cursor:pointer;
+
+    margin-bottom:10px;
+
+    -webkit-tap-highlight-color:transparent;
+
+    touch-action:manipulation;
+
+}
+
+
+.cta-btn:active{
+
+    transform:scale(0.97);
+
+}
+
+
+.cta-btn:hover{
+
+    filter:brightness(1.1);
+
+}
+
+
+.cta-btn.processing{
+
+    opacity:0.7;
+
+    pointer-events:none;
+
+}
+
+
+.cta-btn i.plane{
+
+    font-size:20px;
+
+}
+
+
+.timer-text{
+
+    font-size:12.5px;
+
+    color:#8a6c6c;
+
+    margin-bottom:26px;
+
+}
+
+
+.timer-text span{
+
+    color:#B91C3C;
+
+    font-weight:700;
+
+}
+
+
+.checklist{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:11px;
+
+    text-align:left;
+
+    margin-bottom:8px;
+
+}
+
+
+.check-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:13.5px;
+
+    color:#f0dcdc;
+
+}
+
+
+.check-item i{
+
+    color:#D4AF37;
+
+    font-size:13px;
+
+    flex-shrink:0;
+
+}
+
+
+.disclaimer{
+
+    margin-top:24px;
+
+    font-size:10.5px;
+
+    line-height:1.7;
+
+    color:#5c4040;
+
+    padding:14px 6px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,0.06);
+
+}
+
 </style>
 
 </head>
+
+
 <body>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1577547547436764');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1577547547436764&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
 <div class="content">
 
-  <div class="top-line"></div>
+    <div class="top-line"></div>
 
-  <img src="https://github.com/itssky72001-ui/Gautam/releases/download/Gautam/download.jfif" class="avatar" alt="Profile Image" width="116" height="116" decoding="async" fetchpriority="high">
 
-  <h1>GAUTAM KUMAR JHA</h1>
-  <p class="subtitle">Stock Market &amp; Financial Educator</p>
+    <img
+        src="https://github.com/itssky72001-ui/Gautam/releases/download/Gautam/download.jfif"
+        class="avatar"
+        alt="Profile Image"
+        width="116"
+        height="116"
+        decoding="async"
+        fetchpriority="high"
+    >
 
-  <div class="verified-line"><i class="fas fa-shield-halved"></i> Verified Educational Community</div>
 
-  <div class="stat-row">
-    <div class="s"><strong>100%</strong><span>Beginner</span></div>
-    <div class="s"><strong>Daily</strong><span>Updates</span></div>
-    <div class="s"><strong>Free</strong><span>Access</span></div>
-  </div>
+    <h1>
+        GAUTAM KUMAR JHA
+    </h1>
 
-  <a class="cta-btn" id="telegramBtn" href="https://t.me/+2Mwqp-pUmiljODc1" rel="noopener noreferrer">
-    <i class="fab fa-telegram-plane plane"></i> Join Free Telegram Community
-  </a>
-  <div class="timer-text">
-    ⏳ Auto-redirecting in <span id="count">8</span>s...
-  </div>
 
-  <div class="checklist">
-    <div class="check-item"><i class="fas fa-check-circle"></i> Daily market updates &amp; trading insights</div>
-    <div class="check-item"><i class="fas fa-check-circle"></i> Free educational content, no hidden fees</div>
-    <div class="check-item"><i class="fas fa-check-circle"></i> Easy explanations built for beginners</div>
-    <div class="check-item"><i class="fas fa-check-circle"></i> Full, active community support</div>
-  </div>
+    <p class="subtitle">
+        Stock Market &amp; Financial Educator
+    </p>
 
-  <div class="disclaimer">
-    <strong>Disclaimer:</strong> This platform is for educational and informational purposes only. We do not provide any financial advice and do not guarantee any profits. Stock market investments carry risk — please do your own research before making any investment decisions.
-  </div>
 
-  <div style="text-align:center; margin-top: 16px;">
-    <a href="https://t.me/srsagency" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:6px 14px; border-radius:20px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#8a6c6c; font-size:10px; font-weight:600; text-decoration:none; letter-spacing:0.3px;">
-      Ads By SRS ADS
+    <div class="verified-line">
+
+        <i class="fas fa-shield-halved"></i>
+
+        Verified Educational Community
+
+    </div>
+
+
+    <div class="stat-row">
+
+        <div class="s">
+
+            <strong>
+                100%
+            </strong>
+
+            <span>
+                Beginner
+            </span>
+
+        </div>
+
+
+        <div class="s">
+
+            <strong>
+                Daily
+            </strong>
+
+            <span>
+                Updates
+            </span>
+
+        </div>
+
+
+        <div class="s">
+
+            <strong>
+                Free
+            </strong>
+
+            <span>
+                Access
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        class="cta-btn"
+        id="telegramBtn"
+        href="https://t.me/+2Mwqp-pUmiljODc1"
+        rel="noopener noreferrer"
+    >
+
+        <i class="fab fa-telegram-plane plane"></i>
+
+        Join Free Telegram Community
+
     </a>
-  </div>
+
+
+    <div class="timer-text">
+
+        ⏳ Auto-redirecting in
+        <span id="count">8</span>s...
+
+    </div>
+
+
+    <div class="checklist">
+
+        <div class="check-item">
+
+            <i class="fas fa-check-circle"></i>
+
+            Daily market updates &amp; trading insights
+
+        </div>
+
+
+        <div class="check-item">
+
+            <i class="fas fa-check-circle"></i>
+
+            Free educational content, no hidden fees
+
+        </div>
+
+
+        <div class="check-item">
+
+            <i class="fas fa-check-circle"></i>
+
+            Easy explanations built for beginners
+
+        </div>
+
+
+        <div class="check-item">
+
+            <i class="fas fa-check-circle"></i>
+
+            Full, active community support
+
+        </div>
+
+    </div>
+
+
+    <div class="disclaimer">
+
+        <strong>Disclaimer:</strong>
+
+        This platform is for educational and informational purposes only.
+
+        We do not provide any financial advice and do not guarantee any profits.
+
+        Stock market investments carry risk — please do your own research
+
+        before making any investment decisions.
+
+    </div>
+
+
+    <div style="
+        text-align:center;
+        margin-top:16px;
+    ">
+
+        <a
+            href="https://t.me/srsagency"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="
+                display:inline-block;
+                padding:6px 14px;
+                border-radius:20px;
+                background:rgba(255,255,255,0.06);
+                border:1px solid rgba(255,255,255,0.12);
+                color:#8a6c6c;
+                font-size:10px;
+                font-weight:600;
+                text-decoration:none;
+                letter-spacing:0.3px;
+            "
+        >
+
+            Ads By SRS ADS
+
+        </a>
+
+    </div>
+
 </div>
 
+
 <script>
-(function() {
-  const telegramLink = "https://t.me/+2Mwqp-pUmiljODc1";
-  let time = 8;
-  const counter = document.getElementById("count");
-  const telegramBtn = document.getElementById("telegramBtn");
 
-  telegramBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-    if (window.fbq) {
-      fbq('track', 'Subscribe', { content_name: 'Telegram Community', button_click: true }, { eventID: 'telegram_subscribe_' + Date.now() });
-    }
-    setTimeout(() => {
-      window.location.href = telegramLink;
-    }, 200);
-  });
+/* =========================================================
+   TELEGRAM + META PIXEL TRACKING
+   ========================================================= */
 
-  const countdown = setInterval(() => {
-    time--;
-    counter.textContent = time;
-    if (time <= 0) {
-      clearInterval(countdown);
-      window.location.href = telegramLink;
-    }
-  }, 1000);
-})();
+
+/* Telegram destination */
+
+const telegramLink =
+    "https://t.me/+2Mwqp-pUmiljODc1";
+
+
+/* CTA element */
+
+const telegramBtn =
+    document.getElementById("telegramBtn");
+
+
+/* Prevent double-click */
+
+let clickLocked = false;
+
+
+/* Create unique event ID */
+
+function createEventId(){
+
+    return (
+        "tg_subscribe_" +
+        Date.now() +
+        "_" +
+        Math.random()
+            .toString(36)
+            .substring(2,10)
+    );
+
+}
+
+
+/* =========================================================
+   INTENTIONAL CTA CLICK
+   ========================================================= */
+
+if(telegramBtn){
+
+    telegramBtn.addEventListener(
+        "click",
+        function(event){
+
+            /*
+             * Stop multiple rapid clicks.
+             */
+
+            if(clickLocked){
+
+                event.preventDefault();
+
+                return;
+
+            }
+
+
+            clickLocked = true;
+
+
+            /*
+             * Stop normal navigation temporarily
+             * so the Pixel request gets a chance
+             * to be sent.
+             */
+
+            event.preventDefault();
+
+
+            telegramBtn.classList.add(
+                "processing"
+            );
+
+
+            /*
+             * SUBSCRIBE EVENT
+             *
+             * Fires ONLY when the user
+             * intentionally clicks the
+             * Telegram CTA.
+             */
+
+            if(
+                typeof window.fbq === "function"
+            ){
+
+                const eventId =
+                    createEventId();
+
+
+                fbq(
+                    "track",
+                    "Subscribe",
+                    {
+                        content_name:
+                            "Telegram Community",
+
+                        content_category:
+                            "Telegram",
+
+                        button_location:
+                            "main_cta"
+                    },
+                    {
+                        eventID:
+                            eventId
+                    }
+                );
+
+
+                console.log(
+                    "Subscribe event sent:",
+                    eventId
+                );
+
+            }
+            else{
+
+                console.warn(
+                    "Meta Pixel is not available."
+                );
+
+            }
+
+
+            /*
+             * Give Meta Pixel time to send
+             * the browser request.
+             */
+
+            setTimeout(
+                function(){
+
+                    window.location.href =
+                        telegramLink;
+
+                },
+                500
+            );
+
+        },
+        {
+            passive:false
+        }
+    );
+
+}
+
+
+/* =========================================================
+   AUTO REDIRECT COUNTDOWN
+   ========================================================= */
+
+let time = 8;
+
+const counter =
+    document.getElementById("count");
+
+
+const countdown =
+    setInterval(
+        function(){
+
+            /*
+             * If user has already clicked
+             * the CTA, stop countdown.
+             */
+
+            if(clickLocked){
+
+                clearInterval(
+                    countdown
+                );
+
+                return;
+
+            }
+
+
+            time--;
+
+            if(counter){
+
+                counter.textContent =
+                    time;
+
+            }
+
+
+            /*
+             * Auto redirect does NOT fire
+             * Subscribe.
+             *
+             * This is intentional so that
+             * automatic navigation is not
+             * counted as a button click.
+             */
+
+            if(time <= 0){
+
+                clearInterval(
+                    countdown
+                );
+
+
+                window.location.href =
+                    telegramLink;
+
+            }
+
+        },
+        1000
+    );
+
 </script>
+
 
 </body>
 </html>
