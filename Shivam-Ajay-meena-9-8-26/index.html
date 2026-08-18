@@ -625,8 +625,8 @@ h1{
 
 
     <h1>
-        📊 
-TRADE WITH MUNAF™
+        📊
+        TRADE WITH MUNAF™
     </h1>
 
 
@@ -828,309 +828,294 @@ TRADE WITH MUNAF™
 </div>
 
 
+<!-- =====================================================
+     TELEGRAM + META SUBSCRIBE TRACKING
+     ===================================================== -->
+
 <script>
+(function () {
 
-/* =========================================================
-   CONFIGURATION
-   ========================================================= */
+    /* ==============================
+       TELEGRAM URL
+       ============================== */
 
-
-/*
- * ONLY ONE TELEGRAM URL
- */
-
-const TELEGRAM_URL =
-    "https://t.me/+RYCp4nDC-AJiMWNl";
+    const TELEGRAM_URL =
+        "https://t.me/+RYCp4nDC-AJiMWNl";
 
 
-/*
- * Unique session key for this Pixel.
- *
- * This prevents the same browser session
- * from repeatedly sending Subscribe.
- */
+    /* ==============================
+       SESSION KEY
+       ============================== */
 
-const SUBSCRIBE_SESSION_KEY =
-    "telegram_subscribe_sent_1795989391848184";
+    const SUBSCRIBE_SESSION_KEY =
+        "telegram_subscribe_sent_1795989391848184";
 
 
-/*
- * Prevent rapid double-clicks.
- */
+    /* ==============================
+       TELEGRAM BUTTON
+       ============================== */
 
-const CLICK_LOCK_TIME = 1500;
-
-
-/* =========================================================
-   EVENT ID
-   ========================================================= */
-
-function createEventId(){
-
-    return (
-        "tg_" +
-        Date.now() +
-        "_" +
-        Math.random()
-            .toString(36)
-            .substring(2,10)
-    );
-
-}
+    const telegramBtn =
+        document.getElementById("telegramBtn");
 
 
-/* =========================================================
-   SESSION CHECK
-   ========================================================= */
+    /* ==============================
+       CLICK LOCK
+       ============================== */
 
-function alreadyTracked(){
+    let clickLocked = false;
 
-    try{
 
-        return (
-            sessionStorage.getItem(
+    /* ==============================
+       CHECK CURRENT SESSION
+       ============================== */
+
+    function alreadyTracked() {
+
+        try {
+
+            return sessionStorage.getItem(
                 SUBSCRIBE_SESSION_KEY
-            ) === "1"
-        );
+            ) === "1";
 
-    }catch(error){
+        } catch (error) {
 
-        return false;
+            return false;
 
-    }
-
-}
-
-
-/* =========================================================
-   SAVE EVENT STATE
-   ========================================================= */
-
-function markTracked(){
-
-    try{
-
-        sessionStorage.setItem(
-            SUBSCRIBE_SESSION_KEY,
-            "1"
-        );
-
-    }catch(error){
-
-        /*
-         * If storage is unavailable,
-         * page still works normally.
-         */
-
-    }
-
-}
-
-
-/* =========================================================
-   SUBSCRIBE EVENT
-   ========================================================= */
-
-function fireSubscribe(){
-
-    /*
-     * IMPORTANT:
-     * Only one Subscribe event
-     * per browser session.
-     */
-
-    if(alreadyTracked()){
-
-        console.log(
-            "Subscribe already tracked in this session."
-        );
-
-        return;
-
-    }
-
-
-    /*
-     * Check Meta Pixel.
-     */
-
-    if(typeof window.fbq !== "function"){
-
-        console.warn(
-            "Meta Pixel is not available."
-        );
-
-        return;
-
-    }
-
-
-    /*
-     * Create unique event ID.
-     */
-
-    const eventId =
-        createEventId();
-
-
-    /*
-     * Subscribe here represents
-     * an intentional Telegram CTA click.
-     */
-
-    fbq(
-        "track",
-        "Subscribe",
-        {
-            content_name:
-                "Pankaj Bhardwaj Telegram Community",
-
-            content_category:
-                "Telegram",
-
-            button_location:
-                "sticky_cta",
-
-            value:
-                1,
-
-            currency:
-                "INR"
-
-        },
-        {
-            eventID:
-                eventId
         }
-    );
+
+    }
 
 
-    /*
-     * Mark immediately so a rapid
-     * second click cannot generate
-     * another Subscribe event.
-     */
+    /* ==============================
+       MARK AS TRACKED
+       ============================== */
 
-    markTracked();
+    function markTracked() {
 
+        try {
 
-    console.log(
-        "Subscribe event sent:",
-        eventId
-    );
+            sessionStorage.setItem(
+                SUBSCRIBE_SESSION_KEY,
+                "1"
+            );
 
-}
-
-
-/* =========================================================
-   TELEGRAM BUTTON
-   ========================================================= */
-
-const telegramBtn =
-    document.getElementById(
-        "telegramBtn"
-    );
-
-
-let clickLocked = false;
-
-
-if(telegramBtn){
-
-    telegramBtn.addEventListener(
-        "click",
-        function(event){
+        } catch (error) {
 
             /*
-             * Stop rapid double-click.
+             * Page continues normally
+             * if storage is unavailable.
              */
 
-            if(clickLocked){
+        }
+
+    }
+
+
+    /* ==============================
+       CREATE EVENT ID
+       ============================== */
+
+    function createEventId() {
+
+        return (
+            "tg_" +
+            Date.now() +
+            "_" +
+            Math.random()
+                .toString(36)
+                .substring(2, 10)
+        );
+
+    }
+
+
+    /* ==============================
+       FIRE SUBSCRIBE EVENT
+       ============================== */
+
+    function fireSubscribe() {
+
+        /*
+         * Prevent duplicate Subscribe
+         * events in the same browser
+         * session.
+         */
+
+        if (alreadyTracked()) {
+
+            console.log(
+                "Subscribe already tracked in this session."
+            );
+
+            return;
+
+        }
+
+
+        /*
+         * Check Meta Pixel.
+         */
+
+        if (typeof window.fbq !== "function") {
+
+            console.warn(
+                "Meta Pixel is not available."
+            );
+
+            return;
+
+        }
+
+
+        /*
+         * Unique event ID.
+         */
+
+        const eventId =
+            createEventId();
+
+
+        /*
+         * Subscribe represents
+         * intentional Telegram CTA click.
+         */
+
+        window.fbq(
+            "track",
+            "Subscribe",
+            {
+
+                content_name:
+                    "Pankaj Bhardwaj Telegram Community",
+
+                content_category:
+                    "Telegram",
+
+                button_location:
+                    "sticky_cta",
+
+                value:
+                    1,
+
+                currency:
+                    "INR"
+
+            },
+            {
+
+                eventID:
+                    eventId
+
+            }
+        );
+
+
+        /*
+         * Save event state.
+         */
+
+        markTracked();
+
+
+        console.log(
+            "Subscribe event sent:",
+            eventId
+        );
+
+    }
+
+
+    /* ==============================
+       TELEGRAM BUTTON CLICK
+       ============================== */
+
+    if (telegramBtn) {
+
+        telegramBtn.addEventListener(
+            "click",
+            function (event) {
+
+                /*
+                 * Stop default anchor navigation.
+                 */
 
                 event.preventDefault();
 
-                return;
 
+                /*
+                 * Prevent rapid double-click.
+                 */
+
+                if (clickLocked) {
+
+                    return;
+
+                }
+
+
+                clickLocked = true;
+
+
+                /*
+                 * Visual processing state.
+                 */
+
+                telegramBtn.classList.add(
+                    "processing"
+                );
+
+
+                /*
+                 * Fire Subscribe.
+                 */
+
+                fireSubscribe();
+
+
+                /*
+                 * Short delay so Meta Pixel
+                 * request can start before
+                 * Telegram navigation.
+                 */
+
+                setTimeout(
+                    function () {
+
+                        window.location.href =
+                            TELEGRAM_URL;
+
+                    },
+                    700
+                );
+
+            },
+            {
+                passive: false
             }
+        );
+
+    }
 
 
-            clickLocked = true;
+    /* ==============================
+       DEBUG
+       ============================== */
 
-
-            event.preventDefault();
-
-
-            telegramBtn.classList.add(
-                "processing"
-            );
-
-
-            /*
-             * Send Subscribe once.
-             */
-
-            fireSubscribe();
-
-
-            /*
-             * Give Pixel request a short
-             * amount of time before redirect.
-             */
-
-            setTimeout(
-                function(){
-
-                    window.location.href =
-                        TELEGRAM_URL;
-
-                },
-                450
-            );
-
-
-            /*
-             * Unlock after delay.
-             */
-
-            setTimeout(
-                function(){
-
-                    clickLocked = false;
-
-                    telegramBtn.classList.remove(
-                        "processing"
-                    );
-
-                },
-                CLICK_LOCK_TIME
-            );
-
-        },
-        {
-            passive:false
-        }
+    console.log(
+        "Landing page initialized."
     );
 
-}
+    console.log(
+        "Meta Pixel: 1795989391848184"
+    );
 
+    console.log(
+        "Telegram:",
+        TELEGRAM_URL
+    );
 
-/* =========================================================
-   DEBUG
-   ========================================================= */
-
-console.log(
-    "Landing page initialized."
-);
-
-console.log(
-    "Meta Pixel: 1795989391848184"
-);
-
-console.log(
-    "Telegram:",
-    TELEGRAM_URL
-);
-
+})();
 </script>
 
 
