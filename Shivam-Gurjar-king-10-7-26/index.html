@@ -11,7 +11,64 @@ content="Join Pankaj Bhardwaj — free stock market education community on Teleg
 <title>Pankaj Bhardwaj | Stock Market Education</title>
 
 
-<!-- META PIXEL --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1416026647116055');fbq('track','PageView');</script><noscript><img height='1' width='1' style='display:none' src='https://www.facebook.com/tr?id=1416026647116055&ev=PageView&noscript=1'/></noscript><!-- END META PIXEL -->
+<!-- =====================================================
+     META PIXEL
+     PIXEL ID: 2520545358390311
+     INSTALLED ONCE ONLY
+     ===================================================== -->
+
+<script>
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
+
+    n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
+
+}
+(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+
+/* ONLY ONE PIXEL */
+
+fbq('init','2520545358390311');
+
+
+/* ONLY ONE PAGEVIEW */
+
+fbq('track','PageView');
+
+</script>
+
+
+<noscript>
+<img
+height="1"
+width="1"
+style="display:none"
+src="https://www.facebook.com/tr?id=2520545358390311&ev=PageView&noscript=1"
+/>
+</noscript>
+
+<!-- END META PIXEL -->
 
 
 <link
@@ -761,7 +818,166 @@ h1{
 </div>
 
 
-<script>const TELEGRAM_LINK="https://t.me/+TdkwxQKz5wsxYzE9";const telegramBtn=document.getElementById("telegramBtn");let clickLocked=false;function createEventId(){return "tg_subscribe_"+Date.now()+"_"+Math.random().toString(36).slice(2,10)}function trackTelegramSubscribe(){if(typeof window.fbq!=="function")return;fbq("track","Subscribe",{content_name:"Pankaj Bhardwaj Telegram Community",content_category:"Telegram",button_location:"sticky_cta"},{eventID:createEventId()})}if(telegramBtn){telegramBtn.addEventListener("click",function(e){if(clickLocked){e.preventDefault();return}clickLocked=true;e.preventDefault();telegramBtn.classList.add("processing");trackTelegramSubscribe();setTimeout(function(){window.location.href=TELEGRAM_LINK},500)},{passive:false})}</script>
+<script>
+
+/* =========================================================
+   TELEGRAM CONFIG
+   ========================================================= */
+
+const TELEGRAM_LINK =
+    "https://t.me/+TdkwxQKz5wsxYzE9";
+
+const telegramBtn =
+    document.getElementById("telegramBtn");
+
+
+/* =========================================================
+   CLICK LOCK
+   Prevents accidental double-clicks from
+   creating multiple Subscribe events.
+   ========================================================= */
+
+let clickLocked = false;
+
+
+/* =========================================================
+   UNIQUE EVENT ID
+   ========================================================= */
+
+function createEventId(){
+
+    return (
+        "tg_subscribe_" +
+        Date.now() +
+        "_" +
+        Math.random()
+            .toString(36)
+            .slice(2,10)
+    );
+
+}
+
+
+/* =========================================================
+   SUBSCRIBE EVENT
+   Fires ONLY after intentional CTA click.
+   ========================================================= */
+
+function trackTelegramSubscribe(){
+
+    if(typeof window.fbq !== "function"){
+
+        console.warn(
+            "Meta Pixel is not available."
+        );
+
+        return;
+
+    }
+
+
+    const eventId =
+        createEventId();
+
+
+    fbq(
+        "track",
+        "Subscribe",
+        {
+            content_name:
+                "Pankaj Bhardwaj Telegram Community",
+
+            content_category:
+                "Telegram",
+
+            button_location:
+                "sticky_cta"
+        },
+        {
+            eventID:
+                eventId
+        }
+    );
+
+
+    console.log(
+        "Subscribe event sent:",
+        eventId
+    );
+
+}
+
+
+/* =========================================================
+   TELEGRAM CTA HANDLER
+   ONE HANDLER ONLY
+   ========================================================= */
+
+if(telegramBtn){
+
+    telegramBtn.addEventListener(
+        "click",
+        function(event){
+
+            /* Block duplicate clicks */
+
+            if(clickLocked){
+
+                event.preventDefault();
+
+                return;
+
+            }
+
+
+            clickLocked = true;
+
+
+            /*
+             * Stop default navigation temporarily
+             * so Pixel has time to send the event.
+             */
+
+            event.preventDefault();
+
+
+            telegramBtn.classList.add(
+                "processing"
+            );
+
+
+            /*
+             * Subscribe is counted ONLY
+             * for an intentional CTA click.
+             */
+
+            trackTelegramSubscribe();
+
+
+            /*
+             * Navigate to Telegram after
+             * a short delay.
+             */
+
+            setTimeout(
+                function(){
+
+                    window.location.href =
+                        TELEGRAM_LINK;
+
+                },
+                500
+            );
+
+        },
+        {
+            passive:false
+        }
+    );
+
+}
+
+</script>
 
 
 </body>
