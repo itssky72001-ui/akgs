@@ -1,22 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Join Gautam Kumar Jha — free stock market education community on Telegram.">
-<title> PANKAJ BHARDWAJ| Official Community</title>
 
-<link rel="preload"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-as="style"
-onload="this.onload=null;this.rel='stylesheet'">
+<meta name="description"
+content="Join Gautam Kumar Jha — free stock market education community on Telegram.">
+
+<title>PANKAJ BHARDWAJ | Official Community</title>
+
+
+<!-- =====================================================
+     META PIXEL
+     PIXEL ID: 962277323444667
+     ONLY ONE PIXEL + ONE PAGEVIEW
+====================================================== -->
+
+<script>
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
+
+    n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
+
+}
+(
+window,
+document,
+'script',
+'https://connect.facebook.net/en_US/fbevents.js'
+);
+
+
+/* Initialize ONLY this pixel */
+fbq('init','962277323444667');
+
+
+/* PageView ONLY ONCE */
+fbq('track','PageView');
+
+</script>
+
 
 <noscript>
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<img
+height="1"
+width="1"
+style="display:none"
+src="https://www.facebook.com/tr?id=962277323444667&ev=PageView&noscript=1"
+/>
+
 </noscript>
 
+<!-- END META PIXEL -->
+
+
+<link
+rel="preload"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+as="style"
+onload="this.onload=null;this.rel='stylesheet'"
+>
+
+<noscript>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+>
+
+</noscript>
+
+
 <style>
+
 *,*::before,*::after{
 margin:0;
 padding:0;
@@ -31,10 +109,21 @@ body{
 min-height:100vh;
 display:flex;
 justify-content:center;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif;
+
 color:#eaf6ff;
+
 background:#060D16;
 }
+
 
 .wrapper{
 width:100%;
@@ -43,26 +132,41 @@ padding-bottom:92px;
 position:relative;
 }
 
+
 .card{
 padding:20px 20px 8px;
 }
+
+
+/* =========================
+   VERIFIED BAR
+========================= */
 
 .mini-bar{
 display:flex;
 align-items:center;
 justify-content:center;
 gap:6px;
+
 font-size:10px;
 font-weight:800;
+
 letter-spacing:.8px;
 text-transform:uppercase;
+
 color:#2AABEE;
+
 margin-bottom:20px;
 }
 
 .mini-bar i{
 font-size:9px;
 }
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero-center{
 text-align:center;
@@ -72,18 +176,26 @@ margin-bottom:20px;
 .avatar{
 width:88px;
 height:88px;
+
 border-radius:50%;
 object-fit:cover;
+
 border:3px solid #2AABEE;
+
 background:#12314a;
+
 margin:0 auto 12px;
+
 display:block;
 }
+
 
 h1{
 font-size:20px;
 font-weight:900;
+
 color:#ffffff;
+
 margin-bottom:4px;
 }
 
@@ -92,12 +204,22 @@ font-size:12px;
 color:#9fc4de;
 }
 
+
+/* =========================
+   FEATURES
+========================= */
+
 .feature-strip{
 display:flex;
+
 gap:10px;
+
 overflow-x:auto;
+
 padding:4px 2px 16px;
+
 margin-bottom:4px;
+
 scrollbar-width:none;
 }
 
@@ -105,309 +227,486 @@ scrollbar-width:none;
 display:none;
 }
 
+
 .feature-card{
 flex:0 0 auto;
+
 width:118px;
-background:rgba(42,171,238,.06);
-border:1px solid rgba(42,171,238,.2);
+
+background:
+rgba(42,171,238,.06);
+
+border:
+1px solid rgba(42,171,238,.2);
+
 border-radius:14px;
+
 padding:14px 12px;
+
 text-align:center;
 }
+
 
 .feature-card .ic{
 width:36px;
 height:36px;
+
 border-radius:10px;
-background:rgba(42,171,238,.12);
+
+background:
+rgba(42,171,238,.12);
+
 color:#2AABEE;
+
 display:flex;
+
 align-items:center;
 justify-content:center;
+
 font-size:15px;
+
 margin:0 auto 8px;
 }
 
+
 .feature-card span{
 font-size:10.5px;
+
 color:#d7e9f5;
+
 line-height:1.35;
 }
 
+
+/* =========================
+   STATS
+========================= */
+
 .stat-line{
 display:flex;
+
 justify-content:center;
+
 gap:22px;
+
 padding:14px 0;
+
 margin-bottom:16px;
-border-top:1px solid rgba(255,255,255,.06);
-border-bottom:1px solid rgba(255,255,255,.06);
+
+border-top:
+1px solid rgba(255,255,255,.06);
+
+border-bottom:
+1px solid rgba(255,255,255,.06);
 }
+
 
 .stat-line .s{
 text-align:center;
 }
 
+
 .stat-line .s strong{
 display:block;
+
 font-size:16px;
+
 font-weight:900;
+
 color:#2AABEE;
 }
 
+
 .stat-line .s span{
 font-size:9.5px;
+
 color:#7fa9c4;
 }
 
+
+/* =========================
+   TESTIMONIAL
+========================= */
+
 .testimonial{
 text-align:center;
+
 padding:0 12px;
+
 margin-bottom:16px;
 }
 
+
 .testimonial p{
 font-size:11.5px;
+
 font-style:italic;
+
 color:#c7e0f0;
+
 margin-bottom:8px;
 }
 
+
 .dots{
 display:flex;
+
 justify-content:center;
+
 gap:5px;
 }
+
 
 .dots span{
 width:5px;
 height:5px;
+
 border-radius:50%;
-background:rgba(42,171,238,.3);
+
+background:
+rgba(42,171,238,.3);
 }
+
 
 .dots span.active{
 background:#2AABEE;
 }
 
+
+/* =========================
+   DISCLAIMER
+========================= */
+
 .disclaimer{
 font-size:10px;
+
 line-height:1.6;
+
 color:#3d5468;
+
 text-align:center;
+
 padding:4px 8px 0;
 }
 
+
+/* =========================
+   STICKY CTA
+========================= */
+
 .sticky-cta{
 position:fixed;
+
 bottom:0;
 left:0;
 right:0;
+
 display:flex;
+
 justify-content:center;
-padding:14px 16px calc(14px + env(safe-area-inset-bottom));
-background:linear-gradient(180deg,rgba(6,16,24,0) 0%,#060D16 35%);
+
+padding:
+14px
+16px
+calc(14px + env(safe-area-inset-bottom));
+
+background:
+linear-gradient(
+180deg,
+rgba(6,16,24,0) 0%,
+#060D16 35%
+);
+
 z-index:10;
 }
 
+
 .sticky-cta-inner{
 width:100%;
+
 max-width:388px;
 }
 
+
 .cta-btn{
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 gap:10px;
+
 width:100%;
+
 padding:16px;
+
 border-radius:14px;
-background:linear-gradient(135deg,#2AABEE 0%,#0088CC 100%);
+
+background:
+linear-gradient(
+135deg,
+#2AABEE 0%,
+#0088CC 100%
+);
+
 color:#ffffff;
+
 font-size:14.5px;
+
 font-weight:900;
+
 text-decoration:none;
+
 letter-spacing:.3px;
+
 text-transform:uppercase;
+
 box-shadow:
 0 0 0 5px rgba(42,171,238,.15),
 0 16px 34px rgba(42,171,238,.4);
+
 animation:pulse-glow 1.8s ease-in-out infinite;
-transition:transform .15s ease;
+
+transition:
+transform .15s ease,
+opacity .15s ease;
+
 cursor:pointer;
+
+-webkit-tap-highlight-color:transparent;
+
+touch-action:manipulation;
 }
+
 
 .cta-btn:active{
 transform:scale(.96);
 }
 
+
+.cta-btn.processing{
+opacity:.65;
+
+pointer-events:none;
+
+animation:none;
+}
+
+
 @keyframes pulse-glow{
+
 0%,100%{
 box-shadow:
 0 0 0 5px rgba(42,171,238,.15),
 0 16px 34px rgba(42,171,238,.4);
 }
+
 50%{
 box-shadow:
 0 0 0 10px rgba(42,171,238,.25),
 0 16px 40px rgba(42,171,238,.6);
 }
+
 }
+
+
+/* =========================
+   TIMER
+========================= */
 
 .timer-text{
 text-align:center;
+
 margin-top:8px;
+
 font-size:11px;
+
 color:#4d7189;
 }
 
+
 .timer-text span{
 color:#2AABEE;
+
 font-weight:700;
 }
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+.wrapper{
+max-width:100%;
+}
+
+}
+
 </style>
+
 </head>
 
+
 <body>
-
-<!-- =====================================================
-     META PIXEL
-     PIXEL ID: 28859469030308399
-====================================================== -->
-
-<script>
-!function(f,b,e,v,n,t,s)
-{
-if(f.fbq)return;
-
-n=f.fbq=function(){
-n.callMethod ?
-n.callMethod.apply(n,arguments) :
-n.queue.push(arguments)
-};
-
-if(!f._fbq)f._fbq=n;
-
-n.push=n;
-n.loaded=!0;
-n.version='2.0';
-n.queue=[];
-
-t=b.createElement(e);
-t.async=!0;
-t.src=v;
-
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}
-(
-window,
-document,
-'script',
-'https://connect.facebook.net/en_US/fbevents.js'
-);
-
-fbq('init','28859469030308399');
-fbq('track','PageView');
-</script>
-
-<noscript>
-<img
-height="1"
-width="1"
-style="display:none"
-src="https://www.facebook.com/tr?id=28859469030308399&ev=PageView&noscript=1"
-/>
-</noscript>
-
-<!-- End Meta Pixel Code -->
 
 
 <div class="wrapper">
 
+
 <div class="card">
 
+
+<!-- VERIFIED -->
+
 <div class="mini-bar">
+
 <i class="fas fa-shield-halved"></i>
+
 Verified Official Community
+
 </div>
+
+
+<!-- PROFILE -->
 
 <div class="hero-center">
 
+
 <img
-src="https://github.com/itssky72001-ui/Pankajb/releases/download/pankaj/images.1.jpg
-"
+src="https://github.com/itssky72001-ui/Pankajb/releases/download/pankaj/images.1.jpg"
 class="avatar"
-alt="Gautam Kumar Jha Profile"
+alt="Pankaj Bhardwaj"
 width="88"
 height="88"
 decoding="async"
 fetchpriority="high"
 >
 
+
 <h1>
-PANKAJ BHARDWAJ WAY2LAABH️</h1>
+PANKAJ BHARDWAJ WAY2LAABH️
+</h1>
+
 
 <p class="subtitle">
 Stock Market &amp; Financial Educator
 </p>
 
+
 </div>
 
+
+<!-- FEATURES -->
 
 <div class="feature-strip">
 
+
 <div class="feature-card">
+
 <div class="ic">
 <i class="fas fa-chart-line"></i>
 </div>
-<span>Daily Market Updates</span>
+
+<span>
+Daily Market Updates
+</span>
+
 </div>
 
+
 <div class="feature-card">
+
 <div class="ic">
 <i class="fas fa-book-open"></i>
 </div>
-<span>Free Educational Content</span>
+
+<span>
+Free Educational Content
+</span>
+
 </div>
 
+
 <div class="feature-card">
+
 <div class="ic">
 <i class="fas fa-bullseye"></i>
 </div>
-<span>Beginner-Friendly Explanations</span>
+
+<span>
+Beginner-Friendly Explanations
+</span>
+
 </div>
 
+
 <div class="feature-card">
+
 <div class="ic">
 <i class="fas fa-users"></i>
 </div>
-<span>Full Community Support</span>
-</div>
+
+<span>
+Full Community Support
+</span>
 
 </div>
 
+
+</div>
+
+
+<!-- STATS -->
 
 <div class="stat-line">
 
-<div class="s">
-<strong>100%</strong>
-<span>Beginner</span>
-</div>
 
 <div class="s">
-<strong>Daily</strong>
-<span>Updates</span>
+
+<strong>
+100%
+</strong>
+
+<span>
+Beginner
+</span>
+
 </div>
+
 
 <div class="s">
-<strong>Free</strong>
-<span>Access</span>
-</div>
+
+<strong>
+Daily
+</strong>
+
+<span>
+Updates
+</span>
 
 </div>
 
+
+<div class="s">
+
+<strong>
+Free
+</strong>
+
+<span>
+Access
+</span>
+
+</div>
+
+
+</div>
+
+
+<!-- TESTIMONIAL -->
 
 <div class="testimonial">
 
@@ -415,34 +714,47 @@ Stock Market &amp; Financial Educator
 "Clear, honest market breakdowns every single day — no fluff."
 </p>
 
+
 <div class="dots">
+
 <span class="active"></span>
+
 <span></span>
+
 <span></span>
-</div>
 
 </div>
 
 </div>
 
+
+<!-- DISCLAIMER -->
 
 <div class="disclaimer">
 
 <strong>Disclaimer:</strong>
+
 This platform is for educational and informational purposes only.
+
 We do not provide any financial advice.
+
 Please do your own research before making any investment decisions.
 
 </div>
 
+
 </div>
 
 
-<!-- Sticky Telegram CTA -->
+<!-- =========================
+     TELEGRAM CTA
+========================= -->
 
 <div class="sticky-cta">
 
+
 <div class="sticky-cta-inner">
+
 
 <a
 class="cta-btn"
@@ -452,95 +764,185 @@ rel="noopener noreferrer"
 >
 
 <i class="fab fa-telegram-plane"></i>
+
 JOIN NOW — IT'S FREE
 
 </a>
 
+
 <div class="timer-text">
-⏳ Auto-redirecting in <span id="count">8</span>s...
+
+Telegram Community
+
 </div>
+
 
 </div>
 
 </div>
 
+
+</div>
+
+
+<!-- =====================================================
+     SINGLE TELEGRAM SUBSCRIBE HANDLER
+
+     IMPORTANT:
+     - No inline onclick
+     - No second Subscribe handler
+     - Double click locked
+     - One click = one Subscribe attempt
+====================================================== -->
 
 <script>
+
 (function(){
 
+"use strict";
+
+
 const telegramLink =
-"https://t.me/+UJ3Mup9g011iMjY1"; 
- 
-let time = 8; 
- 
-const counter = 
-document.getElementById("count"); 
- 
-const telegramBtn = 
-document.getElementById("telegramBtn"); 
- 
- 
-/* Telegram Button Click */ 
- 
-telegramBtn.addEventListener("click",function(e){ 
- 
-e.preventDefault(); 
- 
- 
-/* Send Subscribe event to NEW Pixel */ 
- 
-if(window.fbq){ 
- 
-fbq( 
-'track', 
-'Subscribe', 
-{ 
-content_name:'Telegram Community', 
-button_click:true 
-}, 
-{ 
-eventID:'telegram_subscribe_' + Date.now() 
-} 
-); 
- 
-} 
- 
- 
-/* Redirect to Telegram */ 
- 
-setTimeout(function(){ 
- 
-window.location.href = 
-telegramLink; 
- 
-},200); 
- 
-}); 
- 
- 
-/* 8 Second Auto Redirect */ 
- 
-const countdown = 
-setInterval(function(){ 
- 
-time--; 
- 
-counter.textContent = 
-time; 
- 
-if(time <= 0){ 
- 
-clearInterval(countdown); 
- 
-window.location.href = 
-telegramLink; 
- 
-} 
- 
-},1000); 
- 
-})(); 
-</script> 
- 
+"https://t.me/+UJ3Mup9g011iMjY1";
+
+const telegramBtn =
+document.getElementById("telegramBtn");
+
+
+let clickLocked = false;
+
+
+/*
+Generate a unique event ID.
+This is useful for event deduplication
+if server-side tracking is ever added.
+*/
+
+function createEventId(){
+
+return "tg_subscribe_" +
+Date.now() +
+"_" +
+Math.random()
+.toString(36)
+.substring(2,10);
+
+}
+
+
+/*
+Single Subscribe function.
+There is ONLY ONE place in this page
+where Subscribe is fired.
+*/
+
+function trackSubscribe(){
+
+if(typeof window.fbq !== "function"){
+
+return;
+
+}
+
+
+const eventId =
+createEventId();
+
+
+window.fbq(
+"track",
+"Subscribe",
+{
+content_name:
+"Pankaj Bhardwaj Telegram Community",
+
+content_category:
+"Telegram",
+
+button_location:
+"sticky_cta"
+
+},
+{
+eventID:eventId
+}
+);
+
+}
+
+
+/*
+Telegram CTA click
+*/
+
+if(telegramBtn){
+
+telegramBtn.addEventListener(
+"click",
+function(e){
+
+e.preventDefault();
+
+
+/*
+Prevent double-click /
+multiple rapid clicks.
+*/
+
+if(clickLocked){
+
+return;
+
+}
+
+clickLocked=true;
+
+
+/*
+Disable button visually.
+*/
+
+telegramBtn.classList.add(
+"processing"
+);
+
+
+/*
+Fire Subscribe ONCE.
+*/
+
+trackSubscribe();
+
+
+/*
+Small delay allows the browser
+to send the tracking request
+before leaving the page.
+*/
+
+setTimeout(
+function(){
+
+window.location.href =
+telegramLink;
+
+},
+500
+);
+
+},
+{
+passive:false
+}
+);
+
+}
+
+})();
+
+</script>
+
+
 </body>
+
 </html>
