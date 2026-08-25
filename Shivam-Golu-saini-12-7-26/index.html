@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SRS AGENCY</title>
+
+<title>TOPG</title>
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 <!-- =====================================================
      META PIXEL
-     PIXEL ID: 1562196542302049
-     ONLY ONE PIXEL
+     Pixel: 1054294524007787
+     Installed ONCE only
      ===================================================== -->
 
 <script>
@@ -40,285 +43,216 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s);
 
-}(window,document,'script',
+}(window, document, 'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','1562196542302049');
 
-/* PageView — only once */
-fbq('track','PageView');
+/* Initialize ONLY this pixel */
+fbq('init', '1054294524007787');
+
+
+/* PageView */
+fbq('track', 'PageView');
 
 </script>
 
+
 <noscript>
 <img
-height="1"
-width="1"
-style="display:none"
-src="https://www.facebook.com/tr?id=1562196542302049&ev=PageView&noscript=1"
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=1054294524007787&ev=PageView&noscript=1"
 />
 </noscript>
 
-<!-- END META PIXEL -->
+<!-- =====================================================
+     END META PIXEL
+     ===================================================== -->
 
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-    color:#fff;
-    overflow-x:hidden;
-
-    background:
-    radial-gradient(
-        circle at top,
-        #059669 0%,
-        #064e3b 25%,
-        #022c22 60%,
-        #011410 100%
-    );
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#0f172a;
+color:white;
 }
 
-.wrapper{
-    width:100%;
-    max-width:450px;
-    text-align:center;
-}
+
+/* CARD */
 
 .card{
-    position:relative;
-    overflow:hidden;
-    padding:40px 28px;
-    border-radius:30px;
-
-    background:rgba(6,18,15,0.88);
-    backdrop-filter:blur(20px);
-
-    border:1px solid rgba(52,211,153,0.25);
-
-    box-shadow:
-    0 20px 60px rgba(0,0,0,.6),
-    0 0 40px rgba(52,211,153,0.1);
-
-    animation:float 4s ease-in-out infinite;
-}
-
-.card::before{
-    content:"";
-    position:absolute;
-    width:250px;
-    height:250px;
-    background:#34d399;
-    border-radius:50%;
-    filter:blur(120px);
-    opacity:.15;
-    top:-120px;
-    right:-120px;
-}
-
-.card::after{
-    content:"";
-    position:absolute;
-    width:220px;
-    height:220px;
-    background:#059669;
-    border-radius:50%;
-    filter:blur(120px);
-    opacity:.12;
-    bottom:-120px;
-    left:-120px;
+width:350px;
+padding:40px 30px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.15);
+text-align:center;
+box-shadow:0 0px 80px rgba(0,0,0,.6);
+animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
-    0%,100%{
-        transform:translateY(0);
-    }
 
-    50%{
-        transform:translateY(-8px);
-    }
+0%,100%{
+transform:translateY(0)
 }
+
+50%{
+transform:translateY(-10px)
+}
+
+}
+
+
+/* PROFILE */
 
 .profile{
-    width:125px;
-    height:125px;
-    border-radius:50%;
-    object-fit:cover;
-
-    border:4px solid #34d399;
-
-    box-shadow:
-    0 0 30px rgba(52,211,153,0.4),
-    0 0 60px rgba(5,150,105,0.2);
-
-    position:relative;
-    z-index:2;
+width:110px;
+height:110px;
+border-radius:50%;
+border:4px solid white;
+object-fit:cover;
+margin-bottom:15px;
 }
 
-.verify{
-    margin-top:10px;
-    color:#34d399;
-    font-size:14px;
-    font-weight:700;
-}
 
-.verify i{
-    color:#10b981;
-}
+/* TITLE */
 
 h2{
-    margin-top:15px;
-    font-size:28px;
-    color:#fff;
-    position:relative;
-    z-index:2;
+margin-bottom:10px;
 }
 
-.stats{
-    margin-top:15px;
-    color:#34d399;
-    font-size:14px;
-    line-height:1.8;
-    font-weight:700;
-}
+
+/* TEXT */
 
 .text{
-    margin-top:20px;
-    line-height:1.9;
-    font-size:15px;
-    color:#e2e8f0;
+font-size:14px;
+line-height:1.6;
+opacity:.9;
+margin-bottom:25px;
 }
 
-.benefits{
-    margin-top:22px;
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(52,211,153,0.15);
-    border-radius:18px;
-    padding:18px;
-    text-align:left;
-}
 
-.benefits div{
-    padding:8px 0;
-    color:#f8fafc;
-    font-size:14px;
-}
+/* BUTTON */
 
 .btn{
-    margin-top:25px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-
-    width:100%;
-    padding:18px;
-
-    border-radius:60px;
-    text-decoration:none;
-
-    color:#022c22;
-    font-size:17px;
-    font-weight:800;
-
-    background:linear-gradient(
-        135deg,
-        #a7f3d0,
-        #34d399,
-        #059669
-    );
-
-    box-shadow:
-    0 10px 40px rgba(52,211,153,0.35);
-
-    transition:.4s;
-
-    position:relative;
-    overflow:hidden;
-
-    cursor:pointer;
-
-    -webkit-tap-highlight-color:transparent;
-    touch-action:manipulation;
+display:inline-flex;
+align-items:center;
+gap:12px;
+padding:15px 32px;
+border-radius:50px;
+background:linear-gradient(45deg,#6366f1,#06b6d4);
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+position:relative;
+transition:.4s;
+overflow:hidden;
 }
 
 .btn:hover{
-    transform:translateY(-3px) scale(1.03);
+transform:scale(1.1);
+box-shadow:0 0 30px #06b6d4;
 }
 
-.btn::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100%;
 
-    background:
-    linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.5),
-        transparent
-    );
+/* SPARKLE */
 
-    transition:.8s;
+.btn span{
+position:absolute;
+width:6px;
+height:6px;
+background:white;
+border-radius:50%;
+animation:spark 3s infinite;
 }
 
-.btn:hover::before{
-    left:100%;
+.btn span:nth-child(1){
+top:-10px;
+left:20%
 }
 
-.btn.processing{
-    opacity:.7;
-    pointer-events:none;
+.btn span:nth-child(2){
+top:-10px;
+left:50%;
+animation-delay:1s
 }
+
+.btn span:nth-child(3){
+top:-10px;
+left:80%;
+animation-delay:2s
+}
+
+@keyframes spark{
+
+0%{
+transform:translateY(0);
+opacity:1
+}
+
+100%{
+transform:translateY(-40px);
+opacity:0
+}
+
+}
+
+
+/* COUNTDOWN */
 
 .timer{
-    margin-top:18px;
-    color:#cbd5e1;
-    font-size:14px;
+margin-top:15px;
+font-size:13px;
+opacity:.8;
 }
 
+
+/* DISCLAIMER */
+
 .disclaimer{
-    margin-top:25px;
-    font-size:11px;
-    line-height:1.8;
-    color:#cbd5e1;
-    opacity:.8;
-    padding:0 10px;
+margin-top:20px;
+font-size:11px;
+opacity:.6;
+text-align:center;
 }
+
+
+.ads{
+margin-top:6px;
+font-size:12px;
+text-align:center;
+}
+
+
+.ads a{
+color:#22c55e;
+font-weight:bold;
+text-decoration:none;
+}
+
+
+/* MOBILE */
 
 @media(max-width:480px){
 
-    .card{
-        padding:35px 22px;
-    }
-
-    h2{
-        font-size:24px;
-    }
-
-    .profile{
-        width:110px;
-        height:110px;
-    }
-
-    .btn{
-        font-size:15px;
-    }
+.card{
+width:calc(100% - 30px);
+}
 
 }
 
@@ -330,97 +264,62 @@ h2{
 <body>
 
 
-<div class="wrapper">
+<div>
 
 
 <div class="card">
 
 
 <img
-src="https://github.com/itssky72001-ui/Gautam2/releases/download/Gautam2/Gautam.jha.jpg"
+src="images.1.jpg"
 class="profile"
 alt="Profile"
 >
 
 
-<div class="verify">
-
-<i class="fas fa-check-circle"></i>
-
-Verified Learning Community
-
-</div>
-
-
-<h2>
-GAUTAM JHA
-</h2>
-
-
-<div class="stats">
-
-⭐ 50,000+ Learners <br>
-🌍 Global Learning Community <br>
-🔥 Daily Educational Updates
-
-</div>
-
-
-<a
-class="btn"
-id="telegramBtn"
-href="https://t.me/+inHjdDwWKagzZGNl"
-rel="noopener noreferrer"
->
-
-<i class="fab fa-telegram"></i>
-
-JOIN FREE TELEGRAM CHANNEL
-
-<i class="fab fa-telegram"></i>
-
-</a>
+<h2>📊 PANKAJ BHARDWAJ</h2>
 
 
 <div class="text">
 
-📚 A dedicated community for Stock Market Education and Financial Knowledge.
+Start learning with Expert Calls🔥<br>
 
-<br><br>
+Trusted by 12,000+ Traders🌍<br>
 
-Learn market concepts, trading basics, technical analysis, and financial awareness through educational content designed for learners of all levels.
-
-</div>
-
-
-<div class="benefits">
-
-<div>
-📈 Daily Market Updates
-</div>
-
-<div>
-📚 Educational Learning Content
-</div>
-
-<div>
-🎯 Beginner-Friendly Explanations
-</div>
-
-<div>
-🔥 Community Support
-</div>
-
-<div>
-💡 Financial Awareness & Knowledge
-</div>
+Join our Channel for daily updates✅
 
 </div>
+
+
+<!-- =====================================================
+     TELEGRAM CTA
+     ===================================================== -->
+
+<a
+    class="btn"
+    id="telegramBtn"
+    href="https://t.me/+inHjdDwWKagzZGNl"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+
+<i class="fab fa-telegram"></i>
+
+VIP Telegram group
+
+<i class="fab fa-telegram"></i>
+
+
+<span></span>
+<span></span>
+<span></span>
+
+</a>
 
 
 <div class="timer">
 
-⏳ Auto redirecting in
+Redirecting in
 <span id="count">30</span>
 seconds...
 
@@ -432,9 +331,18 @@ seconds...
 
 <div class="disclaimer">
 
-Disclaimer: This platform is intended solely for educational and informational purposes.
-It does not provide investment, trading, financial, or advisory services.
-Please conduct your own research and consult qualified professionals before making any financial decisions.
+This channel is for educational and informational purposes only.
+
+</div>
+
+
+<div class="ads">
+
+<a
+href="https://t.me/+inHjdDwWKagzZGNl"
+target="_blank"
+rel="noopener noreferrer"
+></a>
 
 </div>
 
@@ -444,51 +352,98 @@ Please conduct your own research and consult qualified professionals before maki
 
 <script>
 
-/* =========================================================
-   TELEGRAM + META PIXEL
-   SINGLE CTA TRACKING
-   ========================================================= */
+/* =====================================================
+   TELEGRAM + META PIXEL TRACKING
+   ===================================================== */
 
-const TELEGRAM_URL =
+
+/* Single Telegram destination */
+const TELEGRAM_LINK =
 "https://t.me/+inHjdDwWKagzZGNl";
+
 
 const telegramBtn =
 document.getElementById("telegramBtn");
 
+
 const counter =
 document.getElementById("count");
 
+
+/*
+   Prevent duplicate/double Subscribe events
+*/
 let clickLocked = false;
 
 
-/* Unique event ID */
-
+/*
+   Generate unique Event ID
+*/
 function createEventId(){
 
-    return (
-        "telegram_subscribe_" +
-        Date.now() +
-        "_" +
-        Math.random()
-        .toString(36)
-        .substring(2,10)
+    return "telegram_subscribe_" +
+           Date.now() +
+           "_" +
+           Math.random()
+           .toString(36)
+           .substring(2,10);
+
+}
+
+
+/*
+   Track intentional CTA click only
+*/
+function trackSubscribe(){
+
+    if(typeof window.fbq !== "function"){
+        console.warn("Meta Pixel is not available.");
+        return;
+    }
+
+
+    const eventId = createEventId();
+
+
+    fbq(
+        "track",
+        "Subscribe",
+        {
+            content_name:
+            "Pankaj Bhardwaj Telegram Community",
+
+            content_category:
+            "Telegram",
+
+            button_location:
+            "telegram_cta"
+        },
+        {
+            eventID:eventId
+        }
+    );
+
+
+    console.log(
+        "Subscribe event sent:",
+        eventId
     );
 
 }
 
 
-/* =========================================================
-   INTENTIONAL TELEGRAM BUTTON CLICK
-   ========================================================= */
-
+/*
+   CTA CLICK
+*/
 if(telegramBtn){
 
     telegramBtn.addEventListener(
         "click",
         function(event){
 
-            /* Prevent double / rapid clicks */
-
+            /*
+               Stop duplicate clicks
+            */
             if(clickLocked){
 
                 event.preventDefault();
@@ -501,69 +456,35 @@ if(telegramBtn){
             clickLocked = true;
 
 
-            /* Stop normal link navigation */
-
+            /*
+               Prevent browser from navigating
+               immediately so Pixel request gets
+               a moment to leave the page.
+            */
             event.preventDefault();
 
 
-            /* Visual processing state */
-
-            telegramBtn.classList.add("processing");
-
-
-            /* Send Subscribe only on actual CTA click */
-
-            if(typeof window.fbq === "function"){
-
-                const eventId =
-                    createEventId();
-
-
-                fbq(
-                    "track",
-                    "Subscribe",
-                    {
-                        content_name:
-                            "Gautam Jha Telegram Community",
-
-                        content_category:
-                            "Telegram",
-
-                        button_location:
-                            "main_cta",
-
-                        button_click:
-                            true
-                    },
-                    {
-                        eventID:
-                            eventId
-                    }
-                );
-
-
-                console.log(
-                    "Subscribe event sent:",
-                    eventId
-                );
-
-            }
+            telegramBtn.style.opacity = "0.65";
+            telegramBtn.style.pointerEvents = "none";
 
 
             /*
-             * Give browser time to queue
-             * the Meta Pixel request.
-             */
+               Subscribe is fired ONLY because
+               the user intentionally clicked CTA.
+            */
+            trackSubscribe();
 
-            setTimeout(
-                function(){
 
-                    window.location.href =
-                        TELEGRAM_URL;
+            /*
+               Small delay for Pixel request
+            */
+            setTimeout(function(){
 
-                },
-                1000
-            );
+                window.location.href =
+                TELEGRAM_LINK;
+
+            },500);
+
 
         },
         {
@@ -574,72 +495,44 @@ if(telegramBtn){
 }
 
 
-/* =========================================================
-   COUNTDOWN
-   =========================================================
-
+/* =====================================================
+   AUTO REDIRECT
    IMPORTANT:
-   Automatic redirect does NOT fire
-   Subscribe.
-
-   Subscribe is counted only when
-   the user intentionally clicks
-   the Telegram button.
-   ========================================================= */
+   Auto redirect does NOT fire Subscribe.
+   ===================================================== */
 
 let time = 30;
 
 
 const countdown =
-setInterval(
-    function(){
+setInterval(function(){
+
+    time--;
+
+    if(counter){
+        counter.innerText = time;
+    }
+
+
+    if(time <= 0){
+
+        clearInterval(countdown);
+
 
         /*
-         * Stop countdown after
-         * manual CTA click.
-         */
+           Automatic navigation only.
+           No Subscribe event here.
+        */
+        window.location.href =
+        TELEGRAM_LINK;
 
-        if(clickLocked){
+    }
 
-            clearInterval(countdown);
-
-            return;
-
-        }
-
-
-        time--;
-
-
-        if(counter){
-
-            counter.innerText =
-                time;
-
-        }
-
-
-        if(time <= 0){
-
-            clearInterval(countdown);
-
-
-            /*
-             * Automatic redirect only.
-             * NO Subscribe event.
-             */
-
-            window.location.href =
-                TELEGRAM_URL;
-
-        }
-
-    },
-    1000
-);
+},1000);
 
 </script>
 
 
 </body>
+
 </html>
