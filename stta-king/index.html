@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Join Pankaj Bhardwaj's stock market education community on Telegram.">
+
+<title>TOPG</title>
+
+
+<!-- =====================================================
+     FONT AWESOME
+     ===================================================== -->
+
+<link
+    rel="preconnect"
+    href="https://cdnjs.cloudflare.com"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+>
+
+
+<!-- =====================================================
+     META PIXEL
+     
+     PIXEL ID:
+     1784207315909262
+
+     IMPORTANT:
+     - ONE PIXEL ONLY
+     - ONE INIT ONLY
+     - ONE PAGEVIEW ONLY
+     ===================================================== -->
+
+<script>
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
+
+    n=f.fbq=function()
+    {
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
+
+}
+(window, document, 'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+
+/* ONE PIXEL INITIALIZATION */
+
+fbq('init', '1784207315909262');
+
+
+/* ONE PAGEVIEW */
+
+fbq('track', 'PageView');
+
+</script>
+
+
+<noscript>
+
+<img
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=1784207315909262&ev=PageView&noscript=1"
+/>
+
+</noscript>
+
+<!-- ================= END META PIXEL ================= -->
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+html,
+body{
+    min-height:100%;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
+.main{
+
+    width:100%;
+
+    max-width:350px;
+
+    text-align:center;
+
+}
+
+
+/* =====================================================
+   CARD
+   ===================================================== */
+
+.card{
+
+    width:100%;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    box-shadow:
+        0 0 80px
+        rgba(0,0,0,.6);
+
+}
+
+
+/* =====================================================
+   PROFILE
+   ===================================================== */
+
+.profile{
+
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+
+    border:4px solid white;
+
+    object-fit:cover;
+
+    margin-bottom:15px;
+
+    display:block;
+
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+
+/* =====================================================
+   HEADING
+   ===================================================== */
+
+h2{
+
+    margin-bottom:10px;
+
+    font-size:21px;
+
+    line-height:1.3;
+
+}
+
+
+/* =====================================================
+   DESCRIPTION
+   ===================================================== */
+
+.text{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    opacity:.9;
+
+    margin-bottom:25px;
+
+}
+
+
+/* =====================================================
+   TELEGRAM BUTTON
+   ===================================================== */
+
+.btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    width:100%;
+
+    padding:15px 20px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            45deg,
+            #6366f1,
+            #06b6d4
+        );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    position:relative;
+
+    transition:
+        transform .2s ease,
+        opacity .2s ease,
+        box-shadow .2s ease;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    border:none;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 30px
+        rgba(6,182,212,.55);
+
+}
+
+
+.btn:active{
+
+    transform:scale(.97);
+
+}
+
+
+.btn.processing{
+
+    opacity:.6;
+
+    pointer-events:none;
+
+}
+
+
+.btn i{
+
+    font-size:18px;
+
+}
+
+
+/* =====================================================
+   SPARKLES
+   ===================================================== */
+
+.btn span{
+
+    position:absolute;
+
+    width:6px;
+    height:6px;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:
+        spark 3s infinite;
+
+    pointer-events:none;
+
+}
+
+
+.btn span:nth-child(1){
+
+    top:-10px;
+    left:20%;
+
+}
+
+
+.btn span:nth-child(2){
+
+    top:-10px;
+    left:50%;
+
+    animation-delay:1s;
+
+}
+
+
+.btn span:nth-child(3){
+
+    top:-10px;
+    left:80%;
+
+    animation-delay:2s;
+
+}
+
+
+@keyframes spark{
+
+    0%{
+
+        transform:
+            translateY(0);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(-40px);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* =====================================================
+   STATUS
+   ===================================================== */
+
+.status{
+
+    margin-top:12px;
+
+    font-size:12px;
+
+    opacity:.65;
+
+}
+
+
+/* =====================================================
+   DISCLAIMER
+   ===================================================== */
+
+.disclaimer{
+
+    margin-top:20px;
+
+    font-size:11px;
+
+    line-height:1.5;
+
+    opacity:.6;
+
+    text-align:center;
+
+}
+
+
+/* =====================================================
+   ADVERTISER
+   ===================================================== */
+
+.ads{
+
+    margin-top:8px;
+
+    font-size:12px;
+
+    text-align:center;
+
+    opacity:.7;
+
+}
+
+
+.ads span{
+
+    color:#22c55e;
+
+    font-weight:bold;
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media(max-width:380px){
+
+    body{
+
+        padding:15px;
+
+    }
+
+    .card{
+
+        padding:35px 22px;
+
+    }
+
+    h2{
+
+        font-size:19px;
+
+    }
+
+    .text{
+
+        font-size:13px;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="main">
+
+
+    <div class="card">
+
+
+        <!-- PROFILE -->
+
+        <img
+            src="https://github.com/AdsGrowthlab/navjot/releases/download/nav/Navjot.1.jpg"
+            class="profile"
+            alt="Pankaj Bhardwaj"
+            width="110"
+            height="110"
+            loading="eager"
+            decoding="async"
+        >
+
+
+        <!-- NAME -->
+
+        <h2>
+            📊 NAVJOT BRAR
+        </h2>
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="text">
+
+            Start learning with Expert Calls🔥
+            <br>
+
+            Trusted by 12,000+ Traders🌍
+
+            <br>
+
+            Join our Channel for daily updates✅
+
+        </div>
+
+
+        <!-- =================================================
+             SINGLE TELEGRAM CTA
+
+             Subscribe fires ONLY when this button
+             is genuinely clicked.
+             ================================================= -->
+
+        <a
+            class="btn"
+            id="telegramBtn"
+            href="https://t.me/+nmUqPpSOgWY0OWI1"
+            rel="noopener noreferrer"
+            aria-label="Join Telegram Channel"
+        >
+
+            <i class="fab fa-telegram"></i>
+
+            VIP Telegram Group
+
+            <i class="fab fa-telegram"></i>
+
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </a>
+
+
+        <div class="status">
+
+            🔒 Free access • Educational community
+
+        </div>
+
+
+    </div>
+
+
+    <!-- DISCLAIMER -->
+
+    <div class="disclaimer">
+
+        This channel is for educational and informational
+        purposes only.
+
+    </div>
+
+
+    <!-- ADVERTISER -->
+
+    <div class="ads">
+
+        Advertised by:
+        <span>SRS Marketing Agency</span>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     TELEGRAM + META SUBSCRIBE TRACKING
+
+     RULES:
+
+     1. Subscribe fires ONLY on real CTA click
+     2. No Subscribe on page load
+     3. No Subscribe on automatic redirect
+     4. Duplicate clicks are blocked
+     5. Only one Pixel is initialized
+     6. Only one PageView is fired
+     ===================================================== -->
+
+<script>
+
+(function(){
+
+    "use strict";
+
+
+    /* =================================================
+       CONFIG
+       ================================================= */
+
+    const TELEGRAM_LINK =
+        "https://t.me/+nmUqPpSOgWY0OWI1";
+
+
+    const telegramBtn =
+        document.getElementById("telegramBtn");
+
+
+    let clickLocked = false;
+
+
+    /* =================================================
+       EVENT ID
+       ================================================= */
+
+    function createEventId(){
+
+        return (
+            "telegram_subscribe_" +
+            Date.now() +
+            "_" +
+            Math.random()
+                .toString(36)
+                .substring(2,10)
+        );
+
+    }
+
+
+    /* =================================================
+       BUTTON CHECK
+       ================================================= */
+
+    if(!telegramBtn){
+
+        return;
+
+    }
+
+
+    /* =================================================
+       REAL USER CLICK ONLY
+       ================================================= */
+
+    telegramBtn.addEventListener(
+        "click",
+        function(event){
+
+            /*
+             * Stop normal navigation temporarily.
+             */
+
+            event.preventDefault();
+
+
+            /*
+             * Prevent rapid/double clicks.
+             */
+
+            if(clickLocked){
+
+                return;
+
+            }
+
+
+            clickLocked = true;
+
+
+            /*
+             * Disable button visually.
+             */
+
+            telegramBtn.classList.add(
+                "processing"
+            );
+
+
+            /* =========================================
+               META SUBSCRIBE EVENT
+
+               Fires ONLY after actual CTA click.
+               ========================================= */
+
+            if(
+                typeof window.fbq === "function"
+            ){
+
+                const eventId =
+                    createEventId();
+
+
+                window.fbq(
+                    "track",
+                    "Subscribe",
+                    {
+
+                        content_name:
+                            "Telegram Community",
+
+                        content_category:
+                            "Telegram",
+
+                        button_location:
+                            "main_cta"
+
+                    },
+                    {
+
+                        eventID:
+                            eventId
+
+                    }
+                );
+
+            }
+
+
+            /*
+             * Short delay gives the browser time
+             * to initiate the Meta request.
+             *
+             * Then Telegram opens.
+             */
+
+            setTimeout(
+                function(){
+
+                    window.location.href =
+                        TELEGRAM_LINK;
+
+                },
+                700
+            );
+
+
+        },
+        {
+            passive:false
+        }
+    );
+
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
