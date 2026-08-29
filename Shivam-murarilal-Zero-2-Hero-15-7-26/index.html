@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
 
 <meta charset="UTF-8">
@@ -11,67 +12,6 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
-<!-- =====================================================
-     META PIXEL
-     PIXEL ID: 27718153437886494
-     
-     ONE PIXEL ONLY
-     ONE INITIALIZATION
-     ONE PAGEVIEW
-     ===================================================== -->
-
-<script>
-!function(f,b,e,v,n,t,s)
-{
-    if(f.fbq)return;
-
-    n=f.fbq=function(){
-        n.callMethod ?
-        n.callMethod.apply(n,arguments) :
-        n.queue.push(arguments)
-    };
-
-    if(!f._fbq)f._fbq=n;
-
-    n.push=n;
-    n.loaded=!0;
-    n.version='2.0';
-    n.queue=[];
-
-    t=b.createElement(e);
-    t.async=!0;
-    t.src=v;
-
-    s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s);
-
-}
-(window, document, 'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-
-/* ONLY ONE PIXEL */
-fbq('init', '27718153437886494');
-
-
-/* ONLY ONE PAGEVIEW */
-fbq('track', 'PageView');
-
-</script>
-
-
-<noscript>
-<img
-height="1"
-width="1"
-style="display:none"
-src="https://www.facebook.com/tr?id=27718153437886494&ev=PageView&noscript=1"
-/>
-</noscript>
-
-<!-- ================= END META PIXEL ================= -->
-
-
 <style>
 
 *{
@@ -81,17 +21,13 @@ src="https://www.facebook.com/tr?id=27718153437886494&ev=PageView&noscript=1"
     font-family:'Inter',system-ui,-apple-system,sans-serif;
 }
 
-
 body{
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-
     padding:20px;
-
     color:#e2e8f0;
-
     overflow-x:hidden;
 
     background:
@@ -152,6 +88,8 @@ body{
 
     top:-80px;
     left:-80px;
+
+    pointer-events:none;
 }
 
 
@@ -243,7 +181,6 @@ h2{
 
 .stats span{
     color:#00c2ff;
-
     font-weight:700;
 }
 
@@ -260,10 +197,6 @@ h2{
     white-space:pre-wrap;
 }
 
-
-/* =====================================================
-   BENEFITS
-   ===================================================== */
 
 .benefits{
     margin-top:20px;
@@ -307,10 +240,6 @@ h2{
 }
 
 
-/* =====================================================
-   MAIN TELEGRAM BUTTON
-   ===================================================== */
-
 .btn{
     margin-top:22px;
 
@@ -350,11 +279,19 @@ h2{
     rgba(0,66,219,0.3);
 
     transition:
-    all .3s ease;
+    transform .2s ease,
+    opacity .2s ease,
+    box-shadow .2s ease;
 
     position:relative;
 
+    overflow:hidden;
+
     cursor:pointer;
+
+    user-select:none;
+
+    -webkit-tap-highlight-color:transparent;
 }
 
 
@@ -374,7 +311,6 @@ h2{
 
 .btn.processing{
     pointer-events:none;
-
     opacity:.6;
 }
 
@@ -401,10 +337,6 @@ h2{
 }
 
 
-/* =====================================================
-   ADVERTISED BY BUTTON
-   ===================================================== */
-
 .ad-btn{
     display:inline-flex;
 
@@ -430,9 +362,10 @@ h2{
 }
 
 
-/* =====================================================
-   MOBILE
-   ===================================================== */
+.ad-btn:hover{
+    opacity:.9;
+}
+
 
 @media(max-width:480px){
 
@@ -457,20 +390,96 @@ h2{
 }
 
 
-/* =====================================================
-   REDUCED MOTION
-   ===================================================== */
+/* Reduced motion */
 
 @media(prefers-reduced-motion:reduce){
 
     *{
-        animation:none !important;
         transition:none !important;
+        animation:none !important;
     }
 
 }
 
 </style>
+
+
+<!-- =========================================================
+     META PIXEL
+     PIXEL ID: 27718153437886494
+
+     ONE PIXEL
+     ONE INITIALIZATION
+     ONE PAGEVIEW
+     ========================================================= -->
+
+<script>
+
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
+
+    n=f.fbq=function(){
+
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments);
+
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
+
+}
+(
+    window,
+    document,
+    'script',
+    'https://connect.facebook.net/en_US/fbevents.js'
+);
+
+
+/* ONLY ONE PIXEL INITIALIZATION */
+
+fbq(
+    'init',
+    '27718153437886494'
+);
+
+
+/* ONLY ONE PAGEVIEW */
+
+fbq(
+    'track',
+    'PageView'
+);
+
+</script>
+
+
+<noscript>
+
+<img
+height="1"
+width="1"
+style="display:none"
+src="https://www.facebook.com/tr?id=27718153437886494&ev=PageView&noscript=1"
+/>
+
+</noscript>
+
+<!-- ================= END META PIXEL ================= -->
 
 </head>
 
@@ -480,23 +489,27 @@ h2{
 
 <div class="wrapper">
 
+
     <div class="card">
 
-
-        <!-- =================================================
-             PROFILE
-             ================================================= -->
 
         <img
             src="https://github.com/itssky72001-ui/0-to-hero/releases/download/zero/Zero.to.hero.jpg"
             class="profile"
             alt="Profile"
+            width="110"
+            height="110"
+            decoding="async"
+            fetchpriority="high"
         >
 
 
         <div class="verify">
+
             <i class="fas fa-check-circle"></i>
+
             ZERO TO HERO
+
         </div>
 
 
@@ -505,11 +518,8 @@ h2{
         </h2>
 
 
-        <!-- =================================================
-             STATS
-             ================================================= -->
-
         <div class="stats">
+
 
             <div>
                 ⭐
@@ -525,8 +535,7 @@ h2{
                 <span>
                     Fastest Growing
                 </span>
-                100% transparent education system,
-                Dedicated Skilled Community
+                100% transparent education system, Dedicated Skilled Community
             </div>
 
 
@@ -535,16 +544,12 @@ h2{
                 <span>
                     Insight &amp; Updates
                 </span>
-                Daily Researched and proven Technical updates,
-                Pre Market Detailed Analysis
+                Daily Researched and proven Technical updates, Pre Market Detailed Analysis
             </div>
+
 
         </div>
 
-
-        <!-- =================================================
-             MAIN TEXT
-             ================================================= -->
 
         <div class="text">
             📚 Learn world-class, proven, and strategic skills from experts.
@@ -552,9 +557,9 @@ h2{
 
 
         <!-- =================================================
-             MAIN TELEGRAM CTA
+             TELEGRAM CTA
 
-             SUBSCRIBE EVENT ONLY HERE
+             SUBSCRIBE FIRES ONLY ON REAL CLICK
              ================================================= -->
 
         <a
@@ -573,49 +578,54 @@ h2{
         </a>
 
 
-        <!-- =================================================
-             BENEFITS
-             ================================================= -->
-
         <div class="benefits">
 
+
             <div>
+
                 <i
                     class="fas fa-chart-line"
                     style="color:#00ff88;"
                 ></i>
 
                 Daily Market Updates
+
             </div>
 
 
             <div>
+
                 <i
                     class="fas fa-book-open"
                     style="color:#00c2ff;"
                 ></i>
 
                 Just for Free Huge Learning Contents
+
             </div>
 
 
             <div>
+
                 <i
                     class="fas fa-bullseye"
                     style="color:#ff4a4a;"
                 ></i>
 
                 Detailed Easy Explanation fro Beginers
+
             </div>
 
 
             <div>
+
                 <i
                     class="fas fa-users"
                     style="color:#3b82f6;"
                 ></i>
 
                 24 X 7 Full dedicated community support existing
+
             </div>
 
 
@@ -643,16 +653,13 @@ h2{
 
             </div>
 
+
         </div>
 
 
-        <!-- =================================================
-             STATUS
-             ================================================= -->
-
         <div class="timer">
 
-            🔒 Free • Educational • No automatic signup
+            🔒 Free access • Educational content • No automatic signup
 
         </div>
 
@@ -660,14 +667,11 @@ h2{
     </div>
 
 
-    <!-- =================================================
-         DISCLAIMER
-         ================================================= -->
-
     <div class="disclaimer">
 
         <strong>Disclaimer:</strong>
-        This Platform is only for educational purpose only,
+
+        Disclaimer: This Platform is only for educational purpose only,
         not recommended for any investment.
 
     </div>
@@ -676,8 +680,9 @@ h2{
 </div>
 
 
+
 <!-- =========================================================
-     META PIXEL + TELEGRAM TRACKING
+     TELEGRAM + SUBSCRIBE EVENT TRACKING
 
      PIXEL:
      27718153437886494
@@ -686,12 +691,13 @@ h2{
      https://t.me/+AQb0-84cClJmZTdl
 
      RULES:
-     1. PageView only once
-     2. Subscribe only after main CTA click
-     3. No automatic Subscribe
-     4. No automatic Telegram redirect
-     5. Rapid duplicate clicks blocked
-     6. SRS Marketing Agency button does NOT trigger Subscribe
+
+     1. Subscribe ONLY after real CTA click
+     2. No Subscribe on page load
+     3. No automatic Telegram redirect
+     4. Rapid duplicate clicks blocked
+     5. Only one Pixel initialization
+     6. Only one PageView
      ========================================================= -->
 
 
@@ -717,8 +723,13 @@ h2{
     let clickLocked = false;
 
 
+    if(!telegramBtn){
+        return;
+    }
+
+
     /* =====================================================
-       CREATE UNIQUE EVENT ID
+       EVENT ID
        ===================================================== */
 
     function createEventId(){
@@ -736,110 +747,106 @@ h2{
 
 
     /* =====================================================
-       MAIN TELEGRAM BUTTON
+       CTA CLICK
        ===================================================== */
 
-    if(telegramBtn){
+    telegramBtn.addEventListener(
+        "click",
+        function(event){
 
-        telegramBtn.addEventListener(
-            "click",
-            function(event){
+            /*
+             * Prevent normal navigation temporarily
+             * so tracking can start.
+             */
 
-                /*
-                 * Stop the normal link navigation
-                 * temporarily so tracking can start.
-                 */
-
-                event.preventDefault();
+            event.preventDefault();
 
 
-                /*
-                 * Prevent rapid/double clicks.
-                 */
+            /*
+             * Block rapid/double clicks.
+             */
 
-                if(clickLocked){
-
-                    return;
-
-                }
+            if(clickLocked){
+                return;
+            }
 
 
-                clickLocked = true;
+            clickLocked = true;
 
 
-                /*
-                 * Show processing state.
-                 */
+            /*
+             * Disable CTA visually.
+             */
 
-                telegramBtn.classList.add(
-                    "processing"
-                );
-
-
-                /*
-                 * Fire Subscribe ONLY
-                 * after an actual user click.
-                 */
-
-                if(
-                    typeof window.fbq === "function"
-                ){
-
-                    const eventId =
-                        createEventId();
+            telegramBtn.classList.add(
+                "processing"
+            );
 
 
-                    window.fbq(
-                        "track",
-                        "Subscribe",
-                        {
+            /*
+             * Make sure Meta Pixel exists.
+             */
 
-                            content_name:
-                                "Zero To Hero Telegram Community",
+            if(
+                typeof window.fbq === "function"
+            ){
 
-                            content_category:
-                                "Telegram",
-
-                            button_location:
-                                "main_cta",
-
-                            button_click:
-                                true
-
-                        },
-                        {
-
-                            eventID:
-                                eventId
-
-                        }
-                    );
-
-                }
+                const eventId =
+                    createEventId();
 
 
                 /*
-                 * Give the browser a short time
-                 * to start sending the Meta request.
+                 * Subscribe fires ONLY HERE.
                  */
 
-                setTimeout(
-                    function(){
+                window.fbq(
+                    "track",
+                    "Subscribe",
+                    {
 
-                        window.location.href =
-                            TELEGRAM_URL;
+                        content_name:
+                            "Zero To Hero Telegram Community",
+
+                        content_category:
+                            "Telegram",
+
+                        button_location:
+                            "main_cta"
 
                     },
-                    800
+                    {
+
+                        eventID:
+                            eventId
+
+                    }
                 );
 
-            },
-            {
-                passive:false
             }
-        );
 
-    }
+
+            /*
+             * Give the browser a short time
+             * to start sending the Pixel request.
+             */
+
+            setTimeout(
+                function(){
+
+                    window.location.href =
+                        TELEGRAM_URL;
+
+                },
+                700
+            );
+
+
+        },
+        {
+            passive:false
+        }
+    );
+
 
 })();
 
@@ -847,4 +854,5 @@ h2{
 
 
 </body>
+
 </html>
