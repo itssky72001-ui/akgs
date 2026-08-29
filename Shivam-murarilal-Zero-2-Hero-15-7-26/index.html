@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -11,10 +10,14 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+
 <!-- =====================================================
      META PIXEL
      PIXEL ID: 27718153437886494
-     ONE PIXEL / ONE INITIALIZATION / ONE PAGEVIEW
+     
+     ONE PIXEL ONLY
+     ONE INITIALIZATION
+     ONE PAGEVIEW
      ===================================================== -->
 
 <script>
@@ -46,10 +49,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 (window, document, 'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
+
+/* ONLY ONE PIXEL */
 fbq('init', '27718153437886494');
+
+
+/* ONLY ONE PAGEVIEW */
 fbq('track', 'PageView');
 
 </script>
+
 
 <noscript>
 <img
@@ -72,13 +81,17 @@ src="https://www.facebook.com/tr?id=27718153437886494&ev=PageView&noscript=1"
     font-family:'Inter',system-ui,-apple-system,sans-serif;
 }
 
+
 body{
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+
     padding:20px;
+
     color:#e2e8f0;
+
     overflow-x:hidden;
 
     background:
@@ -89,17 +102,20 @@ body{
     );
 }
 
+
 .wrapper{
     width:100%;
     max-width:440px;
     text-align:center;
 }
 
+
 .card{
     position:relative;
     overflow:hidden;
 
     padding:35px 25px;
+
     border-radius:16px;
 
     background:
@@ -116,6 +132,7 @@ body{
     0 24px 50px rgba(0,0,0,0.6),
     0 0 30px rgba(0,194,255,0.05);
 }
+
 
 .card::before{
     content:"";
@@ -137,6 +154,7 @@ body{
     left:-80px;
 }
 
+
 .profile{
     width:110px;
     height:110px;
@@ -156,6 +174,7 @@ body{
     z-index:2;
 }
 
+
 .verify{
     margin-top:15px;
 
@@ -170,9 +189,11 @@ body{
     text-transform:uppercase;
 }
 
+
 .verify i{
     color:#00ff88;
 }
+
 
 h2{
     margin-top:12px;
@@ -188,6 +209,7 @@ h2{
     text-shadow:
     0 2px 10px rgba(0,0,0,.5);
 }
+
 
 .stats{
     margin-top:20px;
@@ -218,10 +240,13 @@ h2{
     text-align:left;
 }
 
+
 .stats span{
     color:#00c2ff;
+
     font-weight:700;
 }
+
 
 .text{
     margin-top:18px;
@@ -234,6 +259,11 @@ h2{
 
     white-space:pre-wrap;
 }
+
+
+/* =====================================================
+   BENEFITS
+   ===================================================== */
 
 .benefits{
     margin-top:20px;
@@ -251,6 +281,7 @@ h2{
 
     text-align:left;
 }
+
 
 .benefits div{
     padding:8px 0;
@@ -270,9 +301,15 @@ h2{
     rgba(255,255,255,.03);
 }
 
+
 .benefits div:last-child{
     border-bottom:none;
 }
+
+
+/* =====================================================
+   MAIN TELEGRAM BUTTON
+   ===================================================== */
 
 .btn{
     margin-top:22px;
@@ -313,14 +350,13 @@ h2{
     rgba(0,66,219,0.3);
 
     transition:
-    all .2s ease;
+    all .3s ease;
 
     position:relative;
 
     cursor:pointer;
-
-    border:none;
 }
+
 
 .btn:hover{
     transform:translateY(-2px);
@@ -330,14 +366,18 @@ h2{
     rgba(0,66,219,0.5);
 }
 
+
 .btn:active{
     transform:scale(.98);
 }
 
+
 .btn.processing{
     pointer-events:none;
-    opacity:.55;
+
+    opacity:.6;
 }
+
 
 .timer{
     margin-top:18px;
@@ -346,6 +386,7 @@ h2{
 
     font-size:12px;
 }
+
 
 .disclaimer{
     margin-top:22px;
@@ -358,6 +399,11 @@ h2{
 
     padding:0 5px;
 }
+
+
+/* =====================================================
+   ADVERTISED BY BUTTON
+   ===================================================== */
 
 .ad-btn{
     display:inline-flex;
@@ -383,6 +429,11 @@ h2{
     font-weight:700;
 }
 
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
 @media(max-width:480px){
 
     .card{
@@ -402,6 +453,21 @@ h2{
         font-size:14px;
         padding:15px;
     }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+        animation:none !important;
+        transition:none !important;
+    }
+
 }
 
 </style>
@@ -416,21 +482,21 @@ h2{
 
     <div class="card">
 
+
+        <!-- =================================================
+             PROFILE
+             ================================================= -->
+
         <img
             src="https://github.com/itssky72001-ui/0-to-hero/releases/download/zero/Zero.to.hero.jpg"
             class="profile"
             alt="Profile"
-            width="110"
-            height="110"
         >
 
 
         <div class="verify">
-
             <i class="fas fa-check-circle"></i>
-
             ZERO TO HERO
-
         </div>
 
 
@@ -439,24 +505,36 @@ h2{
         </h2>
 
 
+        <!-- =================================================
+             STATS
+             ================================================= -->
+
         <div class="stats">
 
             <div>
                 ⭐
-                <span>20337 + Students Already Joined</span>
+                <span>
+                    20337 + Students Already Joined
+                </span>
                 Delivering strategic and proven skills
             </div>
 
+
             <div>
                 🌍
-                <span>Fastest Growing</span>
+                <span>
+                    Fastest Growing
+                </span>
                 100% transparent education system,
                 Dedicated Skilled Community
             </div>
 
+
             <div>
                 🔥
-                <span>Insight &amp; Updates</span>
+                <span>
+                    Insight &amp; Updates
+                </span>
                 Daily Researched and proven Technical updates,
                 Pre Market Detailed Analysis
             </div>
@@ -464,14 +542,19 @@ h2{
         </div>
 
 
+        <!-- =================================================
+             MAIN TEXT
+             ================================================= -->
+
         <div class="text">
             📚 Learn world-class, proven, and strategic skills from experts.
         </div>
 
 
         <!-- =================================================
-             TELEGRAM CTA
-             Subscribe fires ONLY after this real click
+             MAIN TELEGRAM CTA
+
+             SUBSCRIBE EVENT ONLY HERE
              ================================================= -->
 
         <a
@@ -489,6 +572,10 @@ h2{
 
         </a>
 
+
+        <!-- =================================================
+             BENEFITS
+             ================================================= -->
 
         <div class="benefits">
 
@@ -559,14 +646,23 @@ h2{
         </div>
 
 
+        <!-- =================================================
+             STATUS
+             ================================================= -->
+
         <div class="timer">
 
-            🔒 Free access • Educational content
+            🔒 Free • Educational • No automatic signup
 
         </div>
 
+
     </div>
 
+
+    <!-- =================================================
+         DISCLAIMER
+         ================================================= -->
 
     <div class="disclaimer">
 
@@ -576,11 +672,12 @@ h2{
 
     </div>
 
+
 </div>
 
 
 <!-- =========================================================
-     SUBSCRIBE EVENT TRACKING
+     META PIXEL + TELEGRAM TRACKING
 
      PIXEL:
      27718153437886494
@@ -589,13 +686,14 @@ h2{
      https://t.me/+AQb0-84cClJmZTdl
 
      RULES:
-     1. No Subscribe on page load
-     2. Subscribe only on CTA click
-     3. No automatic redirect
-     4. Rapid duplicate clicks blocked
-     5. Only one Pixel initialization
-     6. Only one PageView
+     1. PageView only once
+     2. Subscribe only after main CTA click
+     3. No automatic Subscribe
+     4. No automatic Telegram redirect
+     5. Rapid duplicate clicks blocked
+     6. SRS Marketing Agency button does NOT trigger Subscribe
      ========================================================= -->
+
 
 <script>
 
@@ -603,6 +701,10 @@ h2{
 
     "use strict";
 
+
+    /* =====================================================
+       CONFIG
+       ===================================================== */
 
     const TELEGRAM_URL =
         "https://t.me/+AQb0-84cClJmZTdl";
@@ -615,10 +717,9 @@ h2{
     let clickLocked = false;
 
 
-    if(!telegramBtn){
-        return;
-    }
-
+    /* =====================================================
+       CREATE UNIQUE EVENT ID
+       ===================================================== */
 
     function createEventId(){
 
@@ -634,88 +735,111 @@ h2{
     }
 
 
-    telegramBtn.addEventListener(
-        "click",
-        function(event){
+    /* =====================================================
+       MAIN TELEGRAM BUTTON
+       ===================================================== */
 
-            event.preventDefault();
+    if(telegramBtn){
 
+        telegramBtn.addEventListener(
+            "click",
+            function(event){
 
-            /*
-             * Prevent rapid/double clicks.
-             */
+                /*
+                 * Stop the normal link navigation
+                 * temporarily so tracking can start.
+                 */
 
-            if(clickLocked){
-                return;
-            }
-
-
-            clickLocked = true;
-
-
-            telegramBtn.classList.add(
-                "processing"
-            );
+                event.preventDefault();
 
 
-            /*
-             * Subscribe fires ONLY because
-             * the visitor actually clicked
-             * the Telegram CTA.
-             */
+                /*
+                 * Prevent rapid/double clicks.
+                 */
 
-            if(typeof window.fbq === "function"){
+                if(clickLocked){
 
-                const eventId =
-                    createEventId();
+                    return;
+
+                }
 
 
-                window.fbq(
-                    "track",
-                    "Subscribe",
-                    {
-                        content_name:
-                            "Zero To Hero Telegram Community",
+                clickLocked = true;
 
-                        content_category:
-                            "Telegram",
 
-                        button_location:
-                            "main_cta",
+                /*
+                 * Show processing state.
+                 */
 
-                        button_click:
-                            true
-                    },
-                    {
-                        eventID:
-                            eventId
-                    }
+                telegramBtn.classList.add(
+                    "processing"
                 );
 
+
+                /*
+                 * Fire Subscribe ONLY
+                 * after an actual user click.
+                 */
+
+                if(
+                    typeof window.fbq === "function"
+                ){
+
+                    const eventId =
+                        createEventId();
+
+
+                    window.fbq(
+                        "track",
+                        "Subscribe",
+                        {
+
+                            content_name:
+                                "Zero To Hero Telegram Community",
+
+                            content_category:
+                                "Telegram",
+
+                            button_location:
+                                "main_cta",
+
+                            button_click:
+                                true
+
+                        },
+                        {
+
+                            eventID:
+                                eventId
+
+                        }
+                    );
+
+                }
+
+
+                /*
+                 * Give the browser a short time
+                 * to start sending the Meta request.
+                 */
+
+                setTimeout(
+                    function(){
+
+                        window.location.href =
+                            TELEGRAM_URL;
+
+                    },
+                    800
+                );
+
+            },
+            {
+                passive:false
             }
+        );
 
-
-            /*
-             * Give the browser a short time
-             * to send the Pixel request.
-             */
-
-            setTimeout(
-                function(){
-
-                    window.location.href =
-                        TELEGRAM_URL;
-
-                },
-                800
-            );
-
-        },
-        {
-            passive:false
-        }
-    );
-
+    }
 
 })();
 
@@ -724,4 +848,3 @@ h2{
 
 </body>
 </html>
-```
