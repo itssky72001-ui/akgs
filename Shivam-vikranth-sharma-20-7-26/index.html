@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +9,12 @@
 
     <title>TOPG</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -48,6 +50,7 @@
             100% {
                 transform: translateY(0)
             }
+
             50% {
                 transform: translateY(-10px)
             }
@@ -89,11 +92,25 @@
             position: relative;
             transition: .4s;
             overflow: hidden;
+            cursor: pointer;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn:hover {
             transform: scale(1.1);
             box-shadow: 0 0 30px #06b6d4;
+        }
+
+        .btn:active {
+            transform: scale(.98);
+        }
+
+        /* Prevent rapid duplicate clicks */
+
+        .btn.processing {
+            pointer-events: none;
+            opacity: .65;
         }
 
         /* sparkle animation */
@@ -129,6 +146,7 @@
                 transform: translateY(0);
                 opacity: 1
             }
+
             100% {
                 transform: translateY(-40px);
                 opacity: 0
@@ -163,88 +181,393 @@
             font-weight: bold;
             text-decoration: none;
         }
+
     </style>
 
 
+    <!-- =====================================================
+         META PIXEL
+         PIXEL ID: 957041629988595
+
+         ONE PIXEL
+         ONE INITIALIZATION
+         ONE PAGEVIEW
+         ===================================================== -->
+
+    <script>
+
+        !function(f,b,e,v,n,t,s)
+        {
+            if(f.fbq)return;
+
+            n=f.fbq=function()
+            {
+                n.callMethod ?
+                n.callMethod.apply(n,arguments) :
+                n.queue.push(arguments)
+            };
+
+            if(!f._fbq)f._fbq=n;
+
+            n.push=n;
+            n.loaded=!0;
+            n.version='2.0';
+            n.queue=[];
+
+            t=b.createElement(e);
+            t.async=!0;
+            t.src=v;
+
+            s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+
+        }(
+            window,
+            document,
+            'script',
+            'https://connect.facebook.net/en_US/fbevents.js'
+        );
+
+
+        /* ONE PIXEL INITIALIZATION */
+
+        fbq(
+            'init',
+            '957041629988595'
+        );
+
+
+        /* ONE PAGEVIEW */
+
+        fbq(
+            'track',
+            'PageView'
+        );
+
+    </script>
+
+
+    <noscript>
+
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=957041629988595&ev=PageView&noscript=1"
+        />
+
+    </noscript>
+
+    <!-- ================= END META PIXEL ================= -->
 
 
 </head>
 
+
 <body>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '859783500309075');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=859783500309075&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
 
     <div>
 
         <div class="card">
 
-            <img src="https://github.com/siyalshivam690-maker/harmimg/releases/download/harman/harmancolic.jpg
-" class="profile">
+            <img
+                src="https://github.com/siyalshivam690-maker/harmimg/releases/download/harman/harmancolic.jpg"
+                class="profile"
+                alt="Profile"
+            >
 
-            <h2> HARMONIC TRADER RAJ </h2>
+
+            <h2>
+                HARMONIC TRADER RAJ
+            </h2>
+
 
             <div class="text">
-                Start learning with Expert Calls🔥<br> Trusted by 12,000+ Traders🌍<br> Join our Channel for daily updates✅
+
+                Start learning with Expert Calls🔥<br>
+                Trusted by 12,000+ Traders🌍<br>
+                Join our Channel for daily updates✅
+
             </div>
 
-            <a class="btn" href="https://telegram.me/+jCf2DKVmmAw1MDg1" target="_blank">
 
-<i class="fab fa-telegram"></i>
- VIP Telegram group
-<i class="fab fa-telegram"></i>
+            <!-- =================================================
+                 TELEGRAM CTA
 
-<span></span>
-<span></span>
-<span></span>
+                 SUBSCRIBE FIRES ONLY ON REAL CLICK
+                 ================================================= -->
 
-</a>
+            <a
+                class="btn"
+                id="telegramBtn"
+                href="https://telegram.me/+jCf2DKVmmAw1MDg1"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="fab fa-telegram"></i>
+
+                VIP Telegram group
+
+                <i class="fab fa-telegram"></i>
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </a>
+
 
             <div class="timer">
-                Redirecting in <span id="count">30</span> seconds...
+
+                Redirecting in
+                <span id="count">30</span>
+                seconds...
+
             </div>
 
+
         </div>
+
 
         <div class="disclaimer">
+
             This channel is for educational and informational purposes only.
+
         </div>
 
+
         <div class="ads">
-               <a href="https://telegram.me/+jCf2DKVmmAw1MDg1" target="_blank"></a>
+
+            <a
+                href="https://telegram.me/+jCf2DKVmmAw1MDg1"
+                target="_blank"
+                rel="noopener noreferrer"
+            ></a>
+
         </div>
+
 
     </div>
 
+
+
+    <!-- =========================================================
+         TELEGRAM + SUBSCRIBE EVENT TRACKING
+
+         PIXEL:
+         957041629988595
+
+         TELEGRAM:
+         https://telegram.me/+jCf2DKVmmAw1MDg1
+
+         RULES:
+
+         1. Subscribe ONLY after actual CTA click
+         2. No Subscribe on page load
+         3. No automatic Telegram redirect
+         4. Rapid duplicate clicks blocked
+         5. Unique eventID generated
+         6. Only one Pixel initialization
+         7. Only one PageView
+         ========================================================= -->
+
+
     <script>
-        let time = 30;
-        let counter = document.getElementById("count");
 
-        setInterval(() => {
-            time--;
-            counter.innerText = time;
+        (function(){
 
-            if (time <= 0) {
-                window.location.href = "https://telegram.me/+jCf2DKVmmAw1MDg1";
+            "use strict";
+
+
+            const TELEGRAM_URL =
+                "https://telegram.me/+jCf2DKVmmAw1MDg1";
+
+
+            const telegramBtn =
+                document.getElementById("telegramBtn");
+
+
+            let clickLocked = false;
+
+
+            if(!telegramBtn){
+                return;
             }
 
-        }, 1000);
+
+            /* =====================================================
+               CREATE UNIQUE EVENT ID
+               ===================================================== */
+
+            function createEventId(){
+
+                return (
+                    "telegram_subscribe_" +
+                    Date.now() +
+                    "_" +
+                    Math.random()
+                        .toString(36)
+                        .substring(2,10)
+                );
+
+            }
+
+
+            /* =====================================================
+               REAL TELEGRAM CTA CLICK
+               ===================================================== */
+
+            telegramBtn.addEventListener(
+                "click",
+                function(event){
+
+                    /*
+                     * Do not fire Subscribe from page load,
+                     * timer, or any automatic action.
+                     */
+
+                    if(clickLocked){
+
+                        event.preventDefault();
+
+                        return;
+
+                    }
+
+
+                    /*
+                     * Lock immediately so rapid
+                     * double clicks cannot fire duplicates.
+                     */
+
+                    clickLocked = true;
+
+
+                    telegramBtn.classList.add(
+                        "processing"
+                    );
+
+
+                    /*
+                     * Fire Subscribe ONLY on
+                     * the actual button click.
+                     */
+
+                    if(
+                        typeof window.fbq === "function"
+                    ){
+
+                        const eventId =
+                            createEventId();
+
+
+                        window.fbq(
+                            "track",
+                            "Subscribe",
+                            {
+                                content_name:
+                                    "Harmonic Trader Raj Telegram",
+
+                                content_category:
+                                    "Telegram",
+
+                                button_location:
+                                    "main_cta"
+                            },
+                            {
+                                eventID:
+                                    eventId
+                            }
+                        );
+
+
+                        console.log(
+                            "Subscribe event fired:",
+                            eventId
+                        );
+
+                    }
+
+
+                    /*
+                     * IMPORTANT:
+                     *
+                     * We do NOT manually redirect here.
+                     *
+                     * The original <a> link opens Telegram
+                     * normally in a new tab after the click.
+                     *
+                     * This allows the actual CTA click to
+                     * remain the conversion action.
+                     */
+
+                },
+                {
+                    passive:false
+                }
+            );
+
+
+        })();
+
     </script>
+
+
+    <!-- =========================================================
+         VISUAL COUNTDOWN ONLY
+
+         IMPORTANT:
+         It does NOT redirect automatically.
+
+         This prevents a visitor/bot from generating a
+         Telegram navigation without actually clicking CTA.
+         ========================================================= -->
+
+
+    <script>
+
+        (function(){
+
+            let time = 30;
+
+            const counter =
+                document.getElementById("count");
+
+
+            if(!counter){
+                return;
+            }
+
+
+            const countdown =
+                setInterval(function(){
+
+                    time--;
+
+                    if(time < 0){
+                        time = 0;
+                    }
+
+                    counter.innerText =
+                        time;
+
+
+                    if(time <= 0){
+
+                        clearInterval(countdown);
+
+                    }
+
+                },1000);
+
+        })();
+
+    </script>
+
 
 </body>
 
 </html>
+```
