@@ -31,8 +31,6 @@
             color: white;
         }
 
-        /* card */
-
         .card {
             width: 350px;
             padding: 40px 30px;
@@ -46,8 +44,7 @@
         }
 
         @keyframes float {
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0)
             }
 
@@ -75,8 +72,6 @@
             opacity: .9;
             margin-bottom: 25px;
         }
-
-        /* button */
 
         .btn {
             display: inline-flex;
@@ -106,14 +101,10 @@
             transform: scale(.98);
         }
 
-        /* Prevent rapid duplicate clicks */
-
         .btn.processing {
             pointer-events: none;
             opacity: .65;
         }
-
-        /* sparkle animation */
 
         .btn span {
             position: absolute;
@@ -153,15 +144,11 @@
             }
         }
 
-        /* countdown */
-
         .timer {
             margin-top: 15px;
             font-size: 13px;
             opacity: .8;
         }
-
-        /* disclaimer */
 
         .disclaimer {
             margin-top: 20px;
@@ -185,14 +172,7 @@
     </style>
 
 
-    <!-- =====================================================
-         META PIXEL
-         PIXEL ID: 957041629988595
-
-         ONE PIXEL
-         ONE INITIALIZATION
-         ONE PAGEVIEW
-         ===================================================== -->
+    <!-- META PIXEL -->
 
     <script>
 
@@ -229,7 +209,7 @@
         );
 
 
-        /* ONE PIXEL INITIALIZATION */
+        /* ONE PIXEL */
 
         fbq(
             'init',
@@ -258,7 +238,7 @@
 
     </noscript>
 
-    <!-- ================= END META PIXEL ================= -->
+    <!-- END META PIXEL -->
 
 
 </head>
@@ -292,11 +272,7 @@
             </div>
 
 
-            <!-- =================================================
-                 TELEGRAM CTA
-
-                 SUBSCRIBE FIRES ONLY ON REAL CLICK
-                 ================================================= -->
+            <!-- TELEGRAM BUTTON -->
 
             <a
                 class="btn"
@@ -327,7 +303,6 @@
 
             </div>
 
-
         </div>
 
 
@@ -352,27 +327,7 @@
     </div>
 
 
-
-    <!-- =========================================================
-         TELEGRAM + SUBSCRIBE EVENT TRACKING
-
-         PIXEL:
-         957041629988595
-
-         TELEGRAM:
-         https://telegram.me/+jCf2DKVmmAw1MDg1
-
-         RULES:
-
-         1. Subscribe ONLY after actual CTA click
-         2. No Subscribe on page load
-         3. No automatic Telegram redirect
-         4. Rapid duplicate clicks blocked
-         5. Unique eventID generated
-         6. Only one Pixel initialization
-         7. Only one PageView
-         ========================================================= -->
-
+    <!-- SUBSCRIBE EVENT TRACKING -->
 
     <script>
 
@@ -397,10 +352,6 @@
             }
 
 
-            /* =====================================================
-               CREATE UNIQUE EVENT ID
-               ===================================================== */
-
             function createEventId(){
 
                 return (
@@ -415,18 +366,9 @@
             }
 
 
-            /* =====================================================
-               REAL TELEGRAM CTA CLICK
-               ===================================================== */
-
             telegramBtn.addEventListener(
                 "click",
                 function(event){
-
-                    /*
-                     * Do not fire Subscribe from page load,
-                     * timer, or any automatic action.
-                     */
 
                     if(clickLocked){
 
@@ -437,11 +379,6 @@
                     }
 
 
-                    /*
-                     * Lock immediately so rapid
-                     * double clicks cannot fire duplicates.
-                     */
-
                     clickLocked = true;
 
 
@@ -451,8 +388,8 @@
 
 
                     /*
-                     * Fire Subscribe ONLY on
-                     * the actual button click.
+                     * Subscribe fires ONLY
+                     * after actual button click.
                      */
 
                     if(
@@ -490,19 +427,6 @@
 
                     }
 
-
-                    /*
-                     * IMPORTANT:
-                     *
-                     * We do NOT manually redirect here.
-                     *
-                     * The original <a> link opens Telegram
-                     * normally in a new tab after the click.
-                     *
-                     * This allows the actual CTA click to
-                     * remain the conversion action.
-                     */
-
                 },
                 {
                     passive:false
@@ -515,16 +439,7 @@
     </script>
 
 
-    <!-- =========================================================
-         VISUAL COUNTDOWN ONLY
-
-         IMPORTANT:
-         It does NOT redirect automatically.
-
-         This prevents a visitor/bot from generating a
-         Telegram navigation without actually clicking CTA.
-         ========================================================= -->
-
+    <!-- VISUAL COUNTDOWN ONLY -->
 
     <script>
 
