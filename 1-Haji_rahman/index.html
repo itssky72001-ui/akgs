@@ -1,534 +1,244 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Halal Stock Market Education</title>
+    <title>HALAL WORK</title>
 
-<style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-body{
-background:linear-gradient(180deg,#0b4228,#052015);
-color:#fff;
-overflow-x:hidden;
--webkit-text-size-adjust:100%;
-}
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0f172a;
+            color: white;
+        }
 
-.container{
-max-width:430px;
-margin:auto;
-padding:12px;
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-}
+        /* card */
 
-.card{
-width:100%;
-background:rgba(255,255,255,.06);
-border:1px solid rgba(212,175,55,.20);
-border-radius:22px;
-padding:22px 18px;
-text-align:center;
-backdrop-filter:blur(10px);
-box-shadow:0 0 35px rgba(212,175,55,.12);
-}
+        .card {
+            width: 350px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+            box-shadow: 0 0px 80px rgba(0, 0, 0, .6);
+            animation: float 4s ease-in-out infinite;
+        }
 
-.logo{
-width:90px;
-height:90px;
-border-radius:50%;
-overflow:hidden;
-margin:auto;
-border:3px solid #d4af37;
-box-shadow:0 0 20px rgba(212,175,55,.35);
-}
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+            50% {
+                transform: translateY(-10px)
+            }
+        }
 
-.logo img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
+        .profile {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
 
-.badge{
-display:inline-block;
-margin-top:14px;
-background:#d4af37;
-color:#08351f;
-padding:7px 15px;
-border-radius:50px;
-font-size:12px;
-font-weight:700;
-}
+        h2 {
+            margin-bottom: 10px;
+        }
 
-h1{
-font-size:24px;
-margin-top:15px;
-line-height:1.3;
-color:#d4af37;
-font-weight:800;
-}
+        .text {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: .9;
+            margin-bottom: 25px;
+        }
 
-.desc{
-margin-top:14px;
-font-size:15px;
-line-height:1.6;
-color:#f2f2f2;
-}
+        /* button */
 
-.highlight{
-color:#d4af37;
-font-weight:bold;
-}
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 32px;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #6366f1, #06b6d4);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            transition: .4s;
+            overflow: hidden;
+        }
 
-.cta-btn{
-margin-top:18px;
-width:100%;
-display:inline-block;
-text-decoration:none;
-background:linear-gradient(90deg,#d4af37,#f3d26a);
-color:#08351f;
-padding:16px;
-font-size:18px;
-font-weight:800;
-border-radius:60px;
-box-shadow:0 10px 25px rgba(212,175,55,.30);
-transition:.3s;
-cursor:pointer;
--webkit-tap-highlight-color:transparent;
-}
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #06b6d4;
+        }
 
-.cta-btn:hover{
-transform:scale(1.02);
-}
+        /* sparkle animation */
 
-.cta-btn:active{
-transform:scale(.99);
-}
+        .btn span {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            animation: spark 3s infinite;
+        }
 
-.cta-btn.disabled{
-pointer-events:none;
-opacity:.85;
-}
+        .btn span:nth-child(1) {
+            top: -10px;
+            left: 20%
+        }
 
-.note{
-margin-top:14px;
-font-size:12px;
-line-height:1.6;
-color:#ddd;
-}
+        .btn span:nth-child(2) {
+            top: -10px;
+            left: 50%;
+            animation-delay: 1s
+        }
 
-.footer{
-margin-top:15px;
-font-size:11px;
-color:#bbb;
-}
+        .btn span:nth-child(3) {
+            top: -10px;
+            left: 80%;
+            animation-delay: 2s
+        }
 
-@media(max-width:480px){
+        @keyframes spark {
+            0% {
+                transform: translateY(0);
+                opacity: 1
+            }
+            100% {
+                transform: translateY(-40px);
+                opacity: 0
+            }
+        }
 
-.card{
-padding:18px 15px;
-}
+        /* countdown */
 
-.logo{
-width:80px;
-height:80px;
-}
+        .timer {
+            margin-top: 15px;
+            font-size: 13px;
+            opacity: .8;
+        }
 
-h1{
-font-size:22px;
-}
+        /* disclaimer */
 
-.desc{
-font-size:14px;
-}
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 11px;
+            opacity: .6;
+            text-align: center;
+        }
 
-.cta-btn{
-font-size:17px;
-padding:15px;
-}
+        .ads {
+            margin-top: 6px;
+            font-size: 12px;
+            text-align: center;
+        }
 
-}
-
-</style>
-
-<!-- ================================================= -->
-
-<!-- META PIXEL - ONLY PIXEL 2278999236258193 -->
-
-<!-- ================================================= -->
-
-<script>
-
-!function(f,b,e,v,n,t,s)
-{
-if(f.fbq)return;
-
-n=f.fbq=function(){
-
-n.callMethod ?
-n.callMethod.apply(n,arguments) :
-n.queue.push(arguments);
-
-};
-
-if(!f._fbq)f._fbq=n;
-
-n.push=n;
-n.loaded=!0;
-n.version='2.0';
-n.queue=[];
-
-t=b.createElement(e);
-t.async=!0;
-t.src=v;
-
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s);
-
-}
-(
-window,
-document,
-'script',
-'https://connect.facebook.net/en_US/fbevents.js'
-);
-
-
-/*
-================================================
-ONLY ONE PIXEL
-PIXEL ID: 2278999236258193
-================================================
-*/
-
-fbq('init','2278999236258193');
-
-fbq('track','PageView');
-
-</script>
-
-<noscript>
-
-<img
-height="1"
-width="1"
-style="display:none"
-src="https://www.facebook.com/tr?id=2278999236258193&ev=PageView&noscript=1"
-/>
-
-</noscript>
-
-<!-- End Meta Pixel Code -->
-
+        .ads a {
+            color: #22c55e;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
 </head>
-
 <body>
-
-<div class="container">
-
-<div class="card">
-
-<div class="logo">
-
-<img
-src="https://github.com/itssky72001-ui/hajii/releases/download/hahi/haji.jpg"
-alt="Logo"
-loading="eager"
-
->
-
-</div>
-
-<div class="badge">
-📚 100% Educational Purpose
-</div>
-
-<h1>
-HAJI MUSSABBIR RAHMAN ( HALAL TRADING) 🕋🕋
-</h1>
-
-<p class="desc">
-
-<b>Assalamu Alaikum 🤍</b>
-
-<br><br>
-
-Agar aap <span class="highlight">Stock Market</span>
-ko <span class="highlight">Islamic & Halal Perspective</span>
-se seekhna chahte hain to hamare free educational community ko join karein.
-
-<br><br>
-
-Yahan aapko <span class="highlight">
-Stock Market Education,
-Risk Management,
-Market Learning </span>
-aur simple language me educational content milega.
-
-</p>
-
-<a
-href="https://t.me/+bbMnSTA8R204MmNl"
-id="telegramBtn"
-class="cta-btn"
-rel="noopener noreferrer"
-
->
-
-🚀 JOIN FREE TELEGRAM CHANNEL </a>
-
-<p class="note">
-
-⚠️ Ye sirf <span class="highlight">Educational Purpose</span>
-ke liye hai.
-
-Hum koi financial advice ya guaranteed profit claim nahi karte.
-
-Always do your own research.
-
-</p>
-
-<div class="footer">
-© 2026 Halal Trading Education
-</div>
-
-</div>
-
-</div>
-
-<!-- ================================================= -->
-
-<!-- SUBSCRIBE EVENT -->
-
-<!-- ================================================= -->
-
+<!-- Meta Pixel Code -->
 <script>
-
-(function(){
-
-"use strict";
-
-
-const telegramBtn =
-document.getElementById("telegramBtn");
-
-
-if(!telegramBtn){
-
-console.error(
-"Telegram button not found."
-);
-
-return;
-
-}
-
-
-/*
-================================================
-ANTI DOUBLE-CLICK PROTECTION
-================================================
-*/
-
-let clickLocked = false;
-
-
-/*
-================================================
-SESSION DUPLICATE PROTECTION
-================================================
-
-One Subscribe event per browser tab/session.
-
-This prevents accidental repeated firing
-from rapid/repeated clicks.
-
-================================================
-*/
-
-const SESSION_KEY =
-"telegram_subscribe_2278999236258193";
-
-
-telegramBtn.addEventListener(
-"click",
-function(event){
-
-
-/*
-Temporarily stop navigation so that
-the Pixel event can be queued first.
-*/
-
-event.preventDefault();
-
-
-/*
-Prevent rapid double-click.
-*/
-
-if(clickLocked){
-
-return;
-
-}
-
-clickLocked = true;
-
-telegramBtn.classList.add("disabled");
-
-
-/*
-================================================
-CHECK PIXEL
-================================================
-*/
-
-if(
-typeof window.fbq !== "function"
-){
-
-console.error(
-"Meta Pixel is not loaded."
-);
-
-
-/*
-If Pixel cannot load, don't trap the
-visitor on the landing page.
-*/
-
-window.location.href =
-telegramBtn.href;
-
-return;
-
-}
-
-
-/*
-================================================
-CHECK DUPLICATE EVENT
-================================================
-*/
-
-const alreadySent =
-sessionStorage.getItem(SESSION_KEY);
-
-
-if(!alreadySent){
-
-
-/*
-================================================
-UNIQUE EVENT ID
-================================================
-*/
-
-const eventId =
-"telegram_" +
-Date.now() +
-"_" +
-Math.random()
-.toString(36)
-.substring(2,12);
-
-
-/*
-================================================
-SUBSCRIBE EVENT
-================================================
-
-Fires ONLY after the visitor actually
-clicks the Telegram CTA.
-
-================================================
-*/
-
-fbq(
-"track",
-"Subscribe",
-{
-content_name:"Telegram Join",
-content_category:"Telegram"
-},
-{
-eventID:eventId
-}
-);
-
-
-/*
-Mark event as fired for this session.
-*/
-
-sessionStorage.setItem(
-SESSION_KEY,
-"1"
-);
-
-
-console.log(
-"Subscribe event fired:",
-eventId
-);
-
-
-}else{
-
-
-console.log(
-"Subscribe already fired in this session."
-);
-
-}
-
-
-/*
-================================================
-TELEGRAM REDIRECT
-================================================
-
-Small delay gives the Pixel request time
-to enter the browser queue.
-
-================================================
-*/
-
-setTimeout(
-function(){
-
-window.location.href =
-telegramBtn.href;
-
-},
-300
-);
-
-
-},
-{
-passive:false
-}
-
-);
-
-
-})();
-
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2278999236258193');
+fbq('track', 'PageView');
 </script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2278999236258193&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+    <div>
+
+        <div class="card">
+
+            <img src="https://github.com/itssky72001-ui/hajii/releases/download/hahi/haji.jpg" class="profile">
+
+            <h2>HAJI MUSSABBIR RAHMAN</h2>
+            <h2>( HALAL TRADING) </h2>
+
+            <div class="text">
+                Start learning with Expert Calls🔥<br> Trusted by 12,000+ Traders🌍<br> Join our Channel for daily updates✅
+            </div>
+
+            <a class="btn" href="https://t.me/+bbMnSTA8R204MmNl" target="_blank">
+
+<i class="fab fa-telegram"></i>
+ VIP Telegram group
+<i class="fab fa-telegram"></i>
+
+<span></span>
+<span></span>
+<span></span>
+
+</a>
+
+            <div class="timer">
+                Redirecting in <span id="count">30</span> seconds...
+            </div>
+
+        </div>
+
+        <div class="disclaimer">
+            This channel is for educational and informational purposes only.
+        </div>
+
+        <div class="ads">
+            
+        </div>
+
+    </div>
+
+    <script>
+        let time = 30;
+        let counter = document.getElementById("count");
+
+        setInterval(() => {
+            time--;
+            counter.innerText = time;
+
+            if (time <= 0) {
+                window.location.href = "https://t.me/+bbMnSTA8R204MmNl";
+            }
+
+        }, 1000);
+    </script>
 
 </body>
+
 </html>
