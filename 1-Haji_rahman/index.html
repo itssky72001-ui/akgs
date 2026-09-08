@@ -1,171 +1,155 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Haji Mudassir Rahman | Stock Market Education</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
 
-    <title>HALAL WORK</title>
+body{
+  min-height:100vh;
+  min-height:100dvh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:16px 14px;
+  color:#1a1f2b;
+  background:#f5f9f6;
+}
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+.wrap{width:100%;max-width:400px}
 
-  
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+.card{
+  background:#ffffff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 16px 40px rgba(6,95,70,.09);
+  border:1px solid #dceee4;
+}
 
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #0f172a;
-            color: white;
-        }
+/* Green/gold Islamic-inspired accent strip */
+.flag{
+  height:6px;
+  background:linear-gradient(90deg,#065f46,#d4a441,#065f46);
+}
 
-        /* card */
+.top{
+  text-align:center;
+  padding:22px 18px 14px;
+}
 
-        .card {
-            width: 350px;
-            padding: 40px 30px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            text-align: center;
-            box-shadow: 0 0px 80px rgba(0, 0, 0, .6);
-            animation: float 4s ease-in-out infinite;
-        }
+.avatar{
+  width:72px;height:72px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #065f46;
+  padding:2px;
+  background:#fff;
+  display:block;
+  margin:0 auto 10px;
+}
 
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0)
-            }
-            50% {
-                transform: translateY(-10px)
-            }
-        }
+.badge{
+  display:inline-block;
+  padding:5px 12px;
+  background:#f0fdf4;
+  border:1px solid #a7d4b8;
+  border-radius:30px;
+  color:#065f46;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.4px;
+  margin-bottom:9px;
+}
 
-        .profile {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            border: 4px solid white;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
+h1{font-size:16px;font-weight:900;color:#111827}
+.role{margin-top:3px;font-size:10px;color:#6b7280}
 
-        h2 {
-            margin-bottom: 10px;
-        }
+.tagline{
+  margin-top:9px;
+  font-size:12.5px;
+  font-weight:700;
+  color:#065f46;
+  line-height:1.5;
+}
 
-        .text {
-            font-size: 14px;
-            line-height: 1.6;
-            opacity: .9;
-            margin-bottom: 25px;
-        }
+.icon-row{
+  display:flex;
+  gap:6px;
+  padding:12px 18px;
+  border-top:1px solid #eef4f0;
+  border-bottom:1px solid #eef4f0;
+  background:#f8fbf9;
+  justify-content:space-around;
+}
+.icon-pill{text-align:center}
+.icon-pill .ic{font-size:16px;display:block;margin-bottom:3px}
+.icon-pill b{display:block;font-size:11px;color:#065f46}
+.icon-pill span{font-size:8px;color:#8892a0}
 
-        /* button */
+.body{padding:14px 18px 18px}
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 15px 32px;
-            border-radius: 50px;
-            background: linear-gradient(45deg, #6366f1, #06b6d4);
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            position: relative;
-            transition: .4s;
-            overflow: hidden;
-        }
+.intro{
+  text-align:center;
+  font-size:10.5px;
+  color:#4b5563;
+  line-height:1.6;
+  margin-bottom:14px;
+}
 
-        .btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 30px #06b6d4;
-        }
+.cta{
+  display:block;
+  text-decoration:none;
+  text-align:center;
+  background:linear-gradient(135deg,#229ed9,#087db5);
+  color:#fff;
+  padding:15px 12px;
+  border-radius:13px;
+  box-shadow:0 10px 24px rgba(34,158,217,.3);
+}
+.cta:active{transform:scale(.98)}
+.cta-main{display:block;font-size:14px;font-weight:900}
+.cta-sub{display:block;margin-top:3px;font-size:10px;color:rgba(255,255,255,.9)}
 
-        /* sparkle animation */
+.timer{
+  margin-top:8px;
+  text-align:center;
+  color:#8892a0;
+  font-size:9px;
+}
+.timer b{color:#065f46}
 
-        .btn span {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            background: white;
-            border-radius: 50%;
-            animation: spark 3s infinite;
-        }
+.feat-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:14px;
+}
+.f-cell{
+  background:#f8fbf9;
+  border:1px solid #e1efe5;
+  border-radius:12px;
+  padding:10px 8px;
+  text-align:center;
+}
+.f-cell .ic{font-size:15px;margin-bottom:4px;display:block}
+.f-cell h3{font-size:10px;color:#1f2937;margin-bottom:1px}
+.f-cell p{font-size:8.5px;color:#7c8794;line-height:1.3}
 
-        .btn span:nth-child(1) {
-            top: -10px;
-            left: 20%
-        }
+.disclaimer{
+  margin-top:13px;
+  padding-top:11px;
+  border-top:1px solid #eceef2;
+  color:#8892a0;
+  font-size:7.5px;
+  line-height:1.55;
+}
 
-        .btn span:nth-child(2) {
-            top: -10px;
-            left: 50%;
-            animation-delay: 1s
-        }
+.footer{margin-top:8px;text-align:center;color:#b0b7c2;font-size:7.5px}
+</style>
 
-        .btn span:nth-child(3) {
-            top: -10px;
-            left: 80%;
-            animation-delay: 2s
-        }
-
-        @keyframes spark {
-            0% {
-                transform: translateY(0);
-                opacity: 1
-            }
-            100% {
-                transform: translateY(-40px);
-                opacity: 0
-            }
-        }
-
-        /* countdown */
-
-        .timer {
-            margin-top: 15px;
-            font-size: 13px;
-            opacity: .8;
-        }
-
-        /* disclaimer */
-
-        .disclaimer {
-            margin-top: 20px;
-            font-size: 11px;
-            opacity: .6;
-            text-align: center;
-        }
-
-        .ads {
-            margin-top: 6px;
-            font-size: 12px;
-            text-align: center;
-        }
-
-        .ads a {
-            color: #22c55e;
-            font-weight: bold;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -180,65 +164,84 @@ fbq('init', '2278999236258193');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2278999236258193&ev=PageView&noscript=1"
-/></noscript>
+src="https://www.facebook.com/tr?id=2278999236258193&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
-    <div>
 
-        <div class="card">
+</head>
+<body>
 
-            <img src="https://github.com/itssky72001-ui/hajii/releases/download/hahi/haji.jpg" class="profile">
+<div class="wrap">
+  <div class="card">
+    <div class="flag"></div>
 
-            <h2>HAJI MUSSABBIR RAHMAN</h2>
-            <h2>( HALAL TRADING) </h2>
-
-            <div class="text">
-                Start learning with Expert Calls🔥<br> Trusted by 12,000+ Traders🌍<br> Join our Channel for daily updates✅
-            </div>
-
-            <a class="btn" href="https://t.me/+bbMnSTA8R204MmNl" target="_blank">
-
-<i class="fab fa-telegram"></i>
- VIP Telegram group
-<i class="fab fa-telegram"></i>
-
-<span></span>
-<span></span>
-<span></span>
-
-</a>
-
-            <div class="timer">
-                Redirecting in <span id="count">30</span> seconds...
-            </div>
-
-        </div>
-
-        <div class="disclaimer">
-            This channel is for educational and informational purposes only.
-        </div>
-
-        <div class="ads">
-            
-        </div>
-
+    <div class="top">
+      <div class="badge">STOCK MARKET EDUCATION COMMUNITY</div>
+      <img src="https://github.com/itssky72001-ui/hajii/releases/download/hahi/haji.jpg
+" class="avatar" alt="Haji Mudassir Rahman" width="72" height="72">
+      <h1>HAJI MUDASSIR RAHMAN</h1>
+      <div class="role">Stock Market Educator</div>
+      <div class="tagline">Halal Learning. Honest Guidance.</div>
     </div>
 
-    <script>
-        let time = 30;
-        let counter = document.getElementById("count");
+    <div class="icon-row">
+      <div class="icon-pill"><span class="ic">🆓</span><b>Free</b><span>Access</span></div>
+      <div class="icon-pill"><span class="ic">📘</span><b>English</b><span>Language</span></div>
+      <div class="icon-pill"><span class="ic">📅</span><b>Daily</b><span>Updates</span></div>
+    </div>
 
-        setInterval(() => {
-            time--;
-            counter.innerText = time;
+    <div class="body">
+      <p class="intro">
+        A stock market education community for our Muslim brothers and sisters — clear, honest learning to help you understand how markets work, step by step, from the ground up.
+      </p>
 
-            if (time <= 0) {
-                window.location.href = "https://t.me/+bbMnSTA8R204MmNl";
-            }
+      <a class="cta" id="telegramBtn" href="https://t.me/+bbMnSTA8R204MmNl" rel="noopener noreferrer">
+        <span class="cta-main">JOIN FREE TELEGRAM COMMUNITY</span>
+        <span class="cta-sub">Free education • Instant access • No fees</span>
+      </a>
 
-        }, 1000);
-    </script>
+      <div class="timer">Auto-redirecting in <span id="count">30</span>s...</div>
+
+      <div class="feat-grid">
+        <div class="f-cell"><span class="ic">📘</span><h3>Market Fundamentals</h3><p>Core concepts explained clearly</p></div>
+        <div class="f-cell"><span class="ic">🎯</span><h3>Beginner Friendly</h3><p>Start from scratch, no experience needed</p></div>
+        <div class="f-cell"><span class="ic">💬</span><h3>Doubt Support</h3><p>Questions answered actively</p></div>
+        <div class="f-cell"><span class="ic">👥</span><h3>Active Community</h3><p>Learn alongside fellow students</p></div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Important Disclaimer:</strong> Haji Mudassir Rahman is an educational and informational platform only. We are not a SEBI-registered investment advisor and do not issue any fatwas or Shariah rulings. All content is strictly for learning and awareness purposes and does not constitute financial advice, trading recommendations, or any solicitation to buy or sell securities. Stock market investments are subject to market risks. Please consult a qualified financial advisor and your own scholar before investing. We do not guarantee any returns or profits.
+      </div>
+
+      <div class="footer">© 2026 Haji Mudassir Rahman • Educational Community</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById("telegramBtn");
+  var link = "https://t.me/+bbMnSTA8R204MmNl";
+  var counter = document.getElementById("count");
+  var time = 30;
+
+  btn.addEventListener("click", function(){
+    // No preventDefault, no setTimeout — navigation happens
+    // immediately via the href so in-app browsers don't block it.
+    if(window.fbq){
+      fbq('track','Subscribe',{content_name:'Haji Mudassir Rahman Telegram Community'},{eventID:'telegram_subscribe_'+Date.now()});
+    }
+  });
+
+  var t = setInterval(function(){
+    time--;
+    counter.textContent = time;
+    if(time <= 0){
+      clearInterval(t);
+      window.location.href = link;
+    }
+  }, 1000);
+})();
+</script>
 
 </body>
-
 </html>
