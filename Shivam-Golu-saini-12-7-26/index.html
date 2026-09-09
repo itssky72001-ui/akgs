@@ -1,0 +1,702 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Trade With Gautam</title>
+
+
+    <!-- =====================================================
+         META PIXEL
+         Pixel ID: 1054294524007787
+         ===================================================== -->
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {
+        if(f.fbq)return;
+
+        n=f.fbq=function()
+        {
+            n.callMethod ?
+            n.callMethod.apply(n,arguments) :
+            n.queue.push(arguments)
+        };
+
+        if(!f._fbq)f._fbq=n;
+
+        n.push=n;
+        n.loaded=!0;
+        n.version='2.0';
+        n.queue=[];
+
+        t=b.createElement(e);
+        t.async=!0;
+        t.src=v;
+
+        s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s);
+
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1054294524007787');
+
+    fbq('track', 'PageView');
+    </script>
+
+
+    <noscript>
+
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=1054294524007787&ev=PageView&noscript=1"
+            alt=""
+        >
+
+    </noscript>
+
+    <!-- ================= END META PIXEL ================= -->
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+        }
+
+
+        html {
+            min-height: 100%;
+        }
+
+
+        body {
+
+            background-color: #000000;
+
+            color: #ffffff;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            min-height: 100vh;
+
+            padding: 20px;
+        }
+
+
+        .container {
+
+            max-width: 450px;
+
+            width: 100%;
+
+            text-align: center;
+
+            padding: 10px;
+        }
+
+
+        /* ================= PROFILE ================= */
+
+        .profile-img {
+
+            width: 140px;
+
+            height: 140px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            margin-bottom: 25px;
+
+            border: 2px solid #333;
+
+            display: block;
+
+            margin-left: auto;
+
+            margin-right: auto;
+        }
+
+
+        /* ================= TITLE ================= */
+
+        h1 {
+
+            color: #FFEB3B;
+
+            font-size: 26px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================= HIGHLIGHT ================= */
+
+        .highlight-box {
+
+            background-color: #ffffff;
+
+            color: #000000;
+
+            border-radius: 50px;
+
+            padding: 18px 20px;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            line-height: 1.4;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================= TELEGRAM BUTTON ================= */
+
+        .btn-telegram {
+
+            display: block;
+
+            background-color: #1E73BE;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            padding: 16px;
+
+            border-radius: 12px;
+
+            margin-bottom: 25px;
+
+            transition:
+                background 0.2s ease,
+                transform 0.1s ease,
+                opacity 0.2s ease;
+
+            box-shadow:
+                0 4px 15px rgba(30, 115, 190, 0.4);
+
+            cursor: pointer;
+
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        .btn-telegram:hover {
+
+            background-color: #155a96;
+        }
+
+
+        .btn-telegram:active {
+
+            transform: scale(0.98);
+        }
+
+
+        /* ================= SUB TEXT ================= */
+
+        .sub-text {
+
+            color: #FFEB3B;
+
+            font-size: 15px;
+
+            line-height: 1.5;
+
+            margin-bottom: 30px;
+
+            padding: 0 10px;
+        }
+
+
+        /* ================= FEATURES ================= */
+
+        .features-list {
+
+            text-align: left;
+
+            max-width: 360px;
+
+            margin: 0 auto 30px auto;
+
+            list-style: none;
+        }
+
+
+        .features-list li {
+
+            font-size: 16px;
+
+            font-weight: 500;
+
+            margin-bottom: 15px;
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        .features-list li::before {
+
+            content: "✓";
+
+            color: #2ecc71;
+
+            font-weight: 900;
+
+            margin-right: 12px;
+
+            font-size: 18px;
+        }
+
+
+        /* ================= DIVIDER ================= */
+
+        hr {
+
+            border: none;
+
+            border-top: 2px solid #ff0000;
+
+            margin: 35px 0;
+        }
+
+
+        /* ================= TIMER ================= */
+
+        .timer-text {
+
+            font-size: 22px;
+
+            font-weight: 700;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= DISCLAIMER ================= */
+
+        .disclaimer {
+
+            font-size: 12px;
+
+            color: #aaaaaa;
+
+            line-height: 1.6;
+
+            text-align: justify;
+
+            padding: 0 10px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 480px) {
+
+            body {
+
+                padding: 15px;
+            }
+
+
+            .container {
+
+                padding: 5px;
+
+            }
+
+
+            .profile-img {
+
+                width: 125px;
+
+                height: 125px;
+
+                margin-bottom: 20px;
+            }
+
+
+            h1 {
+
+                font-size: 23px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .highlight-box {
+
+                font-size: 16px;
+
+                padding: 15px;
+            }
+
+
+            .btn-telegram {
+
+                font-size: 17px;
+
+                padding: 15px;
+            }
+
+
+            .features-list li {
+
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- ================= PROFILE IMAGE ================= -->
+
+    <img
+        src="https://github.com/gt260856-netizen/gautam/releases/download/gautam/WhatsApp.Image.2026-06-12.at.11.42.50.PM.jpeg"
+        alt="Trade With Gautam"
+        class="profile-img"
+        loading="eager"
+        decoding="async"
+    >
+
+
+    <!-- ================= TITLE ================= -->
+
+    <h1>
+        TRADE WITH GAUTAM JHA
+    </h1>
+
+
+    <!-- ================= HIGHLIGHT ================= -->
+
+    <div class="highlight-box">
+
+        Get Daily Stock Market Insights
+        <br>
+        – Free on Telegram
+
+    </div>
+
+
+    <!-- ================= FIRST TELEGRAM BUTTON ================= -->
+
+    <a
+        href="https://t.me/+OjnusPmcvphhNmVl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cta-btn btn-telegram"
+        data-telegram-cta
+    >
+
+        🚀 JOIN TELEGRAM FREE
+
+    </a>
+
+
+    <!-- ================= DESCRIPTION ================= -->
+
+    <p class="sub-text">
+
+        Get market updates, potential trades and expert analysis
+        straight to your phone – Absolutely Free
+
+    </p>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <ul class="features-list">
+
+        <li>
+            Daily NIFTY &amp; BankNIFTY Levels
+        </li>
+
+        <li>
+            No Paid Tips – Purely Educational
+        </li>
+
+        <li>
+            5+ Years of Market Experience
+        </li>
+
+        <li>
+            20000+ Subscribers Trust Us Already
+        </li>
+
+    </ul>
+
+
+    <!-- ================= DIVIDER ================= -->
+
+    <hr>
+
+
+    <!-- ================= SECOND TELEGRAM BUTTON ================= -->
+
+    <a
+        href="https://t.me/+OjnusPmcvphhNmVl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cta-btn btn-telegram"
+        data-telegram-cta
+    >
+
+        🚀 JOIN TELEGRAM FREE
+
+    </a>
+
+
+    <!-- ================= TIMER ================= -->
+
+    <div class="timer-text">
+
+        Redirecting in
+        <span id="countdown">20</span>s...
+
+    </div>
+
+
+    <!-- ================= DISCLAIMER ================= -->
+
+    <p class="disclaimer">
+
+        <strong>Disclaimer:</strong>
+
+        This channel is for educational and informational purposes only.
+        We do not provide investment advice or guaranteed returns.
+        Trading in the stock market involves risk.
+        Please consult your financial advisor before making any
+        investment decisions.
+
+    </p>
+
+
+</div>
+
+
+<!-- =====================================================
+     EVENT + REDIRECT SCRIPT
+     ===================================================== -->
+
+<script>
+
+(function () {
+
+
+    /* =====================================================
+       TELEGRAM CONFIGURATION
+       ===================================================== */
+
+    var telegramLink =
+        "https://t.me/+OjnusPmcvphhNmVl";
+
+
+    /* =====================================================
+       SUBSCRIBE EVENT CONTROL
+       =====================================================
+
+       Subscribe fires ONLY when the visitor genuinely clicks
+       one of the Telegram buttons.
+
+       It does NOT fire from the countdown redirect.
+
+       Duplicate rapid clicks are blocked during this page load.
+       ===================================================== */
+
+    var subscribeSent = false;
+
+
+    function fireSubscribeEvent(event) {
+
+
+        /*
+         * Block synthetic / programmatic clicks.
+         */
+
+        if (
+            event &&
+            event.isTrusted === false
+        ) {
+
+            event.preventDefault();
+
+            return false;
+        }
+
+
+        /*
+         * Prevent duplicate Subscribe events
+         * during the same page load.
+         */
+
+        if (subscribeSent) {
+
+            return true;
+        }
+
+
+        subscribeSent = true;
+
+
+        /*
+         * Send Meta Subscribe event.
+         */
+
+        if (
+            typeof window.fbq === "function"
+        ) {
+
+            window.fbq(
+                "track",
+                "Subscribe"
+            );
+
+        }
+
+
+        return true;
+    }
+
+
+    /* =====================================================
+       TELEGRAM BUTTON EVENTS
+       ===================================================== */
+
+    var buttons =
+        document.querySelectorAll(
+            "[data-telegram-cta]"
+        );
+
+
+    buttons.forEach(function (button) {
+
+
+        button.addEventListener(
+            "click",
+            function (event) {
+
+                fireSubscribeEvent(event);
+
+            },
+            {
+                passive: false
+            }
+        );
+
+
+    });
+
+
+    /* =====================================================
+       COUNTDOWN
+       =====================================================
+
+       IMPORTANT:
+       Countdown does NOT fire Subscribe.
+
+       It only redirects when it reaches zero.
+       ===================================================== */
+
+    var countdownElement =
+        document.getElementById(
+            "countdown"
+        );
+
+
+    var timeLeft = 20;
+
+
+    var timer =
+        setInterval(function () {
+
+
+            timeLeft--;
+
+
+            if (countdownElement) {
+
+                countdownElement.textContent =
+                    timeLeft;
+
+            }
+
+
+            if (timeLeft <= 0) {
+
+                clearInterval(timer);
+
+
+                /*
+                 * Auto redirect only.
+                 *
+                 * NO Subscribe event here.
+                 */
+
+                window.location.href =
+                    telegramLink;
+
+            }
+
+
+        }, 1000);
+
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
+```
