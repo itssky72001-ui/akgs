@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Haji Salman Memon — free stock market education community on Telegram.">
+<title>Haji Salman Memon | Official Community</title>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+
+body{
+  min-height:100vh;
+  min-height:100dvh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px 16px;
+  background:#08140f;
+  color:#f2fbf6;
+}
+
+.wrap{width:100%;max-width:400px}
+
+.card{
+  background:#0e1f17;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 26px 60px rgba(0,0,0,.55);
+  border:1px solid rgba(212,175,55,.25);
+}
+
+/* geometric arch header with star-pattern accent line */
+.header{
+  position:relative;
+  background:linear-gradient(160deg,#0f5132,#0a3320);
+  padding:32px 20px 30px;
+  text-align:center;
+  border-bottom:2px solid rgba(212,175,55,.4);
+}
+
+.pattern-strip{
+  position:absolute;
+  bottom:-1px;left:0;right:0;
+  height:6px;
+  background:repeating-linear-gradient(45deg,rgba(212,175,55,.5) 0 6px,transparent 6px 12px);
+}
+
+.avatar-ring{
+  width:88px;height:88px;
+  border-radius:50%;
+  margin:0 auto 14px;
+  padding:3px;
+  background:conic-gradient(from 0deg,#d4af37,#f5e08c,#d4af37,#0f5132,#d4af37);
+}
+.avatar{
+  width:100%;height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  background:#0a3320;
+  border:3px solid #0e1f17;
+  display:block;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  background:rgba(212,175,55,.14);
+  border:1px solid rgba(212,175,55,.4);
+  color:#f0dfa0;
+  font-size:9.5px;
+  font-weight:800;
+  letter-spacing:.4px;
+  padding:5px 12px;
+  border-radius:20px;
+  margin-bottom:10px;
+}
+
+h1{font-size:21px;font-weight:900;color:#fff}
+.tagline{margin-top:6px;font-size:12px;font-weight:700;color:#f0dfa0}
+
+.body{padding:22px 22px 20px}
+
+.intro{
+  text-align:center;
+  font-size:11.5px;
+  color:#a9c9b8;
+  line-height:1.7;
+  margin-bottom:18px;
+}
+
+.stat-pills{
+  display:flex;
+  gap:8px;
+  margin-bottom:20px;
+}
+.pill{
+  flex:1;
+  text-align:center;
+  background:rgba(212,175,55,.06);
+  border:1px solid rgba(212,175,55,.22);
+  border-radius:12px;
+  padding:10px 6px;
+}
+.pill b{display:block;font-size:12.5px;color:#f0dfa0}
+.pill span{font-size:8.5px;color:#7fa190}
+
+.cta{
+  display:block;
+  text-decoration:none;
+  text-align:center;
+  background:linear-gradient(135deg,#229ed9,#087db5);
+  color:#fff;
+  padding:16px 14px;
+  border-radius:16px;
+  box-shadow:0 14px 30px rgba(8,125,181,.35);
+  margin-bottom:10px;
+}
+.cta:active{transform:scale(.98)}
+.cta-main{display:block;font-size:14.5px;font-weight:900}
+.cta-sub{display:block;margin-top:3px;font-size:10.5px;color:rgba(255,255,255,.85)}
+
+.timer{
+  text-align:center;
+  color:#7fa190;
+  font-size:9.5px;
+  margin-bottom:18px;
+}
+.timer b{color:#f0dfa0}
+
+.feat-list{margin-bottom:6px}
+.feat-row{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding:9px 0;
+  border-bottom:1px solid rgba(212,175,55,.1);
+}
+.feat-row:last-child{border-bottom:none}
+.feat-ic{
+  width:30px;height:30px;
+  flex-shrink:0;
+  border-radius:10px;
+  background:rgba(212,175,55,.08);
+  border:1px solid rgba(212,175,55,.25);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;
+}
+.feat-text h3{font-size:11.5px;color:#f2fbf6;margin-bottom:1px;font-weight:800}
+.feat-text p{font-size:10px;color:#7fa190;line-height:1.4}
+
+.disclaimer{
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid rgba(212,175,55,.12);
+  color:#547163;
+  font-size:8.5px;
+  line-height:1.65;
+}
+
+.footer{margin-top:8px;text-align:center;color:#3f5a4d;font-size:8.5px}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1827636271740949');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1827636271740949&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<div class="wrap">
+  <div class="card">
+
+    <div class="header">
+      <div class="avatar-ring">
+        <img src="salman.jpg" class="avatar" alt="Haji Salman Memon" width="82" height="82">
+      </div>
+      <div class="badge">✓ VERIFIED COMMUNITY</div>
+      <h1>HAJI SALMAN MEMON</h1>
+      <div class="tagline">Honest Learning. Halal Guidance.</div>
+      <div class="pattern-strip"></div>
+    </div>
+
+    <div class="body">
+      <p class="intro">
+        A respectful, community-first approach to understanding the stock market — free, structured, and built for beginners.
+      </p>
+
+      <div class="stat-pills">
+        <div class="pill"><b>FREE</b><span>NO COST</span></div>
+        <div class="pill"><b>DAILY</b><span>MARKET NOTES</span></div>
+        <div class="pill"><b>100%</b><span>BEGINNER OK</span></div>
+      </div>
+
+      <a class="cta" id="telegramBtn" href="https://t.me/+M1U1pWKt8TNlYTQ1" rel="noopener noreferrer">
+        <span class="cta-main">JOIN FREE TELEGRAM COMMUNITY</span>
+        <span class="cta-sub">Instant access • 100% free</span>
+      </a>
+
+      <div class="timer">Auto-redirecting in <b><span id="count">30</span>s</b>...</div>
+
+      <div class="feat-list">
+        <div class="feat-row"><div class="feat-ic">📊</div><div class="feat-text"><h3>Daily Market Insights</h3><p>Simple, no-jargon updates every day</p></div></div>
+        <div class="feat-row"><div class="feat-ic">📘</div><div class="feat-text"><h3>Structured Fundamentals</h3><p>Learn the basics, step by step</p></div></div>
+        <div class="feat-row"><div class="feat-ic">🤝</div><div class="feat-text"><h3>Respectful Community</h3><p>A supportive space for everyone</p></div></div>
+        <div class="feat-row"><div class="feat-ic">🛡️</div><div class="feat-text"><h3>Honest, No Hype</h3><p>Education first — no false promises</p></div></div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This platform is for educational and informational purposes only. We are not a SEBI-registered investment advisor, and we do not issue any fatwas or Shariah rulings. Nothing shared here constitutes financial or investment advice, and no returns are guaranteed. Stock market investments carry risk — please consult a qualified advisor and conduct your own research before investing.
+      </div>
+
+      <div class="footer">© 2026 Haji Salman Memon • Educational Community</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById("telegramBtn");
+  var link = "https://t.me/+M1U1pWKt8TNlYTQ1";
+  var counter = document.getElementById("count");
+  var time = 30;
+
+  // No preventDefault, no setTimeout — native href navigates instantly
+  // so in-app browsers (Instagram/Facebook) never block it.
+  btn.addEventListener("click", function(){
+    if(window.fbq){
+      fbq('track','Subscribe',{content_name:'Haji Salman Memon Telegram Community'},{eventID:'telegram_subscribe_'+Date.now()});
+    }
+  });
+
+  var t = setInterval(function(){
+    time--;
+    counter.textContent = time;
+    if(time <= 0){
+      clearInterval(t);
+      window.location.href = link;
+    }
+  }, 1000);
+})();
+</script>
+
+</body>
+</html>
