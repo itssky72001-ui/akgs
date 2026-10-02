@@ -1,7 +1,8 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,12 +23,14 @@ body{
   text-align:center;
 }
 
+/* ✅ CONTAINER (PC FIX) */
 .container{
   width:100%;
   max-width:480px;
   margin:auto;
 }
 
+/* HEADER */
 .header{
   display:flex;
   align-items:center;
@@ -35,17 +38,16 @@ body{
   font-size:12px;
 }
 
+/* LIVE */
 .live{
   color:#ff4d4d;
   font-weight:bold;
   animation:blink 1s infinite;
   margin-right:6px;
 }
+@keyframes blink{50%{opacity:0.4;}}
 
-@keyframes blink{
-  50%{opacity:0.4;}
-}
-
+/* MARKET */
 .market{
   overflow:hidden;
   flex:1;
@@ -67,11 +69,13 @@ body{
   to{transform:translateX(-50%);}
 }
 
+/* WATCH */
 .watch{
   color:#00e676;
   margin-left:6px;
 }
 
+/* PROFILE */
 .profile{
   margin-top:20px;
   position:relative;
@@ -84,9 +88,9 @@ body{
   border-radius:50%;
   border:3px solid #0A66C2;
   box-shadow:0 0 20px rgba(10,102,194,0.6);
-  object-fit:cover;
 }
 
+/* VERIFIED */
 .verified{
   position:absolute;
   bottom:5px;
@@ -95,6 +99,7 @@ body{
   height:30px;
 }
 
+/* TITLE */
 .title{
   font-size:26px;
   font-weight:700;
@@ -108,12 +113,14 @@ body{
   color:#9fb3c8;
 }
 
+/* STATS */
 .stats{
   font-size:15px;
   margin:12px;
   font-weight:bold;
 }
 
+/* DESC */
 .desc{
   font-size:15px;
   padding:0 18px;
@@ -126,6 +133,7 @@ body{
   font-weight:700;
 }
 
+/* TAGS */
 .tags{
   display:flex;
   flex-wrap:wrap;
@@ -142,6 +150,7 @@ body{
   color:#00AEEF;
 }
 
+/* BOX */
 .box-container{
   display:flex;
   gap:8px;
@@ -158,6 +167,7 @@ body{
   border:1px solid #0A66C2;
 }
 
+/* CTA */
 .cta button{
   width:92%;
   padding:16px;
@@ -167,7 +177,6 @@ body{
   background:linear-gradient(45deg,#0A66C2,#00AEEF);
   color:white;
   font-weight:bold;
-  cursor:pointer;
   animation:glowBtn 1.5s infinite alternate;
 }
 
@@ -176,12 +185,14 @@ body{
   to{box-shadow:0 0 30px #00AEEF;}
 }
 
+/* TRUST */
 .trust{
   margin:15px;
   font-size:13px;
   color:#b8c7d9;
 }
 
+/* POPUP */
 .popup{
   position:fixed;
   bottom:20px;
@@ -195,13 +206,16 @@ body{
   border:1px solid #0A66C2;
 }
 
+/* DISCLAIMER */
 .disclaimer{
   font-size:11px;
   color:#8a9bb0;
   padding:12px;
 }
 
+/* ✅ PC ONLY IMPROVEMENT */
 @media(min-width:768px){
+
   .container{
     margin-top:30px;
     margin-bottom:30px;
@@ -209,64 +223,33 @@ body{
     box-shadow:0 0 40px rgba(0,0,0,0.6);
     overflow:hidden;
   }
+
 }
 </style>
 </head>
 
 <body>
-
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
-{
-  if(f.fbq)return;
-
-  n=f.fbq=function(){
-    n.callMethod ?
-    n.callMethod.apply(n,arguments) :
-    n.queue.push(arguments)
-  };
-
-  if(!f._fbq)f._fbq=n;
-
-  n.push=n;
-  n.loaded=!0;
-  n.version='2.0';
-  n.queue=[];
-
-  t=b.createElement(e);
-  t.async=!0;
-  t.src=v;
-
-  s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s);
-
-}(window, document,'script',
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-
-/* YOUR META PIXEL */
 fbq('init', '2380953135769467');
-
-/* PAGE VIEW */
 fbq('track', 'PageView');
 </script>
-
-<noscript>
-<img
-  height="1"
-  width="1"
-  style="display:none"
-  src="https://www.facebook.com/tr?id=2380953135769467&ev=PageView&noscript=1"
-/>
-</noscript>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2380953135769467&ev=PageView&noscript=1"
+/></noscript>
 <!-- End Meta Pixel Code -->
-
-
 <div class="container">
 
 <!-- HEADER -->
 <div class="header">
-
   <div class="live">🔴 LIVE</div>
 
   <div class="market">
@@ -276,276 +259,121 @@ fbq('track', 'PageView');
     </div>
   </div>
 
-  <div class="watch">
-    👀 <span id="watchCount">1247</span>
-  </div>
-
+  <div class="watch">👀 <span id="watchCount">1247</span></div>
 </div>
-
 
 <!-- PROFILE -->
 <div class="profile">
+  <img src="https://github.com/itssky72001-ui/Munaf/releases/download/munaf/munaf.1.jpg
 
-  <img
-    src="https://github.com/itssky72001-ui/Munaf/releases/download/munaf/munaf.1.jpg"
-    alt="Profile"
-  >
+
+">
 
   <svg class="verified" viewBox="0 0 24 24">
-
     <defs>
       <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#00c6ff"/>
         <stop offset="100%" stop-color="#0072ff"/>
       </linearGradient>
     </defs>
-
-    <circle
-      cx="12"
-      cy="12"
-      r="11"
-      fill="none"
-      stroke="#00AEEF"
-      stroke-width="2"
-      opacity="0.6"
-    />
-
-    <circle
-      cx="12"
-      cy="12"
-      r="9"
-      fill="url(#badgeGrad)"
-    />
-
-    <path
-      d="M7 12l3 3 7-7"
-      stroke="#fff"
-      stroke-width="2.2"
-      fill="none"
-    />
-
+    <circle cx="12" cy="12" r="11" fill="none" stroke="#00AEEF" stroke-width="2" opacity="0.6"/>
+    <circle cx="12" cy="12" r="9" fill="url(#badgeGrad)"/>
+    <path d="M7 12l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none"/>
   </svg>
-
 </div>
-
 
 <!-- TITLE -->
-<div class="title">
-  𝙏𝙍𝘼𝘿𝙀 𝙒𝙄𝙏𝙃 𝙈𝙐𝙉𝘼𝙁 (TELUGU) OFFICIAL
-</div>
-
-<div class="sub">
-  OFFICIAL TRADING CHANNEL
-</div>
-
+<div class="title">𝙏𝙍𝘼𝘿𝙀 𝙒𝙄𝙏𝙃 𝙈𝙐𝙉𝘼𝙁 (TELUGU) OFFICIAL </div>
+<div class="sub">OFFICIAL TRADING CHANNEL</div>
 
 <!-- STATS -->
 <div class="stats">
   👥 <b>10,584+ Members</b> | 📊 Market Insights
 </div>
 
-
 <!-- DESC -->
 <div class="desc">
-
-  📊
-  <span class="highlight">
-    📊 ಮಾರುಕಟ್ಟೆ ಸಂಶೋಧನೆ ಮತ್ತು ವಿಶ್ಲೇಷಣೆಯ ಆಧಾರದ ಮೇಲೆ ನವೀಕರಣಗಳು
-  </span>
-  <br>
-
-  💼
-  <span class="highlight">
-    💼 ಶೈಕ್ಷಣಿಕ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮಾತ್ರ
-  </span>
-  <br>
-
-  ⚡
-  <span class="highlight">
-    ⚡ ಅಪಾಯ ನಿರ್ವಹಣೆ ಅತ್ಯಗತ್ಯ
-  </span>
-
+  📊 <span class="highlight">📊 ಮಾರುಕಟ್ಟೆ ಸಂಶೋಧನೆ ಮತ್ತು ವಿಶ್ಲೇಷಣೆಯ ಆಧಾರದ ಮೇಲೆ ನವೀಕರಣಗಳು</span> <span class="highlight"></span> <br>
+  💼  <span class="highlight">💼 ಶೈಕ್ಷಣಿಕ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮಾತ್ರ</span> <br>
+  ⚡ <span class="highlight">⚡ ಅಪಾಯ ನಿರ್ವಹಣೆ ಅತ್ಯಗತ್ಯ</span> 
 </div>
-
 
 <!-- TAGS -->
 <div class="tags">
-
   <div class="tag">📊 STOCKS</div>
   <div class="tag">📉 INDEX</div>
-  <div class="tag">💹 F&amp;O</div>
+  <div class="tag">💹 F&O</div>
   <div class="tag">🪙 CRYPTO</div>
-
 </div>
-
 
 <!-- BOX -->
 <div class="box-container">
-
-  <div class="box">
-    👥 10K+ USERS
-  </div>
-
-  <div class="box">
-    📈 DAILY UPDATES
-  </div>
-
-  <div class="box">
-    🆓 FREE ACCESS
-  </div>
-
+  <div class="box">👥 10K+ USERS</div>
+  <div class="box">📈 DAILY UPDATES</div>
+  <div class="box">🆓 FREE ACCESS</div>
 </div>
-
 
 <!-- CTA -->
 <div class="cta">
-
-  <button onclick="joinNow()">
-    🚀 JOIN CHANNEL — IT'S FREE
-  </button>
-
+  <button onclick="joinNow()">🚀 JOIN CHANNEL — IT'S FREE</button>
 </div>
-
 
 <!-- TRUST -->
 <div class="trust">
-
-  🛡️ Risk Management Guidance
-  <br>
-
-  📊 Daily Market Analysis
-  <br>
-
+  🛡️ Risk Management Guidance <br>
+  📊 Daily Market Analysis <br>
   ⚡ Timely Trade Alerts
-
 </div>
-
 
 <!-- POPUP -->
 <div class="popup" id="popup"></div>
 
-
 <!-- DISCLAIMER -->
 <div class="disclaimer">
-  Disclaimer: This channel is for educational and informational purposes only.
+Disclaimer: This channel is for educational and informational purposes only.
 </div>
 
 </div>
-
 
 <script>
 
-/* =========================
-   MARKET TICKER
-========================= */
-
+// SAME JS
 function updateMarket(){
-
   let items=["NIFTY","BANKNIFTY","BTC"];
   let text="";
-
   items.forEach(i=>{
-
     let change=(Math.random()*1-0.5).toFixed(2);
     let up=change>0;
-
-    text += `${i}
-      <span style="color:${up?'#00ff88':'#ff4d4d'}">
-        ${up?'▲':'▼'} ${Math.abs(change)}%
-      </span> | `;
-
+    text+=`${i} <span style="color:${up?'#00ff88':'#ff4d4d'}">${up?'▲':'▼'} ${Math.abs(change)}%</span> | `;
   });
-
   document.getElementById("marketData").innerHTML=text;
   document.getElementById("marketDataClone").innerHTML=text;
-
 }
-
 updateMarket();
-
 setInterval(updateMarket,6000);
 
-
-/* =========================
-   WATCH COUNT
-========================= */
-
 let watch=1247;
-
 setInterval(()=>{
-
-  watch += Math.floor(Math.random()*2);
-
+  watch+=Math.floor(Math.random()*2);
   document.getElementById("watchCount").innerText=watch;
-
 },3000);
 
-
-/* =========================
-   POPUP
-========================= */
-
-let names=[
-  "Rahul",
-  "Amit",
-  "Vikas",
-  "Suresh",
-  "Rohit"
-];
-
+let names=["Rahul","Amit","Vikas","Suresh","Rohit"];
 function showPopup(){
-
   let name=names[Math.floor(Math.random()*names.length)];
-
   let amount=Math.floor(Math.random()*50+10)*1000;
-
   let popup=document.getElementById("popup");
-
   popup.innerHTML=`💰 ${name} made profit ₹${amount}`;
-
   popup.style.display="block";
-
-  setTimeout(()=>{
-    popup.style.display="none";
-  },3000);
-
+  setTimeout(()=>{popup.style.display="none";},3000);
 }
-
 setInterval(showPopup,7000);
 
-
-/* =========================
-   SUBSCRIBE EVENT + TELEGRAM
-========================= */
-
 function joinNow(){
-
-  /*
-   * Meta Pixel Subscribe Event
-   *
-   * This fires when the user clicks
-   * the JOIN CHANNEL button.
-   */
-  if(typeof fbq === "function"){
-
-    fbq('track', 'Subscribe');
-
-  }
-
-  /*
-   * Give Meta Pixel a short moment
-   * to send the event before redirect.
-   */
-  setTimeout(function(){
-
-    window.location.href="https://t.me/+l7BRTxZtNyM2N2M1";
-
-  },500);
-
-}
-
-</script>
-
-</body>
-</html>
-```
+  window.location.href="https://t.me/+l7BRTxZtNyM2N2M1"; 
+} 
+ 
+</script> 
+ 
+</body> 
+</html>>                                                                                                                                                      
