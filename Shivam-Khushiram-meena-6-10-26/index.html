@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#211632">
+<meta name="description" content="Gujarati Trader: explore market basics, chart concepts and risk awareness in English and Gujarati.">
+<title>Gujarati Trader | Market Learning</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100svh;
+  padding:20px;
+  background:#211632;
+  color:#fff;
+  font-family:Arial,sans-serif;
+  display:grid;
+  place-items:center;
+}
+.page{
+  width:100%;
+  max-width:440px;
+}
+.identity{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:24px;
+}
+.logo{
+  position:relative;
+  width:72px;
+  height:72px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border:1px solid #d5f69a;
+  border-radius:50%;
+  overflow:hidden;
+  background:#302442;
+  color:#d5f69a;
+  font-size:24px;
+  font-weight:800;
+}
+.logo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:5px;
+  border-radius:50%;
+  background:#302442;
+}
+.logo img[hidden]{display:none}
+.name{
+  margin:0;
+  font-size:17px;
+  line-height:1.5;
+  letter-spacing:.5px;
+}
+.sub{
+  font-size:12px;
+  color:#b9accb;
+  letter-spacing:1.2px;
+  margin:6px 0 0;
+}
+.hero{
+  border-radius:24px;
+  background:#d5f69a;
+  color:#211632;
+  padding:28px 24px;
+  position:relative;
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:1.5px;
+  font-weight:800;
+  margin:0 0 17px;
+}
+h1{
+  font-size:clamp(36px,10vw,47px);
+  letter-spacing:-1.5px;
+  line-height:1.08;
+  margin:0 0 18px;
+}
+.gujarati{
+  font-size:16px;
+  line-height:1.8;
+  margin:0;
+  color:#394628;
+}
+.intro{
+  font-size:16px;
+  line-height:1.6;
+  color:#c9bfd7;
+  margin:22px 0;
+}
+.topics{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:23px;
+}
+.topic{
+  padding:14px;
+  border:1px solid #ffffff1a;
+  border-radius:12px;
+  background:#ffffff05;
+}
+.topic span{
+  display:block;
+  font-size:12px;
+  color:#c9e99a;
+  margin-bottom:7px;
+}
+.topic strong{
+  font-size:14px;
+  line-height:1.5;
+  font-weight:500;
+}
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  width:100%;
+  min-height:60px;
+  padding:17px 10px;
+  border-radius:12px;
+  background:#d5f69a;
+  color:#211632;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+  line-height:1.5;
+}
+.cta:hover{background:#e3ffb6}
+.cta:focus-visible{
+  outline:3px solid #fff;
+  outline-offset:4px;
+}
+.cta svg{
+  width:21px;
+  height:21px;
+  flex-shrink:0;
+}
+.note{
+  font-size:12px;
+  text-align:center;
+  color:#b9accb;
+  line-height:1.7;
+  margin:12px 0 22px;
+}
+footer{
+  border-top:1px solid #ffffff1a;
+  padding-top:16px;
+  color:#b2a6c4;
+  font-size:12px;
+  line-height:1.6;
+}
+footer p{margin:0}
+@media(max-width:360px){
+  body{padding:14px}
+  .hero{padding:24px 20px}
+  .name{font-size:15px}
+  .cta{font-size:12px}
+  .topic{padding:12px}
+}
+@media(max-height:750px){
+  .identity{margin-bottom:18px}
+  .hero{
+    padding-top:23px;
+    padding-bottom:23px;
+  }
+  .intro{margin:18px 0}
+  .topics{margin-bottom:18px}
+}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){
+  if(f.fbq)return;
+  n=f.fbq=function(){
+    n.callMethod
+      ? n.callMethod.apply(n,arguments)
+      : n.queue.push(arguments)
+  };
+  if(!f._fbq)f._fbq=n;
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s);
+}(
+  window,
+  document,
+  'script',
+  'https://connect.facebook.net/en_US/fbevents.js'
+);
+
+fbq('init','965121949350339');
+fbq('trackSingle','965121949350339','PageView');
+</script>
+<!-- End Meta Pixel Code -->
+</head>
+
+<body>
+<noscript>
+  <img
+    height="1"
+    width="1"
+    style="display:none"
+    alt=""
+    src="https://www.facebook.com/tr?id=965121949350339&amp;ev=PageView&amp;noscript=1"
+  >
+</noscript>
+
+<div class="page">
+  <header class="identity">
+    <div class="logo">
+      <span id="logo-fallback">GT</span>
+
+      <!-- LOGO IMAGE: Paste your image URL inside src="" -->
+      <img
+        id="logo-image"
+        src="https://github.com/itssky72001-ui/Gujrati-/releases/download/Guju/Gujrati.trader.jpg"
+        alt="Gujarati Trader logo"
+        hidden
+      >
+    </div>
+
+    <div>
+      <h2 class="name">
+        <span lang="gu">ગુજરાતી</span><br>
+        GUJARATI TRADER
+      </h2>
+      <p class="sub">LEARNING / CONTEXT / DISCIPLINE</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">START WITH UNDERSTANDING</p>
+
+      <h1>
+        Your next step?<br>
+        Learn the market.
+      </h1>
+
+      <p class="gujarati" lang="gu">
+        બજારને સમજો.<br>
+        શીખીને આગળ વધો.
+      </p>
+    </section>
+
+    <p class="intro">
+      Explore stock market fundamentals and chart concepts
+      with an educational approach that puts risk awareness first.
+    </p>
+
+    <div class="topics">
+      <div class="topic">
+        <span>EXPLORE</span>
+        <strong>Market basics &amp; chart concepts</strong>
+      </div>
+
+      <div class="topic">
+        <span>BUILD</span>
+        <strong>Risk awareness &amp; discipline</strong>
+      </div>
+    </div>
+
+    <a
+      id="telegram-cta"
+      class="cta"
+      href="https://t.me/+6yf6AT-ajeAxYWU1"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M21.4 3.6 18.2 20c-.2 1-1 1.2-1.8.7l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L5.6 13.3.7 11.8c-1-.3-1-1 .2-1.4L20 3c.9-.3 1.6.2 1.4.6Z"/>
+      </svg>
+
+      JOIN FREE TELEGRAM CHANNEL
+    </a>
+
+    <p class="note">
+      Free to join ·
+      <span lang="gu">મફતમાં જોડાઓ</span>
+    </p>
+  </main>
+
+  <footer>
+    <p>
+      Educational content only. No investment advice,
+      buy/sell recommendations or assured returns.
+      Stock market investments involve risk.
+    </p>
+  </footer>
+</div>
+
+<script>
+const logo = document.getElementById('logo-image');
+const fallback = document.getElementById('logo-fallback');
+
+function showLogo(){
+  logo.hidden = false;
+  fallback.hidden = true;
+}
+
+function hideLogo(){
+  logo.hidden = true;
+  fallback.hidden = false;
+}
+
+logo.addEventListener('load', showLogo);
+logo.addEventListener('error', hideLogo);
+
+if(
+  logo.getAttribute('src') &&
+  logo.complete &&
+  logo.naturalWidth
+){
+  showLogo();
+}
+
+document
+  .getElementById('telegram-cta')
+  .addEventListener('click', function(){
+    // Tracks CTA clicks, not confirmed Telegram membership.
+    if(typeof window.fbq === 'function'){
+      fbq('trackSingle','965121949350339','Subscribe');
+    }
+  });
+</script>
+
+</body>
+</html>
