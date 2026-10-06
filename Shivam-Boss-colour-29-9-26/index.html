@@ -1,416 +1,362 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SRS AD AGENCY </title>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c0f14">
+<meta name="description" content="Learn market fundamentals, chart concepts and risk awareness with Gautam Jha. Join the free Telegram channel.">
+<title>Gautam Jha | Market Notes</title>
 
 <style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100svh;
+  background:#0c0f14;
+  color:#f5f7fc;
+  font-family:Arial,sans-serif;
+  display:grid;
+  place-items:center;
+  padding:24px 20px;
+}
+.page{
+  width:100%;
+  max-width:440px;
+}
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding-bottom:24px;
+  border-bottom:1px solid #ffffff1c;
+}
+.brand{
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  margin:0;
+}
+.edition{
+  color:#8794a9;
+  font-size:12px;
+  margin:7px 0 0;
+}
+.logo{
+  position:relative;
+  width:62px;
+  height:62px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  overflow:hidden;
+  background:#17233a;
+  border:1px solid #629cff;
+  color:#a5c7ff;
+  font-size:21px;
+  font-weight:800;
+}
+.logo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:5px;
+  border-radius:50%;
+  background:#17233a;
+}
+.logo img[hidden]{display:none}
+main{padding-top:26px}
+.kicker{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#89b6ff;
+  font-size:12px;
+  letter-spacing:1.6px;
+  font-weight:700;
+  margin:0 0 18px;
+}
+.kicker:before{
+  content:'';
+  width:24px;
+  height:2px;
+  background:#71a6ff;
+}
+h1{
+  font-size:clamp(40px,11vw,54px);
+  line-height:1.04;
+  letter-spacing:-2px;
+  margin:0 0 20px;
+}
+h1 span{color:#80adff}
+.intro{
+  font-size:16px;
+  line-height:1.65;
+  color:#a8b3c5;
+  margin:0 0 23px;
+  max-width:390px;
+}
+.insight{
+  position:relative;
+  padding:19px 18px;
+  background:linear-gradient(125deg,#1c2f4b,#121923);
+  border:1px solid #6da3ff35;
+  border-radius:16px;
+  margin-bottom:22px;
+}
+.insight p{
+  font-size:12px;
+  letter-spacing:1.4px;
+  color:#87b2f9;
+  margin:0 0 13px;
+}
+.insight h2{
+  font-size:19px;
+  line-height:1.4;
+  margin:0;
+  font-weight:500;
+}
+.topics{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:16px;
+}
+.topics span{
+  color:#a9bad0;
+  font-size:12px;
+  padding:7px 9px;
+  background:#ffffff06;
+  border:1px solid #ffffff12;
+  border-radius:6px;
+}
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  min-height:60px;
+  padding:17px 12px;
+  border-radius:10px;
+  background:#80adff;
+  color:#08152b;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+  line-height:1.4;
+  box-shadow:0 8px 30px #4d86e923;
+}
+.cta:hover{background:#a0c2ff}
+.cta:focus-visible{
+  outline:3px solid #fff;
+  outline-offset:4px;
+}
+.cta svg{
+  width:21px;
+  height:21px;
+  flex-shrink:0;
+}
+.note{
+  text-align:center;
+  color:#8b99af;
+  font-size:12px;
+  margin:13px 0 23px;
+}
+footer{
+  padding-top:17px;
+  border-top:1px solid #ffffff1c;
+  color:#8794a9;
+  font-size:12px;
+  line-height:1.6;
+}
+footer p{margin:0}
+@media(max-width:360px){
+  body{padding:18px 14px}
+  h1{font-size:40px}
+  .cta{font-size:12px}
+}
+@media(max-height:740px){
+  header{padding-bottom:18px}
+  main{padding-top:20px}
+  h1{margin-bottom:16px}
+  .intro{margin-bottom:18px}
+  .insight{
+    padding:16px;
+    margin-bottom:18px;
+  }
+  .note{margin-bottom:18px}
+}
+</style>
 
-*{
-    margin:0;
-        padding:0;
-            box-sizing:border-box;
-                font-family:'Segoe UI',sans-serif;
-                }
-
-                body{
-                    min-height:100vh;
-                        display:flex;
-                            justify-content:center;
-                                align-items:center;
-                                    padding:20px;
-                                        color:#fff;
-                                            overflow-x:hidden;
-
-                                                /* Theme Change: Deep Emerald & Charcoal background */
-                                                    background:
-                                                        radial-gradient(circle at top,
-                                                            #059669 0%,
-                                                                #064e3b 25%,
-                                                                    #022c22 60%,
-                                                                        #011410 100%);
-                                                                        }
-
-                                                                        .wrapper{
-                                                                            width:100%;
-                                                                                max-width:450px;
-                                                                                    text-align:center;
-                                                                                    }
-
-                                                                                    .card{
-                                                                                        position:relative;
-                                                                                            overflow:hidden;
-                                                                                                padding:40px 28px;
-                                                                                                    border-radius:30px;
-
-                                                                                                        background:rgba(6, 18, 15, 0.88);
-                                                                                                            backdrop-filter:blur(20px);
-
-                                                                                                                /* Theme Change: Mint Green border */
-                                                                                                                    border:1px solid rgba(52, 211, 153, 0.25);
-
-                                                                                                                        /* Theme Change: Mint glow shadow */
-                                                                                                                            box-shadow:
-                                                                                                                                0 20px 60px rgba(0,0,0,.6),
-                                                                                                                                    0 0 40px rgba(52, 211, 153, 0.1);
-
-                                                                                                                                        animation:float 4s ease-in-out infinite;
-                                                                                                                                        }
-
-                                                                                                                                        .card::before{
-                                                                                                                                            content:"";
-                                                                                                                                                position:absolute;
-                                                                                                                                                    width:250px;
-                                                                                                                                                        height:250px;
-                                                                                                                                                            background:#34d399;
-                                                                                                                                                                border-radius:50%;
-                                                                                                                                                                    filter:blur(120px);
-                                                                                                                                                                        opacity:.15;
-                                                                                                                                                                            top:-120px;
-                                                                                                                                                                                right:-120px;
-                                                                                                                                                                                }
-
-                                                                                                                                                                                .card::after{
-                                                                                                                                                                                    content:"";
-                                                                                                                                                                                        position:absolute;
-                                                                                                                                                                                            width:220px;
-                                                                                                                                                                                                height:220px;
-                                                                                                                                                                                                    background:#059669;
-                                                                                                                                                                                                        border-radius:50%;
-                                                                                                                                                                                                            filter:blur(120px);
-                                                                                                                                                                                                                opacity:.12;
-                                                                                                                                                                                                                    bottom:-120px;
-                                                                                                                                                                                                                        left:-120px;
-                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                        @keyframes float{
-                                                                                                                                                                                                                            0%,100%{
-                                                                                                                                                                                                                                    transform:translateY(0);
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                            50%{
-                                                                                                                                                                                                                                                    transform:translateY(-8px);
-                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                        .profile{
-                                                                                                                                                                                                                                                            width:125px;
-                                                                                                                                                                                                                                                                height:125px;
-                                                                                                                                                                                                                                                                    border-radius:50%;
-                                                                                                                                                                                                                                                                        object-fit:cover;
-
-                                                                                                                                                                                                                                                                            /* Theme Change: Profile border & glow color */
-                                                                                                                                                                                                                                                                                border:4px solid #34d399;
-
-                                                                                                                                                                                                                                                                                    box-shadow:
-                                                                                                                                                                                                                                                                                        0 0 30px rgba(52, 211, 153, 0.4),
-                                                                                                                                                                                                                                                                                            0 0 60px rgba(5, 150, 105, 0.2);
-
-                                                                                                                                                                                                                                                                                                position:relative;
-                                                                                                                                                                                                                                                                                                    z-index:2;
-                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                    .verify{
-                                                                                                                                                                                                                                                                                                        margin-top:10px;
-                                                                                                                                                                                                                                                                                                            color:#34d399;
-                                                                                                                                                                                                                                                                                                                font-size:14px;
-                                                                                                                                                                                                                                                                                                                    font-weight:700;
-                                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                                    .verify i{
-                                                                                                                                                                                                                                                                                                                        color:#10b981;
-                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                        h2{
-                                                                                                                                                                                                                                                                                                                            margin-top:15px;
-                                                                                                                                                                                                                                                                                                                                font-size:28px;
-                                                                                                                                                                                                                                                                                                                                    color:#fff;
-                                                                                                                                                                                                                                                                                                                                        position:relative;
-                                                                                                                                                                                                                                                                                                                                            z-index:2;
-                                                                                                                                                                                                                                                                                                                                            }
-
-                                                                                                                                                                                                                                                                                                                                            .stats{
-                                                                                                                                                                                                                                                                                                                                                margin-top:15px;
-                                                                                                                                                                                                                                                                                                                                                    color:#34d399;
-                                                                                                                                                                                                                                                                                                                                                        font-size:14px;
-                                                                                                                                                                                                                                                                                                                                                            line-height:1.8;
-                                                                                                                                                                                                                                                                                                                                                                font-weight:700;
-                                                                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                                                                .text{
-                                                                                                                                                                                                                                                                                                                                                                    margin-top:20px;
-                                                                                                                                                                                                                                                                                                                                                                        line-height:1.9;
-                                                                                                                                                                                                                                                                                                                                                                            font-size:15px;
-                                                                                                                                                                                                                                                                                                                                                                                color:#e2e8f0;
-                                                                                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                                                                                .benefits{
-                                                                                                                                                                                                                                                                                                                                                                                    margin-top:22px;
-                                                                                                                                                                                                                                                                                                                                                                                        background:rgba(255,255,255,.04);
-                                                                                                                                                                                                                                                                                                                                                                                            border:1px solid rgba(52, 211, 153, 0.15);
-                                                                                                                                                                                                                                                                                                                                                                                                border-radius:18px;
-                                                                                                                                                                                                                                                                                                                                                                                                    padding:18px;
-                                                                                                                                                                                                                                                                                                                                                                                                        text-align:left;
-                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                        .benefits div{
-                                                                                                                                                                                                                                                                                                                                                                                                            padding:8px 0;
-                                                                                                                                                                                                                                                                                                                                                                                                                color:#f8fafc;
-                                                                                                                                                                                                                                                                                                                                                                                                                    font-size:14px;
-                                                                                                                                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                    .btn{
-                                                                                                                                                                                                                                                                                                                                                                                                                        margin-top:25px;
-
-                                                                                                                                                                                                                                                                                                                                                                                                                            display:flex;
-                                                                                                                                                                                                                                                                                                                                                                                                                                align-items:center;
-                                                                                                                                                                                                                                                                                                                                                                                                                                    justify-content:center;
-                                                                                                                                                                                                                                                                                                                                                                                                                                        gap:12px;
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                            width:100%;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                padding:18px;
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    border-radius:60px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        text-decoration:none;
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            color:#022c22;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                font-size:17px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    font-weight:800;
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* Theme Change: Vibrant Gradient Button */
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            background:linear-gradient(
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                135deg,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    #a7f3d0,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        #34d399,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            #059669
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                );
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    box-shadow:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0 10px 40px rgba(52, 211, 153, 0.35);
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            transition:.4s;
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                position:relative;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    overflow:hidden;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .btn:hover{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        transform:translateY(-3px) scale(1.03);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .btn::before{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            content:"";
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                position:absolute;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    top:0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        left:-100%;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            width:100%;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                height:100%;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    background:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        linear-gradient(
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            90deg,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                transparent,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    rgba(255,255,255,.5),
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        transparent
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            );
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                transition:.8s;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .btn:hover::before{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    left:100%;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .timer{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        margin-top:18px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color:#cbd5e1;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                font-size:14px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .disclaimer{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    margin-top:25px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        font-size:11px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            line-height:1.8;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                color:#cbd5e1;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    opacity:.8;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        padding:0 10px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @media(max-width:480px){
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .card{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        padding:35px 22px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        h2{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        font-size:24px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .profile{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        width:110px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        height:110px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .btn{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        font-size:15px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </style>
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2136770553860384');
-fbq('track', 'PageView');
+!function(f,b,e,v,n,t,s){
+  if(f.fbq)return;
+  n=f.fbq=function(){
+    n.callMethod
+      ? n.callMethod.apply(n,arguments)
+      : n.queue.push(arguments)
+  };
+  if(!f._fbq)f._fbq=n;
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s);
+}(
+  window,
+  document,
+  'script',
+  'https://connect.facebook.net/en_US/fbevents.js'
+);
+
+fbq('init','2136770553860384');
+fbq('trackSingle','2136770553860384','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2136770553860384&ev=PageView&noscript=1"
-/></noscript>
 <!-- End Meta Pixel Code -->
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </head>
+</head>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <body>
+<body>
+<noscript>
+  <img
+    height="1"
+    width="1"
+    style="display:none"
+    alt=""
+    src="https://www.facebook.com/tr?id=2136770553860384&amp;ev=PageView&amp;noscript=1"
+  >
+</noscript>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="wrapper">
+<div class="page">
+  <header>
+    <div>
+      <p class="brand">GAUTAM JHA</p>
+      <p class="edition"> Verified Learning Community</p>
+    </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="card">
+    <div class="logo">
+      <span id="logo-fallback">GJ</span>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <img
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        src="https://github.com/itssky72001-ui/Gautam2/releases/download/Gautam2/Gautam.jha.jpg
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        class="profile"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        alt="Profile">
+      <!-- LOGO IMAGE: Paste your logo URL inside src="" -->
+      <img
+        id="logo-image"
+        src="https://github.com/itssky72001-ui/Gautam/releases/download/Gautam/download.jfif
+"
+        alt="Gautam Jha logo"
+        hidden
+      >
+    </div>
+  </header>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="verify">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="fas fa-check-circle"></i>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Verified Learning Community
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+  <main>
+    <p class="kicker">MAKE LEARNING YOUR FIRST MOVE</p>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <h2> GAUTAM JHA </h2>
+    <h1>
+      More context.<br>
+      Clearer thinking.<br>
+      <span>Better learning.</span>
+    </h1>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="stats">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ⭐ 50,000+ Learners <br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        🌍 Global Learning Community <br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        🔥 Daily Educational Updates
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+    <p class="intro">
+      ⭐ 50,000+ Learners<br>
+      🌍 Global Learning Community<br>
+      🔥 Daily Educational Updates
+    </p>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <a
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        class="btn"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        id="telegramBtn"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        href="https://t.me/+fO36ZuzBtBU3MzFh"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        rel="noopener noreferrer">
+    <section class="insight" aria-label="Learning focus">
+      <p>THE LEARNING FOCUS</p>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="fab fa-telegram"></i>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        JOIN FREE TELEGRAM CHANNEL
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="fab fa-telegram"></i>
+      <h2>
+        Look beyond the price.<br>
+        Understand what you see.
+        <div>📈 Daily Market Updates</div>
+        <div>📚 Educational Learning Content</div>
+         <div>🎯 Beginner-Friendly Explanations</div>
+          <div>🔥 Community Support</div>
+          <div>💡 Financial Awareness & Knowledge</div>
+      </h2>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </a>
+      <div class="topics">
+        <span>Chart reading</span>
+        <span>Market basics</span>
+        <span>Risk awareness</span>
+      </div>
+    </section>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="text">
+    <a
+      id="telegram-cta"
+      class="cta"
+      href="https://t.me/+fO36ZuzBtBU3MzFh"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M21.4 3.6 18.2 20c-.2 1-1 1.2-1.8.7l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L5.6 13.3.7 11.8c-1-.3-1-1 .2-1.4L20 3c.9-.3 1.6.2 1.4.6Z"/>
+      </svg>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        📚 A dedicated community for Stock Market Education and Financial Knowledge.<br><br>
+      JOIN FREE TELEGRAM CHANNEL
+    </a>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Learn market concepts, trading basics, technical analysis, and financial awareness through educational content designed for learners of all levels.
+    <p class="note">
+      Free access · Educational content · Open in Telegram
+    </p>
+  </main>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+  <footer>
+    <p>
+      For education only. No investment advice, buy/sell
+      recommendations or guaranteed returns.
+      Stock market investments involve risk.
+    </p>
+  </footer>
+</div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="benefits">
+<script>
+const logo = document.getElementById('logo-image');
+const fallback = document.getElementById('logo-fallback');
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div>📈 Daily Market Updates</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div>📚 Educational Learning Content</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div>🎯 Beginner-Friendly Explanations</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div>🔥 Community Support</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div>💡 Financial Awareness & Knowledge</div>
+function showLogo(){
+  logo.hidden = false;
+  fallback.hidden = true;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+function hideLogo(){
+  logo.hidden = true;
+  fallback.hidden = false;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="timer">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ⏳ Auto redirecting in <span id="count">30</span> seconds...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+logo.addEventListener('load', showLogo);
+logo.addEventListener('error', hideLogo);
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+if(
+  logo.getAttribute('src') &&
+  logo.complete &&
+  logo.naturalWidth
+){
+  showLogo();
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="disclaimer">
+document
+  .getElementById('telegram-cta')
+  .addEventListener('click', function(){
+    // Tracks a CTA click, not confirmed Telegram membership.
+    if(typeof window.fbq === 'function'){
+      fbq('trackSingle','2136770553860384','Subscribe');
+    }
+  });
+</script>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Disclaimer: This platform is intended solely for educational and informational purposes.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        It does not provide investment, trading, financial, or advisory services.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Please conduct your own research and consult qualified professionals before making any financial decisions.
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <script>
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        let time = 30;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        let counter = document.getElementById("count");
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        document.getElementById("telegramBtn")
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .addEventListener("click", function(e){
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        e.preventDefault();
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        const telegramLink = this.href;
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        const go=function(){ window.location.href=telegramLink; };
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        if(typeof fbq==="function"){
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        fbq('track','Subscribe',{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        content_name:'Telegram Community',
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        button_click:true
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        },{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        eventID:'telegram_subscribe_'+Date.now(),
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        eventCallback:go
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        });
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        setTimeout(go,2000);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }else{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        go();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        });
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        const countdown=setInterval(()=>{
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        time--;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        counter.innerText=time;
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        if(time<=0){
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        clearInterval(countdown);
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        if(typeof fbq==="function"){
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        fbq('track','Subscribe',{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        content_name:'Telegram Community',
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        auto_redirect:true
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        },{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        eventID:'telegram_auto_'+Date.now(),
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        eventCallback:function(){
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        window.location.href="https://t.me/+fO36ZuzBtBU3MzFh";
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        });
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        setTimeout(function(){window.location.href="https://t.me/+fO36ZuzBtBU3MzFh";},2000);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }else{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        window.location.href="https://t.me/+fO36ZuzBtBU3MzFh";
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        },1000);
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </script>
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </html>
+</body>
+</html>
