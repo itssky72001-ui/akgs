@@ -1,478 +1,346 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>TOPG</title>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101d32">
+<meta name="description" content="Tamil Harmonic: explore market concepts, chart patterns and risk awareness in English and Tamil.">
+<title>Tamil Harmonic | Learn the Market</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
+*{box-sizing:border-box}
 body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#0f172a;
-    color:white;
+  margin:0;
+  background:#101d32;
+  color:#17253a;
+  font-family:Arial,"Noto Sans Tamil",sans-serif;
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  padding:20px;
 }
-
-.card{
-    width:350px;
-    padding:40px 30px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,0.15);
-    text-align:center;
-    box-shadow:0 0 80px rgba(0,0,0,.6);
-    animation:float 4s ease-in-out infinite;
+.page{
+  width:100%;
+  max-width:460px;
+  border-radius:26px;
+  overflow:hidden;
+  background:#faf8f2;
+  box-shadow:0 24px 70px #0005;
 }
-
-@keyframes float{
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
+header{
+  background:#14243e;
+  color:#fff;
+  padding:26px 24px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  border-bottom:3px solid #ddb66d;
 }
-
-.profile{
-    width:110px;
-    height:110px;
-    border-radius:50%;
-    border:4px solid white;
-    object-fit:cover;
-    margin-bottom:15px;
+.logo{
+  width:64px;
+  height:64px;
+  flex-shrink:0;
+  border:1px solid #ddb66d;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+  background:#21324d;
+  color:#f4d399;
+  font-size:22px;
+  font-weight:800;
 }
-
-h2{
-    margin-bottom:10px;
+.logo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:5px;
+  border-radius:50%;
+  background:#21324d;
 }
-
-.text{
-    font-size:14px;
-    line-height:1.6;
-    opacity:.9;
-    margin-bottom:25px;
+.logo img[hidden]{display:none}
+.brand{
+  margin:0;
+  font-size:19px;
+  letter-spacing:.3px;
 }
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    gap:12px;
-    padding:15px 32px;
-    border-radius:50px;
-    background:linear-gradient(45deg,#6366f1,#06b6d4);
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:16px;
-    position:relative;
-    transition:.4s;
-    overflow:hidden;
-    cursor:pointer;
-    user-select:none;
-    -webkit-tap-highlight-color:transparent;
+.brand-sub{
+  margin:7px 0 0;
+  font-size:12px;
+  color:#d8c39c;
+  letter-spacing:1.5px;
 }
-
-.btn:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 30px #06b6d4;
+main{padding:28px 24px 23px}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:1.7px;
+  font-weight:700;
+  color:#84632f;
+  margin:0 0 15px;
 }
-
-.btn:active{
-    transform:scale(.98);
+h1{
+  font-size:clamp(34px,9vw,43px);
+  line-height:1.1;
+  letter-spacing:-1.5px;
+  margin:0 0 14px;
 }
-
-.btn.processing{
-    pointer-events:none;
-    opacity:.65;
+h1 span{color:#9a702d}
+.tamil{
+  font-size:16px;
+  line-height:1.75;
+  margin:0 0 15px;
+  color:#48556a;
 }
-
-.btn span{
-    position:absolute;
-    width:6px;
-    height:6px;
-    background:white;
-    border-radius:50%;
-    animation:spark 3s infinite;
+.intro{
+  font-size:16px;
+  line-height:1.6;
+  color:#596477;
+  margin:0 0 22px;
 }
-
-.btn span:nth-child(1){
-    top:-10px;
-    left:20%;
+.learning{
+  display:grid;
+  grid-template-columns:36px 1fr;
+  gap:10px 12px;
+  padding:17px;
+  background:#eeebe2;
+  border-radius:13px;
+  margin-bottom:23px;
 }
-
-.btn span:nth-child(2){
-    top:-10px;
-    left:50%;
-    animation-delay:1s;
+.number{
+  color:#9a702d;
+  font-size:12px;
+  font-weight:700;
+  padding-top:3px;
 }
-
-.btn span:nth-child(3){
-    top:-10px;
-    left:80%;
-    animation-delay:2s;
+.learning p{
+  font-size:14px;
+  margin:0;
+  line-height:1.5;
 }
-
-@keyframes spark{
-    0%{
-        transform:translateY(0);
-        opacity:1;
-    }
-
-    100%{
-        transform:translateY(-40px);
-        opacity:0;
-    }
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  width:100%;
+  min-height:58px;
+  padding:16px 10px;
+  background:#14243e;
+  color:#f9e1b8;
+  border-radius:11px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+  line-height:1.5;
+  box-shadow:0 8px 20px #14243e22;
 }
-
-.timer{
-    margin-top:15px;
-    font-size:13px;
-    opacity:.8;
+.cta:hover{background:#243a5d}
+.cta:focus-visible{
+  outline:3px solid #9a702d;
+  outline-offset:4px;
 }
-
-.disclaimer{
-    margin-top:20px;
-    font-size:11px;
-    opacity:.6;
-    text-align:center;
+.cta svg{
+  width:21px;
+  height:21px;
+  flex-shrink:0;
 }
-
-.ads{
-    margin-top:6px;
-    font-size:12px;
-    text-align:center;
+.note{
+  text-align:center;
+  font-size:12px;
+  color:#6a7280;
+  margin:12px 0 0;
+  line-height:1.7;
 }
-
-.ads a{
-    color:#22c55e;
-    font-weight:bold;
-    text-decoration:none;
+footer{
+  padding:16px 24px 20px;
+  border-top:1px solid #17253a18;
+  font-size:12px;
+  color:#697181;
+  line-height:1.6;
+}
+footer p{margin:0}
+@media(max-width:360px){
+  body{padding:12px}
+  main{padding:24px 18px}
+  header{padding:22px 18px}
+  .brand{font-size:17px}
+  .cta{font-size:12px}
+  footer{padding:16px 18px}
+}
+@media(max-height:750px){
+  body{padding:12px}
+  header{
+    padding-top:18px;
+    padding-bottom:18px;
+  }
+  main{padding-top:22px}
+  .intro{margin-bottom:17px}
+  .learning{margin-bottom:18px}
 }
 </style>
 
-<!-- =========================================
-     META PIXEL
-     ONLY ONE PIXEL
-     ========================================= -->
-
 <!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1803173024360579');
-fbq('track', 'PageView');
+!function(f,b,e,v,n,t,s){
+  if(f.fbq)return;
+  n=f.fbq=function(){
+    n.callMethod
+      ? n.callMethod.apply(n,arguments)
+      : n.queue.push(arguments)
+  };
+  if(!f._fbq)f._fbq=n;
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s);
+}(
+  window,
+  document,
+  'script',
+  'https://connect.facebook.net/en_US/fbevents.js'
+);
+
+fbq('init','1081432494502716');
+fbq('trackSingle','1081432494502716','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1803173024360579&ev=PageView&noscript=1"
-/></noscript>
 <!-- End Meta Pixel Code -->
 
 </head>
 
 <body>
+<noscript>
+  <img
+    height="1"
+    width="1"
+    style="display:none"
+    alt=""
+    src="https://www.facebook.com/tr?id=1081432494502716&amp;ev=PageView&amp;noscript=1"
+  >
+</noscript>
 
-<div>
+<div class="page">
+  <header>
+    <div class="logo">
+      <span id="logo-fallback">TH</span>
 
-<div class="card">
+      <!-- LOGO IMAGE: Paste your image URL inside src="" -->
+      <img
+        id="logo-image"
+        src=""
+        alt="Tamil Harmonic logo"
+        hidden
+      >
+    </div>
 
-<img
-src="https://github.com/siyalshivam690-maker/harmimg/releases/download/harman/harmancolic.jpg"
-class="profile"
-alt="Profile"
+    <div>
+      <h2 class="brand">Tamil Harmonic</h2>
+      <p class="brand-sub">THE MARKET LEARNING SPACE</p>
+    </div>
+  </header>
 
->
+  <main>
+    <p class="eyebrow">LEARN WITH PERSPECTIVE</p>
 
-<h2>
-HARMONIC TRADER RAJ
-</h2>
+    <h1>
+      Read the patterns.<br>
+      <span>Understand the market.</span>
+    </h1>
 
-<div class="text">
-Start learning with Expert Calls🔥<br>
-Trusted by 12,000+ Traders🌍<br>
-Join our Channel for daily updates✅
+    <p class="tamil" lang="ta">
+      சந்தையைப் புரிந்துகொள்ளுங்கள்.<br>
+      உங்கள் அறிவை வளர்த்துக்கொள்ளுங்கள்.
+    </p>
+
+    <p class="intro">
+      Explore market concepts and chart patterns with a
+      focus on learning and risk awareness.
+    </p>
+
+    <div class="learning" aria-label="Learning topics">
+      <span class="number">01</span>
+      <p>Chart patterns &amp; market structure</p>
+
+      <span class="number">02</span>
+      <p>Market basics, explained clearly</p>
+
+      <span class="number">03</span>
+      <p>Risk awareness &amp; discipline</p>
+    </div>
+
+    <a
+      id="telegram-cta"
+      class="cta"
+      href="https://t.me/+jCf2DKVmmAw1MDg1"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M21.4 3.6 18.2 20c-.2 1-1 1.2-1.8.7l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L5.6 13.3.7 11.8c-1-.3-1-1 .2-1.4L20 3c.9-.3 1.6.2 1.4.6Z"/>
+      </svg>
+
+      JOIN FREE TELEGRAM CHANNEL
+    </a>
+
+    <p class="note">
+      Free to join ·
+      <span lang="ta">இலவசமாக இணையுங்கள்</span>
+    </p>
+  </main>
+
+  <footer>
+    <p>
+      For educational purposes only. No investment advice,
+      buy/sell recommendations or assured returns.
+      Market investments involve risk.
+    </p>
+  </footer>
 </div>
-
-<!-- TELEGRAM BUTTON -->
-
-<a
-class="btn"
-id="telegramBtn"
-href="https://telegram.me/+jCf2DKVmmAw1MDg1"
-target="_blank"
-rel="noopener noreferrer"
-
->
-
-<i class="fab fa-telegram"></i>
-
-VIP Telegram group
-
-<i class="fab fa-telegram"></i>
-
-<span></span> <span></span> <span></span>
-
-</a>
-
-<div class="timer">
-
-Redirecting in <span id="count">30</span>
-seconds...
-
-</div>
-
-</div>
-
-<div class="disclaimer">
-
-This channel is for educational and informational purposes only.
-
-</div>
-
-<div class="ads">
-
-<a
-href="https://telegram.me/+jCf2DKVmmAw1MDg1"
-target="_blank"
-rel="noopener noreferrer"
-
-> </a>
-
-</div>
-
-</div>
-
-<!-- =========================================
-     SUBSCRIBE EVENT
-     ========================================= -->
 
 <script>
+const logo = document.getElementById('logo-image');
+const fallback = document.getElementById('logo-fallback');
 
-(function(){
-
-"use strict";
-
-
-const telegramBtn =
-document.getElementById("telegramBtn");
-
-
-if(!telegramBtn){
-
-console.error(
-"Telegram button not found."
-);
-
-return;
-
+function showLogo(){
+  logo.hidden = false;
+  fallback.hidden = true;
 }
 
-
-/*
-Prevent rapid/double clicks.
-*/
-
-let clickLocked = false;
-
-const CLICK_LOCK_MS = 1500;
-
-
-/*
-Generate unique Event ID.
-*/
-
-function createEventId(){
-
-return (
-"telegram_subscribe_" +
-Date.now() +
-"_" +
-Math.random()
-.toString(36)
-.substring(2,10)
-);
-
+function hideLogo(){
+  logo.hidden = true;
+  fallback.hidden = false;
 }
 
-
-/*
-Subscribe fires ONLY when
-the main Telegram button is clicked.
-*/
-
-telegramBtn.addEventListener(
-"click",
-function(event){
-
-/*
-Prevent accidental rapid clicks.
-*/
-
-if(clickLocked){
-
-event.preventDefault();
-
-return;
-
-}
-
-
-clickLocked = true;
-
-
-telegramBtn.classList.add(
-"processing"
-);
-
-
-/*
-Check Pixel availability.
-*/
+logo.addEventListener('load', showLogo);
+logo.addEventListener('error', hideLogo);
 
 if(
-typeof window.fbq === "function"
+  logo.getAttribute('src') &&
+  logo.complete &&
+  logo.naturalWidth
 ){
-
-const eventId =
-createEventId();
-
-
-/*
-Fire Subscribe event.
-*/
-
-window.fbq(
-"track",
-"Subscribe",
-{
-content_name:
-"Harmonic Trader Raj Telegram",
-
-content_category:
-"Telegram",
-
-button_location:
-"main_cta"
-},
-{
-eventID:
-eventId
-}
-);
-
-
-console.log(
-"Subscribe event fired:",
-eventId
-);
-
-}
-else{
-
-console.error(
-"Meta Pixel is not loaded."
-);
-
+  showLogo();
 }
 
-
-/*
-Release click lock after 1.5 sec.
-*/
-
-setTimeout(
-function(){
-
-clickLocked = false;
-
-telegramBtn.classList.remove(
-"processing"
-);
-
-},
-CLICK_LOCK_MS
-);
-
-},
-{
-passive:false
-}
-);
-
-})();
-
-</script>
-
-<!-- =========================================
-     VISUAL COUNTDOWN ONLY
-     ========================================= -->
-
-<script>
-
-(function(){
-
-let time = 30;
-
-const counter =
-document.getElementById("count");
-
-
-if(!counter){
-
-return;
-
-}
-
-
-const countdown =
-setInterval(
-function(){
-
-time--;
-
-if(time < 0){
-
-time = 0;
-
-}
-
-counter.innerText =
-time;
-
-
-if(time <= 0){
-
-clearInterval(countdown);
-
-}
-
-},
-1000
-);
-
-})();
-
+document
+  .getElementById('telegram-cta')
+  .addEventListener('click', function(){
+    // Tracks CTA clicks, not confirmed Telegram membership.
+    if(typeof window.fbq === 'function'){
+      fbq('trackSingle','1081432494502716','Subscribe');
+    }
+  });
 </script>
 
 </body>
