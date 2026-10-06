@@ -212,7 +212,6 @@ fbq('init','1081432494502716');
 fbq('trackSingle','1081432494502716','PageView');
 </script>
 <!-- End Meta Pixel Code -->
-
 </head>
 
 <body>
@@ -231,12 +230,11 @@ fbq('trackSingle','1081432494502716','PageView');
     <div class="logo">
       <span id="logo-fallback">TH</span>
 
-      <!-- LOGO IMAGE: Paste your image URL inside src="" -->
+      <!-- Replace src below to change the logo -->
       <img
-        id="https://github.com/siyalshivam690-maker/harmimg/releases/download/harman/harmancolic.jpg
-"
-        src=""
-        alt="Shivam-vikranth-sharma-20-7-26/index.html"
+        id="logo-image"
+        src="https://github.com/siyalshivam690-maker/harmimg/releases/download/harman/harmancolic.jpg"
+        alt="Tamil Harmonic logo"
         hidden
       >
     </div>
@@ -337,7 +335,7 @@ if(
 document
   .getElementById('telegram-cta')
   .addEventListener('click', function(){
-    // Tracks CTA clicks, not confirmed Telegram membership.
+    // Measures button clicks, not confirmed Telegram membership.
     if(typeof window.fbq === 'function'){
       fbq('trackSingle','1081432494502716','Subscribe');
     }
