@@ -1,928 +1,344 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link
-href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;700&display=swap"
-rel="stylesheet">
-
-<title>Join Telegram Channel</title>
-
-<!-- =========================
-     META PIXEL
-     ========================= -->
-
-<script>
-!function(f,b,e,v,n,t,s)
-{
-    if(f.fbq)return;
-
-    n=f.fbq=function(){
-        n.callMethod ?
-        n.callMethod.apply(n,arguments) :
-        n.queue.push(arguments)
-    };
-
-    if(!f._fbq)f._fbq=n;
-
-    n.push=n;
-    n.loaded=!0;
-    n.version='2.0';
-    n.queue=[];
-
-    t=b.createElement(e);
-    t.async=!0;
-    t.src=v;
-
-    s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s);
-
-}
-(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','1758038278945265');
-fbq('track','PageView');
-</script>
-
-<noscript>
-<img
-height="1"
-width="1"
-style="display:none"
-src="https://www.facebook.com/tr?id=1758038278945265&ev=PageView&noscript=1"
-/>
-</noscript>
-
-<!-- END META PIXEL -->
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#121212">
+<meta name="description" content="Gujarati Trader: stock market learning in English and Gujarati. Explore market fundamentals, chart concepts and risk awareness.">
+<title>Gujarati Trader | Market Study</title>
 
 <style>
-
-*{
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box}
 body{
-    margin:0;
-    overflow-x:hidden;
-    font-family:'Segoe UI','Noto Sans Devanagari',sans-serif;
-    background:#0b1220;
-    color:#e6edf3;
-    text-align:center;
+  margin:0;
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  padding:20px;
+  background:#121212;
+  color:#f6f4ee;
+  font-family:Arial,sans-serif;
 }
-
-.container{
-    width:100%;
-    max-width:480px;
-    margin:auto;
+.page{
+  width:100%;
+  max-width:450px;
 }
-
-.header{
-    display:flex;
-    align-items:center;
-    padding:8px;
-    font-size:12px;
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  margin-bottom:23px;
 }
-
-.live{
-    color:#ff4d4d;
-    font-weight:bold;
-    animation:blink 1s infinite;
-    margin-right:6px;
+.brand{
+  margin:0;
+  font-size:18px;
+  line-height:1.4;
+  letter-spacing:.5px;
 }
-
-@keyframes blink{
-
-    50%{
-        opacity:.4;
-    }
-
-}
-
-.market{
-    overflow:hidden;
-    flex:1;
-}
-
-.ticker{
-    display:flex;
-    width:max-content;
-    animation:tickerMove 20s linear infinite;
-}
-
-.ticker span{
-    white-space:nowrap;
-    padding-right:40px;
-}
-
-@keyframes tickerMove{
-
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(-50%);
-    }
-
-}
-
-.watch{
-    color:#00e676;
-    margin-left:6px;
-}
-
-.profile{
-    margin-top:20px;
-    position:relative;
-    display:inline-block;
-}
-
-.profile img{
-    width:110px;
-    height:110px;
-    border-radius:50%;
-    border:3px solid #0A66C2;
-    box-shadow:
-        0 0 20px rgba(10,102,194,.6);
-
-    object-fit:cover;
-    display:block;
-}
-
-.verified{
-    position:absolute;
-    bottom:5px;
-    right:5px;
-    width:30px;
-    height:30px;
-}
-
-.title{
-    font-size:26px;
-    font-weight:700;
-    color:#00AEEF;
-
-    text-shadow:
-        0 0 10px rgba(0,174,239,.5);
-
-    margin-top:10px;
-}
-
 .sub{
-    font-size:14px;
-    color:#9fb3c8;
+  margin:6px 0 0;
+  font-size:12px;
+  color:#a49f94;
+  letter-spacing:1px;
 }
-
-.stats{
-    font-size:15px;
-    margin:12px;
-    font-weight:bold;
+.logo{
+  position:relative;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  overflow:hidden;
+  border:1px solid #ffc45d;
+  background:#28231b;
+  color:#ffc45d;
+  font-weight:800;
+  font-size:24px;
 }
-
-.desc{
-    font-size:15px;
-    padding:0 18px;
-    line-height:1.8;
-    color:#dce3ea;
+.logo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:5px;
+  border-radius:50%;
+  background:#28231b;
 }
-
-.highlight{
-    color:#00AEEF;
-    font-weight:700;
+.logo img[hidden]{display:none}
+.hero{
+  border-top:3px solid #ffc45d;
+  padding-top:23px;
 }
-
-.tags{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:8px;
-    margin:15px;
+.eyebrow{
+  margin:0 0 16px;
+  color:#ffc45d;
+  font-size:12px;
+  letter-spacing:1.6px;
+  font-weight:700;
 }
-
-.tag{
-    border:1px solid #0A66C2;
-    padding:7px 14px;
-    border-radius:20px;
-    font-size:12px;
-    color:#00AEEF;
+h1{
+  font-size:clamp(37px,10vw,48px);
+  line-height:1.08;
+  letter-spacing:-1.5px;
+  margin:0 0 17px;
 }
-
-.box-container{
-    display:flex;
-    gap:8px;
-    padding:0 10px;
-    margin:15px 0;
+h1 span{color:#ffc45d}
+.gujarati{
+  font-size:16px;
+  line-height:1.8;
+  color:#c9c1b2;
+  margin:0 0 16px;
 }
-
-.box{
-    flex:1;
-    padding:12px;
-    font-size:12px;
-    border-radius:10px;
-    background:#111a2b;
-    border:1px solid #0A66C2;
+.intro{
+  font-size:16px;
+  line-height:1.6;
+  color:#aaa59b;
+  margin:0 0 23px;
 }
-
-
-/* =========================
-   TELEGRAM CTA
-   ========================= */
-
 .cta{
-    margin-top:5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  width:100%;
+  min-height:60px;
+  padding:17px 10px;
+  border-radius:8px;
+  background:#ffc45d;
+  color:#241a08;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+  line-height:1.4;
 }
-
-.telegramBtn{
-
-    display:block;
-
-    width:92%;
-
-    margin:0 auto;
-
-    padding:16px;
-
-    font-size:16px;
-
-    border-radius:10px;
-
-    border:none;
-
-    background:
-        linear-gradient(
-            45deg,
-            #0A66C2,
-            #00AEEF
-        );
-
-    color:white;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    text-decoration:none;
-
-    animation:
-        glowBtn 1.5s infinite alternate;
-
-    -webkit-tap-highlight-color:
-        transparent;
-
-    touch-action:
-        manipulation;
-
-    transition:
-        transform .15s ease,
-        opacity .15s ease;
-
+.cta:hover{background:#ffd58b}
+.cta:focus-visible{
+  outline:3px solid white;
+  outline-offset:4px;
 }
-
-.telegramBtn:active{
-    transform:scale(.98);
+.cta svg{
+  width:21px;
+  height:21px;
+  flex-shrink:0;
 }
-
-.telegramBtn.processing{
-    opacity:.75;
+.note{
+  font-size:12px;
+  line-height:1.7;
+  text-align:center;
+  color:#a49f94;
+  margin:12px 0 23px;
 }
-
-
-@keyframes glowBtn{
-
-    from{
-        box-shadow:
-            0 0 10px #0A66C2;
-    }
-
-    to{
-        box-shadow:
-            0 0 30px #00AEEF;
-    }
-
+.study{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:23px;
 }
-
-
-.trust{
-    margin:15px;
-    font-size:13px;
-    color:#b8c7d9;
+.study div{
+  padding:16px;
+  background:#1d1d1b;
+  border-radius:10px;
+  border:1px solid #ffffff10;
 }
-
-.disclaimer{
-    font-size:11px;
-    color:#8a9bb0;
-    padding:12px 18px 20px;
+.study small{
+  display:block;
+  font-size:12px;
+  color:#ffc45d;
+  margin-bottom:7px;
 }
-
-
-@media(min-width:768px){
-
-    .container{
-
-        margin-top:30px;
-
-        margin-bottom:30px;
-
-        border-radius:14px;
-
-        box-shadow:
-            0 0 40px rgba(0,0,0,.6);
-
-        overflow:hidden;
-
-    }
-
+.study strong{
+  display:block;
+  font-size:14px;
+  line-height:1.5;
+  font-weight:500;
 }
-
-
-@media(max-width:480px){
-
-    .title{
-        font-size:23px;
-    }
-
-    .desc{
-        font-size:14px;
-    }
-
-    .box{
-        font-size:11px;
-        padding:10px 5px;
-    }
-
+footer{
+  padding-top:16px;
+  border-top:1px solid #ffffff17;
+  font-size:12px;
+  line-height:1.6;
+  color:#99958b;
 }
-
+footer p{margin:0}
+@media(max-width:360px){
+  body{padding:14px}
+  .brand{font-size:16px}
+  .cta{font-size:12px}
+  .study div{padding:13px}
+}
+@media(max-height:750px){
+  .top{margin-bottom:18px}
+  .hero{padding-top:18px}
+  .intro{margin-bottom:18px}
+  .note{margin-bottom:18px}
+  .study{margin-bottom:18px}
+}
 </style>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){
+  if(f.fbq)return;
+  n=f.fbq=function(){
+    n.callMethod
+      ? n.callMethod.apply(n,arguments)
+      : n.queue.push(arguments)
+  };
+  if(!f._fbq)f._fbq=n;
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s);
+}(
+  window,
+  document,
+  'script',
+  'https://connect.facebook.net/en_US/fbevents.js'
+);
+
+fbq('init','1758038278945265');
+fbq('trackSingle','1758038278945265','PageView');
+</script>
+<!-- End Meta Pixel Code -->
 </head>
 
-
 <body>
+<noscript>
+  <img
+    height="1"
+    width="1"
+    style="display:none"
+    alt=""
+    src="https://www.facebook.com/tr?id=1758038278945265&amp;ev=PageView&amp;noscript=1"
+  >
+</noscript>
 
-<div class="container">
-
-
-<!-- =========================
-     HEADER
-     ========================= -->
-
-<div class="header">
-
-    <div class="live">
-        🔴 LIVE
+<div class="page">
+  <header class="top">
+    <div>
+      <h2 class="brand">GUJARATI TRADER</h2>
+      <p class="sub">THE MARKET STUDY SPACE</p>
     </div>
 
-    <div class="market">
+    <div class="logo">
+      <span id="logo-fallback">GT</span>
 
-        <div class="ticker">
-
-            <span id="marketData"></span>
-
-            <span id="marketDataClone"></span>
-
-        </div>
-
+      <!-- LOGO IMAGE: Paste your image URL inside src="" -->
+      <img
+        id="logo-image"
+        src="https://github.com/itssky72001-ui/Gujrati-/releases/download/Guju/Gujrati.trader.jpg
+"
+        alt="Gujarati Trader logo"
+        hidden
+      >
     </div>
-
-    <div class="watch">
-        👥 <span>10,584+</span>
-    </div>
-
-</div>
-
-
-<!-- =========================
-     PROFILE
-     ========================= -->
-
-<div class="profile">
-
-    <img
-        src="https://github.com/itssky72001-ui/Gujrati-/releases/download/Guju/Gujrati.trader.jpg"
-        alt="Gujarati Trader"
-        loading="eager"
-    >
-
-
-    <svg
-        class="verified"
-        viewBox="0 0 24 24"
-        aria-label="Verified"
-    >
-
-        <defs>
-
-            <linearGradient
-                id="badgeGrad"
-                x1="0"
-                y1="0"
-                x2="1"
-                y2="1"
-            >
-
-                <stop
-                    offset="0%"
-                    stop-color="#00c6ff"
-                />
-
-                <stop
-                    offset="100%"
-                    stop-color="#0072ff"
-                />
-
-            </linearGradient>
-
-        </defs>
-
-
-        <circle
-            cx="12"
-            cy="12"
-            r="11"
-            fill="none"
-            stroke="#00AEEF"
-            stroke-width="2"
-            opacity=".6"
-        />
-
-
-        <circle
-            cx="12"
-            cy="12"
-            r="9"
-            fill="url(#badgeGrad)"
-        />
-
-
-        <path
-            d="M7 12l3 3 7-7"
-            stroke="#fff"
-            stroke-width="2.2"
-            fill="none"
-        />
-
-    </svg>
-
-</div>
-
-
-<!-- =========================
-     TITLE
-     ========================= -->
-
-<div class="title">
-    GUJARATI TRADER ✈️
-</div>
-
-<div class="sub">
-    OFFICIAL TRADING CHANNEL
-</div>
-
-
-<!-- =========================
-     STATS
-     ========================= -->
-
-<div class="stats">
-
-    👥 <b>10,584+ Members</b>
-    |
-    📊 Market Insights
-
-</div>
-
-
-<!-- =========================
-     DESCRIPTION
-     ========================= -->
-
-<div class="desc">
-
-    📊
-
-    <span class="highlight">
-        બજાર સંશોધન
-    </span>
-
-    અને
-
-    <span class="highlight">
-        વિશ્લેષણ-આધારિત અપડેટ
-    </span>
-
-    <br>
-
-    💼 માત્ર
-
-    <span class="highlight">
-        શૈક્ષણિક ઉદ્દેશ્યો
-    </span>
-
-    <br>
-
-    ⚡
-
-    <span class="highlight">
-        જોખમ વ્યવસ્થાપન
-    </span>
-
-    આવશ્યક
-
-</div>
-
-
-<!-- =========================
-     TAGS
-     ========================= -->
-
-<div class="tags">
-
-    <div class="tag">
-        📊 STOCKS
-    </div>
-
-    <div class="tag">
-        📉 INDEX
-    </div>
-
-    <div class="tag">
-        💹 F&O
-    </div>
-
-    <div class="tag">
-        🪙 CRYPTO
-    </div>
-
-</div>
-
-
-<!-- =========================
-     INFORMATION BOXES
-     ========================= -->
-
-<div class="box-container">
-
-    <div class="box">
-        👥 10K+ USERS
-    </div>
-
-    <div class="box">
-        📈 DAILY UPDATES
-    </div>
-
-    <div class="box">
-        🆓 FREE ACCESS
-    </div>
-
-</div>
-
-
-<!-- =========================
-     TELEGRAM CTA
-     ========================= -->
-
-<div class="cta">
+  </header>
+
+  <main class="hero">
+    <p class="eyebrow">TURN CURIOSITY INTO KNOWLEDGE</p>
+
+    <h1>
+      Study the market.<br>
+      <span>One concept at a time.</span>
+    </h1>
+
+    <p class="gujarati" lang="gu">
+      બજાર વિશે શીખો.<br>
+      સમજણ સાથે આગળ વધો.
+    </p>
+
+    <p class="intro">
+      Explore market fundamentals and chart concepts,
+      with risk awareness at the heart of your learning.
+    </p>
 
     <a
-        href="https://t.me/+UJAhXGBVpBQ2NWY1"
-        id="telegramBtn"
-        class="telegramBtn"
-        target="_blank"
-        rel="noopener noreferrer"
+      id="telegram-cta"
+      class="cta"
+      href="https://t.me/+UJAhXGBVpBQ2NWY1"
+      target="_blank"
+      rel="noopener noreferrer"
     >
-        🚀 JOIN CHANNEL — IT'S FREE
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M21.4 3.6 18.2 20c-.2 1-1 1.2-1.8.7l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L5.6 13.3.7 11.8c-1-.3-1-1 .2-1.4L20 3c.9-.3 1.6.2 1.4.6Z"/>
+      </svg>
+
+      JOIN FREE TELEGRAM CHANNEL
     </a>
 
+    <p class="note">
+      Free to join ·
+      <span lang="gu">મફતમાં જોડાઓ</span>
+    </p>
+
+    <section class="study" aria-label="Learning topics">
+      <div>
+        <small>UNDERSTAND</small>
+        <strong>Market basics<br>&amp; chart concepts</strong>
+      </div>
+
+      <div>
+        <small>STAY AWARE</small>
+        <strong>Risk principles<br>&amp; discipline</strong>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Educational content only. No investment advice,
+      buy/sell recommendations or assured returns.
+      Stock market investments involve risk.
+    </p>
+  </footer>
 </div>
-
-
-<!-- =========================
-     TRUST
-     ========================= -->
-
-<div class="trust">
-
-    🛡️ Risk Management Guidance
-
-    <br>
-
-    📊 Daily Market Analysis
-
-    <br>
-
-    ⚡ Timely Market Updates
-
-</div>
-
-
-<!-- =========================
-     DISCLAIMER
-     ========================= -->
-
-<div class="disclaimer">
-
-    Disclaimer: This channel is for educational
-    and informational purposes only.
-
-</div>
-
-
-</div>
-
 
 <script>
+const logo = document.getElementById('logo-image');
+const fallback = document.getElementById('logo-fallback');
 
-/* =========================================================
-   CONFIGURATION
-   ========================================================= */
-
-const TELEGRAM_URL =
-    "https://t.me/+UJAhXGBVpBQ2NWY1";
-
-const SUBSCRIBE_SESSION_KEY =
-    "telegram_subscribe_sent_1758038278945265";
-
-const CLICK_LOCK_TIME =
-    1500;
-
-
-/* =========================================================
-   MARKET TICKER
-   ========================================================= */
-
-function updateMarket(){
-
-    const items = [
-        "NIFTY",
-        "BANKNIFTY",
-        "BTC"
-    ];
-
-    let text = "";
-
-    items.forEach(function(item){
-
-        text +=
-            item +
-            " • MARKET UPDATE • ";
-
-    });
-
-
-    const marketData =
-        document.getElementById("marketData");
-
-    const marketDataClone =
-        document.getElementById("marketDataClone");
-
-
-    if(marketData){
-        marketData.textContent = text;
-    }
-
-    if(marketDataClone){
-        marketDataClone.textContent = text;
-    }
-
+function showLogo(){
+  logo.hidden = false;
+  fallback.hidden = true;
 }
 
-updateMarket();
-
-
-/* =========================================================
-   EVENT ID
-   ========================================================= */
-
-function createEventId(){
-
-    return (
-        "tg_" +
-        Date.now() +
-        "_" +
-        Math.random()
-            .toString(36)
-            .substring(2,10)
-    );
-
+function hideLogo(){
+  logo.hidden = true;
+  fallback.hidden = false;
 }
 
+logo.addEventListener('load', showLogo);
+logo.addEventListener('error', hideLogo);
 
-/* =========================================================
-   SESSION CHECK
-   ========================================================= */
+if(
+  logo.getAttribute('src') &&
+  logo.complete &&
+  logo.naturalWidth
+){
+  showLogo();
+}
 
-function alreadyTracked(){
-
-    try{
-
-        return (
-            sessionStorage.getItem(
-                SUBSCRIBE_SESSION_KEY
-            ) === "1"
-        );
-
-    }catch(error){
-
-        return false;
-
+document
+  .getElementById('telegram-cta')
+  .addEventListener('click', function(){
+    // Tracks a CTA click, not confirmed Telegram membership.
+    if(typeof window.fbq === 'function'){
+      fbq('trackSingle','1758038278945265','Subscribe');
     }
-
-}
-
-
-/* =========================================================
-   MARK AS TRACKED
-   ========================================================= */
-
-function markTracked(){
-
-    try{
-
-        sessionStorage.setItem(
-            SUBSCRIBE_SESSION_KEY,
-            "1"
-        );
-
-    }catch(error){
-
-        // Page continues normally
-        // if storage is unavailable.
-
-    }
-
-}
-
-
-/* =========================================================
-   SUBSCRIBE EVENT
-   ========================================================= */
-
-function fireSubscribe(){
-
-    if(alreadyTracked()){
-
-        console.log(
-            "Subscribe already tracked."
-        );
-
-        return;
-
-    }
-
-
-    if(typeof window.fbq !== "function"){
-
-        console.log(
-            "Meta Pixel unavailable."
-        );
-
-        return;
-
-    }
-
-
-    const eventId =
-        createEventId();
-
-
-    fbq(
-        "track",
-        "Subscribe",
-        {
-            content_name:
-                "Telegram Channel Join",
-
-            content_category:
-                "Telegram",
-
-            value:1,
-
-            currency:"INR"
-        },
-        {
-            eventID:eventId
-        }
-    );
-
-
-    markTracked();
-
-
-    console.log(
-        "Subscribe fired:",
-        eventId
-    );
-
-}
-
-
-/* =========================================================
-   TELEGRAM BUTTON
-   ========================================================= */
-
-const telegramBtn =
-    document.getElementById(
-        "telegramBtn"
-    );
-
-let clickLocked = false;
-
-
-if(telegramBtn){
-
-    telegramBtn.addEventListener(
-        "click",
-        function(){
-
-            /*
-             * Prevent accidental rapid
-             * repeated clicks.
-             */
-
-            if(clickLocked){
-
-                return;
-
-            }
-
-
-            clickLocked = true;
-
-
-            telegramBtn.classList.add(
-                "processing"
-            );
-
-
-            /*
-             * Fire Subscribe for the
-             * genuine CTA interaction.
-             */
-
-            fireSubscribe();
-
-
-            /*
-             * IMPORTANT:
-             *
-             * Telegram navigation is handled
-             * by the anchor href itself.
-             *
-             * We intentionally do NOT use
-             * window.open(), which can be
-             * blocked by browsers.
-             */
-
-
-            setTimeout(
-                function(){
-
-                    clickLocked = false;
-
-                    telegramBtn.classList.remove(
-                        "processing"
-                    );
-
-                },
-                CLICK_LOCK_TIME
-            );
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   DEBUG
-   ========================================================= */
-
-console.log(
-    "Landing page initialized."
-);
-
-console.log(
-    "Pixel: 1758038278945265"
-);
-
-console.log(
-    "Telegram:",
-    TELEGRAM_URL
-);
-
+  });
 </script>
-
 
 </body>
 </html>
-
