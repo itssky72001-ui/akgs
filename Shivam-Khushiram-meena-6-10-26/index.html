@@ -19,13 +19,12 @@
     content="India's Most Trusted Stock Market Community"
   />
   <meta property="og:type" content="website" />
-
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- =========================
+  <!-- =================================================
        META PIXEL
-       Only Pixel: 965121949350339
-       ========================= -->
+       Pixel ID: 965121949350339
+       ================================================= -->
   <script>
     !function(f,b,e,v,n,t,s)
     {
@@ -60,7 +59,6 @@
     fbq('track', 'PageView');
   </script>
 
-  <!-- Meta Pixel NoScript -->
   <noscript>
     <img
       height="1"
@@ -70,6 +68,9 @@
       alt=""
     />
   </noscript>
+
+  <!-- End Meta Pixel Code -->
+
 
   <style>
     * {
@@ -100,10 +101,12 @@
       min-height: 100vh;
       background: #0a0a0a;
       color: #ffffff;
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
+
       padding: 40px 20px;
       text-align: center;
     }
@@ -111,14 +114,18 @@
     .logo {
       width: 160px;
       height: 160px;
+
       border-radius: 50%;
       background: #ffffff;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       box-shadow:
         0 0 30px rgba(255, 200, 0, 0.6),
         0 0 60px rgba(255, 200, 0, 0.3);
+
       margin-bottom: 30px;
       overflow: hidden;
     }
@@ -191,7 +198,6 @@
 
       width: 100%;
       max-width: 420px;
-      border: 0;
       cursor: pointer;
     }
 
@@ -210,8 +216,10 @@
     .main-heading {
       font-size: 1.6rem;
       font-weight: 700;
+
       margin: 45px 0 15px 0;
       line-height: 1.3;
+
       max-width: 500px;
       color: #ffffff;
     }
@@ -219,17 +227,22 @@
     .sub-heading {
       font-size: 1rem;
       color: #a0a0a0;
+
       margin: 0 0 35px 0;
       max-width: 500px;
     }
 
     .feature-card {
       background: rgba(255, 255, 255, 0.04);
+
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 20px;
+
       padding: 30px 25px;
+
       max-width: 500px;
       width: 100%;
+
       text-align: left;
     }
 
@@ -262,6 +275,7 @@
     }
 
     @media (max-width: 480px) {
+
       #root {
         padding: 30px 16px;
       }
@@ -286,6 +300,7 @@
   </style>
 </head>
 
+
 <body>
 
   <div id="root">
@@ -298,13 +313,15 @@
       />
     </div>
 
-    <!-- Brand -->
+
+    <!-- Brand Name -->
     <h1 class="brand">
       <span class="blue">◆</span>
       <span class="blue">ગુજરાતી</span>
       <span class="pink">TRADER</span>
       <span class="blue">◆</span>
     </h1>
+
 
     <!-- Countdown -->
     <p id="countdown">
@@ -315,7 +332,10 @@
       If not opened, click below 👇
     </p>
 
-    <!-- Join Button -->
+
+    <!-- =================================================
+         TELEGRAM JOIN BUTTON
+         ================================================= -->
     <a
       id="joinBtn"
       href="https://t.me/+6yf6AT-ajeAxYWU1"
@@ -339,7 +359,9 @@
       </svg>
 
       JOIN OUR TELEGRAM
+
     </a>
+
 
     <!-- Main Heading -->
     <h2 class="main-heading">
@@ -347,12 +369,14 @@
       Community
     </h2>
 
+
     <!-- Sub Heading -->
     <p class="sub-heading">
       Free Signals • Daily Analysis • Smart Risk Management
     </p>
 
-    <!-- Features -->
+
+    <!-- Feature Card -->
     <div class="feature-card">
 
       <div class="feature">
@@ -385,6 +409,7 @@
 
     </div>
 
+
     <!-- Footer -->
     <p class="footer">
       © 2026 Gujarati Trader • All Rights Reserved
@@ -393,32 +418,31 @@
   </div>
 
 
-  <!-- ==========================================
+  <!-- =================================================
        SUBSCRIBE EVENT
-       Only fires on manual button click.
-       Fires maximum ONE time per page load.
-       ========================================== -->
+       ONLY fires on manual JOIN button click.
+       Maximum ONE time per page load.
+       ================================================= -->
   <script>
 
     const joinBtn = document.getElementById("joinBtn");
 
-    let subscribeSent = false;
+    let subscribeFired = false;
 
     joinBtn.addEventListener("click", function () {
 
       /*
-       * Prevent duplicate Subscribe events
-       * from multiple click handlers/clicks.
+       * Stop duplicate Subscribe events
+       * if the button is clicked repeatedly.
        */
-      if (subscribeSent) {
+      if (subscribeFired) {
         return;
       }
 
-      subscribeSent = true;
+      subscribeFired = true;
 
       /*
-       * ONLY Meta event:
-       * Subscribe
+       * ONLY conversion event.
        */
       if (typeof window.fbq === "function") {
         window.fbq("track", "Subscribe");
@@ -427,15 +451,12 @@
     });
 
 
-    /*
-     * Countdown is visual only.
-     *
-     * IMPORTANT:
-     * Auto redirect does NOT fire Subscribe.
-     *
-     * This prevents an automatic redirect from
-     * being counted as a user Subscribe action.
-     */
+    /* =================================================
+       AUTO REDIRECT
+       
+       The automatic redirect does NOT fire Subscribe.
+       ================================================= */
+
     const TELEGRAM_LINK =
       "https://t.me/+6yf6AT-ajeAxYWU1";
 
@@ -460,7 +481,8 @@
           clearInterval(interval);
 
           /*
-           * No Subscribe event here.
+           * IMPORTANT:
+           * No Meta event here.
            * Only redirect.
            */
           window.location.href = TELEGRAM_LINK;
