@@ -1,229 +1,486 @@
+```html
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- This site is hosted on Netlify. Anyone can build and deploy a site
-         like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=f543cc51-ab52-42fd-8610-1ec404aea660
-         Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gujarati Trader</title>
-    <meta name="description" content="India's Most Trusted Stock Market Community" />
-    <meta property="og:title" content="Gujarati Trader" />
-    <meta property="og:description" content="India's Most Trusted Stock Market Community" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+<head>
+  <meta charset="UTF-8" />
 
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '965121949350339');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=965121949350339&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script type="module" crossorigin src="/assets/index-BKEVZ4yY.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B07HH1o_.css">
-  </head>
-  <body>
-    <!-- Meta Pixel NoScript -->
-    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1384221989949561&ev=PageView&noscript=1"
-    /></noscript>
+  <title>Gujarati Trader</title>
 
-    <!-- Main Content -->
-    <div id="root" style="
+  <meta
+    name="description"
+    content="India's Most Trusted Stock Market Community"
+  />
+
+  <meta property="og:title" content="Gujarati Trader" />
+  <meta
+    property="og:description"
+    content="India's Most Trusted Stock Market Community"
+  />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- =========================
+       META PIXEL
+       Only Pixel: 965121949350339
+       ========================= -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {
+      if(f.fbq)return;
+      n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+      };
+
+      if(!f._fbq)f._fbq=n;
+
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(
+      window,
+      document,
+      'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+
+    fbq('init', '965121949350339');
+    fbq('track', 'PageView');
+  </script>
+
+  <!-- Meta Pixel NoScript -->
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=965121949350339&ev=PageView&noscript=1"
+      alt=""
+    />
+  </noscript>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #ffffff;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+    }
+
+    #root {
       min-height: 100vh;
       background: #0a0a0a;
       color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       padding: 40px 20px;
       text-align: center;
-      box-sizing: border-box;
-    ">
+    }
 
-      <!-- Glowing Logo -->
-      <div style="
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        background: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 0 30px rgba(255, 200, 0, 0.6), 0 0 60px rgba(255, 200, 0, 0.3);
-        margin-bottom: 30px;
-        overflow: hidden;
-      ">
-        <img 
-          src="https://karanmetalabe.com/wp-content/uploads/2026/06/wordpress_1200x1200-1.jpg" 
-          alt="Gujarati Trader Logo" 
-          style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
-        />
-      </div>
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0 0 30px rgba(255, 200, 0, 0.6),
+        0 0 60px rgba(255, 200, 0, 0.3);
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
 
-      <!-- Brand Name -->
-      <h1 style="
-        font-size: 2rem;
-        font-weight: 700;
-        margin: 0 0 10px 0;
-        letter-spacing: 1px;
-      ">
-        <span style="color: #2ea3ff;">◆</span>
-        <span style="color: #2ea3ff;">ગુજરાતી</span>
-        <span style="color: #ff2d6f;">TRADER</span>
-        <span style="color: #2ea3ff;">◆</span>
-      </h1>
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
 
-      <!-- Countdown Text -->
-      <p id="countdown" style="
-        font-size: 1.05rem;
-        color: #b0b0b0;
-        margin: 15px 0 5px 0;
-      ">Auto joining in <span id="timer">23</span> seconds...</p>
+    .brand {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      letter-spacing: 1px;
+    }
 
-      <p style="
-        font-size: 1rem;
-        color: #b0b0b0;
-        margin: 0 0 25px 0;
-      ">If not opened, click below 👇</p>
+    .blue {
+      color: #2ea3ff;
+    }
 
-      <!-- Join Button -->
-      <a 
-        id="joinBtn"
-        href="https://t.me/+6yf6AT-ajeAxYWU1" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        style="
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          background: linear-gradient(90deg, #ff2d6f 0%, #b14cff 50%, #2ea3ff 100%);
-          color: #ffffff;
-          font-size: 1.15rem;
-          font-weight: 700;
-          padding: 18px 50px;
-          border-radius: 50px;
-          text-decoration: none;
-          box-shadow: 0 0 25px rgba(177, 76, 255, 0.5), 0 0 50px rgba(46, 163, 255, 0.3);
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
-          width: 100%;
-          max-width: 420px;
-          box-sizing: border-box;
-        "
-        onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 35px rgba(177, 76, 255, 0.7), 0 0 70px rgba(46, 163, 255, 0.5)';"
-        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 25px rgba(177, 76, 255, 0.5), 0 0 50px rgba(46, 163, 255, 0.3)';"
-        onclick="trackJoin();"
+    .pink {
+      color: #ff2d6f;
+    }
+
+    #countdown {
+      font-size: 1.05rem;
+      color: #b0b0b0;
+      margin: 15px 0 5px 0;
+    }
+
+    .instruction {
+      font-size: 1rem;
+      color: #b0b0b0;
+      margin: 0 0 25px 0;
+    }
+
+    #joinBtn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #ff2d6f 0%,
+          #b14cff 50%,
+          #2ea3ff 100%
+        );
+
+      color: #ffffff;
+      font-size: 1.15rem;
+      font-weight: 700;
+
+      padding: 18px 50px;
+      border-radius: 50px;
+
+      text-decoration: none;
+
+      box-shadow:
+        0 0 25px rgba(177, 76, 255, 0.5),
+        0 0 50px rgba(46, 163, 255, 0.3);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+      width: 100%;
+      max-width: 420px;
+      border: 0;
+      cursor: pointer;
+    }
+
+    #joinBtn:hover {
+      transform: scale(1.03);
+
+      box-shadow:
+        0 0 35px rgba(177, 76, 255, 0.7),
+        0 0 70px rgba(46, 163, 255, 0.5);
+    }
+
+    #joinBtn:active {
+      transform: scale(0.98);
+    }
+
+    .main-heading {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 45px 0 15px 0;
+      line-height: 1.3;
+      max-width: 500px;
+      color: #ffffff;
+    }
+
+    .sub-heading {
+      font-size: 1rem;
+      color: #a0a0a0;
+      margin: 0 0 35px 0;
+      max-width: 500px;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px 25px;
+      max-width: 500px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .feature:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-icon {
+      font-size: 1.3rem;
+      margin-right: 15px;
+      min-width: 28px;
+    }
+
+    .feature-text {
+      font-size: 1rem;
+      color: #e0e0e0;
+      font-weight: 500;
+    }
+
+    .footer {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+      #root {
+        padding: 30px 16px;
+      }
+
+      .logo {
+        width: 135px;
+        height: 135px;
+      }
+
+      .brand {
+        font-size: 1.65rem;
+      }
+
+      .main-heading {
+        font-size: 1.4rem;
+      }
+
+      #joinBtn {
+        padding: 17px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="root">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img
+        src="https://karanmetalabe.com/wp-content/uploads/2026/06/wordpress_1200x1200-1.jpg"
+        alt="Gujarati Trader Logo"
+      />
+    </div>
+
+    <!-- Brand -->
+    <h1 class="brand">
+      <span class="blue">◆</span>
+      <span class="blue">ગુજરાતી</span>
+      <span class="pink">TRADER</span>
+      <span class="blue">◆</span>
+    </h1>
+
+    <!-- Countdown -->
+    <p id="countdown">
+      Auto joining in <span id="timer">23</span> seconds...
+    </p>
+
+    <p class="instruction">
+      If not opened, click below 👇
+    </p>
+
+    <!-- Join Button -->
+    <a
+      id="joinBtn"
+      href="https://t.me/+6yf6AT-ajeAxYWU1"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <!-- Telegram Icon -->
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
-        <!-- Telegram Icon -->
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.22 15.51 15.99C15.37 16.74 15.09 16.99 14.82 17.02C14.23 17.07 13.78 16.63 13.21 16.26C12.32 15.68 11.81 15.32 10.95 14.75C9.96 14.1 10.62 13.74 11.19 13.15C11.34 12.99 13.91 10.65 13.96 10.43C13.97 10.4 13.97 10.3 13.91 10.25C13.85 10.2 13.77 10.22 13.7 10.23C13.61 10.25 10.64 12.21 10.56 12.27C10.48 12.33 10.42 12.37 10.36 12.37C10.29 12.37 10.23 12.34 10.15 12.3C10.07 12.26 9.68 12.13 9.51 12.06C9.34 11.99 9.18 11.95 9.03 11.95C8.88 11.95 8.73 11.98 8.61 12.04L8.56 12.07C8.41 12.14 8.31 12.2 8.28 12.3C8.25 12.4 8.25 12.52 8.28 12.67C8.31 12.82 8.4 13.1 8.56 13.51C9.06 15.02 9.74 16.14 10.6 16.88C11.46 17.62 12.25 18.01 12.97 18.05C13.69 18.09 14.32 17.83 14.86 17.27C15.4 16.71 15.83 15.86 16.15 14.71C16.47 13.56 16.64 12.6 16.64 11.83C16.64 11.06 16.57 10.5 16.42 10.13C16.27 9.76 16.04 9.5 15.74 9.35C15.44 9.2 15.06 9.13 14.6 9.13C14.14 9.13 13.7 9.2 13.28 9.35C12.86 9.5 12.5 9.7 12.2 9.95C11.9 10.2 11.7 10.45 11.6 10.7C11.5 10.95 11.45 11.2 11.45 11.45C11.45 11.7 11.5 11.95 11.6 12.2C11.7 12.45 11.9 12.7 12.2 12.95C12.5 13.2 12.86 13.4 13.28 13.55C13.7 13.7 14.14 13.77 14.6 13.77C15.06 13.77 15.44 13.7 15.74 13.55C16.04 13.4 16.27 13.14 16.42 12.77C16.57 12.4 16.64 11.84 16.64 11.07V8.8Z" fill="#ffffff"/>
-        </svg>
-        JOIN OUR TELEGRAM
-      </a>
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.22 15.51 15.99C15.37 16.74 15.09 16.99 14.82 17.02C14.23 17.07 13.78 16.63 13.21 16.26C12.32 15.68 11.81 15.32 10.95 14.75C9.96 14.1 10.62 13.74 11.19 13.15C11.34 12.99 13.91 10.65 13.96 10.43C13.97 10.4 13.97 10.3 13.91 10.25C13.85 10.2 13.77 10.22 13.7 10.23C13.61 10.25 10.64 12.21 10.56 12.27C10.48 12.33 10.42 12.37 10.36 12.37C10.29 12.37 10.23 12.34 10.15 12.3C10.07 12.26 9.68 12.13 9.51 12.06C9.34 11.99 9.18 11.95 9.03 11.95C8.88 11.95 8.73 11.98 8.61 12.04L8.56 12.07C8.41 12.14 8.31 12.2 8.28 12.3C8.25 12.4 8.25 12.52 8.28 12.67C8.31 12.82 8.4 13.1 8.56 13.51C9.06 15.02 9.74 16.14 10.6 16.88C11.46 17.62 12.25 18.01 12.97 18.05C13.69 18.09 14.32 17.83 14.86 17.27C15.4 16.71 15.83 15.86 16.15 14.71C16.47 13.56 16.64 12.6 16.64 11.83C16.64 11.06 16.57 10.5 16.42 10.13C16.27 9.76 16.04 9.5 15.74 9.35C15.44 9.2 15.06 9.13 14.6 9.13C14.14 9.13 13.7 9.2 13.28 9.35C12.86 9.5 12.5 9.7 12.2 9.95C11.9 10.2 11.7 10.45 11.6 10.7C11.5 10.95 11.45 11.2 11.45 11.45C11.45 11.7 11.5 11.95 11.6 12.2C11.7 12.45 11.9 12.7 12.2 12.95C12.5 13.2 12.86 13.4 13.28 13.55C13.7 13.7 14.14 13.77 14.6 13.77C15.06 13.77 15.44 13.7 15.74 13.55C16.04 13.4 16.27 13.14 16.42 12.77C16.57 12.4 16.64 11.84 16.64 11.07V8.8Z"
+          fill="#ffffff"
+        />
+      </svg>
 
-      <!-- Main Heading -->
-      <h2 style="
-        font-size: 1.6rem;
-        font-weight: 700;
-        margin: 45px 0 15px 0;
-        line-height: 1.3;
-        max-width: 500px;
-        color: #ffffff;
-      ">India's Most Trusted Stock Market<br/>Community</h2>
+      JOIN OUR TELEGRAM
+    </a>
 
-      <!-- Sub Heading -->
-      <p style="
-        font-size: 1rem;
-        color: #a0a0a0;
-        margin: 0 0 35px 0;
-        max-width: 500px;
-      ">Free Signals • Daily Analysis • Smart Risk Management</p>
+    <!-- Main Heading -->
+    <h2 class="main-heading">
+      India's Most Trusted Stock Market<br />
+      Community
+    </h2>
 
-      <!-- Feature Card -->
-      <div style="
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        padding: 30px 25px;
-        max-width: 500px;
-        width: 100%;
-        box-sizing: border-box;
-        text-align: left;
-      ">
-        <div style="display: flex; align-items: center; margin-bottom: 22px;">
-          <span style="font-size: 1.3rem; margin-right: 15px; color: #2ea3ff;">📈</span>
-          <span style="font-size: 1rem; color: #e0e0e0; font-weight: 500;">Intraday, Options, NIFTY &amp; BANKNIFTY Calls</span>
-        </div>
-        <div style="display: flex; align-items: center; margin-bottom: 22px;">
-          <span style="font-size: 1.3rem; margin-right: 15px; color: #2ea3ff;">🎯</span>
-          <span style="font-size: 1rem; color: #e0e0e0; font-weight: 500;">Accurate Entry, Exit &amp; Target Levels</span>
-        </div>
-        <div style="display: flex; align-items: center; margin-bottom: 22px;">
-          <span style="font-size: 1.3rem; margin-right: 15px; color: #2ea3ff;">🛡️</span>
-          <span style="font-size: 1rem; color: #e0e0e0; font-weight: 500;">Risk Management Focused Strategy</span>
-        </div>
-        <div style="display: flex; align-items: center;">
-          <span style="font-size: 1.3rem; margin-right: 15px; color: #2ea3ff;">🔥</span>
-          <span style="font-size: 1rem; color: #e0e0e0; font-weight: 500;">Daily Free &amp; Premium Market Analysis</span>
-        </div>
+    <!-- Sub Heading -->
+    <p class="sub-heading">
+      Free Signals • Daily Analysis • Smart Risk Management
+    </p>
+
+    <!-- Features -->
+    <div class="feature-card">
+
+      <div class="feature">
+        <span class="feature-icon">📈</span>
+        <span class="feature-text">
+          Intraday, Options, NIFTY &amp; BANKNIFTY Calls
+        </span>
       </div>
 
-      <!-- Footer -->
-      <p style="
-        font-size: 0.8rem;
-        color: #666;
-        margin-top: 40px;
-      ">© 2026 Gujarati Trader • All Rights Reserved</p>
+      <div class="feature">
+        <span class="feature-icon">🎯</span>
+        <span class="feature-text">
+          Accurate Entry, Exit &amp; Target Levels
+        </span>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">🛡️</span>
+        <span class="feature-text">
+          Risk Management Focused Strategy
+        </span>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">🔥</span>
+        <span class="feature-text">
+          Daily Free &amp; Premium Market Analysis
+        </span>
+      </div>
 
     </div>
 
-    <!-- Auto‑redirect & Event Tracking -->
-    <script>
-      const TELEGRAM_LINK = "https://t.me/+6yf6AT-ajeAxYWU1";
-      const REDIRECT_SECONDS = 23;
-      let secondsLeft = REDIRECT_SECONDS;
+    <!-- Footer -->
+    <p class="footer">
+      © 2026 Gujarati Trader • All Rights Reserved
+    </p>
 
-      // Track click event
-      function trackJoin() {
-        if (typeof fbq === 'function') {
-          fbq('track', 'Lead');
-          fbq('track', 'Subscribe');
-          fbq('trackCustom', 'JoinTelegram');
-        }
+  </div>
+
+
+  <!-- ==========================================
+       SUBSCRIBE EVENT
+       Only fires on manual button click.
+       Fires maximum ONE time per page load.
+       ========================================== -->
+  <script>
+
+    const joinBtn = document.getElementById("joinBtn");
+
+    let subscribeSent = false;
+
+    joinBtn.addEventListener("click", function () {
+
+      /*
+       * Prevent duplicate Subscribe events
+       * from multiple click handlers/clicks.
+       */
+      if (subscribeSent) {
+        return;
       }
 
-      // Auto redirect after countdown
-      const timerEl = document.getElementById('timer');
+      subscribeSent = true;
 
-      const interval = setInterval(() => {
+      /*
+       * ONLY Meta event:
+       * Subscribe
+       */
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "Subscribe");
+      }
+
+    });
+
+
+    /*
+     * Countdown is visual only.
+     *
+     * IMPORTANT:
+     * Auto redirect does NOT fire Subscribe.
+     *
+     * This prevents an automatic redirect from
+     * being counted as a user Subscribe action.
+     */
+    const TELEGRAM_LINK =
+      "https://t.me/+6yf6AT-ajeAxYWU1";
+
+    const REDIRECT_SECONDS = 23;
+
+    let secondsLeft = REDIRECT_SECONDS;
+
+    const timerEl =
+      document.getElementById("timer");
+
+    const interval =
+      setInterval(function () {
+
         secondsLeft--;
-        if (timerEl) timerEl.textContent = secondsLeft;
-        if (secondsLeft <= 0) {
-          clearInterval(interval);
-          trackJoin();
-          window.location.href = TELEGRAM_LINK;
+
+        if (timerEl) {
+          timerEl.textContent = secondsLeft;
         }
+
+        if (secondsLeft <= 0) {
+
+          clearInterval(interval);
+
+          /*
+           * No Subscribe event here.
+           * Only redirect.
+           */
+          window.location.href = TELEGRAM_LINK;
+
+        }
+
       }, 1000);
 
-      // Also track if user clicks the button manually
-      document.getElementById('joinBtn').addEventListener('click', trackJoin);
-    </script>
-  </body>
-</html>
+  </script>
 
-<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="f543cc51-ab52-42fd-8610-1ec404aea660" data-app-host="app.netlify.com"></script>
+
+  <!-- Netlify -->
+  <script
+    async
+    src="/.netlify/scripts/hud?variant=public"
+    data-nf-variant="public"
+    data-netlify-site-id="f543cc51-ab52-42fd-8610-1ec404aea660"
+    data-app-host="app.netlify.com"
+  ></script>
+
+</body>
+</html>
+```
