@@ -1,289 +1,316 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b1018">
+<meta name="theme-color" content="#0b111b">
 <meta name="description" content="Tamil Harmonic - Stock Market Learning Community">
-<title>Tamil Harmonic | Market Learning</title>
+<title>Tamil Harmonic | Market Education</title>
 
 <style>
 :root{
- --dark:#0b1018;
- --panel:#151e2a;
- --orange:#ffad4a;
- --blue:#7adcf4;
+ --bg:#0b111b;
+ --card:#172534;
+ --gold:#ffb451;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
 body{
- background:#0b1018;
+ background:var(--bg);
  color:#fff;
  font-family:system-ui,-apple-system,Arial,sans-serif;
 }
 .page{
  width:100%;
- max-width:380px;
+ max-width:400px;
  min-height:100vh;
  min-height:100dvh;
  margin:auto;
- padding:16px 15px 13px;
+ padding:20px 18px;
  display:flex;
  flex-direction:column;
  justify-content:center;
- background:
-  radial-gradient(circle at 95% 18%,#273b4b 0,transparent 37%),
-  linear-gradient(165deg,#111b28,#0b1018 68%);
- overflow:hidden;
+ background:linear-gradient(155deg,#172638,#0b111b 75%);
 }
-.top{
+
+/* HEADER */
+.header{
  display:flex;
- justify-content:space-between;
  align-items:center;
+ justify-content:space-between;
  gap:8px;
- font-size:9px;
+ padding-bottom:16px;
+ border-bottom:1px solid #344658;
+}
+.brand{
+ display:flex;
+ align-items:center;
+ gap:11px;
+ min-width:0;
+}
+.logo{
+ width:48px;
+ height:48px;
+ flex:none;
+ display:grid;
+ place-items:center;
+ border:1px solid #577386;
+ background:#24394a;
+ border-radius:12px;
+ color:var(--gold);
+ font-size:19px;
+ font-weight:900;
+}
+.brand strong{
+ display:block;
+ font-size:15px;
+ letter-spacing:.3px;
+}
+.brand small{
+ display:block;
+ color:#afc3d1;
+ font-size:10px;
+ margin-top:4px;
+}
+.free{
+ padding:8px 12px;
+ border:1px solid #35644e;
+ background:#173629;
+ color:#a4e9bd;
+ border-radius:25px;
+ font-size:11px;
  font-weight:800;
- letter-spacing:.7px;
- color:var(--blue);
 }
-.top span:last-child{
- color:#ffc47a;
- background:#51331d;
- padding:6px 9px;
- border-radius:20px;
-}
+
+/* HERO */
 .hero{
  display:grid;
- grid-template-columns:minmax(0,1fr) 122px;
+ grid-template-columns:minmax(0,1fr) 150px;
  align-items:center;
- gap:4px;
- margin:19px 0 14px;
+ gap:8px;
+ margin:23px 0 21px;
 }
 .kicker{
- font-size:9px;
+ color:var(--gold);
+ font-size:11px;
  font-weight:800;
- letter-spacing:1px;
- color:var(--orange);
+ letter-spacing:.5px;
 }
-h1{
- margin:8px 0;
- font-size:30px;
+.hero h1{
+ font-size:36px;
  line-height:1.05;
  letter-spacing:-1px;
+ margin:12px 0;
 }
-h1 span{color:var(--orange)}
+.hero h1 span{color:var(--gold)}
 .hero p{
  margin:0;
- color:#c3d3df;
- font-size:11px;
- line-height:1.55;
+ color:#c6d7e3;
+ font-size:14px;
+ line-height:1.5;
 }
-.photo-area{
- position:relative;
- width:122px;
- height:135px;
- display:flex;
- align-items:center;
- justify-content:center;
-}
-.photo-area:before{
- content:"";
- position:absolute;
- inset:5px 0;
- border:1px dashed #557489;
- border-radius:50%;
- transform:rotate(-20deg);
-}
+
+/* PHOTO */
 .photo-ring{
- position:relative;
- width:112px;
- height:112px;
- padding:4px;
- border:3px solid var(--orange);
+ width:144px;
+ height:144px;
+ border:3px solid var(--gold);
  border-radius:50%;
- background:#25313e;
+ padding:4px;
+ background:#263746;
 }
-.photo-inner{
+.photo{
  width:100%;
  height:100%;
  border-radius:50%;
  overflow:hidden;
+ background:#263746;
  display:grid;
  place-items:center;
- background:#23374a;
 }
-.photo-inner img{
+.photo img{
  display:block;
  width:100%;
  height:100%;
  object-fit:cover;
 }
 .initials{
- color:var(--orange);
- font-size:26px;
+ font-size:36px;
  font-weight:900;
+ color:var(--gold);
 }
-.dot{
- position:absolute;
- right:0;
- bottom:9px;
- width:16px;
- height:16px;
- border-radius:50%;
- background:var(--blue);
- border:3px solid var(--dark);
-}
+
+/* MAIN TEXT */
 .headline{
- font-size:23px;
+ margin:0 0 12px;
+ font-size:28px;
  line-height:1.2;
  font-weight:900;
- letter-spacing:-.4px;
- margin:0 0 9px;
+ letter-spacing:-.5px;
 }
-.headline span{color:var(--orange)}
+.headline span{color:var(--gold)}
 .desc{
- margin:0 0 15px;
- font-size:11px;
- line-height:1.6;
- color:#c0d0db;
+ color:#c5d6e0;
+ font-size:14px;
+ line-height:1.55;
+ margin:0 0 17px;
 }
+
+/* MARKET GRAPHIC */
 .market{
- height:52px;
  position:relative;
- margin:0 0 13px;
- border-radius:10px;
- background:linear-gradient(90deg,#132332,#182a36);
- overflow:hidden;
+ height:57px;
  display:flex;
- justify-content:space-evenly;
  align-items:center;
+ justify-content:space-evenly;
+ background:#152738;
+ border:1px solid #294052;
+ border-radius:12px;
+ margin-bottom:18px;
+ overflow:hidden;
 }
 .market:before{
  content:"";
  position:absolute;
  inset:0;
  background:repeating-linear-gradient(
-  90deg,transparent 0 34px,#ffffff09 35px 36px
+  90deg,transparent 0 36px,#ffffff09 37px 38px
  );
 }
 .candle{
- position:relative;
- z-index:1;
- width:7px;
+ width:8px;
  height:var(--h);
  background:var(--c);
  border-radius:1px;
+ position:relative;
 }
 .candle:before{
  content:"";
  position:absolute;
  width:1px;
- height:calc(var(--h) + 17px);
+ height:calc(var(--h) + 14px);
  background:var(--c);
- top:-8px;
  left:3px;
+ top:-7px;
 }
 .market-label{
  position:absolute;
- right:9px;
+ right:10px;
  top:5px;
- color:#b7cdd9;
- font-size:8px;
- font-weight:bold;
- letter-spacing:.6px;
+ font-size:9px;
+ letter-spacing:.5px;
+ color:#b9cbd7;
 }
+
+/* BENEFITS */
 .benefits{
  display:grid;
- grid-template-columns:1fr 1fr;
- gap:8px;
- margin-bottom:14px;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:10px;
+ margin-bottom:19px;
 }
 .benefit{
  display:flex;
  align-items:center;
- gap:8px;
- background:#172330;
- border:1px solid #2a4051;
- border-radius:10px;
- padding:11px 9px;
+ gap:10px;
+ padding:15px 11px;
+ background:var(--card);
+ border:1px solid #30485a;
+ border-radius:12px;
  min-width:0;
 }
-.benefit .icon{
- width:27px;
- height:27px;
+.icon{
+ width:35px;
+ height:35px;
+ flex:none;
  display:grid;
  place-items:center;
- flex:none;
- background:#2b3c4b;
- color:var(--orange);
- border-radius:7px;
- font-size:16px;
+ border-radius:9px;
+ background:#304355;
+ color:var(--gold);
+ font-size:21px;
 }
 .benefit b{
  display:block;
- font-size:10px;
+ font-size:13px;
  line-height:1.3;
 }
 .benefit small{
  display:block;
- color:#a9becb;
- font-size:9px;
- margin-top:3px;
+ color:#acc3d0;
+ font-size:11px;
+ margin-top:4px;
 }
+
+/* TELEGRAM CTA */
 .cta{
  display:flex;
- align-items:center;
  justify-content:center;
- gap:9px;
- text-align:center;
- min-height:56px;
- padding:12px 9px;
- background:linear-gradient(95deg,#ffbd64,#ff9734);
- border-radius:12px;
- color:#17202b;
- font-size:13px;
- font-weight:900;
+ align-items:center;
+ gap:10px;
+ min-height:65px;
+ padding:15px 10px;
+ background:linear-gradient(100deg,#ffcb7b,#ff9f34);
+ border-radius:14px;
+ color:#192330;
  text-decoration:none;
+ text-align:center;
+ font-size:15px;
+ font-weight:900;
  -webkit-tap-highlight-color:transparent;
 }
-.cta:active{background:#ffc677}
+.cta svg{
+ width:23px;
+ height:23px;
+ flex:none;
+}
+.cta:active{background:#ffd28a}
 .cta:focus-visible{
  outline:2px solid #fff;
  outline-offset:3px;
 }
-.cta svg{width:20px;height:20px;flex:none}
 .after{
- margin:11px 0 0;
- color:#a8c1ce;
- font-size:10px;
+ color:#b6ccd9;
  text-align:center;
+ font-size:12px;
+ margin:12px 0 0;
 }
 .disclaimer{
- margin:15px 0 0;
- padding-top:10px;
- border-top:1px solid #2b3b49;
- color:#8fa5b3;
- font-size:8.5px;
- line-height:1.5;
+ border-top:1px solid #314253;
+ padding-top:12px;
+ margin:17px 0 0;
+ color:#91a9b8;
  text-align:center;
+ font-size:10px;
+ line-height:1.5;
 }
-@media(max-width:340px){
- .hero{grid-template-columns:minmax(0,1fr) 105px}
- .photo-area{width:105px;height:118px}
- .photo-ring{width:99px;height:99px}
- h1{font-size:26px}
- .headline{font-size:21px}
- .benefit{padding:9px 6px;gap:5px}
- .cta{font-size:11px}
+
+/* MOBILE ADJUSTMENTS */
+@media(max-width:360px){
+ .page{padding:15px 12px}
+ .brand strong{font-size:13px}
+ .brand small{font-size:8px}
+ .hero{grid-template-columns:minmax(0,1fr) 120px}
+ .photo-ring{width:116px;height:116px}
+ .hero h1{font-size:30px}
+ .hero p{font-size:12px}
+ .headline{font-size:25px}
+ .desc{font-size:12px}
+ .benefit{gap:6px;padding:11px 7px}
+ .benefit b{font-size:11px}
+ .benefit small{font-size:9px}
+ .cta{font-size:12px}
 }
-@media(max-height:650px){
+@media(max-height:760px){
  .page{justify-content:flex-start}
- .hero{margin:11px 0 8px}
- .market{height:38px;margin-bottom:9px}
- .benefits{margin-bottom:10px}
- .benefit{padding:8px 7px}
- .disclaimer{margin-top:10px}
+ .hero{margin:15px 0}
+ .desc{margin-bottom:12px}
+ .market{height:45px;margin-bottom:12px}
+ .benefits{margin-bottom:13px}
+ .benefit{padding-top:10px;padding-bottom:10px}
+ .disclaimer{margin-top:12px}
 }
 </style>
 
@@ -310,39 +337,42 @@ alt="">
 <body>
 <main class="page">
 
- <div class="top">
-  <span>✦ TAMIL HARMONIC</span>
-  <span>FREE LEARNING</span>
- </div>
+ <header class="header">
+  <div class="brand">
+   <div class="logo">TH</div>
+   <div>
+    <strong>TAMIL HARMONIC</strong>
+    <small>STOCK MARKET EDUCATION</small>
+   </div>
+  </div>
+  <span class="free">FREE</span>
+ </header>
 
  <section class="hero">
-
   <div>
-   <div class="kicker">STOCK MARKET EDUCATION</div>
-   <h1>TAMIL<br><span>HARMONIC</span></h1>
+   <div class="kicker">LEARN • ANALYSE • UNDERSTAND</div>
+   <h1>Market<br><span>Learning</span></h1>
    <p>
-    கற்றுக்கொள்வோம் • புரிந்துகொள்வோம்<br>
-    Learn with clarity.
+    பங்குச் சந்தையை எளிதாகக்
+    கற்றுக்கொள்ளுங்கள்.
    </p>
   </div>
 
   <!-- TRADER PHOTO: REPLACE IMAGE URL -->
-  <div class="photo-area">
-   <div class="photo-ring">
-    <div class="photo-inner">
-     <span class="initials" id="initials">TH</span>
-     <img
-      src="https://github.com/siyalshivam690-maker/harmimg/releases/download/harman/harmancolic.jpg"
-      alt="Tamil Harmonic"
-      width="106" height="106"
-      fetchpriority="high"
-      onload="document.getElementById('initials').style.display='none'"
-      onerror="this.style.display='none'">
-    </div>
+  <div class="photo-ring">
+   <div class="photo">
+    <span class="initials" id="initials">TH</span>
+    <img
+     src="https://github.com/siyalshivam690-maker/harmimg/releases/download/harman/harmancolic.jpg
+"
+     alt="Tamil Harmonic"
+     width="136"
+     height="136"
+     fetchpriority="high"
+     onload="document.getElementById('initials').style.display='none'"
+     onerror="this.style.display='none'">
    </div>
-   <span class="dot"></span>
   </div>
-
  </section>
 
  <h2 class="headline">
@@ -352,44 +382,52 @@ alt="">
 
  <p class="desc">
   பங்குச் சந்தையை எளிமையாகப் புரிந்துகொள்ளுங்கள்.
-  Explore market concepts, charts and risk management
+  Explore charts, market trends and risk management
   through simple educational content.
  </p>
 
- <!-- LIGHTWEIGHT CSS MARKET GRAPHIC -->
  <div class="market" aria-hidden="true">
   <span class="market-label">MARKET LEARNING</span>
+  <i class="candle" style="--h:14px;--c:#ffad4a"></i>
+  <i class="candle" style="--h:22px;--c:#65d9c5"></i>
   <i class="candle" style="--h:13px;--c:#ffad4a"></i>
-  <i class="candle" style="--h:20px;--c:#65d9c5"></i>
-  <i class="candle" style="--h:12px;--c:#ffad4a"></i>
-  <i class="candle" style="--h:26px;--c:#65d9c5"></i>
-  <i class="candle" style="--h:17px;--c:#65d9c5"></i>
-  <i class="candle" style="--h:23px;--c:#ffad4a"></i>
   <i class="candle" style="--h:29px;--c:#65d9c5"></i>
-  <i class="candle" style="--h:18px;--c:#65d9c5"></i>
+  <i class="candle" style="--h:19px;--c:#65d9c5"></i>
+  <i class="candle" style="--h:24px;--c:#ffad4a"></i>
+  <i class="candle" style="--h:30px;--c:#65d9c5"></i>
+  <i class="candle" style="--h:19px;--c:#65d9c5"></i>
   <i class="candle" style="--h:26px;--c:#ffad4a"></i>
-  <i class="candle" style="--h:32px;--c:#65d9c5"></i>
+  <i class="candle" style="--h:33px;--c:#65d9c5"></i>
  </div>
 
  <section class="benefits">
   <div class="benefit">
    <span class="icon">↗</span>
-   <div><b>Market Insights</b><small>சந்தை தகவல்கள்</small></div>
+   <div>
+    <b>Market Insights</b>
+    <small>சந்தை தகவல்கள்</small>
+   </div>
   </div>
-
   <div class="benefit">
    <span class="icon">▥</span>
-   <div><b>Chart Reading</b><small>Chart basics</small></div>
+   <div>
+    <b>Chart Reading</b>
+    <small>Chart basics</small>
+   </div>
   </div>
-
   <div class="benefit">
    <span class="icon">✦</span>
-   <div><b>Easy Learning</b><small>எளிய விளக்கம்</small></div>
+   <div>
+    <b>Easy Learning</b>
+    <small>எளிய விளக்கம்</small>
+   </div>
   </div>
-
   <div class="benefit">
    <span class="icon">◇</span>
-   <div><b>Risk Awareness</b><small>Risk concepts</small></div>
+   <div>
+    <b>Risk Awareness</b>
+    <small>Risk concepts</small>
+   </div>
   </div>
  </section>
 
@@ -405,7 +443,9 @@ alt="">
   JOIN FREE TELEGRAM CHANNEL →
  </a>
 
- <p class="after">இலவசமாக இணைந்திடுங்கள் • Free Educational Access</p>
+ <p class="after">
+  இலவசமாக இணைந்திடுங்கள் • Free Educational Access
+ </p>
 
  <p class="disclaimer">
   Educational information only. No guaranteed returns
@@ -426,6 +466,7 @@ alt="">
 
   try{
    if(sessionStorage.getItem('th_cta_39596670156598070'))return;
+
    if(typeof fbq==='function'){
     fbq('track','Subscribe',{
      content_name:'Tamil Harmonic Telegram CTA',
