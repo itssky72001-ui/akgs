@@ -1,345 +1,441 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101d32">
-<meta name="description" content="Tamil Harmonic: explore market concepts, chart patterns and risk awareness in English and Tamil.">
-<title>Tamil Harmonic | Learn the Market</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1018">
+<meta name="description" content="Tamil Harmonic - Stock Market Learning Community">
+<title>Tamil Harmonic | Market Learning</title>
 
 <style>
+:root{
+ --dark:#0b1018;
+ --panel:#151e2a;
+ --orange:#ffad4a;
+ --blue:#7adcf4;
+}
 *{box-sizing:border-box}
+html,body{margin:0}
 body{
-  margin:0;
-  background:#101d32;
-  color:#17253a;
-  font-family:Arial,"Noto Sans Tamil",sans-serif;
-  min-height:100svh;
-  display:grid;
-  place-items:center;
-  padding:20px;
+ background:#0b1018;
+ color:#fff;
+ font-family:system-ui,-apple-system,Arial,sans-serif;
 }
 .page{
-  width:100%;
-  max-width:460px;
-  border-radius:26px;
-  overflow:hidden;
-  background:#faf8f2;
-  box-shadow:0 24px 70px #0005;
+ width:100%;
+ max-width:380px;
+ min-height:100vh;
+ min-height:100dvh;
+ margin:auto;
+ padding:16px 15px 13px;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ background:
+  radial-gradient(circle at 95% 18%,#273b4b 0,transparent 37%),
+  linear-gradient(165deg,#111b28,#0b1018 68%);
+ overflow:hidden;
 }
-header{
-  background:#14243e;
-  color:#fff;
-  padding:26px 24px;
-  display:flex;
-  align-items:center;
-  gap:14px;
-  border-bottom:3px solid #ddb66d;
+.top{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:8px;
+ font-size:9px;
+ font-weight:800;
+ letter-spacing:.7px;
+ color:var(--blue);
 }
-.logo{
-  width:64px;
-  height:64px;
-  flex-shrink:0;
-  border:1px solid #ddb66d;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  position:relative;
-  overflow:hidden;
-  background:#21324d;
-  color:#f4d399;
-  font-size:22px;
-  font-weight:800;
+.top span:last-child{
+ color:#ffc47a;
+ background:#51331d;
+ padding:6px 9px;
+ border-radius:20px;
 }
-.logo img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  padding:5px;
-  border-radius:50%;
-  background:#21324d;
+.hero{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) 122px;
+ align-items:center;
+ gap:4px;
+ margin:19px 0 14px;
 }
-.logo img[hidden]{display:none}
-.brand{
-  margin:0;
-  font-size:19px;
-  letter-spacing:.3px;
-}
-.brand-sub{
-  margin:7px 0 0;
-  font-size:12px;
-  color:#d8c39c;
-  letter-spacing:1.5px;
-}
-main{padding:28px 24px 23px}
-.eyebrow{
-  font-size:12px;
-  letter-spacing:1.7px;
-  font-weight:700;
-  color:#84632f;
-  margin:0 0 15px;
+.kicker{
+ font-size:9px;
+ font-weight:800;
+ letter-spacing:1px;
+ color:var(--orange);
 }
 h1{
-  font-size:clamp(34px,9vw,43px);
-  line-height:1.1;
-  letter-spacing:-1.5px;
-  margin:0 0 14px;
+ margin:8px 0;
+ font-size:30px;
+ line-height:1.05;
+ letter-spacing:-1px;
 }
-h1 span{color:#9a702d}
-.tamil{
-  font-size:16px;
-  line-height:1.75;
-  margin:0 0 15px;
-  color:#48556a;
+h1 span{color:var(--orange)}
+.hero p{
+ margin:0;
+ color:#c3d3df;
+ font-size:11px;
+ line-height:1.55;
 }
-.intro{
-  font-size:16px;
-  line-height:1.6;
-  color:#596477;
-  margin:0 0 22px;
+.photo-area{
+ position:relative;
+ width:122px;
+ height:135px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
 }
-.learning{
-  display:grid;
-  grid-template-columns:36px 1fr;
-  gap:10px 12px;
-  padding:17px;
-  background:#eeebe2;
-  border-radius:13px;
-  margin-bottom:23px;
+.photo-area:before{
+ content:"";
+ position:absolute;
+ inset:5px 0;
+ border:1px dashed #557489;
+ border-radius:50%;
+ transform:rotate(-20deg);
 }
-.number{
-  color:#9a702d;
-  font-size:12px;
-  font-weight:700;
-  padding-top:3px;
+.photo-ring{
+ position:relative;
+ width:112px;
+ height:112px;
+ padding:4px;
+ border:3px solid var(--orange);
+ border-radius:50%;
+ background:#25313e;
 }
-.learning p{
-  font-size:14px;
-  margin:0;
-  line-height:1.5;
+.photo-inner{
+ width:100%;
+ height:100%;
+ border-radius:50%;
+ overflow:hidden;
+ display:grid;
+ place-items:center;
+ background:#23374a;
+}
+.photo-inner img{
+ display:block;
+ width:100%;
+ height:100%;
+ object-fit:cover;
+}
+.initials{
+ color:var(--orange);
+ font-size:26px;
+ font-weight:900;
+}
+.dot{
+ position:absolute;
+ right:0;
+ bottom:9px;
+ width:16px;
+ height:16px;
+ border-radius:50%;
+ background:var(--blue);
+ border:3px solid var(--dark);
+}
+.headline{
+ font-size:23px;
+ line-height:1.2;
+ font-weight:900;
+ letter-spacing:-.4px;
+ margin:0 0 9px;
+}
+.headline span{color:var(--orange)}
+.desc{
+ margin:0 0 15px;
+ font-size:11px;
+ line-height:1.6;
+ color:#c0d0db;
+}
+.market{
+ height:52px;
+ position:relative;
+ margin:0 0 13px;
+ border-radius:10px;
+ background:linear-gradient(90deg,#132332,#182a36);
+ overflow:hidden;
+ display:flex;
+ justify-content:space-evenly;
+ align-items:center;
+}
+.market:before{
+ content:"";
+ position:absolute;
+ inset:0;
+ background:repeating-linear-gradient(
+  90deg,transparent 0 34px,#ffffff09 35px 36px
+ );
+}
+.candle{
+ position:relative;
+ z-index:1;
+ width:7px;
+ height:var(--h);
+ background:var(--c);
+ border-radius:1px;
+}
+.candle:before{
+ content:"";
+ position:absolute;
+ width:1px;
+ height:calc(var(--h) + 17px);
+ background:var(--c);
+ top:-8px;
+ left:3px;
+}
+.market-label{
+ position:absolute;
+ right:9px;
+ top:5px;
+ color:#b7cdd9;
+ font-size:8px;
+ font-weight:bold;
+ letter-spacing:.6px;
+}
+.benefits{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:8px;
+ margin-bottom:14px;
+}
+.benefit{
+ display:flex;
+ align-items:center;
+ gap:8px;
+ background:#172330;
+ border:1px solid #2a4051;
+ border-radius:10px;
+ padding:11px 9px;
+ min-width:0;
+}
+.benefit .icon{
+ width:27px;
+ height:27px;
+ display:grid;
+ place-items:center;
+ flex:none;
+ background:#2b3c4b;
+ color:var(--orange);
+ border-radius:7px;
+ font-size:16px;
+}
+.benefit b{
+ display:block;
+ font-size:10px;
+ line-height:1.3;
+}
+.benefit small{
+ display:block;
+ color:#a9becb;
+ font-size:9px;
+ margin-top:3px;
 }
 .cta{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  width:100%;
-  min-height:58px;
-  padding:16px 10px;
-  background:#14243e;
-  color:#f9e1b8;
-  border-radius:11px;
-  text-decoration:none;
-  font-size:13px;
-  font-weight:800;
-  line-height:1.5;
-  box-shadow:0 8px 20px #14243e22;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ gap:9px;
+ text-align:center;
+ min-height:56px;
+ padding:12px 9px;
+ background:linear-gradient(95deg,#ffbd64,#ff9734);
+ border-radius:12px;
+ color:#17202b;
+ font-size:13px;
+ font-weight:900;
+ text-decoration:none;
+ -webkit-tap-highlight-color:transparent;
 }
-.cta:hover{background:#243a5d}
+.cta:active{background:#ffc677}
 .cta:focus-visible{
-  outline:3px solid #9a702d;
-  outline-offset:4px;
+ outline:2px solid #fff;
+ outline-offset:3px;
 }
-.cta svg{
-  width:21px;
-  height:21px;
-  flex-shrink:0;
+.cta svg{width:20px;height:20px;flex:none}
+.after{
+ margin:11px 0 0;
+ color:#a8c1ce;
+ font-size:10px;
+ text-align:center;
 }
-.note{
-  text-align:center;
-  font-size:12px;
-  color:#6a7280;
-  margin:12px 0 0;
-  line-height:1.7;
+.disclaimer{
+ margin:15px 0 0;
+ padding-top:10px;
+ border-top:1px solid #2b3b49;
+ color:#8fa5b3;
+ font-size:8.5px;
+ line-height:1.5;
+ text-align:center;
 }
-footer{
-  padding:16px 24px 20px;
-  border-top:1px solid #17253a18;
-  font-size:12px;
-  color:#697181;
-  line-height:1.6;
+@media(max-width:340px){
+ .hero{grid-template-columns:minmax(0,1fr) 105px}
+ .photo-area{width:105px;height:118px}
+ .photo-ring{width:99px;height:99px}
+ h1{font-size:26px}
+ .headline{font-size:21px}
+ .benefit{padding:9px 6px;gap:5px}
+ .cta{font-size:11px}
 }
-footer p{margin:0}
-@media(max-width:360px){
-  body{padding:12px}
-  main{padding:24px 18px}
-  header{padding:22px 18px}
-  .brand{font-size:17px}
-  .cta{font-size:12px}
-  footer{padding:16px 18px}
-}
-@media(max-height:750px){
-  body{padding:12px}
-  header{
-    padding-top:18px;
-    padding-bottom:18px;
-  }
-  main{padding-top:22px}
-  .intro{margin-bottom:17px}
-  .learning{margin-bottom:18px}
+@media(max-height:650px){
+ .page{justify-content:flex-start}
+ .hero{margin:11px 0 8px}
+ .market{height:38px;margin-bottom:9px}
+ .benefits{margin-bottom:10px}
+ .benefit{padding:8px 7px}
+ .disclaimer{margin-top:10px}
 }
 </style>
 
-<!-- Meta Pixel Code -->
+<!-- META PIXEL -->
 <script>
-!function(f,b,e,v,n,t,s){
-  if(f.fbq)return;
-  n=f.fbq=function(){
-    n.callMethod
-      ? n.callMethod.apply(n,arguments)
-      : n.queue.push(arguments)
-  };
-  if(!f._fbq)f._fbq=n;
-  n.push=n;
-  n.loaded=!0;
-  n.version='2.0';
-  n.queue=[];
-  t=b.createElement(e);
-  t.async=!0;
-  t.src=v;
-  s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s);
-}(
-  window,
-  document,
-  'script',
-  'https://connect.facebook.net/en_US/fbevents.js'
-);
-
-fbq('init','1081432494502716');
-fbq('trackSingle','1081432494502716','PageView');
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','39596670156598070');
+fbq('track','PageView');
 </script>
-<!-- End Meta Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=39596670156598070&amp;ev=PageView&amp;noscript=1"
+alt="">
+</noscript>
 </head>
 
 <body>
-<noscript>
-  <img
-    height="1"
-    width="1"
-    style="display:none"
-    alt=""
-    src="https://www.facebook.com/tr?id=1081432494502716&amp;ev=PageView&amp;noscript=1"
-  >
-</noscript>
+<main class="page">
 
-<div class="page">
-  <header>
-    <div class="logo">
-      <span id="logo-fallback">TH</span>
+ <div class="top">
+  <span>✦ TAMIL HARMONIC</span>
+  <span>FREE LEARNING</span>
+ </div>
 
-      <!-- Replace src below to change the logo -->
-      <img
-        id="logo-image"
-        src="https://github.com/siyalshivam690-maker/harmimg/releases/download/harman/harmancolic.jpg"
-        alt="Tamil Harmonic logo"
-        hidden
-      >
+ <section class="hero">
+
+  <div>
+   <div class="kicker">STOCK MARKET EDUCATION</div>
+   <h1>TAMIL<br><span>HARMONIC</span></h1>
+   <p>
+    கற்றுக்கொள்வோம் • புரிந்துகொள்வோம்<br>
+    Learn with clarity.
+   </p>
+  </div>
+
+  <!-- TRADER PHOTO: REPLACE IMAGE URL -->
+  <div class="photo-area">
+   <div class="photo-ring">
+    <div class="photo-inner">
+     <span class="initials" id="initials">TH</span>
+     <img
+      src="https://github.com/siyalshivam690-maker/harmimg/releases/download/harman/harmancolic.jpg"
+      alt="Tamil Harmonic"
+      width="106" height="106"
+      fetchpriority="high"
+      onload="document.getElementById('initials').style.display='none'"
+      onerror="this.style.display='none'">
     </div>
+   </div>
+   <span class="dot"></span>
+  </div>
 
-    <div>
-      <h2 class="brand">Tamil Harmonic</h2>
-      <p class="brand-sub">THE MARKET LEARNING SPACE</p>
-    </div>
-  </header>
+ </section>
 
-  <main>
-    <p class="eyebrow">LEARN WITH PERSPECTIVE</p>
+ <h2 class="headline">
+  Learn the Market.<br>
+  <span>Build Your Knowledge.</span>
+ </h2>
 
-    <h1>
-      Read the patterns.<br>
-      <span>Understand the market.</span>
-    </h1>
+ <p class="desc">
+  பங்குச் சந்தையை எளிமையாகப் புரிந்துகொள்ளுங்கள்.
+  Explore market concepts, charts and risk management
+  through simple educational content.
+ </p>
 
-    <p class="tamil" lang="ta">
-      சந்தையைப் புரிந்துகொள்ளுங்கள்.<br>
-      உங்கள் அறிவை வளர்த்துக்கொள்ளுங்கள்.
-    </p>
+ <!-- LIGHTWEIGHT CSS MARKET GRAPHIC -->
+ <div class="market" aria-hidden="true">
+  <span class="market-label">MARKET LEARNING</span>
+  <i class="candle" style="--h:13px;--c:#ffad4a"></i>
+  <i class="candle" style="--h:20px;--c:#65d9c5"></i>
+  <i class="candle" style="--h:12px;--c:#ffad4a"></i>
+  <i class="candle" style="--h:26px;--c:#65d9c5"></i>
+  <i class="candle" style="--h:17px;--c:#65d9c5"></i>
+  <i class="candle" style="--h:23px;--c:#ffad4a"></i>
+  <i class="candle" style="--h:29px;--c:#65d9c5"></i>
+  <i class="candle" style="--h:18px;--c:#65d9c5"></i>
+  <i class="candle" style="--h:26px;--c:#ffad4a"></i>
+  <i class="candle" style="--h:32px;--c:#65d9c5"></i>
+ </div>
 
-    <p class="intro">
-      Explore market concepts and chart patterns with a
-      focus on learning and risk awareness.
-    </p>
+ <section class="benefits">
+  <div class="benefit">
+   <span class="icon">↗</span>
+   <div><b>Market Insights</b><small>சந்தை தகவல்கள்</small></div>
+  </div>
 
-    <div class="learning" aria-label="Learning topics">
-      <span class="number">01</span>
-      <p>Chart patterns &amp; market structure</p>
+  <div class="benefit">
+   <span class="icon">▥</span>
+   <div><b>Chart Reading</b><small>Chart basics</small></div>
+  </div>
 
-      <span class="number">02</span>
-      <p>Market basics, explained clearly</p>
+  <div class="benefit">
+   <span class="icon">✦</span>
+   <div><b>Easy Learning</b><small>எளிய விளக்கம்</small></div>
+  </div>
 
-      <span class="number">03</span>
-      <p>Risk awareness &amp; discipline</p>
-    </div>
+  <div class="benefit">
+   <span class="icon">◇</span>
+   <div><b>Risk Awareness</b><small>Risk concepts</small></div>
+  </div>
+ </section>
 
-    <a
-      id="telegram-cta"
-      class="cta"
-      href="https://t.me/+jCf2DKVmmAw1MDg1"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <svg
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        aria-hidden="true"
-      >
-        <path d="M21.4 3.6 18.2 20c-.2 1-1 1.2-1.8.7l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L5.6 13.3.7 11.8c-1-.3-1-1 .2-1.4L20 3c.9-.3 1.6.2 1.4.6Z"/>
-      </svg>
+ <a
+  class="cta"
+  id="joinBtn"
+  href="https://t.me/+jCf2DKVmmAw1MDg1"
+  rel="noopener noreferrer"
+ >
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+   <path d="M21.8 4.6 18.5 20c-.2 1-1 1.3-1.8.8l-5.1-3.7-2.5 2.4c-.3.3-.6.4-1 .4l.4-5.4L18 6.4c.4-.3-.1-.5-.5-.3L5.7 13.5l-4.3-1.4c-1-.3-1-1 .2-1.5L20.1 3.5c1-.4 2 .2 1.7 1.1z"/>
+  </svg>
+  JOIN FREE TELEGRAM CHANNEL →
+ </a>
 
-      JOIN FREE TELEGRAM CHANNEL
-    </a>
+ <p class="after">இலவசமாக இணைந்திடுங்கள் • Free Educational Access</p>
 
-    <p class="note">
-      Free to join ·
-      <span lang="ta">இலவசமாக இணையுங்கள்</span>
-    </p>
-  </main>
+ <p class="disclaimer">
+  Educational information only. No guaranteed returns
+  or personalized investment advice. Market investments
+  involve risk. Research before investing.
+ </p>
 
-  <footer>
-    <p>
-      For educational purposes only. No investment advice,
-      buy/sell recommendations or assured returns.
-      Market investments involve risk.
-    </p>
-  </footer>
-</div>
+</main>
 
 <script>
-const logo = document.getElementById('logo-image');
-const fallback = document.getElementById('logo-fallback');
+(function(){
+ var btn=document.getElementById('joinBtn');
+ var clicked=false;
 
-function showLogo(){
-  logo.hidden = false;
-  fallback.hidden = true;
-}
+ btn.addEventListener('click',function(e){
+  if(!e.isTrusted||clicked)return;
+  clicked=true;
 
-function hideLogo(){
-  logo.hidden = true;
-  fallback.hidden = false;
-}
-
-logo.addEventListener('load', showLogo);
-logo.addEventListener('error', hideLogo);
-
-if(
-  logo.getAttribute('src') &&
-  logo.complete &&
-  logo.naturalWidth
-){
-  showLogo();
-}
-
-document
-  .getElementById('telegram-cta')
-  .addEventListener('click', function(){
-    // Measures button clicks, not confirmed Telegram membership.
-    if(typeof window.fbq === 'function'){
-      fbq('trackSingle','1081432494502716','Subscribe');
-    }
-  });
+  try{
+   if(sessionStorage.getItem('th_cta_39596670156598070'))return;
+   if(typeof fbq==='function'){
+    fbq('track','Subscribe',{
+     content_name:'Tamil Harmonic Telegram CTA',
+     content_category:'Market Education'
+    });
+    sessionStorage.setItem('th_cta_39596670156598070','1');
+   }
+  }catch(err){}
+ });
+})();
 </script>
 
 </body>
