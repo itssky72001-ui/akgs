@@ -9,406 +9,488 @@
 <title>Nitya Publication | Writing & Publication</title>
 
 <style>
-:root{
-  --navy:#081637;
-  --gold:#b78b37;
-  --paper:#faf9f5;
-  --muted:#5f6470;
-}
-*{box-sizing:border-box}
-html,body{
-  margin:0;
-  width:100%;
-  height:100%;
-}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#e8e8e4;
-  color:var(--navy);
-}
-.page{
-  width:100%;
-  max-width:480px;
-  height:100vh;
-  height:100dvh;
-  margin:auto;
-  padding:
-    max(9px,env(safe-area-inset-top))
-    17px
-    max(10px,env(safe-area-inset-bottom));
-  background:
-    radial-gradient(circle at 80% 38%,#f2e9d6 0%,transparent 48%),
-    var(--paper);
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  gap:clamp(4px,1dvh,12px);
-  overflow:hidden;
+:root {
+  --navy: #081637;
+  --gold: #b78b37;
+  --paper: #faf9f5;
+  --muted: #5f6470;
 }
 
-/* LOGO HEADER */
-.header{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:11px;
-  padding-bottom:8px;
-  border-bottom:1px solid #dcd4c6;
-  flex-shrink:0;
+* {
+  box-sizing: border-box;
 }
-.logo{
-  width:clamp(62px,11dvh,100px);
-  height:clamp(62px,11dvh,100px);
-  object-fit:contain;
-  border-radius:50%;
-  background:white;
-  flex-shrink:0;
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
-.header-info{
-  min-width:0;
+
+body {
+  background: #e8e8e4;
+  color: var(--navy);
+  font-family: Arial, Helvetica, sans-serif;
 }
-.brand-name{
-  font-family:Georgia,serif;
-  font-size:clamp(16px,4.5vw,22px);
-  font-weight:bold;
-  letter-spacing:.4px;
-  line-height:1.1;
+
+.page {
+  width: 100%;
+  max-width: 480px;
+  height: 100vh;
+  height: 100dvh;
+  margin: auto;
+  padding:
+    max(9px, env(safe-area-inset-top))
+    17px
+    max(10px, env(safe-area-inset-bottom));
+  background:
+    radial-gradient(
+      circle at 80% 38%,
+      #f2e9d6 0%,
+      transparent 48%
+    ),
+    var(--paper);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(4px, 1dvh, 12px);
+  overflow: hidden;
 }
-.brand-sub{
-  margin-top:5px;
-  font-size:9px;
-  letter-spacing:1.5px;
-  color:#80662d;
-  font-weight:700;
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dcd4c6;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: clamp(62px, 11dvh, 100px);
+  height: clamp(62px, 11dvh, 100px);
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-family: Georgia, serif;
+  font-size: clamp(16px, 4.5vw, 22px);
+  font-weight: bold;
+  letter-spacing: .4px;
+  line-height: 1.1;
+}
+
+.brand-sub {
+  margin-top: 5px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #80662d;
+  font-weight: 700;
 }
 
 /* HERO */
-.hero{
-  text-align:center;
-  flex-shrink:0;
+
+.hero {
+  text-align: center;
+  flex-shrink: 0;
 }
-.kicker{
-  font-size:9px;
-  font-weight:800;
-  letter-spacing:2px;
-  color:#9d782c;
+
+.kicker {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #9d782c;
 }
-.hero h1{
-  margin:8px 0 8px;
-  font-family:Georgia,serif;
-  font-size:clamp(31px,8.5vw,43px);
-  font-weight:normal;
-  letter-spacing:-1.3px;
-  line-height:1.04;
+
+.hero h1 {
+  margin: 8px 0;
+  font-family: Georgia, serif;
+  font-size: clamp(31px, 8.5vw, 43px);
+  font-weight: normal;
+  letter-spacing: -1.3px;
+  line-height: 1.04;
 }
-.hero h1 em{
-  font-style:italic;
-  color:var(--gold);
+
+.hero h1 em {
+  color: var(--gold);
 }
-.hero p{
-  margin:0 auto;
-  max-width:350px;
-  font-size:clamp(11px,3vw,13px);
-  line-height:1.5;
-  color:var(--muted);
+
+.hero p {
+  margin: 0 auto;
+  max-width: 350px;
+  font-size: clamp(11px, 3vw, 13px);
+  line-height: 1.5;
+  color: var(--muted);
 }
 
 /* BOOK ILLUSTRATION */
-.visual{
-  position:relative;
-  flex:1 1 auto;
-  min-height:72px;
-  max-height:190px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.visual:before{
-  content:"";
-  position:absolute;
-  width:190px;
-  height:75%;
-  max-height:150px;
-  background:#f0e6d3;
-  border-radius:50%;
-}
-.book{
-  position:relative;
-  height:min(90%,165px);
-  aspect-ratio:3/4;
-  transform:rotate(-8deg);
-  filter:drop-shadow(9px 10px 6px #08163735);
-}
-.book-pages{
-  position:absolute;
-  inset:5px -7px -4px 7px;
-  background:#e3d8c5;
-  border:1px solid #b8aa91;
-  border-radius:2px;
-}
-.book-cover{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg,#17346a,#071431);
-  border:2px solid #b78b37;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:space-evenly;
-  color:#fff9eb;
-  text-align:center;
-}
-.book-cover:before{
-  content:"";
-  position:absolute;
-  inset:7px;
-  border:1px solid #caa85e;
-}
-.book-cover small{
-  position:relative;
-  font-size:7px;
-  letter-spacing:1px;
-  color:#e8c67d;
-}
-.book-cover strong{
-  position:relative;
-  font-family:Georgia,serif;
-  font-size:clamp(17px,5vw,24px);
-  line-height:1.1;
-  font-weight:normal;
-}
-.book-cover span{
-  position:relative;
-  font-size:21px;
-  color:#e5c27b;
-}
-.visual-note{
-  position:absolute;
-  right:max(3px,calc(50% - 155px));
-  top:20%;
-  transform:rotate(7deg);
-  background:#fffdf7;
-  border:1px solid #dfd2b9;
-  padding:9px 7px;
-  font-family:Georgia,serif;
-  font-size:10px;
-  font-style:italic;
-  line-height:1.35;
-  text-align:center;
-  color:#8d6c2c;
-  box-shadow:2px 4px 8px #08163714;
+
+.visual {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 72px;
+  max-height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* WRITING TOPICS */
-.services{
-  flex-shrink:0;
+.visual::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 75%;
+  max-height: 150px;
+  background: #f0e6d3;
+  border-radius: 50%;
 }
-.services h2{
-  margin:0 0 10px;
-  text-align:center;
-  font-family:Georgia,serif;
-  font-size:clamp(19px,5.3vw,26px);
-  font-weight:normal;
+
+.book {
+  position: relative;
+  height: min(90%, 165px);
+  aspect-ratio: 3 / 4;
+  transform: rotate(-8deg);
+  filter: drop-shadow(9px 10px 6px #08163735);
 }
-.services h2 em{
-  color:#a57b32;
+
+.book-pages {
+  position: absolute;
+  inset: 5px -7px -4px 7px;
+  background: #e3d8c5;
+  border: 1px solid #b8aa91;
 }
-.service-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:8px;
+
+.book-cover {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #17346a, #071431);
+  border: 2px solid #b78b37;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff9eb;
+  text-align: center;
 }
-.service{
-  padding:10px 5px;
-  text-align:center;
-  border:1px solid #dcd2c0;
-  background:#ffffffc9;
-  min-width:0;
+
+.book-cover::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid #caa85e;
 }
-.service-icon{
-  display:block;
-  margin-bottom:5px;
-  font-size:20px;
-  color:var(--gold);
+
+.book-cover small {
+  position: relative;
+  font-size: 7px;
+  letter-spacing: 1px;
+  color: #e8c67d;
 }
-.service strong{
-  display:block;
-  font-size:11px;
-  line-height:1.3;
+
+.book-cover strong {
+  position: relative;
+  font-family: Georgia, serif;
+  font-size: clamp(17px, 5vw, 24px);
+  line-height: 1.1;
+  font-weight: normal;
 }
-.service small{
-  display:block;
-  margin-top:4px;
-  color:var(--muted);
-  font-size:9px;
-  line-height:1.3;
+
+.book-cover span {
+  position: relative;
+  font-size: 21px;
+  color: #e5c27b;
+}
+
+.visual-note {
+  position: absolute;
+  right: max(3px, calc(50% - 155px));
+  top: 20%;
+  transform: rotate(7deg);
+  background: #fffdf7;
+  border: 1px solid #dfd2b9;
+  padding: 9px 7px;
+  font-family: Georgia, serif;
+  font-size: 10px;
+  font-style: italic;
+  line-height: 1.35;
+  text-align: center;
+  color: #8d6c2c;
+  box-shadow: 2px 4px 8px #08163714;
+}
+
+/* SERVICES */
+
+.services {
+  flex-shrink: 0;
+}
+
+.services h2 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: clamp(19px, 5.3vw, 26px);
+  font-weight: normal;
+}
+
+.services h2 em {
+  color: #a57b32;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.service {
+  padding: 10px 5px;
+  text-align: center;
+  border: 1px solid #dcd2c0;
+  background: #ffffffc9;
+  min-width: 0;
+}
+
+.service-icon {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: var(--gold);
+}
+
+.service strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.service small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.3;
 }
 
 /* TELEGRAM CTA */
-.cta-panel{
-  flex-shrink:0;
-  padding:12px;
-  background:var(--navy);
-  text-align:center;
-  border-top:3px solid var(--gold);
+
+.cta-panel {
+  flex-shrink: 0;
+  padding: 12px;
+  background: var(--navy);
+  text-align: center;
+  border-top: 3px solid var(--gold);
 }
-.cta-panel h2{
-  margin:0 0 9px;
-  color:white;
-  font-family:Georgia,serif;
-  font-size:clamp(19px,5.5vw,24px);
-  font-weight:normal;
+
+.cta-panel h2 {
+  margin: 0 0 9px;
+  color: white;
+  font-family: Georgia, serif;
+  font-size: clamp(19px, 5.5vw, 24px);
+  font-weight: normal;
 }
-.cta-panel h2 em{
-  color:#e7c17b;
+
+.cta-panel h2 em {
+  color: #e7c17b;
 }
-.cta{
-  width:100%;
-  min-height:53px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:11px;
-  background:linear-gradient(100deg,#f3dba4,#d9ad5b);
-  color:#081637;
-  text-decoration:none;
-  font-size:clamp(12px,3.4vw,15px);
-  font-weight:800;
-  border-radius:5px;
-  -webkit-tap-highlight-color:transparent;
+
+.cta {
+  width: 100%;
+  min-height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px;
+  background: linear-gradient(100deg, #f3dba4, #d9ad5b);
+  color: #081637;
+  text-decoration: none;
+  font-size: clamp(12px, 3.4vw, 15px);
+  font-weight: 800;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: transparent;
 }
-.cta svg{
-  width:22px;
-  height:22px;
-  flex-shrink:0;
+
+.cta svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
 }
-.cta:focus-visible{
-  outline:3px solid white;
-  outline-offset:3px;
+
+.cta:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
 }
-.cta-note{
-  margin:8px 0 0;
-  color:#d9deea;
-  font-size:10px;
+
+.cta-note {
+  margin: 8px 0 0;
+  color: #d9deea;
+  font-size: 10px;
 }
 
 /* FOOTER */
-.footer{
-  flex-shrink:0;
-  text-align:center;
-  color:#77756d;
-  font-size:9px;
-  line-height:1.3;
+
+.footer {
+  flex-shrink: 0;
+  text-align: center;
+  color: #77756d;
+  font-size: 9px;
+  line-height: 1.3;
 }
 
-/* SHORT HEIGHTS */
-@media(max-height:700px){
-  .page{
-    padding-top:7px;
-    padding-bottom:7px;
-    gap:4px;
-  }
-  .logo{
-    width:62px;
-    height:62px;
-  }
-  .header{
-    padding-bottom:5px;
-  }
-  .hero h1{
-    font-size:32px;
-    margin:5px 0;
-  }
-  .hero p{
-    font-size:11px;
-    line-height:1.35;
-  }
-  .visual{
-    max-height:125px;
-  }
-  .services h2{
-    font-size:20px;
-    margin-bottom:6px;
-  }
-  .service{
-    padding:6px 3px;
-  }
-  .service-icon{
-    font-size:17px;
-    margin-bottom:3px;
-  }
-  .service small{
-    font-size:8px;
-  }
-  .cta-panel{
-    padding:9px;
-  }
-  .cta-panel h2{
-    font-size:19px;
-    margin-bottom:6px;
-  }
-  .cta{
-    min-height:46px;
-  }
-}
+/* SHORT MOBILE SCREENS */
 
-/* VERY SMALL SCREENS */
-@media(max-width:350px){
-  .page{
-    padding-left:11px;
-    padding-right:11px;
+@media (max-height: 700px) {
+  .page {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    gap: 4px;
   }
-  .brand-name{
-    font-size:15px;
+
+  .logo {
+    width: 62px;
+    height: 62px;
   }
-  .brand-sub{
-    font-size:8px;
+
+  .header {
+    padding-bottom: 5px;
   }
-  .hero h1{
-    font-size:31px;
+
+  .hero h1 {
+    font-size: 32px;
+    margin: 5px 0;
   }
-  .service strong{
-    font-size:10px;
+
+  .hero p {
+    font-size: 11px;
+    line-height: 1.35;
   }
-  .visual-note{
-    font-size:9px;
+
+  .visual {
+    max-height: 125px;
+  }
+
+  .services h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .service {
+    padding: 6px 3px;
+  }
+
+  .service-icon {
+    font-size: 17px;
+    margin-bottom: 3px;
+  }
+
+  .service small {
+    font-size: 8px;
+  }
+
+  .cta-panel {
+    padding: 9px;
+  }
+
+  .cta-panel h2 {
+    font-size: 19px;
+    margin-bottom: 6px;
+  }
+
+  .cta {
+    min-height: 46px;
   }
 }
 
-/* ACCESSIBILITY FALLBACK */
-@media(max-height:510px){
-  .page{
-    height:auto;
-    min-height:100dvh;
-    overflow:visible;
-    gap:10px;
+@media (max-width: 350px) {
+  .page {
+    padding-left: 11px;
+    padding-right: 11px;
   }
-  .visual{
-    min-height:85px;
+
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .brand-sub {
+    font-size: 8px;
+  }
+
+  .hero h1 {
+    font-size: 31px;
+  }
+
+  .service strong {
+    font-size: 10px;
+  }
+
+  .visual-note {
+    font-size: 9px;
+  }
+}
+
+/* ACCESSIBILITY / VERY SHORT SCREENS */
+
+@media (max-height: 510px) {
+  .visual {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .page {
+    gap: 3px;
+  }
+}
+
+@media (max-height: 380px) {
+  .page {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
   }
 }
 </style>
 
-<!-- META PIXEL -->
+<!-- META PIXEL CODE -->
 <script>
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){
-n.callMethod?n.callMethod.apply(n,arguments):
-n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
+{
+  if(f.fbq)return;
+
+  n=f.fbq=function(){
+    n.callMethod ?
+      n.callMethod.apply(n,arguments) :
+      n.queue.push(arguments)
+  };
+
+  if(!f._fbq)f._fbq=n;
+
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s);
+
 }(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init','1801123374219991');
 fbq('track','PageView');
 </script>
+
 <noscript>
 <img
   height="1"
@@ -417,34 +499,43 @@ fbq('track','PageView');
   src="https://www.facebook.com/tr?id=1801123374219991&amp;ev=PageView&amp;noscript=1"
   alt="">
 </noscript>
-<!-- END META PIXEL -->
+<!-- END META PIXEL CODE -->
 
 </head>
+
 <body>
 
 <main class="page">
 
-  <!-- ORIGINAL BRAND LOGO -->
+  <!-- ORIGINAL NITYA LOGO -->
+
   <header class="header">
+
     <img
       class="logo"
-      src="https://github.com/itssky72001-ui/nnitya/releases/download/nitya/WhatsApp.Image.2026-10-12.at.1.01.20.PM.jpeg"
-      alt="Nitya Publication logo"
+      src="https://github.com/itssky72001-ui/nnitya/releases/download/nitya/WhatsApp.Image.2026-10-12.at.1.01.20.PM.jpeg
+
+"
+      alt="Nitya Publication official logo"
       width="100"
       height="100">
 
-    <div class="header-info">
+    <div>
       <div class="brand-name">
         NITYA PUBLICATION
       </div>
+
       <div class="brand-sub">
         WORDS • STORIES • BOOKS
       </div>
     </div>
+
   </header>
 
   <!-- HERO -->
+
   <section class="hero">
+
     <div class="kicker">
       FOR WRITERS &amp; AUTHORS
     </div>
@@ -459,21 +550,31 @@ fbq('track','PageView');
       Explore writing and publication enquiries
       with Nitya Publication.
     </p>
+
   </section>
 
-  <!-- BOOK ARTWORK -->
+  <!-- BOOK ILLUSTRATION -->
+
   <div class="visual" aria-hidden="true">
+
     <div class="book">
+
       <div class="book-pages"></div>
 
       <div class="book-cover">
-        <small>NITYA PUBLICATION</small>
+
+        <small>
+          NITYA PUBLICATION
+        </small>
+
         <strong>
           Every<br>
           Story<br>
           Matters
         </strong>
+
         <span>❦</span>
+
       </div>
     </div>
 
@@ -482,15 +583,19 @@ fbq('track','PageView');
       ideas into<br>
       pages.
     </div>
+
   </div>
 
-  <!-- TOPICS -->
+  <!-- WRITING TOPICS -->
+
   <section class="services">
+
     <h2>
       Your Story <em>Starts Here.</em>
     </h2>
 
     <div class="service-grid">
+
       <div class="service">
         <span class="service-icon">✒</span>
         <strong>Book Writing</strong>
@@ -508,11 +613,15 @@ fbq('track','PageView');
         <strong>Publication</strong>
         <small>General enquiries</small>
       </div>
+
     </div>
+
   </section>
 
-  <!-- TELEGRAM BUTTON -->
+  <!-- TELEGRAM CTA -->
+
   <section class="cta-panel">
+
     <h2>
       Let's Discuss <em>Your Book.</em>
     </h2>
@@ -527,48 +636,69 @@ fbq('track','PageView');
         viewBox="0 0 24 24"
         fill="currentColor"
         aria-hidden="true">
-        <path d="M21.8 4.6 18.5 20c-.2 1-1 1.3-1.8.8l-5.1-3.7-2.5 2.4c-.3.3-.6.4-1 .4l.4-5.4L18 6.4c.4-.3-.1-.5-.5-.3L5.7 13.5l-4.3-1.4c-1-.3-1-1 .2-1.5L20.1 3.5c1-.4 2 .2 1.7 1.1z"/>
+        <path d="M21.5 3.4 2.6 10.7c-1.3.5-1.3 1.2-.2 1.5l4.8 1.5 1.8 5.7c.2.7.1 1 .9 1 .5 0 .7-.2 1-.5l2.3-2.2 4.8 3.6c.9.5 1.6.3 1.8-.9L23 4.8c.4-1.4-.5-2-1.5-1.4ZM8 13.3l10.9-6.9c.5-.3 1-.1.6.3l-9.4 8.5-.4 3.6L8 13.3Z"/>
       </svg>
 
       CONNECT ON TELEGRAM →
+
     </a>
 
     <p class="cta-note">
       Writing &amp; publication enquiries
     </p>
+
   </section>
 
   <!-- FOOTER -->
+
   <footer class="footer">
     NITYA PUBLICATION • Service details subject to confirmation
   </footer>
 
 </main>
 
-<!-- CTA CLICK TRACKING -->
+<!-- SUBSCRIBE EVENT TRACKING -->
+
 <script>
 (function(){
-  const button=document.getElementById('telegramBtn');
-  let tracked=false;
 
-  button.addEventListener('click',function(event){
-    if(event.isTrusted===false || tracked){
+  var button = document.getElementById('telegramBtn');
+
+  var subscribeTracked = false;
+
+  button.addEventListener('click', function(event){
+
+    // Ignore some programmatically generated clicks.
+    if(event.isTrusted === false){
       return;
     }
 
-    tracked=true;
+    // Prevent duplicate event firing on this page instance.
+    if(subscribeTracked){
+      return;
+    }
+
+    subscribeTracked = true;
 
     try{
-      if(typeof fbq==='function'){
-        fbq('track','Contact',{
-          content_name:'Nitya Publication Telegram Enquiry',
-          content_category:'Writing and Publication'
+
+      if(typeof fbq === 'function'){
+
+        fbq('track', 'Subscribe', {
+          content_name: 'Nitya Publication Telegram CTA',
+          content_category: 'Writing and Publication'
         });
+
       }
+
     }catch(error){
-      // Telegram link must still work.
+
+      // Tracking must not block Telegram navigation.
+
     }
+
   });
+
 })();
 </script>
 
