@@ -1,1 +1,309 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171527">
+<meta name="description" content="Market Anna: explore stock market basics, chart concepts and risk awareness in English and Telugu.">
+<title>Market Anna | Market Learning</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100svh;
+  padding:20px 14px;
+  display:grid;
+  place-items:center;
+  font-family:Arial,sans-serif;
+  color:#f9f5ff;
+  background:
+    radial-gradient(ellipse at top right,#7454b238,transparent 60%),
+    radial-gradient(ellipse at bottom left,#a44d6b28,transparent 60%),
+    #171527;
+}
+.card{
+  width:100%;
+  max-width:370px;
+  padding:0 21px 19px;
+  border:1px solid #ffffff24;
+  border-radius:24px;
+  background:linear-gradient(145deg,#ffffff12,#ffffff05);
+  box-shadow:0 18px 45px #0004;
+}
+header{
+  text-align:center;
+  padding:24px 0 19px;
+}
+.photo{
+  position:relative;
+  width:76px;
+  height:76px;
+  margin:0 auto 13px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border-radius:50%;
+  border:2px solid #dcc4fa;
+  background:#403052;
+  color:#f2ddff;
+  font-size:25px;
+  font-weight:800;
+}
+.photo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  padding:3px;
+  object-fit:contain;
+  border-radius:50%;
+  background:#403052;
+}
+.photo img[hidden]{display:none}
+.name{
+  margin:0;
+  font-size:19px;
+  letter-spacing:1px;
+}
+.sub{
+  margin:7px 0 0;
+  color:#bcaecf;
+  font-size:12px;
+}
+.hero{
+  padding:18px 0 0;
+  border-top:1px solid #ffffff18;
+}
+.label{
+  margin:0 0 12px;
+  color:#f2b8d0;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.2px;
+}
+h1{
+  margin:0 0 13px;
+  font-size:34px;
+  line-height:1.08;
+  letter-spacing:-1px;
+}
+h1 span{color:#d2c0ff}
+.telugu{
+  margin:0 0 14px;
+  color:#e0d4eb;
+  font-size:16px;
+  line-height:1.75;
+}
+.intro{
+  margin:0 0 21px;
+  font-size:15px;
+  line-height:1.6;
+  color:#bdb2cc;
+}
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  min-height:58px;
+  padding:16px 8px;
+  border:1px solid #f3ddff;
+  border-radius:12px;
+  background:linear-gradient(105deg,#ffc2d5,#ddbcff,#b9cbff);
+  color:#30223c;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.4;
+  box-shadow:0 0 18px #c996ee35;
+}
+.cta:hover{background:#e8d1ff}
+.cta:focus-visible{
+  outline:3px solid white;
+  outline-offset:4px;
+}
+.cta svg{
+  width:20px;
+  height:20px;
+  flex-shrink:0;
+}
+.note{
+  margin:12px 0 18px;
+  text-align:center;
+  color:#bcaecf;
+  font-size:12px;
+  line-height:1.7;
+}
+footer{
+  padding-top:14px;
+  border-top:1px solid #ffffff12;
+  color:#a99bb9;
+  font-size:12px;
+  line-height:1.6;
+}
+footer p{margin:0}
+@media(max-width:350px){
+  .card{padding:0 17px 18px}
+  h1{font-size:31px}
+  header{padding-top:21px}
+}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){
+  if(f.fbq)return;
+  n=f.fbq=function(){
+    n.callMethod
+      ? n.callMethod.apply(n,arguments)
+      : n.queue.push(arguments)
+  };
+  if(!f._fbq)f._fbq=n;
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s);
+}(
+  window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js'
+);
+
+fbq('init','1874865667004662');
+fbq('trackSingle','1874865667004662','PageView');
+</script>
+<!-- End Meta Pixel Code -->
+</head>
+
+<body>
+<noscript>
+  <img
+    height="1"
+    width="1"
+    style="display:none"
+    alt=""
+    src="https://www.facebook.com/tr?id=1874865667004662&amp;ev=PageView&amp;noscript=1"
+  >
+</noscript>
+
+<main class="card">
+  <header>
+    <div class="photo">
+      <span id="photo-fallback">MA</span>
+
+      <!-- ROUND PHOTO: Paste your image URL inside src="" -->
+      <img
+        id="trader-photo"
+        src="https://github.com/itssky72001-ui/Anna/releases/download/anna/anna.jpg"
+        alt="Market Anna logo"
+        width="76"
+        height="76"
+        decoding="async"
+        hidden
+      >
+    </div>
+
+    <h2 class="name">MARKET ANNA</h2>
+    <p class="sub">
+      English + <span lang="te">తెలుగు</span>
+    </p>
+  </header>
+
+  <section class="hero">
+    <p class="label">LEARN WHAT THE CHART CAN SHOW</p>
+
+    <h1>
+      
+తమిళ వ్యాపారుల కోసం ప్రీమియం<br>
+      <span>Telegram Community INDIA</span>
+    </h1>
+
+    <p class="telugu" lang="te">
+      మార్కెట్‌ను అర్థం చేసుకోండి.<br>
+      మీ జ్ఞానాన్ని పెంచుకోండి.
+    </p>
+
+    <div class="text">
+
+📈 Daily High Accuracy Market Updates<br>
+
+🎯 Expert Trading Calls & Learning<br>
+
+🌍 Trusted by 12,000+ Active Traders<br>
+
+🚀 Join Today & Trade Smarter
+
+</div>
+ 
+
+    <a
+      id="telegram-cta"
+      class="cta"
+      href="https://t.me/+4xK2sbqhAGxiNGU1"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M21.4 3.6 18.2 20c-.2 1-1 1.2-1.8.7l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L5.6 13.3.7 11.8c-1-.3-1-1 .2-1.4L20 3c.9-.3 1.6.2 1.4.6Z"/>
+      </svg>
+      JOIN FREE TELEGRAM CHANNEL
+    </a>
+
+    <p class="note">
+      Free to join ·
+      <span lang="te">ఉచితంగా చేరండి</span>
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      Educational content only. No investment advice or assured
+      returns. Stock market investments involve risk.
+    </p>
+  </footer>
+</main>
+
+<script>
+const photo=document.getElementById('trader-photo');
+const fallback=document.getElementById('photo-fallback');
+
+function showPhoto(){
+  photo.hidden=false;
+  fallback.hidden=true;
+}
+
+photo.addEventListener('load',showPhoto);
+photo.addEventListener('error',()=>{
+  photo.hidden=true;
+  fallback.hidden=false;
+});
+
+if(photo.getAttribute('src') && photo.complete && photo.naturalWidth){
+  showPhoto();
+}
+
+let subscribeSent=false;
+
+document.getElementById('telegram-cta').addEventListener('click',event=>{
+  // Tracks a user-initiated CTA click, not verified Telegram membership.
+  // Sends once per page visit without delaying navigation.
+  if(
+    event.isTrusted &&
+    !subscribeSent &&
+    typeof window.fbq==='function'
+  ){
+    subscribeSent=true;
+    fbq('trackSingle','1874865667004662','Subscribe');
+  }
+});
+</script>
+
+</body>
+</html>
