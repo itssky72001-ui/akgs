@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b15">
+<meta name="description" content="Haji Salman Memon Trader - Halal Work. Free stock market learning and financial awareness community.">
+<title>Haji Salman Memon Trader | Halal Work</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init','1650395599813672');
+fbq('track','PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1650395599813672&amp;ev=PageView&amp;noscript=1">
+</noscript>
+
+<style>
+:root{
+  --bg:#080b15;
+  --blue:#253d85;
+  --gold:#e8c684;
+  --mint:#60e2b0;
+  --white:#f9fafc;
+  --muted:#a7b1c5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  overflow-x:hidden;
+}
+.page{
+  position:relative;
+  isolation:isolate;
+  min-height:100svh;
+  overflow:hidden;
+  padding:18px 18px 24px;
+  background:
+    radial-gradient(ellipse at 50% 19%,#253d8580,transparent 46%),
+    radial-gradient(ellipse at 100% 80%,#1b624330,transparent 45%),
+    #080b15;
+}
+.page:before{
+  content:"";
+  position:absolute;
+  top:-180px;
+  left:50%;
+  transform:translateX(-50%);
+  width:440px;
+  height:440px;
+  border:1px solid #e8c68418;
+  border-radius:50%;
+  box-shadow:
+    0 0 0 35px #e8c68408,
+    0 0 0 80px #e8c68405;
+  z-index:-1;
+  pointer-events:none;
+}
+.inner{
+  max-width:430px;
+  margin:auto;
+}
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  padding-bottom:14px;
+  border-bottom:1px solid #e8c68435;
+}
+.brand{
+  font-size:14px;
+  font-weight:950;
+  color:var(--gold);
+  letter-spacing:1px;
+}
+.brand span{color:var(--mint)}
+.top-right{
+  font-size:9px;
+  font-weight:850;
+  color:var(--mint);
+  letter-spacing:.8px;
+}
+.hero{
+  text-align:center;
+  padding-top:23px;
+}
+.photo{
+  width:124px;
+  height:124px;
+  margin:0 auto 17px;
+  padding:5px;
+  border:2px solid var(--gold);
+  border-radius:50%;
+  background:#0d1830;
+  box-shadow:
+    0 0 0 7px #e8c6840b,
+    0 0 34px #e8c6842c;
+}
+.photo-inner{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  overflow:hidden;
+  background:#1c3055;
+}
+.photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.fallback{
+  width:100%;
+  height:100%;
+  display:none;
+  place-items:center;
+  font-size:31px;
+  font-weight:950;
+  color:var(--gold);
+}
+.kicker{
+  color:var(--mint);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2.3px;
+  margin-bottom:10px;
+}
+h1{
+  font-size:clamp(32px,8.5vw,43px);
+  line-height:1.07;
+  letter-spacing:-1.4px;
+  margin:0;
+  font-weight:950;
+}
+h1 span{
+  display:block;
+  color:var(--gold);
+}
+.halal{
+  display:inline-block;
+  margin-top:12px;
+  padding:7px 17px;
+  border:1px solid #e8c68465;
+  border-radius:30px;
+  color:var(--gold);
+  background:#e8c68410;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.8px;
+}
+.urdu-title{
+  margin:15px 0 6px;
+  font-family:serif;
+  font-size:clamp(21px,6vw,27px);
+  line-height:1.8;
+  color:#f0ddb6;
+}
+.description{
+  max-width:340px;
+  margin:auto;
+  font-size:12px;
+  line-height:1.7;
+  color:var(--muted);
+}
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin:23px 0 22px;
+  border-top:1px solid #e8c68440;
+  border-bottom:1px solid #e8c68440;
+  padding:13px 0;
+}
+.highlight{
+  text-align:center;
+  padding:2px 4px;
+}
+.highlight+.highlight{
+  border-left:1px solid #ffffff24;
+}
+.highlight strong{
+  display:block;
+  font-size:12px;
+  font-weight:950;
+  color:var(--mint);
+}
+.highlight small{
+  display:block;
+  margin-top:5px;
+  color:#b4bfd0;
+  font-size:9px;
+}
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:15px;
+  color:var(--gold);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.5px;
+}
+.section-title:after{
+  content:"";
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,#e8c68470,transparent);
+}
+.features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px 12px;
+}
+.feature{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+}
+.feature-icon{
+  font-size:21px;
+  flex:0 0 27px;
+}
+.feature strong{
+  display:block;
+  font-size:12px;
+  line-height:1.3;
+}
+.feature small{
+  display:block;
+  margin-top:4px;
+  font-size:10px;
+  line-height:1.5;
+  color:#a4b0c3;
+}
+.urdu-note{
+  font:17px/1.8 serif;
+  text-align:center;
+  color:#d7e8dd;
+  margin:20px 0 14px;
+}
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  min-height:55px;
+  border-radius:12px;
+  background:linear-gradient(110deg,#f5d89e,#e1b56b);
+  color:#172032;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:950;
+  padding:15px 10px;
+  box-shadow:0 9px 30px #d4a54c38;
+  transition:transform .15s ease;
+}
+.cta:active{transform:scale(.98)}
+.cta svg{
+  width:21px;
+  height:21px;
+  fill:currentColor;
+  flex-shrink:0;
+}
+.cta-sub{
+  text-align:center;
+  font-size:10px;
+  color:var(--mint);
+  margin-top:11px;
+}
+.disclaimer{
+  margin-top:20px;
+  padding-top:12px;
+  border-top:1px solid #ffffff1d;
+  color:#8e9bb0;
+  font-size:9px;
+  line-height:1.6;
+  text-align:center;
+}
+@media(max-width:350px){
+  .page{padding:14px 12px 20px}
+  h1{font-size:30px}
+  .features{gap:12px 8px}
+  .cta{font-size:12px}
+}
+@media(max-height:740px){
+  .hero{padding-top:12px}
+  .photo{width:94px;height:94px;margin-bottom:10px}
+  .urdu-title{margin:9px 0 3px}
+  .highlights{margin:14px 0}
+  .features{gap:11px}
+  .urdu-note{margin:11px 0}
+  .disclaimer{margin-top:12px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+<div class="inner">
+
+<header class="top">
+  <div class="brand">HSM<span>.</span> TRADER</div>
+  <div class="top-right">✦ HALAL WORK</div>
+</header>
+
+<section class="hero">
+
+  <!-- REPLACE PHOTO -->
+  <div class="photo">
+    <div class="photo-inner">
+      <img
+        src="https://github.com/itssky72001-ui/salman/releases/download/salman/Salman.jpeg"
+        alt="Haji Salman Memon Trader"
+        width="114"
+        height="114"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
+      >
+      <div class="fallback">HSM</div>
+    </div>
+  </div>
+
+  <div class="kicker">STOCK MARKET EDUCATION</div>
+
+  <h1>
+    HAJI SALMAN
+    <span>MEMON TRADER</span>
+  </h1>
+
+  <div class="halal">✦ HALAL WORK ✦</div>
+
+  <p class="urdu-title" lang="ur" dir="rtl">
+    علم کے ساتھ مارکیٹ کو سمجھیں
+  </p>
+
+  <p class="description">
+    Learn market concepts, chart reading and
+    Shariah-conscious investing principles through
+    educational content designed for beginners.
+  </p>
+
+</section>
+
+<section class="highlights" aria-label="Community highlights">
+
+  <div class="highlight">
+    <strong>FREE</strong>
+    <small>Learning Access</small>
+  </div>
+
+  <div class="highlight">
+    <strong>DAILY</strong>
+    <small>Educational Updates</small>
+  </div>
+
+  <div class="highlight">
+    <strong>RISK</strong>
+    <small>Awareness First</small>
+  </div>
+
+</section>
+
+<section>
+
+  <div class="section-title">WHAT YOU WILL EXPLORE</div>
+
+  <div class="features">
+
+    <div class="feature">
+      <span class="feature-icon">📊</span>
+      <div>
+        <strong>Market Insights</strong>
+        <small>Educational market analysis</small>
+      </div>
+    </div>
+
+    <div class="feature">
+      <span class="feature-icon">📚</span>
+      <div>
+        <strong>Halal Stock Basics</strong>
+        <small>Shariah screening concepts</small>
+      </div>
+    </div>
+
+    <div class="feature">
+      <span class="feature-icon">📈</span>
+      <div>
+        <strong>Chart Learning</strong>
+        <small>Technical analysis basics</small>
+      </div>
+    </div>
+
+    <div class="feature">
+      <span class="feature-icon">🛡️</span>
+      <div>
+        <strong>Risk Management</strong>
+        <small>Responsible financial learning</small>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<p class="urdu-note" lang="ur" dir="rtl">
+  حلال سرمایہ کاری کے اصول اور مالی آگاہی
+</p>
+
+<a
+  id="telegramJoin"
+  class="cta"
+  href="https://t.me/+s9tvTecUwHc2NTBl"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M21.5 3.5 2.9 10.7c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.5c.2.7.1 1 1 .9.7 0 1-.3 1.4-.7l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.9l3-14.5c.4-1.5-.6-2.1-2-1.5ZM9 13.3l10-6.4c.5-.3.9-.1.5.3l-8.2 7.5-.3 3.3-2-4.7Z"/>
+  </svg>
+  JOIN FREE TELEGRAM CHANNEL
+</a>
+
+<p class="cta-sub">
+  Free Access • Educational Community • English + Urdu
+</p>
+
+<p class="disclaimer">
+  Educational and informational purposes only.
+  Not personalized investment or religious certification advice.
+  Shariah screening depends on individual instruments and criteria.
+  Trading and investing involve financial risk.
+  No guaranteed returns.
+</p>
+
+</div>
+</main>
+
+<script>
+document.getElementById('telegramJoin')
+.addEventListener('click',function(){
+  if(typeof window.fbq==='function'){
+    window.fbq('track','Subscribe',{
+      content_name:'Haji Salman Memon Trader',
+      content_category:'Telegram CTA Click'
+    });
+  }
+});
+</script>
+</body>
+</html>
