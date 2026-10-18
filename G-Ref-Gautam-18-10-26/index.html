@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#351820">
+<meta name="description" content="Gautam Jhaa's free Telegram community for stock market education, market concepts and financial awareness.">
+<title>Gautam Jhaa | Market Learning</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1100382336124404');
+fbq('track','PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1100382336124404&amp;ev=PageView&amp;noscript=1">
+</noscript>
+
+<style>
+:root{
+--wine:#351820;
+--wine2:#4c222d;
+--sand:#f2dfbd;
+--aqua:#79e7dc;
+--white:#fffaf2;
+--muted:#d0bfc1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+background:var(--wine);
+color:var(--white);
+font-family:system-ui,-apple-system,Arial,sans-serif;
+overflow-x:hidden;
+}
+.page{
+min-height:100svh;
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(ellipse at 90% 8%,#9b435348,transparent 45%),
+linear-gradient(165deg,#4c222d,#2c141c 80%);
+}
+.inner{
+max-width:460px;
+margin:auto;
+}
+header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:17px 19px;
+border-bottom:1px solid #ffffff2b;
+gap:10px;
+}
+.brand{
+font-size:17px;
+font-weight:950;
+letter-spacing:-.5px;
+}
+.brand span{color:var(--aqua)}
+.top-tag{
+font-size:9px;
+font-weight:850;
+letter-spacing:.8px;
+color:var(--sand);
+}
+.hero{
+padding:25px 19px 23px;
+}
+.eyebrow{
+font-size:10px;
+font-weight:900;
+letter-spacing:1.5px;
+color:var(--aqua);
+}
+.hero-grid{
+display:flex;
+align-items:center;
+gap:13px;
+margin-top:12px;
+}
+.hero-copy{
+flex:1;
+min-width:0;
+}
+h1{
+font-size:clamp(38px,10vw,52px);
+font-weight:950;
+line-height:.98;
+letter-spacing:-2px;
+margin:0 0 13px;
+}
+h1 span{
+display:block;
+color:var(--sand);
+}
+.hero-sub{
+font-size:11px;
+font-weight:750;
+line-height:1.7;
+color:#e7d2d1;
+}
+.photo{
+width:119px;
+height:119px;
+flex:0 0 119px;
+border-radius:50%;
+padding:5px;
+border:2px solid var(--aqua);
+box-shadow:0 0 0 7px #79e7dc10,0 0 30px #79e7dc25;
+}
+.photo-inner{
+width:100%;
+height:100%;
+border-radius:50%;
+overflow:hidden;
+background:#613b44;
+}
+.photo-inner img{
+width:100%;
+height:100%;
+display:block;
+object-fit:cover;
+}
+.fallback{
+width:100%;
+height:100%;
+display:none;
+place-items:center;
+font-size:33px;
+font-weight:950;
+color:var(--sand);
+}
+.hero-title{
+font-size:clamp(25px,7vw,34px);
+font-weight:950;
+line-height:1.15;
+letter-spacing:-1px;
+margin:25px 0 10px;
+}
+.hero-title em{
+font-style:normal;
+color:var(--aqua);
+}
+.description{
+max-width:360px;
+font-size:12px;
+line-height:1.8;
+color:var(--muted);
+margin:0;
+}
+.diagonal{
+background:var(--sand);
+color:#381c23;
+padding:15px 19px;
+transform:skewY(-2deg);
+margin:13px 0 22px;
+}
+.diagonal-inner{
+transform:skewY(2deg);
+max-width:420px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:12px;
+}
+.diagonal strong{
+font-size:13px;
+font-weight:950;
+}
+.diagonal span{
+font-size:10px;
+font-weight:850;
+}
+.content{
+padding:0 19px 22px;
+}
+.section-title{
+font-size:10px;
+font-weight:900;
+letter-spacing:1.5px;
+color:var(--aqua);
+margin-bottom:15px;
+}
+.benefits{
+display:grid;
+grid-template-columns:1fr;
+gap:0;
+}
+.benefit{
+display:flex;
+align-items:center;
+gap:12px;
+padding:13px 0;
+border-bottom:1px solid #ffffff27;
+}
+.check{
+width:26px;
+height:26px;
+border-radius:50%;
+flex:0 0 26px;
+display:grid;
+place-items:center;
+background:#79e7dc1b;
+border:1px solid #79e7dc65;
+color:var(--aqua);
+font-weight:950;
+font-size:14px;
+}
+.benefit strong{
+display:block;
+font-size:13px;
+}
+.benefit small{
+display:block;
+font-size:10px;
+line-height:1.5;
+margin-top:4px;
+color:#c8b6ba;
+}
+.cta{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:9px;
+width:100%;
+margin-top:22px;
+padding:17px 10px;
+border-radius:10px;
+background:var(--aqua);
+color:#2b1c22;
+text-decoration:none;
+font-size:14px;
+font-weight:950;
+box-shadow:0 9px 30px #79e7dc30;
+transition:transform .15s;
+}
+.cta:active{transform:scale(.98)}
+.cta svg{
+width:21px;
+height:21px;
+fill:currentColor;
+flex-shrink:0;
+}
+.cta-note{
+text-align:center;
+font-size:10px;
+color:var(--sand);
+margin-top:12px;
+}
+.disclaimer{
+text-align:center;
+font-size:9px;
+line-height:1.6;
+color:#b8a1a8;
+margin-top:21px;
+padding-top:12px;
+border-top:1px solid #ffffff20;
+}
+@media(max-width:350px){
+.hero{padding:19px 13px}
+.content{padding:0 13px 18px}
+h1{font-size:35px}
+.photo{width:94px;height:94px;flex-basis:94px}
+.hero-title{font-size:24px}
+.cta{font-size:12px}
+}
+@media(max-height:720px){
+.hero{padding-top:14px;padding-bottom:12px}
+.hero-title{margin-top:13px}
+.diagonal{margin:9px 0 13px}
+.benefit{padding:9px 0}
+.cta{margin-top:14px}
+}
+@media(prefers-reduced-motion:reduce){
+*{transition:none!important}
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+<div class="inner">
+
+<header>
+<div class="brand">GAUTAM<span>.</span> JHAA</div>
+<div class="top-tag">● LEARNING COMMUNITY</div>
+</header>
+
+<section class="hero">
+
+<div class="eyebrow">STOCK MARKET EDUCATION</div>
+
+<div class="hero-grid">
+
+<div class="hero-copy">
+<h1>
+GAUTAM
+<span>JHAA.</span>
+</h1>
+<div class="hero-sub">
+Market Education<br>
+Financial Awareness<br>
+Community Learning
+</div>
+</div>
+
+<!-- CHANGE PROFILE PHOTO -->
+<div class="photo">
+<div class="photo-inner">
+<img
+src="https://github.com/itssky72001-ui/Gautam1/releases/download/Gautam11/gautam11.jpg"
+alt="Gautam Jhaa"
+width="109"
+height="109"
+onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
+>
+<div class="fallback">GJ</div>
+</div>
+</div>
+
+</div>
+
+<h2 class="hero-title">
+Learn the Market.<br>
+<em>Understand the Moves.</em>
+</h2>
+
+<p class="description">
+Explore market fundamentals, chart reading,
+technical concepts and responsible financial
+decision-making through free educational content.
+</p>
+
+</section>
+
+<div class="diagonal">
+<div class="diagonal-inner">
+<strong>FREE COMMUNITY ACCESS</strong>
+<span>EDUCATION FIRST ↗</span>
+</div>
+</div>
+
+<section class="content">
+
+<div class="section-title">WHAT YOU CAN LEARN</div>
+
+<div class="benefits">
+
+<div class="benefit">
+<div class="check">✓</div>
+<div>
+<strong>Market Insights</strong>
+<small>Educational analysis and market updates</small>
+</div>
+</div>
+
+<div class="benefit">
+<div class="check">✓</div>
+<div>
+<strong>Chart Reading & Technical Basics</strong>
+<small>Understand charts, trends and price action</small>
+</div>
+</div>
+
+<div class="benefit">
+<div class="check">✓</div>
+<div>
+<strong>Risk Management Awareness</strong>
+<small>Learn responsible trading and financial planning concepts</small>
+</div>
+</div>
+
+<div class="benefit">
+<div class="check">✓</div>
+<div>
+<strong>Beginner-Friendly Community</strong>
+<small>Simple educational content and learning discussions</small>
+</div>
+</div>
+
+</div>
+
+<a
+id="telegramJoin"
+class="cta"
+href="https://t.me/+9lPfHV5ce7ZjM2Q1"
+target="_blank"
+rel="noopener noreferrer"
+>
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M21.5 3.5 2.9 10.7c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.5c.2.7.1 1 1 .9.7 0 1-.3 1.4-.7l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.9l3-14.5c.4-1.5-.6-2.1-2-1.5ZM9 13.3l10-6.4c.5-.3.9-.1.5.3l-8.2 7.5-.3 3.3-2-4.7Z"/>
+</svg>
+JOIN FREE TELEGRAM CHANNEL
+</a>
+
+<p class="cta-note">
+Free Access • Educational Updates • Community Learning
+</p>
+
+<p class="disclaimer">
+Educational and informational purposes only.
+Not personalized investment advice. Trading and investing
+involve financial risk. No guaranteed returns or outcomes.
+</p>
+
+</section>
+
+</div>
+</main>
+
+<script>
+document.getElementById('telegramJoin')
+.addEventListener('click',function(){
+if(typeof window.fbq==='function'){
+window.fbq('track','Subscribe',{
+content_name:'Gautam Jhaa',
+content_category:'Telegram CTA Click'
+});
+}
+});
+</script>
+</body>
+</html>
