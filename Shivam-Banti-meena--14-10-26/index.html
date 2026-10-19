@@ -4,304 +4,472 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#171527">
-<meta name="description" content="Market Anna: explore stock market basics, chart concepts and risk awareness in English and Telugu.">
-<title>Market Anna | Market Learning</title>
+<meta name="theme-color" content="#f7f5ef">
+<meta name="description" content="Gokul Chhabra stock market and trading education community. Explore chart reading, market basics and risk awareness.">
+<title>Gokul Chhabra | Stock Market & Trading</title>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1874865667004662');
+fbq('track','PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1874865667004662&amp;ev=PageView&amp;noscript=1">
+</noscript>
 
 <style>
+:root{
+  --paper:#f7f5ef;
+  --ink:#202347;
+  --green:#087e65;
+  --soft:#e7ede8;
+  --muted:#667079;
+}
 *{box-sizing:border-box}
 body{
   margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+.page{
   min-height:100svh;
-  padding:20px 14px;
-  display:grid;
-  place-items:center;
-  font-family:Arial,sans-serif;
-  color:#f9f5ff;
-  background:
-    radial-gradient(ellipse at top right,#7454b238,transparent 60%),
-    radial-gradient(ellipse at bottom left,#a44d6b28,transparent 60%),
-    #171527;
-}
-.card{
-  width:100%;
-  max-width:370px;
-  padding:0 21px 19px;
-  border:1px solid #ffffff24;
-  border-radius:24px;
-  background:linear-gradient(145deg,#ffffff12,#ffffff05);
-  box-shadow:0 18px 45px #0004;
-}
-header{
-  text-align:center;
-  padding:24px 0 19px;
-}
-.photo{
-  position:relative;
-  width:76px;
-  height:76px;
-  margin:0 auto 13px;
-  display:grid;
-  place-items:center;
   overflow:hidden;
-  border-radius:50%;
-  border:2px solid #dcc4fa;
-  background:#403052;
-  color:#f2ddff;
-  font-size:25px;
-  font-weight:800;
+  background:
+    radial-gradient(ellipse at 100% 0%,#c9e9d9,transparent 44%),
+    var(--paper);
 }
-.photo img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  padding:3px;
-  object-fit:contain;
-  border-radius:50%;
-  background:#403052;
+.wrap{max-width:460px;margin:auto}
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:17px 19px;
+  border-bottom:1px solid #20234720;
 }
-.photo img[hidden]{display:none}
-.name{
-  margin:0;
-  font-size:19px;
+.wordmark{
+  font-size:17px;
+  font-weight:950;
+  letter-spacing:-.7px;
+}
+.wordmark span{color:var(--green)}
+.top-note{
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.7px;
+  color:var(--green);
+}
+.hero{padding:24px 19px 20px}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:var(--green);
+  font-size:10px;
+  font-weight:900;
   letter-spacing:1px;
 }
-.sub{
-  margin:7px 0 0;
-  color:#bcaecf;
-  font-size:12px;
+.eyebrow:before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--green);
 }
-.hero{
-  padding:18px 0 0;
-  border-top:1px solid #ffffff18;
+.hero-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-top:15px;
 }
-.label{
-  margin:0 0 12px;
-  color:#f2b8d0;
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:1.2px;
-}
+.hero-copy{flex:1;min-width:0}
 h1{
-  margin:0 0 13px;
-  font-size:34px;
-  line-height:1.08;
+  margin:0;
+  font-size:clamp(37px,9.8vw,51px);
+  font-weight:950;
+  letter-spacing:-2px;
+  line-height:1;
+}
+h1 span{
+  display:block;
+  color:var(--green);
+}
+.role{
+  margin-top:11px;
+  font-size:11px;
+  font-weight:800;
+  line-height:1.5;
+  color:#4c5971;
+}
+.avatar{
+  width:115px;
+  height:115px;
+  flex:0 0 115px;
+  padding:5px;
+  border:2px solid var(--green);
+  border-radius:50%;
+  background:#dbe9dc;
+  box-shadow:7px 7px 0 #20234715;
+}
+.avatar-inner{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  overflow:hidden;
+  background:#c3d9cd;
+}
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.fallback{
+  display:none;
+  width:100%;
+  height:100%;
+  place-items:center;
+  font-size:30px;
+  font-weight:950;
+  color:var(--ink);
+}
+.headline{
+  margin:24px 0 10px;
+  font-size:clamp(25px,7vw,33px);
+  line-height:1.13;
   letter-spacing:-1px;
+  font-weight:950;
 }
-h1 span{color:#d2c0ff}
-.telugu{
-  margin:0 0 14px;
-  color:#e0d4eb;
-  font-size:16px;
+.headline em{
+  font-style:normal;
+  color:var(--green);
+}
+.description{
+  font-size:12px;
   line-height:1.75;
+  color:var(--muted);
+  margin:0;
+  max-width:370px;
 }
-.intro{
-  margin:0 0 21px;
-  font-size:15px;
-  line-height:1.6;
-  color:#bdb2cc;
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:18px;
+}
+.chip{
+  padding:8px 11px;
+  border:1px solid #087e6536;
+  background:#e5eee7;
+  color:#17634f;
+  border-radius:100px;
+  font-size:10px;
+  font-weight:850;
 }
 .cta{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
+  gap:9px;
   width:100%;
-  min-height:58px;
-  padding:16px 8px;
-  border:1px solid #f3ddff;
-  border-radius:12px;
-  background:linear-gradient(105deg,#ffc2d5,#ddbcff,#b9cbff);
-  color:#30223c;
+  min-height:56px;
+  margin-top:20px;
+  padding:15px 9px;
+  border-radius:9px;
+  background:var(--ink);
+  color:#fff;
+  font-size:14px;
+  font-weight:950;
   text-decoration:none;
-  font-size:12px;
-  font-weight:800;
-  line-height:1.4;
-  box-shadow:0 0 18px #c996ee35;
+  box-shadow:0 9px 22px #2023472b;
+  transition:transform .15s;
 }
-.cta:hover{background:#e8d1ff}
-.cta:focus-visible{
-  outline:3px solid white;
-  outline-offset:4px;
-}
+.cta:active{transform:scale(.98)}
 .cta svg{
-  width:20px;
-  height:20px;
+  width:21px;
+  height:21px;
+  fill:currentColor;
   flex-shrink:0;
 }
-.note{
-  margin:12px 0 18px;
+.cta-note{
+  margin:11px 0 0;
   text-align:center;
-  color:#bcaecf;
-  font-size:12px;
-  line-height:1.7;
+  color:var(--green);
+  font-size:10px;
+  font-weight:800;
 }
-footer{
-  padding-top:14px;
-  border-top:1px solid #ffffff12;
-  color:#a99bb9;
+.band{
+  padding:13px 19px;
+  background:var(--green);
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  font-size:10px;
+  font-weight:850;
+}
+.band strong{font-size:12px}
+.content{padding:23px 19px 20px}
+.section-kicker{
+  font-size:10px;
+  font-weight:900;
+  color:var(--green);
+  letter-spacing:1.5px;
+}
+.section-title{
+  font-size:24px;
+  line-height:1.15;
+  font-weight:950;
+  letter-spacing:-.7px;
+  margin:8px 0 15px;
+}
+.roadmap{
+  border-top:2px solid var(--ink);
+}
+.step{
+  display:grid;
+  grid-template-columns:32px 1fr 20px;
+  gap:10px;
+  align-items:center;
+  padding:13px 0;
+  border-bottom:1px solid #20234720;
+}
+.step-number{
+  color:var(--green);
   font-size:12px;
+  font-weight:950;
+}
+.step strong{
+  display:block;
+  font-size:12px;
+}
+.step small{
+  display:block;
+  margin-top:4px;
+  font-size:10px;
+  color:var(--muted);
+  line-height:1.5;
+}
+.step-arrow{
+  font-size:19px;
+  color:var(--green);
+}
+.footer{
+  padding:0 19px 23px;
+}
+.footer-link{
+  display:block;
+  text-align:center;
+  padding:13px;
+  border:1px solid var(--green);
+  color:var(--green);
+  border-radius:8px;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:900;
+}
+.disclaimer{
+  margin:17px 0 0;
+  padding-top:12px;
+  border-top:1px solid #20234720;
+  font-size:9px;
   line-height:1.6;
+  color:#7a858a;
+  text-align:center;
 }
-footer p{margin:0}
 @media(max-width:350px){
-  .card{padding:0 17px 18px}
-  h1{font-size:31px}
-  header{padding-top:21px}
+  .hero{padding:18px 13px}
+  .content{padding:18px 13px}
+  .footer{padding:0 13px 18px}
+  h1{font-size:35px}
+  .avatar{width:92px;height:92px;flex-basis:92px}
+  .cta{font-size:12px}
+}
+@media(max-height:720px){
+  .hero{padding-top:14px;padding-bottom:13px}
+  .headline{margin-top:15px}
+  .chips{margin-top:11px}
+  .cta{margin-top:13px}
+  .content{padding-top:15px}
+  .step{padding:9px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important}
 }
 </style>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){
-  if(f.fbq)return;
-  n=f.fbq=function(){
-    n.callMethod
-      ? n.callMethod.apply(n,arguments)
-      : n.queue.push(arguments)
-  };
-  if(!f._fbq)f._fbq=n;
-  n.push=n;
-  n.loaded=!0;
-  n.version='2.0';
-  n.queue=[];
-  t=b.createElement(e);
-  t.async=!0;
-  t.src=v;
-  s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s);
-}(
-  window,document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js'
-);
-
-fbq('init','1874865667004662');
-fbq('trackSingle','1874865667004662','PageView');
-</script>
-<!-- End Meta Pixel Code -->
 </head>
 
 <body>
-<noscript>
-  <img
-    height="1"
-    width="1"
-    style="display:none"
-    alt=""
-    src="https://www.facebook.com/tr?id=1874865667004662&amp;ev=PageView&amp;noscript=1"
-  >
-</noscript>
+<main class="page">
+<div class="wrap">
 
-<main class="card">
-  <header>
-    <div class="photo">
-      <span id="photo-fallback">MA</span>
+<header class="top">
+  <div class="wordmark">GOKUL<span>.</span> CHHABRA</div>
+  <div class="top-note">MARKET EDUCATION</div>
+</header>
 
-      <!-- ROUND PHOTO: Paste your image URL inside src="" -->
-      <img
-        id="trader-photo"
-        src="https://github.com/itssky72001-ui/Anna/releases/download/anna/anna.jpg"
-        alt="Market Anna logo"
-        width="76"
-        height="76"
-        decoding="async"
-        hidden
-      >
+<section class="hero">
+
+  <div class="eyebrow">FREE TELEGRAM LEARNING COMMUNITY</div>
+
+  <div class="hero-row">
+
+    <div class="hero-copy">
+      <h1>
+        GOKUL
+        <span>CHHABRA.</span>
+      </h1>
+
+      <div class="role">
+        STOCK MARKET<br>
+        & TRADING EDUCATION
+      </div>
     </div>
 
-    <h2 class="name">MARKET ANNA</h2>
-    <p class="sub">
-      English + <span lang="te">తెలుగు</span>
-    </p>
-  </header>
+    <!-- Replace this with your profile photo -->
+    <div class="avatar">
+      <div class="avatar-inner">
+        <img
+          src="https://github.com/itssky72001-ui/Gokul/releases/download/gokul/gokul.jpg"
+          alt="Gokul Chhabra"
+          width="105"
+          height="105"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
+        >
+        <div class="fallback">GC</div>
+      </div>
+    </div>
 
-  <section class="hero">
-    <p class="label">LEARN WHAT THE CHART CAN SHOW</p>
+  </div>
 
-    <h1>
-      
-తమిళ వ్యాపారుల కోసం ప్రీమియం<br>
-      <span>Telegram Community INDIA</span>
-    </h1>
+  <h2 class="headline">
+    Learn the Logic.<br>
+    <em>Understand the Market.</em>
+  </h2>
 
-    <p class="telugu" lang="te">
-      మార్కెట్‌ను అర్థం చేసుకోండి.<br>
-      మీ జ్ఞానాన్ని పెంచుకోండి.
-    </p>
+  <p class="description">
+    Explore stock market concepts, chart analysis,
+    trading fundamentals and risk awareness through
+    simple, educational content.
+  </p>
 
-    <div class="text">
+  <div class="chips" aria-label="Learning topics">
+    <span class="chip">📈 Market Basics</span>
+    <span class="chip">📊 Chart Reading</span>
+    <span class="chip">🛡️ Risk Awareness</span>
+  </div>
 
-📈 Daily High Accuracy Market Updates<br>
+  <a
+    class="cta telegram-cta"
+    href="https://t.me/+ojIpgKWEpqs4MmZl"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21.5 3.5 2.9 10.7c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.5c.2.7.1 1 1 .9.7 0 1-.3 1.4-.7l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.9l3-14.5c.4-1.5-.6-2.1-2-1.5ZM9 13.3l10-6.4c.5-.3.9-.1.5.3l-8.2 7.5-.3 3.3-2-4.7Z"/>
+    </svg>
+    JOIN FREE TELEGRAM CHANNEL
+  </a>
 
-🎯 Expert Trading Calls & Learning<br>
+  <p class="cta-note">
+    Free Access • Educational Content • Community Learning
+  </p>
 
-🌍 Trusted by 12,000+ Active Traders<br>
+</section>
 
-🚀 Join Today & Trade Smarter
+<div class="band">
+  <strong>KNOWLEDGE FIRST</strong>
+  <span>LEARN • EXPLORE • UNDERSTAND ↗</span>
+</div>
+
+<section class="content">
+
+  <div class="section-kicker">YOUR LEARNING ROADMAP</div>
+
+  <h2 class="section-title">
+    Explore the essentials.
+  </h2>
+
+  <div class="roadmap">
+
+    <div class="step">
+      <span class="step-number">01</span>
+      <div>
+        <strong>Stock Market Fundamentals</strong>
+        <small>Build an understanding of basic market concepts.</small>
+      </div>
+      <span class="step-arrow">↗</span>
+    </div>
+
+    <div class="step">
+      <span class="step-number">02</span>
+      <div>
+        <strong>Technical Analysis Basics</strong>
+        <small>Explore chart patterns, trends and price action.</small>
+      </div>
+      <span class="step-arrow">↗</span>
+    </div>
+
+    <div class="step">
+      <span class="step-number">03</span>
+      <div>
+        <strong>Risk Management Awareness</strong>
+        <small>Understand market risk and responsible planning.</small>
+      </div>
+      <span class="step-arrow">↗</span>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <a
+    class="footer-link telegram-cta"
+    href="https://t.me/+ojIpgKWEpqs4MmZl"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    JOIN FREE TELEGRAM CHANNEL →
+  </a>
+
+  <p class="disclaimer">
+    Educational and informational purposes only.
+    Not personalized financial advice. Trading and investing
+    involve risk. No guaranteed returns or outcomes.
+  </p>
+
+</footer>
 
 </div>
- 
-
-    <a
-      id="telegram-cta"
-      class="cta"
-      href="https://t.me/+ojIpgKWEpqs4MmZl"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M21.4 3.6 18.2 20c-.2 1-1 1.2-1.8.7l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L5.6 13.3.7 11.8c-1-.3-1-1 .2-1.4L20 3c.9-.3 1.6.2 1.4.6Z"/>
-      </svg>
-      JOIN FREE TELEGRAM CHANNEL
-    </a>
-
-    <p class="note">
-      Free to join ·
-      <span lang="te">ఉచితంగా చేరండి</span>
-    </p>
-  </section>
-
-  <footer>
-    <p>
-      Educational content only. No investment advice or assured
-      returns. Stock market investments involve risk.
-    </p>
-  </footer>
 </main>
 
 <script>
-const photo=document.getElementById('trader-photo');
-const fallback=document.getElementById('photo-fallback');
-
-function showPhoto(){
-  photo.hidden=false;
-  fallback.hidden=true;
-}
-
-photo.addEventListener('load',showPhoto);
-photo.addEventListener('error',()=>{
-  photo.hidden=true;
-  fallback.hidden=false;
-});
-
-if(photo.getAttribute('src') && photo.complete && photo.naturalWidth){
-  showPhoto();
-}
-
-let subscribeSent=false;
-
-document.getElementById('telegram-cta').addEventListener('click',event=>{
-  // Tracks a user-initiated CTA click, not verified Telegram membership.
-  // Sends once per page visit without delaying navigation.
-  if(
-    event.isTrusted &&
-    !subscribeSent &&
-    typeof window.fbq==='function'
-  ){
-    subscribeSent=true;
-    fbq('trackSingle','1874865667004662','Subscribe');
-  }
+document.querySelectorAll('.telegram-cta').forEach(function(button){
+  button.addEventListener('click',function(){
+    if(typeof window.fbq==='function'){
+      window.fbq('track','Subscribe',{
+        content_name:'Gokul Chhabra',
+        content_category:'Telegram CTA Click'
+      });
+    }
+  });
 });
 </script>
 
