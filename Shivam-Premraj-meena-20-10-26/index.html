@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4f7fc">
+<meta name="description" content="Gokul Chhabra - Stock market education, market insights and financial awareness community.">
+<title>Gokul Chhabra | Stock Market Education</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1792719455195011');
+fbq('track','PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1792719455195011&amp;ev=PageView&amp;noscript=1">
+</noscript>
+
+<style>
+:root{
+--blue:#1745c5;
+--dark:#122b62;
+--coral:#ff725d;
+--ice:#f4f7fc;
+--muted:#62728d;
+}
+*{box-sizing:border-box}
+html,body{
+margin:0;
+width:100%;
+height:100%;
+overflow:hidden;
+}
+body{
+font-family:system-ui,-apple-system,Arial,sans-serif;
+background:var(--ice);
+color:var(--dark);
+}
+.screen{
+height:100vh;
+height:100dvh;
+max-width:480px;
+margin:auto;
+padding:
+max(10px,env(safe-area-inset-top))
+17px
+max(10px,env(safe-area-inset-bottom));
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+gap:clamp(3px,1vh,11px);
+overflow:hidden;
+background:
+radial-gradient(circle at 100% 3%,#c8ddff,transparent 37%),
+linear-gradient(165deg,#fff,#edf4ff);
+}
+header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:8px;
+}
+.wordmark{
+font-size:clamp(12px,3.3vw,15px);
+font-weight:950;
+letter-spacing:-.4px;
+}
+.wordmark span{color:var(--blue)}
+.top-label{
+font-size:9px;
+font-weight:900;
+color:var(--blue);
+letter-spacing:.4px;
+}
+.line{
+height:3px;
+width:52px;
+border-radius:5px;
+background:var(--coral);
+}
+.hero{
+display:grid;
+grid-template-columns:minmax(0,1fr) auto;
+gap:11px;
+align-items:center;
+}
+.kicker{
+font-size:clamp(8px,2.3vw,10px);
+font-weight:900;
+color:var(--coral);
+letter-spacing:1px;
+margin-bottom:7px;
+}
+h1{
+font-size:clamp(30px,8.8vw,44px);
+font-weight:950;
+line-height:1.01;
+letter-spacing:-1.6px;
+margin:0;
+}
+h1 span{
+display:block;
+color:var(--blue);
+}
+.role{
+font-size:clamp(9px,2.7vw,12px);
+font-weight:900;
+line-height:1.45;
+margin-top:9px;
+color:var(--dark);
+}
+.avatar{
+width:clamp(82px,26vw,120px);
+height:clamp(82px,26vw,120px);
+padding:4px;
+border:3px solid var(--blue);
+border-radius:50%;
+background:#d7e6ff;
+box-shadow:7px 7px 0 #ff725d35;
+}
+.avatar-inner{
+width:100%;
+height:100%;
+border-radius:50%;
+overflow:hidden;
+background:#c5d9fa;
+}
+.avatar img{
+width:100%;
+height:100%;
+display:block;
+object-fit:cover;
+}
+.fallback{
+display:none;
+width:100%;
+height:100%;
+place-items:center;
+font-size:30px;
+font-weight:950;
+color:var(--blue);
+}
+.headline{
+font-size:clamp(21px,6vw,30px);
+line-height:1.12;
+font-weight:950;
+letter-spacing:-.7px;
+margin:0;
+}
+.headline span{color:var(--coral)}
+.description{
+font-size:clamp(10px,2.8vw,12px);
+line-height:1.5;
+color:var(--muted);
+margin:0;
+}
+.learning{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+}
+.learn-item{
+display:flex;
+align-items:center;
+gap:8px;
+background:#fff;
+border:1px solid #dce7fb;
+border-radius:10px;
+padding:clamp(7px,1.5vh,13px) 8px;
+}
+.learn-icon{
+font-size:clamp(16px,4vw,21px);
+flex-shrink:0;
+}
+.learn-item strong{
+display:block;
+font-size:clamp(9px,2.5vw,11px);
+line-height:1.3;
+}
+.learn-item small{
+display:block;
+font-size:clamp(8px,2.1vw,9px);
+color:var(--muted);
+margin-top:2px;
+line-height:1.3;
+}
+.trust{
+display:flex;
+justify-content:space-between;
+gap:5px;
+font-size:clamp(8px,2.2vw,10px);
+font-weight:850;
+color:var(--blue);
+}
+.cta{
+width:100%;
+min-height:47px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+padding:12px 8px;
+border-radius:11px;
+background:var(--blue);
+color:white;
+font-size:clamp(11px,3.4vw,14px);
+font-weight:950;
+text-decoration:none;
+box-shadow:0 7px 22px #1745c530;
+}
+.cta svg{
+width:19px;
+height:19px;
+fill:currentColor;
+flex-shrink:0;
+}
+.note{
+font-size:clamp(8px,2.3vw,10px);
+font-weight:800;
+text-align:center;
+color:var(--blue);
+margin:0;
+}
+.disclaimer{
+font-size:clamp(8px,2.1vw,9px);
+line-height:1.4;
+color:#75829a;
+text-align:center;
+margin:0;
+}
+@media(max-height:650px){
+.screen{gap:3px;padding-top:8px;padding-bottom:8px}
+.avatar{width:78px;height:78px}
+.kicker{margin-bottom:3px}
+.role{margin-top:4px}
+.learn-item{padding:5px}
+.cta{min-height:41px;padding:9px}
+}
+@media(max-height:500px){
+.learning{display:none}
+.line{display:none}
+.avatar{width:60px;height:60px}
+h1{font-size:27px}
+.headline{font-size:19px}
+}
+@media(max-width:340px){
+.screen{padding-left:11px;padding-right:11px}
+.avatar{width:73px;height:73px}
+h1{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<main class="screen">
+
+<header>
+<div class="wordmark">GOKUL <span>CHHABRA.</span></div>
+<div class="top-label">MARKET LEARNING</div>
+</header>
+
+<div class="line"></div>
+
+<section class="hero">
+
+<div>
+<div class="kicker">STOCK MARKET EDUCATION</div>
+
+<h1>
+GOKUL
+<span>CHHABRA.</span>
+</h1>
+
+<div class="role">
+SEBI Registered RA
+</div>
+</div>
+
+<!-- PROFILE IMAGE -->
+<div class="avatar">
+<div class="avatar-inner">
+<img
+src="https://github.com/itssky72001-ui/Gokul/releases/download/gokul/gokul.jpg"
+alt="Gokul Chhabra"
+onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
+>
+<div class="fallback">GC</div>
+</div>
+</div>
+
+</section>
+
+<h2 class="headline">
+Understand Markets.<br>
+<span>Learn with Clarity.</span>
+</h2>
+
+<p class="description">
+Explore chart reading, market fundamentals,
+financial awareness and risk management concepts
+through educational content.
+</p>
+
+<section class="learning" aria-label="Learning topics">
+
+<div class="learn-item">
+<span class="learn-icon">📈</span>
+<div>
+<strong>Market Insights</strong>
+<small>Educational updates</small>
+</div>
+</div>
+
+<div class="learn-item">
+<span class="learn-icon">📊</span>
+<div>
+<strong>Chart Reading</strong>
+<small>Technical concepts</small>
+</div>
+</div>
+
+<div class="learn-item">
+<span class="learn-icon">🛡️</span>
+<div>
+<strong>Risk Awareness</strong>
+<small>Responsible learning</small>
+</div>
+</div>
+
+<div class="learn-item">
+<span class="learn-icon">📚</span>
+<div>
+<strong>Market Basics</strong>
+<small>Simple explanations</small>
+</div>
+</div>
+
+</section>
+
+<div class="trust">
+<span>✓ FREE ACCESS</span>
+<span>✓ EDUCATIONAL CONTENT</span>
+<span>✓ MARKET AWARENESS</span>
+</div>
+
+<a
+id="join"
+class="cta"
+href="https://t.me/+PfPKRyKxs8syMmE1"
+target="_blank"
+rel="noopener noreferrer"
+>
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M21.5 3.5 2.9 10.7c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.5c.2.7.1 1 1 .9.7 0 1-.3 1.4-.7l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.9l3-14.5c.4-1.5-.6-2.1-2-1.5ZM9 13.3l10-6.4c.5-.3.9-.1.5.3l-8.2 7.5-.3 3.3-2-4.7Z"/>
+</svg>
+JOIN FREE TELEGRAM CHANNEL
+</a>
+
+<p class="note">
+FREE LEARNING • TELEGRAM COMMUNITY
+</p>
+
+<p class="disclaimer">
+For educational purposes only. Not personalized investment advice.
+Trading and investing involve financial risk. No guaranteed returns.
+</p>
+
+</main>
+
+<script>
+document.getElementById('join')
+.addEventListener('click',function(){
+if(typeof window.fbq==='function'){
+window.fbq('track','Subscribe',{
+content_name:'Gokul Chhabra',
+content_category:'Telegram CTA Click'
+});
+}
+});
+</script>
+
+</body>
+</html>
