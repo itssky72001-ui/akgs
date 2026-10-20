@@ -1,389 +1,394 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#121827">
-<meta name="description" content="Trade with Gautam Jhaa: explore chart reading, market structure and risk awareness in a free educational Telegram space.">
-<title>Trade With Gautam Jhaa | Market Education</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0d14">
+<meta name="description" content="Trade With Gautam Jhaa - Stock market education and financial awareness community.">
+<title>Trade With Gautam Jhaa | Market Learning</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','31775833862039552');
+fbq('track','PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=31775833862039552&amp;ev=PageView&amp;noscript=1">
+</noscript>
 
 <style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  min-height:100svh;
-  font-family:Arial,sans-serif;
-  color:#f6f5ff;
-  background:
-    radial-gradient(ellipse at top right,#7252b33b,transparent 60%),
-    radial-gradient(ellipse at bottom left,#247b8530,transparent 60%),
-    #121827;
+:root{
+  --bg:#0b0d14;
+  --panel:#151925;
+  --lime:#c6ff64;
+  --violet:#9a82ff;
+  --white:#f8fafc;
+  --muted:#a6afc0;
 }
-.page{
+*{box-sizing:border-box}
+html,body{
   width:100%;
-  max-width:390px;
-  min-height:100svh;
+  height:100%;
+  margin:0;
+  overflow:hidden;
+}
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+.screen{
+  height:100vh;
+  height:100dvh;
+  max-width:480px;
   margin:auto;
-  padding:22px 21px;
+  padding:
+    max(9px,env(safe-area-inset-top))
+    17px
+    max(9px,env(safe-area-inset-bottom));
   display:flex;
   flex-direction:column;
-  justify-content:center;
+  justify-content:space-between;
+  gap:clamp(3px,.8vh,9px);
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 32%,#5e46943d,transparent 42%),
+    linear-gradient(160deg,#141827,#0b0d14 76%);
 }
-header{
+.top{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:14px;
-  margin-bottom:21px;
+  gap:8px;
 }
 .brand{
-  margin:0;
-  font-size:18px;
-  line-height:1.35;
-  letter-spacing:.3px;
+  font-size:clamp(11px,3.1vw,14px);
+  font-weight:950;
+  letter-spacing:-.4px;
 }
-.brand small{
-  display:block;
-  margin-bottom:5px;
-  font-size:11px;
-  letter-spacing:1.6px;
-  color:#b7abd8;
+.brand span{color:var(--lime)}
+.status{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  font-size:9px;
+  color:var(--lime);
+  font-weight:850;
+  white-space:nowrap;
 }
-.photo{
-  position:relative;
-  width:68px;
-  height:68px;
-  flex-shrink:0;
-  display:grid;
-  place-items:center;
-  overflow:hidden;
+.dot{
+  width:7px;
+  height:7px;
+  background:var(--lime);
   border-radius:50%;
-  background:#34324d;
-  border:2px solid #b4dce3;
-  color:#d8f7f4;
-  font-size:23px;
-  font-weight:800;
 }
-.photo img{
-  position:absolute;
-  inset:0;
+.eyebrow{
+  text-align:center;
+  font-size:clamp(8px,2.2vw,10px);
+  letter-spacing:1.8px;
+  font-weight:900;
+  color:var(--violet);
+}
+.identity{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+}
+.avatar{
+  width:clamp(74px,22vw,108px);
+  height:clamp(74px,22vw,108px);
+  flex-shrink:0;
+  padding:4px;
+  border-radius:50%;
+  border:2px solid var(--lime);
+  box-shadow:0 0 0 5px #c6ff6410;
+}
+.avatar-inner{
   width:100%;
   height:100%;
-  padding:3px;
-  object-fit:contain;
-  background:#34324d;
+  overflow:hidden;
   border-radius:50%;
+  background:#303a4c;
 }
-.photo img[hidden]{display:none}
-.hero{
-  padding:0 0 0 15px;
-  border-left:3px solid #b7a1ee;
-  margin-bottom:18px;
+.avatar img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
-.label{
-  margin:0 0 10px;
-  color:#b9d9e2;
-  font-size:11px;
-  letter-spacing:1.5px;
-  font-weight:700;
+.fallback{
+  display:none;
+  width:100%;
+  height:100%;
+  place-items:center;
+  color:var(--lime);
+  font-size:27px;
+  font-weight:950;
+}
+.identity-copy{min-width:0}
+.identity-copy small{
+  display:block;
+  font-size:clamp(8px,2.4vw,10px);
+  color:var(--muted);
+  font-weight:800;
+  margin-bottom:5px;
 }
 h1{
   margin:0;
-  font-size:35px;
-  line-height:1.08;
+  font-size:clamp(26px,7.4vw,37px);
+  font-weight:950;
   letter-spacing:-1.2px;
+  line-height:1.02;
 }
-h1 span{color:#c4b3f7}
-.intro{
-  margin:0 0 18px;
-  color:#b2bbd0;
-  font-size:15px;
-  line-height:1.6;
+h1 span{
+  display:block;
+  color:var(--lime);
 }
-.topics{
-  margin:0 0 20px;
-  padding:13px 15px;
-  list-style:none;
-  border:1px solid #ffffff18;
-  border-radius:12px;
-  background:linear-gradient(115deg,#ffffff0c,#ffffff03);
+.headline{
+  text-align:center;
+  margin:0;
+  font-size:clamp(21px,5.8vw,29px);
+  font-weight:950;
+  letter-spacing:-.7px;
+  line-height:1.13;
 }
-.topics li{
+.headline em{
+  font-style:normal;
+  color:var(--lime);
+}
+.desc{
+  margin:0;
+  text-align:center;
+  color:var(--muted);
+  font-size:clamp(10px,2.7vw,12px);
+  line-height:1.45;
+}
+.terminal{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:7px;
+}
+.tile{
+  min-width:0;
+  padding:clamp(7px,1.5vh,13px) 5px;
+  border-radius:9px;
+  background:#ffffff09;
+  border:1px solid #ffffff1c;
+  text-align:center;
+}
+.tile b{
+  display:block;
+  font-size:clamp(15px,4.3vw,21px);
+  margin-bottom:4px;
+}
+.tile strong{
+  display:block;
+  font-size:clamp(8px,2.4vw,11px);
+  line-height:1.25;
+}
+.tile small{
+  display:block;
+  margin-top:3px;
+  font-size:clamp(7px,2vw,9px);
+  color:var(--muted);
+}
+.learning-line{
   display:flex;
-  align-items:center;
-  gap:10px;
-  color:#d4dced;
-  font-size:14px;
-  line-height:1.5;
-}
-.topics li+li{margin-top:8px}
-.topics b{
-  color:#a9e4d9;
-  font-size:12px;
+  justify-content:space-between;
+  gap:5px;
+  padding:9px 10px;
+  border-radius:7px;
+  background:#9a82ff15;
+  border-left:3px solid var(--violet);
+  color:#d8d0ff;
+  font-size:clamp(8px,2.2vw,10px);
+  font-weight:800;
 }
 .cta{
+  width:100%;
+  min-height:46px;
+  padding:12px 9px;
   display:flex;
   align-items:center;
   justify-content:center;
   gap:8px;
-  width:100%;
-  min-height:58px;
-  padding:16px 8px;
-  border:1px solid #e0e6ff;
-  border-radius:12px;
-  background:linear-gradient(105deg,#c8b3ff,#b7d4ff,#a1e8db);
-  color:#202a42;
+  background:var(--lime);
+  color:#121821;
+  border-radius:10px;
   text-decoration:none;
-  font-size:12px;
-  font-weight:800;
-  line-height:1.4;
-  box-shadow:0 0 18px #b3a2f635;
-}
-.cta:hover{background:#d1dcff}
-.cta:focus-visible{
-  outline:3px solid white;
-  outline-offset:4px;
+  font-size:clamp(11px,3.4vw,14px);
+  font-weight:950;
+  box-shadow:0 6px 25px #c6ff6427;
 }
 .cta svg{
-  width:20px;
-  height:20px;
+  width:19px;
+  height:19px;
+  fill:currentColor;
   flex-shrink:0;
 }
 .note{
-  margin:11px 0 0;
+  margin:0;
   text-align:center;
-  color:#a7b5cb;
-  font-size:12px;
-  line-height:1.6;
+  color:var(--lime);
+  font-size:clamp(8px,2.2vw,10px);
+  font-weight:850;
 }
-.redirect{
-  margin:13px 0 0;
+.disclaimer{
+  margin:0;
   text-align:center;
-  color:#a7b5cb;
-  font-size:12px;
-  line-height:1.6;
+  color:#8995a8;
+  font-size:clamp(8px,2.1vw,9px);
+  line-height:1.4;
 }
-.redirect button{
-  padding:4px 7px;
-  margin-left:4px;
-  border:1px solid #ffffff30;
-  border-radius:5px;
-  background:transparent;
-  color:#e1daf4;
-  font:inherit;
-  cursor:pointer;
+@media(max-height:650px){
+  .screen{gap:3px;padding-top:7px;padding-bottom:7px}
+  .avatar{width:70px;height:70px}
+  .tile{padding:5px 3px}
+  .learning-line{padding:6px}
+  .cta{min-height:40px;padding:9px}
 }
-footer{
-  margin-top:17px;
-  padding-top:13px;
-  border-top:1px solid #ffffff16;
-  color:#96a4bd;
-  font-size:12px;
-  line-height:1.5;
+@media(max-height:500px){
+  .terminal,.learning-line{display:none}
+  .avatar{width:55px;height:55px}
+  h1{font-size:25px}
+  .headline{font-size:19px}
 }
-footer p{margin:0}
-@media(max-width:350px){
-  .page{padding:18px 16px}
-  h1{font-size:31px}
-  .brand{font-size:16px}
-  .photo{width:62px;height:62px}
+@media(max-width:340px){
+  .screen{padding-left:11px;padding-right:11px}
+  .avatar{width:68px;height:68px}
+  h1{font-size:25px}
 }
-@media(max-height:680px){
-  .page{padding-top:15px;padding-bottom:15px}
-  header{margin-bottom:16px}
-  .hero{margin-bottom:14px}
-  h1{font-size:31px}
-  .topics{margin-bottom:16px;padding:11px 13px}
-  .intro{margin-bottom:14px}
-  footer{margin-top:13px}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important}
 }
 </style>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){
-  if(f.fbq)return;
-  n=f.fbq=function(){
-    n.callMethod
-      ? n.callMethod.apply(n,arguments)
-      : n.queue.push(arguments)
-  };
-  if(!f._fbq)f._fbq=n;
-  n.push=n;
-  n.loaded=!0;
-  n.version='2.0';
-  n.queue=[];
-  t=b.createElement(e);
-  t.async=!0;
-  t.src=v;
-  s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s);
-}(
-  window,document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js'
-);
-fbq('init','31775833862039552');
-fbq('trackSingle','31775833862039552','PageView');
-</script>
 </head>
 
 <body>
-<noscript>
-  <img
-    height="1"
-    width="1"
-    style="display:none"
-    alt=""
-    src="https://www.facebook.com/tr?id=31775833862039552&amp;ev=PageView&amp;noscript=1"
-  >
-</noscript>
 
-<div class="page">
-  <header>
-    <h2 class="brand">
-      <small>TRADE WITH</small>
-      GAUTAM JHAA ✒️
-    </h2>
+<main class="screen">
 
-    <div class="photo">
-      <span id="fallback">GJ</span>
-
-      <!-- ROUND PHOTO: Paste your image URL inside src="" -->
-      <img
-        id="photo"
-        src="https://github.com/itssky72001-ui/Gautam2/releases/download/Gautam2/Gautam.jha.jpg"
-        alt="Gautam Jhaa"
-        width="68"
-        height="68"
-        decoding="async"
-        hidden
-      >
-    </div>
+  <header class="top">
+    <div class="brand">TRADE WITH <span>GAUTAM JHAA ✒️</span></div>
+    <div class="status"><span class="dot"></span> LEARNING HUB</div>
   </header>
 
-  <main>
-    <section class="hero">
-      <p class="label">MAKE UNDERSTANDING YOUR STARTING POINT</p>
+  <div class="eyebrow">
+    STOCK MARKET EDUCATION
+  </div>
+
+  <section class="identity">
+
+    <!-- ROUND PROFILE LOGO -->
+    <div class="avatar">
+      <div class="avatar-inner">
+        <img
+          src="https://github.com/itssky72001-ui/Gautam2/releases/download/Gautam2/Gautam.jha.jpg"
+          alt="Trade With Gautam Jhaa"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
+        >
+        <div class="fallback">GJ</div>
+      </div>
+    </div>
+
+    <div class="identity-copy">
+      <small>WELCOME TO</small>
       <h1>
-        Read the chart.<br>
-        <span>Learn the reasoning.</span>
+        GAUTAM
+        <span>JHAA ✒️</span>
       </h1>
-    </section>
+    </div>
 
-    <p class="intro">
-      Explore how price action, market structure and risk
-      fit together in a free Telegram learning space.
-    </p>
+  </section>
 
-    <ul class="topics" aria-label="Learning topics">
-      <li><b>01</b>Chart concepts &amp; market context</li>
-      <li><b>02</b>Risk awareness &amp; financial knowledge</li>
-    </ul>
+  <h2 class="headline">
+    Learn the Market.<br>
+    <em>Think Beyond Charts.</em>
+  </h2>
 
-    <a
-      id="join"
-      class="cta"
-      href="https://t.me/+Ur5ABgITs6xhMThl"
-    >
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M21.4 3.6 18.2 20c-.2 1-1 1.2-1.8.7l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L5.6 13.3.7 11.8c-1-.3-1-1 .2-1.4L20 3c.9-.3 1.6.2 1.4.6Z"/>
-      </svg>
-      JOIN FREE TELEGRAM CHANNEL
-    </a>
+  <p class="desc">
+    Explore market fundamentals, technical concepts
+    and risk awareness through simple educational content.
+  </p>
 
-    <p class="note">Free access · Educational content</p>
+  <section class="terminal" aria-label="Learning topics">
 
-    <p id="redirect" class="redirect" hidden>
-      Opening Telegram in <span id="seconds">8</span>s.
-      <button id="cancel" type="button">Stay here</button>
-    </p>
-  </main>
+    <div class="tile">
+      <b>📈</b>
+      <strong>Market Basics</strong>
+      <small>Core concepts</small>
+    </div>
 
-  <footer>
-    <p>
-      Educational content only. No investment advice or assured
-      returns. Stock market investments involve risk.
-    </p>
-  </footer>
-</div>
+    <div class="tile">
+      <b>📊</b>
+      <strong>Chart Reading</strong>
+      <small>Technical learning</small>
+    </div>
+
+    <div class="tile">
+      <b>🛡️</b>
+      <strong>Risk Awareness</strong>
+      <small>Responsible trading</small>
+    </div>
+
+  </section>
+
+  <div class="learning-line">
+    <span>✓ FREE ACCESS</span>
+    <span>✓ EDUCATIONAL</span>
+    <span>✓ COMMUNITY</span>
+  </div>
+
+  <a
+    id="join"
+    class="cta"
+    href="https://t.me/+Ur5ABgITs6xhMThl"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21.5 3.5 2.9 10.7c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.5c.2.7.1 1 1 .9.7 0 1-.3 1.4-.7l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.9l3-14.5c.4-1.5-.6-2.1-2-1.5ZM9 13.3l10-6.4c.5-.3.9-.1.5.3l-8.2 7.5-.3 3.3-2-4.7Z"/>
+    </svg>
+    JOIN FREE TELEGRAM CHANNEL
+  </a>
+
+  <p class="note">
+    FREE LEARNING • MARKET EDUCATION
+  </p>
+
+  <p class="disclaimer">
+    Educational purposes only. Not financial advice.
+    Trading involves risk. No guaranteed returns.
+  </p>
+
+</main>
 
 <script>
-const PIXEL='31775833862039552';
-const join=document.getElementById('join');
-const photo=document.getElementById('photo');
-const fallback=document.getElementById('fallback');
-const notice=document.getElementById('redirect');
-const seconds=document.getElementById('seconds');
-
-function showPhoto(){
-  photo.hidden=false;
-  fallback.hidden=true;
-}
-photo.addEventListener('load',showPhoto);
-photo.addEventListener('error',()=>{
-  photo.hidden=true;
-  fallback.hidden=false;
-});
-if(photo.getAttribute('src') && photo.complete && photo.naturalWidth){
-  showPhoto();
-}
-
-function track(type,name){
-  try{
-    if(typeof window.fbq==='function'){
-      fbq(type,PIXEL,name);
-    }
-  }catch(error){}
-}
-
-let stopped=false;
-let clicked=false;
-let remaining=8000;
-let last=performance.now();
-
-notice.hidden=false;
-
-const timer=setInterval(()=>{
-  const now=performance.now();
-  if(!stopped && !document.hidden)remaining-=now-last;
-  last=now;
-
-  seconds.textContent=Math.max(0,Math.ceil(remaining/1000));
-
-  if(!stopped && remaining<=0){
-    stopped=true;
-    clearInterval(timer);
-
-    // Automatic navigation is tracked separately from CTA clicks.
-    track('trackSingleCustom','AutoRedirect');
-    location.assign(join.href);
-  }
-},250);
-
-document.addEventListener('visibilitychange',()=>{
-  last=performance.now();
-});
-
-document.getElementById('cancel').addEventListener('click',()=>{
-  stopped=true;
-  clearInterval(timer);
-  notice.textContent='Automatic redirect paused. Join whenever you are ready.';
-});
-
-join.addEventListener('click',event=>{
-  if(!event.isTrusted)return;
-
-  // Modified clicks can open another tab; stop the automatic redirect too.
-  stopped=true;
-  clearInterval(timer);
-  notice.textContent='Automatic redirect paused.';
-
-  if(!clicked){
-    clicked=true;
-    // Measures a CTA click, not confirmed Telegram membership.
-    track('trackSingle','Subscribe');
+document.getElementById('join')
+.addEventListener('click',function(){
+  if(typeof window.fbq==='function'){
+    window.fbq('track','Subscribe',{
+      content_name:'Trade With Gautam Jhaa',
+      content_category:'Telegram CTA Click'
+    });
   }
 });
 </script>
+
 </body>
 </html>
