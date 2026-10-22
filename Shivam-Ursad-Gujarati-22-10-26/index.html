@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#25154b">
+<meta name="description" content="Gujarati Trader Jiga Bhai - Stock Market Education and Financial Knowledge in Gujarati and English.">
+<title>ગુજરાતી Trader | Jiga Bhai</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1644121203735618');
+fbq('track','PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1644121203735618&amp;ev=PageView&amp;noscript=1">
+</noscript>
+
+<style>
+:root{
+  --purple:#25154b;
+  --violet:#51318b;
+  --orange:#ffab52;
+  --cream:#fffaf1;
+  --ink:#241c38;
+  --muted:#6f687d;
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:system-ui,-apple-system,"Noto Sans Gujarati","Shruti",sans-serif;
+}
+.page{
+  width:100%;
+  max-width:500px;
+  height:100vh;
+  height:100dvh;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:clamp(3px,.8vh,10px);
+  padding:
+    max(12px,env(safe-area-inset-top))
+    16px
+    max(11px,env(safe-area-inset-bottom));
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 100% 0%,#fce3c5,transparent 39%),
+    var(--cream);
+}
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+}
+.brand{
+  font-size:clamp(12px,3.5vw,16px);
+  font-weight:950;
+  color:var(--purple);
+}
+.brand span{color:#dc751d}
+.top-label{
+  font-size:clamp(8px,2.2vw,10px);
+  font-weight:900;
+  color:var(--violet);
+}
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.hero-copy{min-width:0}
+.eyebrow{
+  font-size:clamp(8px,2.2vw,10px);
+  font-weight:950;
+  letter-spacing:.7px;
+  color:#c36c24;
+  margin-bottom:7px;
+}
+h1{
+  font-size:clamp(28px,8.2vw,42px);
+  line-height:1.13;
+  font-weight:950;
+  letter-spacing:-1px;
+  margin:0;
+  color:var(--purple);
+}
+h1 span{
+  display:block;
+  color:#e47a2a;
+}
+.avatar{
+  width:clamp(78px,25vw,115px);
+  height:clamp(78px,25vw,115px);
+  flex-shrink:0;
+  padding:5px;
+  border-radius:50%;
+  border:3px solid var(--purple);
+  background:#e9d9f4;
+  box-shadow:0 0 0 6px #51318b12;
+}
+.avatar-inner{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  border-radius:50%;
+  background:#d6bde9;
+}
+.avatar img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+.fallback{
+  width:100%;
+  height:100%;
+  display:none;
+  place-items:center;
+  font-size:29px;
+  font-weight:950;
+  color:var(--purple);
+}
+.headline{
+  font-size:clamp(19px,5.3vw,26px);
+  line-height:1.22;
+  font-weight:950;
+  letter-spacing:-.5px;
+  margin:0;
+  color:var(--purple);
+}
+.headline span{color:#dc751d}
+.desc{
+  font-size:clamp(10px,2.7vw,12px);
+  line-height:1.55;
+  color:var(--muted);
+  margin:0;
+}
+.highlight{
+  padding:clamp(9px,1.5vh,13px) 11px;
+  border-radius:10px;
+  background:linear-gradient(110deg,var(--purple),var(--violet));
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+.highlight strong{
+  font-size:clamp(11px,3vw,14px);
+  font-weight:950;
+}
+.highlight small{
+  display:block;
+  margin-top:4px;
+  font-size:clamp(8px,2.2vw,10px);
+  color:#e7dafb;
+}
+.highlight-icon{
+  font-size:25px;
+  flex-shrink:0;
+}
+.section-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:5px;
+  font-size:clamp(11px,3vw,13px);
+  font-weight:950;
+  color:var(--purple);
+}
+.section-title span{
+  color:#d77927;
+  font-size:9px;
+}
+.learning{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.learn-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:clamp(7px,1.3vh,11px) 8px;
+  border:1px solid #e9ddf4;
+  border-radius:9px;
+  background:white;
+}
+.learn-num{
+  width:27px;
+  height:27px;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  border-radius:8px;
+  background:#f4e8ff;
+  color:var(--violet);
+  font-size:12px;
+  font-weight:950;
+}
+.learn-copy{flex:1}
+.learn-copy strong{
+  display:block;
+  font-size:clamp(10px,2.7vw,12px);
+  font-weight:900;
+}
+.learn-copy small{
+  display:block;
+  margin-top:3px;
+  color:var(--muted);
+  font-size:clamp(8px,2.2vw,10px);
+}
+.arrow{
+  font-size:17px;
+  font-weight:950;
+  color:#e47a2a;
+}
+.topics{
+  display:flex;
+  justify-content:space-between;
+  gap:6px;
+}
+.topic{
+  flex:1;
+  padding:7px 3px;
+  border-radius:7px;
+  text-align:center;
+  background:#fff0df;
+  color:#a95a1d;
+  font-size:clamp(9px,2.5vw,11px);
+  font-weight:950;
+}
+.trust{
+  display:flex;
+  justify-content:space-between;
+  gap:5px;
+  color:var(--violet);
+  font-size:clamp(8px,2.1vw,10px);
+  font-weight:900;
+}
+.cta{
+  width:100%;
+  min-height:47px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 7px;
+  border-radius:10px;
+  background:linear-gradient(100deg,#ff9b43,#ffbf65);
+  color:#281c38;
+  text-decoration:none;
+  font-size:clamp(11px,3.3vw,14px);
+  font-weight:950;
+  box-shadow:0 7px 22px #ff9b4335;
+}
+.cta svg{
+  width:19px;
+  height:19px;
+  fill:currentColor;
+  flex-shrink:0;
+}
+.disclaimer{
+  text-align:center;
+  font-size:clamp(8px,2.1vw,9px);
+  line-height:1.4;
+  color:#857c8d;
+  margin:0;
+}
+@media(max-height:700px){
+  .page{gap:3px;padding-top:7px;padding-bottom:7px}
+  .avatar{width:69px;height:69px}
+  h1{font-size:28px}
+  .eyebrow{margin-bottom:3px}
+  .highlight{padding:7px}
+  .learn-row{padding:5px 7px}
+  .cta{min-height:40px;padding:9px}
+}
+@media(max-height:550px){
+  .avatar{width:54px;height:54px}
+  h1{font-size:24px}
+  .headline{font-size:17px}
+  .learning .learn-row:last-child,.trust{display:none}
+  .topics .topic:last-child{display:none}
+}
+@media(max-height:430px){
+  .desc,.highlight,.topics{display:none}
+  .learn-row{padding:4px}
+}
+@media(max-width:340px){
+  .page{padding-left:10px;padding-right:10px}
+  h1{font-size:25px}
+  .avatar{width:67px;height:67px}
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+<header class="top">
+  <div class="brand">ગુજરાતી <span>TRADER</span></div>
+  <div class="top-label">JIGA BHAI • EDUCATION</div>
+</header>
+
+<section class="hero">
+
+  <div class="hero-copy">
+    <div class="eyebrow">GUJARATI MARKET LEARNING</div>
+
+    <h1>
+      ગુજરાતી
+      <span>TRADER</span>
+    </h1>
+  </div>
+
+  <!-- CIRCULAR PROFILE LOGO -->
+  <div class="avatar">
+    <div class="avatar-inner">
+      <img
+        src="https://github.com/itssky72001-ui/Gujrati-/releases/download/Guju/Gujrati.trader.jpg"
+        alt="Gujarati Trader Jiga Bhai"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
+      >
+      <div class="fallback">JB</div>
+    </div>
+  </div>
+
+</section>
+
+<h2 class="headline">
+  JIGA BHAI સાથે<br>
+  <span>શેર બજારનું જ્ઞાન મેળવો</span>
+</h2>
+
+<p class="desc">
+  Stock Market Education અને Financial Knowledge
+  માટેનું learning community. Trading basics,
+  technical analysis અને risk management વિશે
+  સરળ ગુજરાતી ભાષામાં શીખો.
+</p>
+
+<div class="highlight">
+  <div>
+    <strong>📚 Learn • Understand • Explore</strong>
+    <small>Educational content for all learning levels</small>
+  </div>
+  <div class="highlight-icon">📈</div>
+</div>
+
+<div class="section-title">
+  તમે શું શીખી શકશો?
+  <span>LEARNING TOPICS ↗</span>
+</div>
+
+<section class="learning" aria-label="Learning topics">
+
+  <div class="learn-row">
+    <div class="learn-num">01</div>
+    <div class="learn-copy">
+      <strong>📈 Daily Market Updates</strong>
+      <small>માર્કેટ રિસર્ચ અને એનાલિસિસ</small>
+    </div>
+    <span class="arrow">↗</span>
+  </div>
+
+  <div class="learn-row">
+    <div class="learn-num">02</div>
+    <div class="learn-copy">
+      <strong>🎯 Beginner-Friendly Learning</strong>
+      <small>સરળ ભાષામાં ચાર્ટ અને માર્કેટ કોન્સેપ્ટ્સ</small>
+    </div>
+    <span class="arrow">↗</span>
+  </div>
+
+  <div class="learn-row">
+    <div class="learn-num">03</div>
+    <div class="learn-copy">
+      <strong>🛡️ Risk Management &amp; Awareness</strong>
+      <small>જોખમ વ્યવસ્થાપન અને નાણાકીય જાગૃતિ</small>
+    </div>
+    <span class="arrow">↗</span>
+  </div>
+
+</section>
+
+<div class="topics">
+  <span class="topic">STOCKS</span>
+  <span class="topic">INDEX</span>
+  <span class="topic">F&amp;O</span>
+  <span class="topic">CRYPTO</span>
+</div>
+
+<div class="trust">
+  <span>✓ FREE ACCESS</span>
+  <span>✓ EDUCATIONAL</span>
+  <span>✓ COMMUNITY</span>
+</div>
+
+<a
+  id="join"
+  class="cta"
+  href="https://t.me/+TtVFLVjEzAIyNWI1"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M21.5 3.5 2.9 10.7c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.5c.2.7.1 1 1 .9.7 0 1-.3 1.4-.7l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.9l3-14.5c.4-1.5-.6-2.1-2-1.5ZM9 13.3l10-6.4c.5-.3.9-.1.5.3l-8.2 7.5-.3 3.3-2-4.7Z"/>
+  </svg>
+  JOIN FREE TELEGRAM CHANNEL
+</a>
+
+<p class="disclaimer">
+  માત્ર શૈક્ષણિક હેતુ માટે. આ નાણાકીય સલાહ નથી.
+  Trading involves risk. No guaranteed returns.
+</p>
+
+</main>
+
+<script>
+document.getElementById('join')
+.addEventListener('click',function(){
+  if(typeof window.fbq==='function'){
+    window.fbq('track','Subscribe',{
+      content_name:'Gujarati Trader Jiga Bhai',
+      content_category:'Telegram CTA Click'
+    });
+  }
+});
+</script>
+
+</body>
+</html>
