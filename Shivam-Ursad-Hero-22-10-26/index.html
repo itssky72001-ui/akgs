@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080d20">
+<meta name="description" content="Zero To Hero Trading - Stock market education, chart reading and financial awareness community.">
+<title>Zero To Hero Trading | Learn the Markets</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','29260164336911371');
+fbq('track','PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=29260164336911371&amp;ev=PageView&amp;noscript=1">
+</noscript>
+
+<style>
+:root{
+  --bg:#080d20;
+  --panel:#111936;
+  --lime:#c9ff4b;
+  --purple:#8262ff;
+  --white:#f6f8ff;
+  --muted:#a4afce;
+}
+*{box-sizing:border-box}
+html,body{
+  width:100%;
+  height:100%;
+  margin:0;
+  overflow:hidden;
+}
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+.page{
+  width:100%;
+  max-width:500px;
+  height:100vh;
+  height:100dvh;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:clamp(3px,.8vh,10px);
+  padding:
+    max(12px,env(safe-area-inset-top))
+    16px
+    max(11px,env(safe-area-inset-bottom));
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 92% 16%,#5e42c84d,transparent 38%),
+    radial-gradient(circle at 0% 85%,#1a575240,transparent 40%),
+    var(--bg);
+}
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+.brand{
+  font-size:clamp(12px,3.4vw,15px);
+  font-weight:950;
+  letter-spacing:.2px;
+}
+.brand span{color:var(--lime)}
+.top-label{
+  color:#c1b6ff;
+  font-size:clamp(8px,2.2vw,10px);
+  font-weight:900;
+  letter-spacing:.5px;
+}
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.hero-copy{min-width:0}
+.eyebrow{
+  font-size:clamp(8px,2.2vw,10px);
+  font-weight:950;
+  letter-spacing:1px;
+  color:#b9a8ff;
+  margin-bottom:9px;
+}
+h1{
+  margin:0;
+  font-size:clamp(34px,10vw,49px);
+  line-height:.96;
+  font-weight:950;
+  letter-spacing:-1.6px;
+}
+h1 span{
+  display:block;
+  color:var(--lime);
+}
+.avatar{
+  width:clamp(77px,25vw,118px);
+  height:clamp(77px,25vw,118px);
+  flex-shrink:0;
+  padding:5px;
+  border-radius:50%;
+  border:3px solid var(--lime);
+  box-shadow:0 0 0 6px #c9ff4b0f,0 0 30px #c9ff4b16;
+  background:#222d43;
+}
+.avatar-inner{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  overflow:hidden;
+  background:#34426a;
+}
+.avatar img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+.fallback{
+  width:100%;
+  height:100%;
+  display:none;
+  place-items:center;
+  color:var(--lime);
+  font-size:30px;
+  font-weight:950;
+}
+.headline{
+  margin:0;
+  font-size:clamp(19px,5.6vw,27px);
+  line-height:1.15;
+  font-weight:950;
+  letter-spacing:-.5px;
+}
+.headline span{color:var(--lime)}
+.desc{
+  margin:0;
+  color:var(--muted);
+  font-size:clamp(10px,2.8vw,12px);
+  line-height:1.55;
+}
+.progress{
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr;
+  align-items:center;
+  gap:5px;
+  padding:clamp(9px,1.6vh,14px) 9px;
+  background:linear-gradient(105deg,#171d3c,#282052);
+  border:1px solid #8e75ff45;
+  border-radius:11px;
+}
+.progress-step{text-align:center}
+.progress-step b{
+  display:block;
+  color:var(--lime);
+  font-size:clamp(11px,3.2vw,14px);
+  font-weight:950;
+}
+.progress-step small{
+  display:block;
+  color:#c6c4e7;
+  font-size:clamp(8px,2.2vw,10px);
+  margin-top:4px;
+}
+.progress-arrow{
+  color:#a88dff;
+  font-weight:950;
+  font-size:17px;
+}
+.section-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:5px;
+  font-size:clamp(11px,3vw,13px);
+  font-weight:950;
+}
+.section-title span{
+  color:var(--lime);
+  font-size:9px;
+}
+.learning{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+}
+.learn{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:clamp(9px,1.5vh,13px) 8px;
+  border:1px solid #ffffff1a;
+  border-radius:9px;
+  background:#ffffff08;
+}
+.learn i{
+  font-size:18px;
+  font-style:normal;
+  flex-shrink:0;
+}
+.learn span{
+  font-size:clamp(9px,2.5vw,11px);
+  font-weight:850;
+  line-height:1.3;
+}
+.topics{
+  display:flex;
+  justify-content:space-between;
+  gap:5px;
+}
+.topic{
+  flex:1;
+  text-align:center;
+  padding:7px 3px;
+  border-radius:7px;
+  background:#c9ff4b12;
+  border:1px solid #c9ff4b28;
+  color:var(--lime);
+  font-size:clamp(9px,2.5vw,11px);
+  font-weight:950;
+}
+.trust{
+  display:flex;
+  justify-content:space-between;
+  gap:5px;
+  font-size:clamp(8px,2.2vw,10px);
+  font-weight:900;
+  color:#c0b1ff;
+}
+.cta{
+  width:100%;
+  min-height:47px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 7px;
+  border-radius:10px;
+  background:linear-gradient(100deg,#c9ff4b,#9cf445);
+  color:#111b20;
+  text-decoration:none;
+  font-size:clamp(11px,3.3vw,14px);
+  font-weight:950;
+  box-shadow:0 0 22px #c9ff4b35;
+}
+.cta svg{
+  width:19px;
+  height:19px;
+  fill:currentColor;
+  flex-shrink:0;
+}
+.disclaimer{
+  text-align:center;
+  margin:0;
+  color:#8d9ab8;
+  font-size:clamp(8px,2.1vw,9px);
+  line-height:1.4;
+}
+@media(max-height:700px){
+  .page{gap:3px;padding-top:7px;padding-bottom:7px}
+  .avatar{width:68px;height:68px}
+  h1{font-size:31px}
+  .eyebrow{margin-bottom:4px}
+  .progress{padding:7px}
+  .learn{padding:6px}
+  .cta{min-height:40px;padding:9px}
+}
+@media(max-height:550px){
+  .avatar{width:54px;height:54px}
+  h1{font-size:26px}
+  .headline{font-size:17px}
+  .topics,.trust{display:none}
+  .learn{padding:5px}
+}
+@media(max-height:430px){
+  .desc,.progress{display:none}
+  .learning .learn:last-child{display:none}
+}
+@media(max-width:340px){
+  .page{padding-left:10px;padding-right:10px}
+  h1{font-size:28px}
+  .avatar{width:65px;height:65px}
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+<header class="top">
+  <div class="brand">ZERO TO <span>HERO</span></div>
+  <div class="top-label">TRADING EDUCATION</div>
+</header>
+
+<section class="hero">
+
+  <div class="hero-copy">
+    <div class="eyebrow">WELCOME TO THE LEARNING COMMUNITY</div>
+
+    <h1>
+      ZERO TO
+      <span>HERO</span>
+      TRADING
+    </h1>
+  </div>
+
+  <!-- CIRCULAR PROFILE LOGO -->
+  <div class="avatar">
+    <div class="avatar-inner">
+      <img
+        src="https://github.com/itssky72001-ui/0-to-hero/releases/download/zero/Zero.to.hero.jpg"
+        alt="Zero To Hero Trading"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
+      >
+      <div class="fallback">ZH</div>
+    </div>
+  </div>
+
+</section>
+
+<h2 class="headline">
+  Start With the Basics.<br>
+  <span>Build Your Market Knowledge.</span>
+</h2>
+
+<p class="desc">
+  A dedicated community for Stock Market Education
+  and Financial Knowledge. Learn trading basics,
+  technical analysis and financial awareness through
+  beginner-friendly educational content.
+</p>
+
+<section class="progress" aria-label="Learning journey">
+  <div class="progress-step">
+    <b>01</b>
+    <small>LEARN</small>
+  </div>
+  <span class="progress-arrow">→</span>
+  <div class="progress-step">
+    <b>02</b>
+    <small>UNDERSTAND</small>
+  </div>
+  <span class="progress-arrow">→</span>
+  <div class="progress-step">
+    <b>03</b>
+    <small>EXPLORE</small>
+  </div>
+</section>
+
+<div class="section-title">
+  EXPLORE EDUCATIONAL CONTENT
+  <span>FREE ACCESS ↗</span>
+</div>
+
+<section class="learning" aria-label="Educational benefits">
+
+  <div class="learn">
+    <i>📈</i>
+    <span>Daily Market Updates</span>
+  </div>
+
+  <div class="learn">
+    <i>📚</i>
+    <span>Educational Learning Content</span>
+  </div>
+
+  <div class="learn">
+    <i>🎯</i>
+    <span>Beginner-Friendly Explanations</span>
+  </div>
+
+  <div class="learn">
+    <i>🛡️</i>
+    <span>Risk Management &amp; Awareness</span>
+  </div>
+
+</section>
+
+<div class="topics">
+  <span class="topic">STOCKS</span>
+  <span class="topic">INDEX</span>
+  <span class="topic">F&amp;O</span>
+  <span class="topic">CRYPTO</span>
+</div>
+
+<div class="trust">
+  <span>✓ FREE ACCESS</span>
+  <span>✓ LEARNING COMMUNITY</span>
+  <span>✓ EDUCATIONAL</span>
+</div>
+
+<a
+  id="join"
+  class="cta"
+  href="https://t.me/+TSAKOZh7bH40Y2U9"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M21.5 3.5 2.9 10.7c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.5c.9.5 1.5.3 1.7-.9l3-14.5c.4-1.5-.6-2.1-2-1.5ZM9 13.3l10-6.4c.5-.3.9-.1.5.3l-8.2 7.5-.3 3.3-2-4.7Z"/>
+  </svg>
+  JOIN FREE TELEGRAM CHANNEL
+</a>
+
+<p class="disclaimer">
+  Educational purposes only. Not financial advice.
+  Trading involves risk. No guaranteed returns.
+</p>
+
+</main>
+
+<script>
+document.getElementById('join')
+.addEventListener('click',function(){
+  if(typeof window.fbq==='function'){
+    window.fbq('track','Subscribe',{
+      content_name:'Zero To Hero Trading',
+      content_category:'Telegram CTA Click'
+    });
+  }
+});
+</script>
+
+</body>
+</html>
