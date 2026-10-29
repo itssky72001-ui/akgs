@@ -3,12 +3,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#260e20">
-<meta name="description" content="Gautam Jha - Stock market education, technical analysis basics and financial knowledge community.">
-<title>Gautam Jha | Market Education</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080f18">
+<meta name="description" content="Gautam Jha - Stock market education, chart reading, technical analysis basics and financial awareness.">
+<title>Gautam Jha | Market Learning</title>
 
-<!-- META PIXEL CODE -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;
@@ -22,21 +22,23 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1469994255231519');
+fbq('init','947817484608512');
 fbq('track','PageView');
 </script>
 <noscript>
 <img height="1" width="1" style="display:none" alt=""
-src="https://www.facebook.com/tr?id=1469994255231519&amp;ev=PageView&amp;noscript=1">
+src="https://www.facebook.com/tr?id=947817484608512&amp;ev=PageView&amp;noscript=1">
 </noscript>
+<!-- End Meta Pixel Code -->
 
 <style>
 :root{
-  --burgundy:#260e20;
-  --wine:#521d3a;
-  --gold:#f0c987;
-  --cream:#fff9ee;
-  --muted:#bdb0bd;
+  --bg:#080f18;
+  --panel:#111d2a;
+  --cyan:#4ce5e8;
+  --coral:#ff856a;
+  --white:#f5f9fc;
+  --muted:#9baebd;
 }
 *{box-sizing:border-box}
 html,body{
@@ -46,11 +48,12 @@ html,body{
   overflow:hidden;
 }
 body{
-  background:var(--burgundy);
-  color:var(--cream);
+  background:var(--bg);
+  color:var(--white);
   font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
 }
 .page{
+  position:relative;
   width:100%;
   max-width:500px;
   height:100vh;
@@ -66,75 +69,76 @@ body{
     max(12px,env(safe-area-inset-bottom));
   overflow:hidden;
   background:
-    radial-gradient(circle at 95% 18%,#92375c55,transparent 42%),
-    linear-gradient(160deg,#36142b,#1b0c1b 80%);
+    radial-gradient(circle at 95% 12%,#155b6559,transparent 40%),
+    radial-gradient(circle at 0% 90%,#71372f33,transparent 40%),
+    var(--bg);
 }
 .top{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:7px;
-  padding-bottom:9px;
-  border-bottom:1px solid #f0c9874a;
+  gap:8px;
 }
 .brand{
-  font-size:clamp(12px,3.5vw,16px);
+  font-size:clamp(14px,3.8vw,18px);
   font-weight:950;
-  letter-spacing:.3px;
+  letter-spacing:-.4px;
 }
-.brand span{color:var(--gold)}
-.top-label{
+.brand span{color:var(--cyan)}
+.top-tag{
+  padding:6px 8px;
+  border:1px solid #4ce5e855;
+  border-radius:30px;
+  color:var(--cyan);
   font-size:clamp(8px,2.2vw,10px);
   font-weight:900;
-  color:var(--gold);
-  letter-spacing:.7px;
 }
 .hero{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:11px;
+  gap:12px;
 }
 .hero-copy{min-width:0}
 .eyebrow{
-  color:var(--gold);
+  color:var(--coral);
   font-size:clamp(8px,2.2vw,10px);
   font-weight:950;
-  letter-spacing:1px;
+  letter-spacing:.8px;
   margin-bottom:8px;
 }
 h1{
   margin:0;
   font-size:clamp(35px,10vw,50px);
-  font-weight:950;
   line-height:.95;
+  font-weight:950;
   letter-spacing:-1.5px;
 }
 h1 span{
   display:block;
-  color:var(--gold);
+  color:var(--cyan);
 }
 .avatar{
-  width:clamp(78px,25vw,115px);
-  height:clamp(78px,25vw,115px);
+  width:clamp(79px,26vw,119px);
+  height:clamp(79px,26vw,119px);
   flex-shrink:0;
   padding:5px;
+  border:3px solid var(--cyan);
   border-radius:50%;
-  border:3px solid var(--gold);
-  box-shadow:0 0 0 6px #f0c98712;
-  background:#63334b;
+  background:#16404a;
+  box-shadow:0 0 0 6px #4ce5e812,0 0 25px #4ce5e81f;
 }
 .avatar-inner{
   width:100%;
   height:100%;
   border-radius:50%;
   overflow:hidden;
-  background:#713c55;
+  background:#23505b;
 }
 .avatar img{
+  display:block;
   width:100%;
   height:100%;
-  display:block;
   object-fit:cover;
 }
 .fallback{
@@ -142,112 +146,131 @@ h1 span{
   height:100%;
   display:none;
   place-items:center;
+  color:var(--cyan);
   font-size:29px;
   font-weight:950;
-  color:var(--gold);
-}
-.gold-line{
-  height:3px;
-  width:95px;
-  background:linear-gradient(90deg,var(--gold),transparent);
-  border-radius:10px;
 }
 .headline{
   margin:0;
-  font-size:clamp(20px,5.8vw,28px);
+  font-size:clamp(20px,5.7vw,28px);
   line-height:1.15;
-  letter-spacing:-.5px;
   font-weight:950;
+  letter-spacing:-.5px;
 }
-.headline em{
-  font-style:normal;
-  color:var(--gold);
-}
+.headline span{color:var(--coral)}
 .desc{
   margin:0;
   color:var(--muted);
   font-size:clamp(10px,2.8vw,12px);
   line-height:1.55;
 }
-.learning-label{
+.market-bar{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:5px;
+  padding:clamp(9px,1.6vh,13px) 10px;
+  border-radius:10px;
+  background:linear-gradient(105deg,#12313b,#172a39);
+  border:1px solid #4ce5e82e;
+}
+.market-bar span{
+  font-size:clamp(9px,2.5vw,11px);
+  font-weight:950;
+  color:var(--cyan);
+}
+.market-bar i{
+  font-style:normal;
+  color:var(--coral);
+}
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:6px;
   font-size:clamp(10px,2.8vw,12px);
   font-weight:950;
-  letter-spacing:.3px;
 }
-.learning-label span{
+.section-title span{
   font-size:9px;
-  color:var(--gold);
+  color:var(--cyan);
 }
 .learning{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:7px;
+  gap:8px;
 }
 .learn{
   display:flex;
   align-items:center;
   gap:8px;
-  padding:clamp(9px,1.5vh,13px) 8px;
-  border:1px solid #f0c98728;
-  border-radius:9px;
-  background:#ffffff09;
+  padding:clamp(10px,1.7vh,14px) 9px;
+  border-radius:10px;
+  background:#ffffff08;
+  border:1px solid #ffffff18;
 }
-.learn i{
-  font-size:18px;
-  font-style:normal;
+.learn-icon{
+  width:29px;
+  height:29px;
+  display:grid;
+  place-items:center;
   flex-shrink:0;
+  border-radius:9px;
+  background:#4ce5e813;
+  color:var(--cyan);
+  font-size:16px;
 }
 .learn span{
   font-size:clamp(9px,2.5vw,11px);
+  line-height:1.35;
   font-weight:850;
-  line-height:1.3;
 }
-.market-strip{
+.highlight{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:6px;
-  padding:clamp(8px,1.5vh,12px) 10px;
-  border-radius:9px;
-  background:linear-gradient(100deg,#f0c987,#d7a85e);
-  color:#331b25;
+  gap:8px;
+  padding:clamp(9px,1.5vh,13px) 11px;
+  border-radius:10px;
+  background:linear-gradient(105deg,#ff856a,#ffb08b);
+  color:#261a1d;
 }
-.market-strip span{
-  font-size:clamp(9px,2.5vw,11px);
+.highlight strong{
+  font-size:clamp(11px,3vw,13px);
   font-weight:950;
 }
-.market-strip i{
-  font-style:normal;
-  font-weight:950;
-  opacity:.6;
+.highlight small{
+  display:block;
+  margin-top:4px;
+  font-size:clamp(8px,2.2vw,10px);
+  font-weight:650;
+}
+.highlight b{
+  font-size:24px;
 }
 .trust{
   display:flex;
   justify-content:space-between;
   gap:5px;
-  color:var(--gold);
-  font-size:clamp(8px,2.1vw,10px);
+  color:var(--cyan);
+  font-size:clamp(8px,2.2vw,10px);
   font-weight:900;
 }
 .cta{
   width:100%;
-  min-height:47px;
+  min-height:48px;
   display:flex;
   align-items:center;
   justify-content:center;
   gap:8px;
   padding:12px 7px;
-  border-radius:10px;
-  background:linear-gradient(100deg,#f0c987,#ffe0a4);
-  color:#301b28;
+  border-radius:11px;
+  background:linear-gradient(105deg,#4ce5e8,#8cf6e5);
+  color:#09252b;
   text-decoration:none;
   font-size:clamp(11px,3.3vw,14px);
   font-weight:950;
-  box-shadow:0 0 25px #f0c98730;
+  box-shadow:0 0 25px #4ce5e835;
 }
 .cta svg{
   width:19px;
@@ -258,35 +281,36 @@ h1 span{
 .disclaimer{
   text-align:center;
   margin:0;
-  color:#a99ca9;
+  color:#8297a8;
   font-size:clamp(8px,2.1vw,9px);
   line-height:1.4;
 }
 @media(max-height:700px){
   .page{gap:3px;padding-top:7px;padding-bottom:7px}
-  .avatar{width:69px;height:69px}
+  .avatar{width:68px;height:68px}
   h1{font-size:31px}
   .eyebrow{margin-bottom:4px}
-  .top{padding-bottom:5px}
-  .learn{padding:6px}
-  .market-strip{padding:7px}
+  .market-bar,.highlight{padding:7px}
+  .learn{padding:7px}
+  .learn-icon{width:24px;height:24px}
   .cta{min-height:40px;padding:9px}
 }
 @media(max-height:550px){
   .avatar{width:54px;height:54px}
   h1{font-size:26px}
   .headline{font-size:18px}
-  .trust,.gold-line{display:none}
+  .market-bar,.trust{display:none}
   .learn{padding:5px}
+  .learn-icon{display:none}
 }
 @media(max-height:430px){
-  .desc,.market-strip{display:none}
+  .desc,.highlight{display:none}
   .learning .learn:last-child{display:none}
 }
 @media(max-width:340px){
   .page{padding-left:10px;padding-right:10px}
   h1{font-size:29px}
-  .avatar{width:67px;height:67px}
+  .avatar{width:65px;height:65px}
 }
 </style>
 </head>
@@ -296,14 +320,13 @@ h1 span{
 
 <header class="top">
   <div class="brand">GAUTAM <span>JHA</span></div>
-  <div class="top-label">MARKET LEARNING</div>
+  <div class="top-tag">MARKET LEARNING</div>
 </header>
 
 <section class="hero">
 
   <div class="hero-copy">
     <div class="eyebrow">STOCK MARKET EDUCATION</div>
-
     <h1>
       GAUTAM
       <span>JHA.</span>
@@ -314,7 +337,7 @@ h1 span{
   <div class="avatar">
     <div class="avatar-inner">
       <img
-        src="https://github.com/itssky72001-ui/Gautam2/releases/download/Gautam2/Gautam.jha.jpg"
+        src="gautam-jha.webp"
         alt="Gautam Jha"
         onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
       >
@@ -324,51 +347,19 @@ h1 span{
 
 </section>
 
-<div class="gold-line"></div>
-
 <h2 class="headline">
-  Understand the Market.<br>
-  <em>Strengthen Your Knowledge.</em>
+  Learn the Market.<br>
+  <span>Build Financial Awareness.</span>
 </h2>
 
 <p class="desc">
   A dedicated community for Stock Market Education
-  and Financial Knowledge. Learn market concepts,
-  trading basics, technical analysis and financial
-  awareness through educational content designed
-  for learners of all levels.
+  and Financial Knowledge. Explore trading basics,
+  technical analysis, market concepts and risk awareness
+  through beginner-friendly educational content.
 </p>
 
-<div class="learning-label">
-  EDUCATIONAL LEARNING CONTENT
-  <span>FREE ACCESS ↗</span>
-</div>
-
-<section class="learning" aria-label="Learning benefits">
-
-  <div class="learn">
-    <i>📈</i>
-    <span>Daily Market Updates</span>
-  </div>
-
-  <div class="learn">
-    <i>📚</i>
-    <span>Beginner-Friendly Explanations</span>
-  </div>
-
-  <div class="learn">
-    <i>🎯</i>
-    <span>Chart Reading &amp; Analysis</span>
-  </div>
-
-  <div class="learn">
-    <i>🛡️</i>
-    <span>Risk Management Awareness</span>
-  </div>
-
-</section>
-
-<div class="market-strip">
+<div class="market-bar">
   <span>STOCKS</span>
   <i>✦</i>
   <span>INDEX</span>
@@ -378,16 +369,53 @@ h1 span{
   <span>CRYPTO</span>
 </div>
 
+<div class="section-title">
+  EXPLORE LEARNING CONTENT
+  <span>FREE ACCESS ↗</span>
+</div>
+
+<section class="learning" aria-label="Educational topics">
+
+  <div class="learn">
+    <div class="learn-icon">📈</div>
+    <span>Daily Market Updates</span>
+  </div>
+
+  <div class="learn">
+    <div class="learn-icon">📚</div>
+    <span>Beginner-Friendly Learning</span>
+  </div>
+
+  <div class="learn">
+    <div class="learn-icon">📊</div>
+    <span>Chart Reading Basics</span>
+  </div>
+
+  <div class="learn">
+    <div class="learn-icon">🛡️</div>
+    <span>Risk Management Awareness</span>
+  </div>
+
+</section>
+
+<div class="highlight">
+  <div>
+    <strong>Learn • Understand • Explore</strong>
+    <small>Educational content for market learners</small>
+  </div>
+  <b>↗</b>
+</div>
+
 <div class="trust">
-  <span>✓ FREE LEARNING</span>
-  <span>✓ COMMUNITY SUPPORT</span>
-  <span>✓ FINANCIAL AWARENESS</span>
+  <span>✓ FREE ACCESS</span>
+  <span>✓ EDUCATIONAL</span>
+  <span>✓ BEGINNER FRIENDLY</span>
 </div>
 
 <a
   id="join"
   class="cta"
-  href="https://t.me/+M75ztr68t9hhYmI9"
+  href="https://t.me/+gJvVL7eCiIQ5MWJl"
   target="_blank"
   rel="noopener noreferrer"
 >
@@ -418,4 +446,3 @@ document.getElementById('join')
 
 </body>
 </html>
-
