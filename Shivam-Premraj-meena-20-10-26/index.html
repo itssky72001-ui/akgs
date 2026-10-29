@@ -3,377 +3,438 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f4f7fc">
-<meta name="description" content="Gokul Chhabra - Stock market education, market insights and financial awareness community.">
-<title>Gokul Chhabra | Stock Market Education</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f8ff">
+<meta name="description" content="Gautam Jha - Explore stock market education, chart reading, trading basics and risk awareness.">
+<title>Gautam Jha | Market Learning Community</title>
 
 <!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+!function(f,b,e,v,n,t,s){
+  if(f.fbq)return;
+  n=f.fbq=function(){
+    n.callMethod?
+    n.callMethod.apply(n,arguments):
+    n.queue.push(arguments)
+  };
+  if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)
+}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2047922199951226');
-fbq('track', 'PageView');
+
+fbq('init','1738804421155647');
+fbq('track','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2047922199951226&ev=PageView&noscript=1"
-/></noscript>
+<noscript>
+<img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1738804421155647&amp;ev=PageView&amp;noscript=1">
+</noscript>
 <!-- End Meta Pixel Code -->
 
 <style>
 :root{
---blue:#1745c5;
---dark:#122b62;
---coral:#ff725d;
---ice:#f4f7fc;
---muted:#62728d;
+  --bg:#f5f8ff;
+  --ink:#102443;
+  --blue:#2455df;
+  --mint:#b9ffe0;
+  --muted:#61728b;
+  --line:#dce5f2;
 }
 *{box-sizing:border-box}
 html,body{
-margin:0;
-width:100%;
-height:100%;
-overflow:hidden;
+  width:100%;
+  height:100%;
+  margin:0;
+  overflow:hidden;
 }
 body{
-font-family:system-ui,-apple-system,Arial,sans-serif;
-background:var(--ice);
-color:var(--dark);
+  font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
 }
-.screen{
-height:100vh;
-height:100dvh;
-max-width:480px;
-margin:auto;
-padding:
-max(10px,env(safe-area-inset-top))
-17px
-max(10px,env(safe-area-inset-bottom));
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-gap:clamp(3px,1vh,11px);
-overflow:hidden;
-background:
-radial-gradient(circle at 100% 3%,#c8ddff,transparent 37%),
-linear-gradient(165deg,#fff,#edf4ff);
+.page{
+  width:100%;
+  max-width:500px;
+  height:100vh;
+  height:100dvh;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:clamp(3px,.8vh,10px);
+  padding:
+    max(12px,env(safe-area-inset-top))
+    17px
+    max(12px,env(safe-area-inset-bottom));
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 95% 12%,#dce8ff,transparent 40%),
+    radial-gradient(circle at 0% 90%,#d7fff0,transparent 38%),
+    var(--bg);
 }
-header{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:8px;
+
+/* NAVIGATION */
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
 }
-.wordmark{
-font-size:clamp(12px,3.3vw,15px);
-font-weight:950;
-letter-spacing:-.4px;
+.brand{
+  font-size:clamp(14px,3.9vw,18px);
+  font-weight:950;
+  letter-spacing:-.5px;
 }
-.wordmark span{color:var(--blue)}
-.top-label{
-font-size:9px;
-font-weight:900;
-color:var(--blue);
-letter-spacing:.4px;
+.brand span{color:var(--blue)}
+.edition{
+  font-size:clamp(8px,2.2vw,10px);
+  font-weight:900;
+  color:var(--blue);
+  letter-spacing:.6px;
 }
-.line{
-height:3px;
-width:52px;
-border-radius:5px;
-background:var(--coral);
-}
+
+/* HERO */
 .hero{
-display:grid;
-grid-template-columns:minmax(0,1fr) auto;
-gap:11px;
-align-items:center;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:11px;
+  padding:clamp(9px,1.8vh,15px) 0;
+  border-top:2px solid var(--ink);
+  border-bottom:1px solid var(--line);
 }
+.hero-copy{min-width:0}
 .kicker{
-font-size:clamp(8px,2.3vw,10px);
-font-weight:900;
-color:var(--coral);
-letter-spacing:1px;
-margin-bottom:7px;
+  font-size:clamp(8px,2.2vw,10px);
+  font-weight:950;
+  color:var(--blue);
+  letter-spacing:.8px;
+  margin-bottom:8px;
 }
 h1{
-font-size:clamp(30px,8.8vw,44px);
-font-weight:950;
-line-height:1.01;
-letter-spacing:-1.6px;
-margin:0;
+  margin:0;
+  font-size:clamp(34px,10vw,50px);
+  line-height:.94;
+  font-weight:950;
+  letter-spacing:-1.7px;
 }
 h1 span{
-display:block;
-color:var(--blue);
-}
-.role{
-font-size:clamp(9px,2.7vw,12px);
-font-weight:900;
-line-height:1.45;
-margin-top:9px;
-color:var(--dark);
+  display:block;
+  color:var(--blue);
 }
 .avatar{
-width:clamp(82px,26vw,120px);
-height:clamp(82px,26vw,120px);
-padding:4px;
-border:3px solid var(--blue);
-border-radius:50%;
-background:#d7e6ff;
-box-shadow:7px 7px 0 #ff725d35;
+  width:clamp(78px,25vw,115px);
+  height:clamp(78px,25vw,115px);
+  padding:5px;
+  flex-shrink:0;
+  border-radius:50%;
+  border:3px solid var(--blue);
+  background:#d9e7ff;
+  box-shadow:0 0 0 6px #2455df0d;
 }
 .avatar-inner{
-width:100%;
-height:100%;
-border-radius:50%;
-overflow:hidden;
-background:#c5d9fa;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  overflow:hidden;
+  background:#c5d8ff;
 }
 .avatar img{
-width:100%;
-height:100%;
-display:block;
-object-fit:cover;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
 }
 .fallback{
-display:none;
-width:100%;
-height:100%;
-place-items:center;
-font-size:30px;
-font-weight:950;
-color:var(--blue);
+  width:100%;
+  height:100%;
+  display:none;
+  place-items:center;
+  color:var(--blue);
+  font-size:28px;
+  font-weight:950;
 }
+
+/* HEADLINE */
 .headline{
-font-size:clamp(21px,6vw,30px);
-line-height:1.12;
-font-weight:950;
-letter-spacing:-.7px;
-margin:0;
+  margin:0;
+  font-size:clamp(20px,5.8vw,28px);
+  line-height:1.16;
+  font-weight:950;
+  letter-spacing:-.6px;
 }
-.headline span{color:var(--coral)}
-.description{
-font-size:clamp(10px,2.8vw,12px);
-line-height:1.5;
-color:var(--muted);
-margin:0;
+.headline span{color:var(--blue)}
+.desc{
+  margin:0;
+  color:var(--muted);
+  font-size:clamp(10px,2.8vw,12px);
+  line-height:1.55;
+}
+
+/* MARKET TICKER */
+.ticker{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:5px;
+  padding:clamp(9px,1.5vh,13px) 9px;
+  border-radius:9px;
+  background:var(--ink);
+  color:white;
+}
+.ticker span{
+  font-size:clamp(9px,2.5vw,11px);
+  font-weight:950;
+}
+.ticker i{
+  color:var(--mint);
+  font-style:normal;
+}
+
+/* LEARNING SECTION */
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:5px;
+  font-size:clamp(10px,2.8vw,12px);
+  font-weight:950;
+}
+.section-title small{
+  color:var(--blue);
+  font-size:9px;
+  font-weight:900;
 }
 .learning{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:8px;
+  display:flex;
+  flex-direction:column;
+  gap:0;
 }
-.learn-item{
-display:flex;
-align-items:center;
-gap:8px;
-background:#fff;
-border:1px solid #dce7fb;
-border-radius:10px;
-padding:clamp(7px,1.5vh,13px) 8px;
+.learn-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:clamp(8px,1.3vh,11px) 2px;
+  border-bottom:1px solid var(--line);
 }
-.learn-icon{
-font-size:clamp(16px,4vw,21px);
-flex-shrink:0;
+.learn-number{
+  width:31px;
+  height:31px;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  border-radius:9px;
+  background:#e3ebff;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:950;
 }
-.learn-item strong{
-display:block;
-font-size:clamp(9px,2.5vw,11px);
-line-height:1.3;
+.learn-text{
+  flex:1;
+  min-width:0;
 }
-.learn-item small{
-display:block;
-font-size:clamp(8px,2.1vw,9px);
-color:var(--muted);
-margin-top:2px;
-line-height:1.3;
+.learn-text strong{
+  display:block;
+  font-size:clamp(10px,2.7vw,12px);
+  font-weight:900;
+}
+.learn-text small{
+  display:block;
+  color:var(--muted);
+  font-size:clamp(8px,2.2vw,10px);
+  margin-top:3px;
+}
+.learn-arrow{
+  color:var(--blue);
+  font-size:18px;
+  font-weight:900;
 }
 .trust{
-display:flex;
-justify-content:space-between;
-gap:5px;
-font-size:clamp(8px,2.2vw,10px);
-font-weight:850;
-color:var(--blue);
+  display:flex;
+  justify-content:space-between;
+  gap:5px;
+  font-size:clamp(8px,2.2vw,10px);
+  color:var(--blue);
+  font-weight:900;
 }
+
+/* CTA */
 .cta{
-width:100%;
-min-height:47px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:8px;
-padding:12px 8px;
-border-radius:11px;
-background:var(--blue);
-color:white;
-font-size:clamp(11px,3.4vw,14px);
-font-weight:950;
-text-decoration:none;
-box-shadow:0 7px 22px #1745c530;
+  width:100%;
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 7px;
+  border-radius:11px;
+  background:linear-gradient(105deg,#2455df,#3d77ff);
+  color:white;
+  text-decoration:none;
+  font-size:clamp(11px,3.3vw,14px);
+  font-weight:950;
+  box-shadow:0 8px 24px #2455df3d;
 }
 .cta svg{
-width:19px;
-height:19px;
-fill:currentColor;
-flex-shrink:0;
-}
-.note{
-font-size:clamp(8px,2.3vw,10px);
-font-weight:800;
-text-align:center;
-color:var(--blue);
-margin:0;
+  width:19px;
+  height:19px;
+  fill:currentColor;
+  flex-shrink:0;
 }
 .disclaimer{
-font-size:clamp(8px,2.1vw,9px);
-line-height:1.4;
-color:#75829a;
-text-align:center;
-margin:0;
+  text-align:center;
+  margin:0;
+  color:#78869a;
+  font-size:clamp(8px,2.1vw,9px);
+  line-height:1.4;
 }
-@media(max-height:650px){
-.screen{gap:3px;padding-top:8px;padding-bottom:8px}
-.avatar{width:78px;height:78px}
-.kicker{margin-bottom:3px}
-.role{margin-top:4px}
-.learn-item{padding:5px}
-.cta{min-height:41px;padding:9px}
+
+/* SMALL SCREENS */
+@media(max-height:700px){
+  .page{gap:3px;padding-top:7px;padding-bottom:7px}
+  .hero{padding:7px 0}
+  .avatar{width:68px;height:68px}
+  h1{font-size:31px}
+  .kicker{margin-bottom:4px}
+  .ticker{padding:7px}
+  .learn-row{padding:6px 2px}
+  .learn-number{width:25px;height:25px}
+  .cta{min-height:40px;padding:9px}
 }
-@media(max-height:500px){
-.learning{display:none}
-.line{display:none}
-.avatar{width:60px;height:60px}
-h1{font-size:27px}
-.headline{font-size:19px}
+@media(max-height:550px){
+  .avatar{width:54px;height:54px}
+  h1{font-size:26px}
+  .headline{font-size:18px}
+  .ticker,.trust{display:none}
+  .learn-row{padding:4px 2px}
+}
+@media(max-height:430px){
+  .desc,.section-title{display:none}
+  .learn-row:last-child{display:none}
 }
 @media(max-width:340px){
-.screen{padding-left:11px;padding-right:11px}
-.avatar{width:73px;height:73px}
-h1{font-size:28px}
+  .page{padding-left:10px;padding-right:10px}
+  h1{font-size:29px}
+  .avatar{width:65px;height:65px}
 }
 </style>
 </head>
 
 <body>
+<main class="page">
 
-<main class="screen">
-
-<header>
-<div class="wordmark">GOKUL <span>CHHABRA.</span></div>
-<div class="top-label">MARKET LEARNING</div>
+<header class="top">
+  <div class="brand">GAUTAM <span>JHA</span></div>
+  <div class="edition">MARKET EDUCATION</div>
 </header>
-
-<div class="line"></div>
 
 <section class="hero">
 
-<div>
-<div class="kicker">STOCK MARKET EDUCATION</div>
+  <div class="hero-copy">
+    <div class="kicker">LEARN • UNDERSTAND • EXPLORE</div>
 
-<h1>
-GOKUL
-<span>CHHABRA.</span>
-</h1>
+    <h1>
+      GAUTAM
+      <span>JHA.</span>
+    </h1>
+  </div>
 
-<div class="role">
-SEBI Registered RA
-</div>
-</div>
-
-<!-- PROFILE IMAGE -->
-<div class="avatar">
-<div class="avatar-inner">
-<img
-src="https://github.com/itssky72001-ui/Gokul/releases/download/gokul/gokul.jpg"
-alt="Gokul Chhabra"
-onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
->
-<div class="fallback">GC</div>
-</div>
-</div>
+  <!-- CIRCULAR PROFILE -->
+  <div class="avatar">
+    <div class="avatar-inner">
+      <img
+        src="https://github.com/itssky72001-ui/Gautam2/releases/download/Gautam2/Gautam.jha.jpg"
+        alt="Gautam Jha"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
+      >
+      <div class="fallback">GJ</div>
+    </div>
+  </div>
 
 </section>
 
 <h2 class="headline">
-Understand Markets.<br>
-<span>Learn with Clarity.</span>
+  Your Journey Into<br>
+  <span>Market Education.</span>
 </h2>
 
-<p class="description">
-Explore chart reading, market fundamentals,
-financial awareness and risk management concepts
-through educational content.
+<p class="desc">
+  Explore stock market concepts, trading basics,
+  technical analysis and financial awareness through
+  educational content designed for curious learners.
 </p>
+
+<div class="ticker">
+  <span>STOCKS</span>
+  <i>✦</i>
+  <span>INDEX</span>
+  <i>✦</i>
+  <span>F&amp;O</span>
+  <i>✦</i>
+  <span>CRYPTO</span>
+</div>
+
+<div class="section-title">
+  INSIDE THE LEARNING COMMUNITY
+  <small>FREE ACCESS ↗</small>
+</div>
 
 <section class="learning" aria-label="Learning topics">
 
-<div class="learn-item">
-<span class="learn-icon">📈</span>
-<div>
-<strong>Market Insights</strong>
-<small>Educational updates</small>
-</div>
-</div>
+  <div class="learn-row">
+    <div class="learn-number">01</div>
+    <div class="learn-text">
+      <strong>Daily Market Updates</strong>
+      <small>Educational market observations</small>
+    </div>
+    <span class="learn-arrow">↗</span>
+  </div>
 
-<div class="learn-item">
-<span class="learn-icon">📊</span>
-<div>
-<strong>Chart Reading</strong>
-<small>Technical concepts</small>
-</div>
-</div>
+  <div class="learn-row">
+    <div class="learn-number">02</div>
+    <div class="learn-text">
+      <strong>Chart Reading &amp; Technical Basics</strong>
+      <small>Understand patterns and price movement</small>
+    </div>
+    <span class="learn-arrow">↗</span>
+  </div>
 
-<div class="learn-item">
-<span class="learn-icon">🛡️</span>
-<div>
-<strong>Risk Awareness</strong>
-<small>Responsible learning</small>
-</div>
-</div>
-
-<div class="learn-item">
-<span class="learn-icon">📚</span>
-<div>
-<strong>Market Basics</strong>
-<small>Simple explanations</small>
-</div>
-</div>
+  <div class="learn-row">
+    <div class="learn-number">03</div>
+    <div class="learn-text">
+      <strong>Risk Management Awareness</strong>
+      <small>Learn why managing risk matters</small>
+    </div>
+    <span class="learn-arrow">↗</span>
+  </div>
 
 </section>
 
 <div class="trust">
-<span>✓ FREE ACCESS</span>
-<span>✓ EDUCATIONAL CONTENT</span>
-<span>✓ MARKET AWARENESS</span>
+  <span>✓ FREE LEARNING</span>
+  <span>✓ BEGINNER FRIENDLY</span>
+  <span>✓ EDUCATIONAL</span>
 </div>
 
 <a
-id="join"
-class="cta"
-href="https://t.me/+PfPKRyKxs8syMmE1"
-target="_blank"
-rel="noopener noreferrer"
+  id="join"
+  class="cta"
+  href="https://t.me/+xd_9kMYh7MhkMmM1"
+  target="_blank"
+  rel="noopener noreferrer"
 >
-<svg viewBox="0 0 24 24" aria-hidden="true">
-<path d="M21.5 3.5 2.9 10.7c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.5c.2.7.1 1 1 .9.7 0 1-.3 1.4-.7l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.9l3-14.5c.4-1.5-.6-2.1-2-1.5ZM9 13.3l10-6.4c.5-.3.9-.1.5.3l-8.2 7.5-.3 3.3-2-4.7Z"/>
-</svg>
-JOIN FREE TELEGRAM CHANNEL
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M21.5 3.5 2.9 10.7c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.5c.2.7.1 1 1 .9.7 0 1-.3 1.4-.7l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.9l3-14.5c.4-1.5-.6-2.1-2-1.5ZM9 13.3l10-6.4c.5-.3.9-.1.5.3l-8.2 7.5-.3 3.3-2-4.7Z"/>
+  </svg>
+  JOIN FREE TELEGRAM CHANNEL
 </a>
 
-<p class="note">
-FREE LEARNING • TELEGRAM COMMUNITY
-</p>
-
 <p class="disclaimer">
-For educational purposes only. Not personalized investment advice.
-Trading and investing involve financial risk. No guaranteed returns.
+  Educational purposes only. Not financial advice.
+  Trading involves risk. No guaranteed returns.
 </p>
 
 </main>
@@ -381,12 +442,12 @@ Trading and investing involve financial risk. No guaranteed returns.
 <script>
 document.getElementById('join')
 .addEventListener('click',function(){
-if(typeof window.fbq==='function'){
-window.fbq('track','Subscribe',{
-content_name:'Gokul Chhabra',
-content_category:'Telegram CTA Click'
-});
-}
+  if(typeof window.fbq==='function'){
+    window.fbq('track','Subscribe',{
+      content_name:'Gautam Jha',
+      content_category:'Telegram CTA Click'
+    });
+  }
 });
 </script>
 
