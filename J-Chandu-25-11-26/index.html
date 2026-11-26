@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +22,10 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '3189679321226752');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=3189679321226752&ev=PageView&noscript=1"
-/></noscript>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3189679321226752&ev=PageView&noscript=1" alt="">
+</noscript>
 <!-- End Meta Pixel Code -->
 
 <style>
@@ -34,492 +34,297 @@ src="https://www.facebook.com/tr?id=3189679321226752&ev=PageView&noscript=1"
   --gold:#f4ce82;
   --white:#fffaf0;
   --muted:#b7ad9c;
-  --line:#ffffff15;
+  --line:#ffffff20;
 }
-
-*{
-  box-sizing:border-box;
-}
-
-html,body{
-  margin:0;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-}
-
+*{box-sizing:border-box}
+html{min-height:100%;background:var(--bg)}
 body{
+  min-height:100vh;
+  min-height:100dvh;
+  margin:0;
+  overflow-x:hidden;
   font-family:Arial,system-ui,sans-serif;
   background:
     radial-gradient(circle at 50% 0%,#48351e,transparent 55%),
     var(--bg);
   color:var(--white);
 }
-
 .page{
   width:100%;
-  max-width:460px;
-  height:100vh;
-  height:100dvh;
+  max-width:492px;
+  min-height:100vh;
+  min-height:100svh;
   margin:auto;
-  padding:16px;
+  padding:
+    max(12px,env(safe-area-inset-top))
+    max(16px,env(safe-area-inset-right))
+    max(12px,env(safe-area-inset-bottom))
+    max(16px,env(safe-area-inset-left));
   display:flex;
   align-items:center;
   justify-content:center;
 }
-
 .card{
-  position:relative;
   width:100%;
-  padding:25px 20px;
-  border-radius:26px;
+  padding:clamp(14px,4vh,25px) 20px;
   border:1px solid #f4ce8233;
+  border-radius:26px;
   background:
     radial-gradient(circle at 50% 0%,#f4ce8214,transparent 45%),
     linear-gradient(160deg,#252019,#141210);
   box-shadow:0 20px 60px #0007;
   display:flex;
   flex-direction:column;
-  gap:18px;
+  gap:clamp(10px,2.5vh,18px);
   text-align:center;
 }
-
-/* PROFILE */
-
 .profile{
-  position:relative;
-  width:94px;
-  height:94px;
-  margin:0 auto;
-  padding:4px;
+  width:94px;height:94px;margin:0 auto;padding:4px;flex-shrink:0;
   border-radius:50%;
   background:linear-gradient(145deg,#fff0b9,#a87832);
   box-shadow:0 0 25px #f4ce8233;
-  flex-shrink:0;
 }
-
 .profile-inner{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  overflow:hidden;
-  background:#252018;
-  display:grid;
-  place-items:center;
-  font-size:28px;
-  font-weight:900;
-  color:var(--gold);
+  width:100%;height:100%;overflow:hidden;border-radius:50%;
+  background:#252018;display:grid;place-items:center;
+  color:var(--gold);font-size:28px;font-weight:900;
 }
-
-.profile-inner img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-/* HEADER */
-
+.profile-inner img{width:100%;height:100%;object-fit:cover;display:block}
 .eyebrow{
-  align-self:center;
-  padding:7px 13px;
-  border:1px solid #f4ce8233;
-  border-radius:30px;
-  background:#f4ce820b;
-  color:var(--gold);
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:1.3px;
+  align-self:center;padding:7px 13px;border:1px solid #f4ce8233;
+  border-radius:30px;background:#f4ce820b;color:var(--gold);
+  font-size:10px;font-weight:800;letter-spacing:1.3px;
 }
-
-h1{
-  margin:0;
-  font-size:clamp(26px,7.5vw,35px);
-  line-height:1.1;
-  font-weight:900;
-  letter-spacing:-.8px;
-}
-
-h1 span{
-  color:var(--gold);
-}
-
-.headline{
-  margin:0;
-  font-size:clamp(17px,4.8vw,21px);
-  font-weight:800;
-  line-height:1.3;
-}
-
-.description{
-  margin:-8px 0 0;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.6;
-}
-
-/* LEARNING TOPICS */
-
-.topics{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:7px;
-}
-
+h1{margin:0;font-size:clamp(26px,7.5vw,35px);line-height:1.1;font-weight:900;letter-spacing:-.8px}
+h1 span{color:var(--gold)}
+.headline{margin:0;font-size:clamp(17px,4.8vw,21px);font-weight:800;line-height:1.3}
+.description{margin:-8px 0 0;color:var(--muted);font-size:13px;line-height:1.6}
+.topics{display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
 .topic{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  padding:9px 10px;
-  border:1px solid var(--line);
-  border-radius:9px;
-  background:#ffffff05;
-  color:#e7ddcb;
-  font-size:10px;
-  font-weight:700;
+  display:flex;align-items:center;gap:6px;padding:9px 10px;
+  border:1px solid var(--line);border-radius:9px;background:#ffffff05;
+  color:#e7ddcb;font-size:10px;font-weight:700;
 }
-
-.topic svg{
-  width:14px;
-  height:14px;
-  stroke:var(--gold);
-  fill:none;
-  stroke-width:1.8;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-}
-
-/* CTA */
-
-.cta-area{
-  padding:5px 0;
-}
-
+.topic svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cta-area{padding:5px 0}
 .cta{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  width:100%;
-  min-height:62px;
-  padding:12px 8px;
-  border-radius:14px;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  width:100%;min-height:58px;padding:12px 8px;border-radius:14px;
   background:linear-gradient(110deg,#ffe4a6,#d7a550);
-  color:#211707;
-  text-decoration:none;
-  font-size:clamp(12px,3.7vw,16px);
-  font-weight:900;
-  white-space:nowrap;
-  box-shadow:
-    0 0 0 5px #f4ce8210,
-    0 8px 30px #e8b65c35;
+  color:#211707;text-decoration:none;font-size:clamp(11px,3.7vw,16px);
+  font-weight:900;white-space:nowrap;
+  box-shadow:0 0 0 5px #f4ce8210,0 8px 30px #e8b65c35;
   -webkit-tap-highlight-color:transparent;
 }
-
-.cta svg{
-  width:23px;
-  height:23px;
-  flex-shrink:0;
-  fill:currentColor;
+.cta svg{width:22px;height:22px;flex-shrink:0;fill:currentColor}
+.cta:focus-visible,.legal-link:focus-visible{outline:2px solid white;outline-offset:4px}
+.countdown{margin:12px 0 0;color:var(--gold);font-size:11px;font-weight:700;line-height:1.45}
+.footer{padding-top:12px;border-top:1px solid var(--line)}
+.disclaimer{margin:0;color:#a99e8d;font-size:10px;line-height:1.5}
+.legal-links{margin-top:9px;display:flex;justify-content:center;gap:14px}
+.legal-link{padding:2px 0;border:0;background:none;color:#d6c6a9;font:inherit;font-size:10px;text-decoration:underline;cursor:pointer}
+dialog{
+  width:min(92vw,480px);max-height:80dvh;padding:22px;
+  border:1px solid #f4ce824d;border-radius:18px;
+  background:#1b1813;color:var(--white);box-shadow:0 20px 60px #0009;
 }
-
-.cta:focus-visible{
-  outline:2px solid white;
-  outline-offset:4px;
+dialog::backdrop{background:#000a}
+dialog h2{margin:0 0 12px;color:var(--gold);font-size:20px}
+dialog p{color:#ddd2c0;font-size:13px;line-height:1.6}
+.dialog-close{
+  padding:10px 16px;border:0;border-radius:9px;
+  background:var(--gold);color:#211707;font-weight:800;cursor:pointer;
 }
-
-.assurance{
-  margin:12px 0 0;
-  color:var(--gold);
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.4px;
-}
-
-/* FOOTER */
-
-.footer{
-  padding-top:13px;
-  border-top:1px solid var(--line);
-}
-
-.disclaimer{
-  margin:0;
-  color:#a99e8d;
-  font-size:10px;
-  line-height:1.5;
-}
-
-/* MOBILE OPTIMIZATION */
-
 @media(max-height:700px){
-  .page{
-    padding:12px;
-  }
-
-  .card{
-    padding:18px 15px;
-    gap:12px;
-  }
-
-  .profile{
-    width:76px;
-    height:76px;
-  }
-
-  .cta{
-    min-height:55px;
-  }
-
-  .description{
-    font-size:12px;
-    line-height:1.4;
-  }
-
-  .footer{
-    padding-top:9px;
-  }
+  .card{padding:14px 15px;gap:10px}
+  .profile{width:72px;height:72px}
+  .cta{min-height:52px}
+  .description{font-size:12px;line-height:1.4}
+  .footer{padding-top:8px}
 }
-
-@media(max-height:550px){
-  .card{
-    padding:12px;
-    gap:8px;
-  }
-
-  .profile{
-    width:54px;
-    height:54px;
-  }
-
-  .profile-inner{
-    font-size:20px;
-  }
-
-  h1{
-    font-size:24px;
-  }
-
-  .eyebrow{
-    padding:5px 9px;
-    font-size:9px;
-  }
-
-  .headline{
-    font-size:15px;
-  }
-
-  .description{
-    margin:0;
-    font-size:11px;
-  }
-
-  .topic{
-    padding:6px 8px;
-    font-size:9px;
-  }
-
-  .cta{
-    min-height:46px;
-  }
-
-  .assurance{
-    margin-top:7px;
-  }
-
-  .disclaimer{
-    font-size:9px;
-  }
+@media(max-height:500px){
+  .card{padding:10px;gap:7px}
+  .profile{width:48px;height:48px}
+  .profile-inner{font-size:18px}
+  h1{font-size:23px}
+  .eyebrow{padding:5px 9px;font-size:9px}
+  .headline{font-size:15px}
+  .description{margin:0;font-size:11px}
+  .topic{padding:6px 8px;font-size:9px}
+  .cta{min-height:44px}
+  .countdown{margin-top:7px}
+  .disclaimer{font-size:9px}
+  .footer{padding-top:5px}
 }
-
-@media(max-height:400px){
-  .page{
-    padding:6px;
-  }
-
-  .card{
-    padding:8px;
-    gap:5px;
-  }
-
-  .profile{
-    width:42px;
-    height:42px;
-  }
-
-  .eyebrow{
-    font-size:8px;
-  }
-
-  .cta-area{
-    padding:2px 0;
-  }
-
-  .footer{
-    padding-top:5px;
-  }
+@media(max-width:320px){
+  .card{padding-left:12px;padding-right:12px}
+  .cta{font-size:10px;gap:6px}
+  .cta svg{width:19px;height:19px}
 }
 </style>
 </head>
 
 <body>
-
 <main class="page">
+  <section class="card" aria-label="Gautam Kumar Jha stock market education">
 
-  <section class="card">
-
-    <!-- PROFILE PHOTO -->
     <div class="profile">
       <div class="profile-inner">
-
-        <!-- Replace profile.webp with your photo URL -->
         <img
           src="https://github.com/itssky72001-ui/Gautam2/releases/download/Gautam2/Gautam.jha.jpg"
           alt="Gautam Kumar Jha"
           onerror="this.parentElement.textContent='GJ';"
         >
-
       </div>
     </div>
 
-    <div class="eyebrow">
-      FREE EDUCATIONAL COMMUNITY
-    </div>
+    <div class="eyebrow">FREE EDUCATIONAL COMMUNITY</div>
 
-    <h1>
-      GAUTAM KUMAR <span>JHA</span>
-    </h1>
+    <h1>GAUTAM KUMAR <span>JHA</span></h1>
 
-    <p class="headline">
-      Learn. Understand. Stay Informed.
-    </p>
+    <p class="headline">Learn. Understand. Stay Informed.</p>
 
     <p class="description">
       Explore stock market fundamentals, chart reading
       and financial awareness through educational content.
     </p>
 
-    <!-- EDUCATIONAL TOPICS -->
-
     <div class="topics">
-
       <div class="topic">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 3v18h18M7 15l4-4 4 3 5-7"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 4 3 5-7"/></svg>
         Market Concepts
       </div>
-
       <div class="topic">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6 3v18M3 8h6v8H3zM18 3v18M15 6h6v7h-6z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M3 8h6v8H3zM18 3v18M15 6h6v7h-6z"/></svg>
         Chart Learning
       </div>
-
       <div class="topic">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6z"/>
-          <path d="m8 12 3 3 5-6"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6z"/><path d="m8 12 3 3 5-6"/></svg>
         Risk Awareness
       </div>
-
     </div>
 
-    <!-- TELEGRAM CTA -->
-
     <div class="cta-area">
-
-      <a
-        class="cta"
-        id="join"
-        href="https://t.me/+JzsNuvyN2EdlYmNl"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
+      <a class="cta" id="join" href="https://t.me/+JzsNuvyN2EdlYmNl" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21.8 3.2 2.6 10.6c-1.3.5-1.3 1.2-.2 1.6l4.9 1.5 1.9 5.8c.2.6.4.8.8.8.5 0 .8-.2 1.1-.5l2.7-2.6 5 3.7c.9.5 1.5.2 1.7-.9l3.2-15.1c.3-1.3-.5-2-1.9-1.7ZM9.2 13.4l10.2-6.5c.5-.3.9-.1.5.3l-8.3 7.6-.3 3.5z"/>
         </svg>
-
         JOIN FREE TELEGRAM CHANNEL
-
       </a>
-
-      <p class="assurance">
-        FREE ACCESS &bull; EDUCATIONAL CONTENT
+      <p class="countdown" id="countdown" aria-live="polite">
+        Telegram par auto-redirect 10 seconds mein
       </p>
-
     </div>
-
-    <!-- DISCLAIMER -->
 
     <footer class="footer">
       <p class="disclaimer">
         Educational purposes only. Not financial advice.
-        Market participation involves risk.
-        No guaranteed returns.
+        Market participation involves risk. No guaranteed returns.
       </p>
+      <nav class="legal-links" aria-label="Legal information">
+        <button class="legal-link" type="button" data-dialog="privacy">Privacy Policy</button>
+        <button class="legal-link" type="button" data-dialog="terms">Terms</button>
+      </nav>
     </footer>
-
   </section>
-
 </main>
 
-<!-- ONE SUBSCRIBE PER PAGE LOAD -->
+<dialog id="privacy">
+  <h2>Privacy Policy</h2>
+  <p>
+    This page uses Meta Pixel to measure page visits and actions such as
+    clicking the Telegram button or using the automatic redirect. Meta may
+    receive browser, device, and interaction data according to its own
+    privacy terms. This page does not ask you to submit personal information.
+  </p>
+  <p>
+    The Telegram link opens an external service. Its privacy practices are
+    governed by Telegram. You can manage cookies and tracking through your
+    browser settings.
+  </p>
+  <button class="dialog-close" type="button">Close</button>
+</dialog>
+
+<dialog id="terms">
+  <h2>Terms</h2>
+  <p>
+    All content on this page and in the linked community is for education
+    and general information only. It is not investment, trading, legal, or
+    tax advice, and it is not a recommendation to buy or sell any security.
+  </p>
+  <p>
+    Market participation involves risk, including possible loss. No result
+    or return is promised. Make independent decisions and consult a
+    qualified professional where appropriate. Telegram is an external
+    service and has its own terms.
+  </p>
+  <button class="dialog-close" type="button">Close</button>
+</dialog>
+
 <script>
 (function(){
   "use strict";
 
   const PIXEL_ID = "3189679321226752";
+  const TELEGRAM_URL = "https://t.me/+JzsNuvyN2EdlYmNl";
   const join = document.getElementById("join");
+  const countdown = document.getElementById("countdown");
 
-  if(!join) return;
-
-  // Prevent duplicate handler installation.
-  if(window.__gautamSubscribeInstalled) return;
-
-  window.__gautamSubscribeInstalled = true;
-
-  // Reset only on a fresh page load.
-  window.__gautamSubscribeSent = false;
-
-  function trackSubscribe(event){
-
-    // Ignore script-generated clicks.
-    if(!event.isTrusted) return;
-
-    // Prevent repeated Subscribe events.
-    if(window.__gautamSubscribeSent) return;
-
-    if(typeof window.fbq !== "function") return;
-
-    // Lock before firing.
-    window.__gautamSubscribeSent = true;
-
-    // Remove tracking listener after first valid click.
-    join.removeEventListener("click",trackSubscribe);
-
-    // Send event to specified Pixel only.
-    window.fbq(
-      "trackSingle",
-      PIXEL_ID,
-      "Subscribe",
-      {
-        content_name:"Gautam Kumar Jha",
-        content_category:"Telegram CTA Click"
-      }
-    );
-
-    // Telegram navigation is never blocked.
+  function trackPixel(eventName, params){
+    if(typeof window.fbq === "function"){
+      window.fbq("trackSingle", PIXEL_ID, eventName, params || {});
+    }
   }
 
-  join.addEventListener("click",trackSubscribe);
+  // Subscribe event fires on each real CTA click; link navigation stays immediate.
+  join.addEventListener("click", function(event){
+    if(!event.isTrusted) return;
 
+    trackPixel("Subscribe", {
+      content_name: "Gautam Kumar Jha",
+      content_category: "Telegram CTA Click"
+    });
+
+    clearInterval(timer);
+    countdown.textContent = "Telegram link opened. Auto-redirect stopped.";
+  });
+
+  // 10-second fallback redirect. It stops if the visitor clicks the CTA.
+  let secondsLeft = 10;
+  const timer = setInterval(function(){
+    secondsLeft -= 1;
+
+    if(secondsLeft > 0){
+      countdown.textContent =
+        "Telegram par auto-redirect " + secondsLeft + " seconds mein";
+      return;
+    }
+
+    clearInterval(timer);
+    countdown.textContent = "Telegram par redirect ho raha hai…";
+
+    trackPixel("AutoRedirect", {
+      content_name: "Gautam Kumar Jha",
+      content_category: "10 Second Auto Redirect"
+    });
+
+    window.location.assign(TELEGRAM_URL);
+  }, 1000);
+
+  // Privacy Policy and Terms dialogs
+  document.querySelectorAll("[data-dialog]").forEach(function(button){
+    button.addEventListener("click", function(){
+      const dialog = document.getElementById(button.dataset.dialog);
+      if(dialog) dialog.showModal();
+    });
+  });
+
+  document.querySelectorAll("dialog .dialog-close").forEach(function(button){
+    button.addEventListener("click", function(){
+      button.closest("dialog").close();
+    });
+  });
 })();
 </script>
-
 </body>
 </html>
