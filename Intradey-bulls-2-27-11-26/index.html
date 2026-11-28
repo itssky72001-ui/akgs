@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17152e">
+  <meta name="description" content="Intradey Bulls — stock market education in Telugu and English.">
+  <title>Intradey Bulls | Market Education</title>
+
+ <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3391922964327103');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3391922964327103&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+  <style>
+    :root {
+      --purple: #312b59;
+      --gold: #ffda83;
+      --cream: #fffaf0;
+      --text: #25233b;
+      --muted: #656377;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      min-height: 100dvh;
+      font-family: system-ui, -apple-system, "Noto Sans Telugu", "Tunga",
+        "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background: #17152e;
+    }
+
+    .page {
+      min-height: 100vh;
+      min-height: 100svh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      background:
+        radial-gradient(circle at 0% 0%, #765ac650, transparent 45%),
+        radial-gradient(circle at 100% 100%, #e7ae4930, transparent 45%),
+        linear-gradient(145deg, #252040, #100e20);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 410px;
+      max-height: calc(100dvh - 24px);
+      overflow: auto;
+      border: 1px solid #ffffff30;
+      border-radius: 24px;
+      background: var(--cream);
+      box-shadow: 0 20px 65px #0007;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 21px 20px 18px;
+      color: var(--cream);
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% -25%, #7662b8 0, transparent 62%),
+        linear-gradient(145deg, #312b59, #19162f);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -110px;
+      bottom: -145px;
+      border: 1px solid #ffda8330;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .logo {
+      position: relative;
+      width: 84px;
+      height: 84px;
+      margin: 0 auto 10px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      background: #51477b;
+      box-shadow: 0 0 25px #ffda8350;
+    }
+
+    .logo-fallback {
+      color: var(--gold);
+      font-size: 26px;
+      font-weight: 950;
+    }
+
+    .logo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 8px;
+      padding: 5px 9px;
+      border: 1px solid #ffda8355;
+      border-radius: 20px;
+      color: var(--gold);
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .5px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(27px, 7vw, 35px);
+      line-height: 1.12;
+      font-weight: 950;
+      letter-spacing: -.7px;
+    }
+
+    h1 span { color: var(--gold); }
+
+    .tagline {
+      margin: 8px 0 0;
+      color: #e0daf1;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .content {
+      padding: 16px 18px 14px;
+      color: var(--text);
+      text-align: center;
+    }
+
+    .section-label {
+      margin: 0 0 6px;
+      color: #59448d;
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+    }
+
+    .headline {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .intro {
+      margin: 7px auto 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .benefits {
+      display: grid;
+      gap: 7px;
+      margin: 0 0 13px;
+      text-align: left;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 10px;
+      border: 1px solid #e6e0ef;
+      border-radius: 11px;
+      background: #ffffffa8;
+      color: #343149;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    .benefit-icon {
+      width: 23px;
+      height: 23px;
+      flex: 0 0 23px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #eee8fa;
+      color: #59448d;
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .cta {
+      min-height: 49px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 13px;
+      border-radius: 12px;
+      background: linear-gradient(105deg, #58458f, #755fc0);
+      color: #fff;
+      text-decoration: none;
+      font-size: clamp(12px, 3.5vw, 15px);
+      font-weight: 900;
+      line-height: 1.3;
+      box-shadow: 0 5px 20px #7152bc55;
+      animation: glow 2.8s ease-in-out infinite;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .cta svg {
+      flex: none;
+      width: 19px;
+      height: 19px;
+      fill: currentColor;
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 4px 13px #7152bc40; }
+      50% { box-shadow: 0 4px 25px #7152bc80; }
+    }
+
+    .micro {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 650;
+    }
+
+    .countdown {
+      margin: 7px 0 0;
+      color: #656377;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .countdown strong { color: #59448d; }
+
+    .footer {
+      padding: 11px 16px 12px;
+      border-top: 1px solid #dcd4eb;
+      background: #eee9f4;
+    }
+
+    .disclaimer {
+      margin: 0;
+      color: #565168;
+      font-size: 10px;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .disclaimer b { color: #30264f; }
+
+    .legal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 7px;
+    }
+
+    .legal button {
+      padding: 4px 0;
+      border: 0;
+      background: none;
+      color: #59448d;
+      font-family: inherit;
+      font-size: 10px;
+      font-weight: 750;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+
+    .legal span { color: #9288a6; font-size: 10px; }
+
+    dialog {
+      width: min(92vw, 520px);
+      max-height: 82dvh;
+      overflow: auto;
+      padding: 21px;
+      border: 1px solid #ffffff40;
+      border-radius: 18px;
+      background: var(--cream);
+      color: var(--text);
+      box-shadow: 0 20px 65px #0008;
+      font-family: inherit;
+    }
+
+    dialog::backdrop { background: #100e20bd; }
+    dialog h2 { margin: 0 0 10px; color: #40366c; font-size: 19px; }
+    dialog p, dialog li { color: #565168; font-size: 12px; line-height: 1.65; }
+    dialog ul { padding-left: 19px; }
+
+    .close {
+      display: block;
+      margin: 12px 0 0 auto;
+      padding: 9px 15px;
+      border: 0;
+      border-radius: 9px;
+      background: #59448d;
+      color: #fff;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    @media (max-height: 650px) {
+      .hero { padding: 14px 18px 12px; }
+      .logo { width: 62px; height: 62px; margin-bottom: 7px; }
+      .content { padding: 12px 16px 10px; }
+      .intro { margin: 5px auto 8px; }
+      .benefits { gap: 5px; margin-bottom: 9px; }
+      .benefit { padding: 6px 9px; }
+      .cta { min-height: 45px; }
+      .footer { padding: 8px 14px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cta { animation: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <article class="card">
+      <header class="hero">
+        <div class="logo" aria-label="Intradey Bulls logo">
+          <span class="logo-fallback">IB</span>
+          <img src="https://github.com/itssky72001-ui/bulls/releases/download/bulls/intradey.bull.jpg" alt="Intradey Bulls" onerror="this.remove()">
+        </div>
+
+        <p class="eyebrow">తెలుగు &amp; English Market Learning</p>
+        <h1><span>Intradey</span> Bulls</h1>
+        <p class="tagline">
+          Learn market concepts at your own pace<br>
+          మార్కెట్ విషయాలను సులభంగా తెలుసుకోండి
+        </p>
+      </header>
+
+      <section class="content">
+        <p class="section-label">Educational Community • విద్యా కమ్యూనిటీ</p>
+        <h2 class="headline">Learn the basics. Build market awareness.</h2>
+        <p class="intro">
+          Telugu and English learning content about stock market fundamentals,
+          chart concepts and risk awareness.
+          <br>
+          స్టాక్ మార్కెట్ ప్రాథమికాలు, చార్ట్ అవగాహన, రిస్క్ గురించి
+          తెలుగులో మరియు Englishలో తెలుసుకోండి.
+        </p>
+
+        <div class="benefits">
+          <div class="benefit">
+            <span class="benefit-icon">✓</span>
+            <span>Market fundamentals • మార్కెట్ ప్రాథమికాలు</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">✓</span>
+            <span>Chart learning • చార్ట్ అవగాహన</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">✓</span>
+            <span>Risk awareness • రిస్క్ అవగాహన</span>
+          </div>
+        </div>
+
+        <a class="cta" id="joinBtn" href="https://t.me/+tAtnS2UQKA4yYWI1">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9.04 15.47 8.66 20.8c.54 0 .78-.23 1.06-.5l2.55-2.44 5.29 3.88c.97.54 1.65.26 1.9-.9l3.44-16.1c.35-1.59-.58-2.2-1.52-1.81L1.12 10.2c-1.55.61-1.53 1.49-.27 1.88l5.18 1.62L18.06 6.1c.57-.38 1.1-.17.67.22z"/>
+          </svg>
+          JOIN FREE TELEGRAM CHANNEL
+        </a>
+
+        <p class="micro">Free to join • విద్య కోసం మాత్రమే</p>
+        <p class="countdown" aria-live="polite">
+          Telegramకి ఆటోమేటిక్‌గా వెళ్లడానికి
+          <strong><span id="seconds">10</span> seconds</strong>
+          <br>
+          Auto-opening Telegram in <strong><span id="secondsEnglish">10</span> seconds</strong>
+        </p>
+      </section>
+
+      <footer class="footer">
+        <p class="disclaimer">
+          <b>Disclaimer:</b> Educational content only; not financial advice or a buy/sell recommendation.
+          Market investments involve risk.
+          <br>
+          విద్యా ప్రయోజనాల కోసం మాత్రమే. ఇది ఆర్థిక సలహా కాదు. మార్కెట్‌లో రిస్క్ ఉంటుంది.
+        </p>
+
+        <nav class="legal" aria-label="Legal information">
+          <button type="button" data-dialog="privacy">Privacy Policy</button>
+          <span>•</span>
+          <button type="button" data-dialog="terms">Terms</button>
+          <span>•</span>
+          <button type="button" data-dialog="disclaimer">Disclaimer</button>
+        </nav>
+      </footer>
+    </article>
+  </main>
+
+  <dialog id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>
+      This page links to a Telegram channel and does not ask you to submit personal
+      details through a form. Meta Pixel may measure page views and the Telegram
+      button click. Meta may process browser, device and ad interaction information
+      under its own policies.
+    </p>
+    <p>
+      If you open Telegram, Telegram handles information according to its own
+      privacy policy. This page does not control how third-party platforms process
+      information.
+    </p>
+    <p>
+      ఈ పేజీ ఫారమ్ ద్వారా వ్యక్తిగత వివరాలు అడగదు. Meta Pixel ద్వారా పేజీ వీక్షణ
+      మరియు బటన్ క్లిక్ కొలవబడవచ్చు. Telegram తెరిస్తే, ఆ ప్లాట్‌ఫారమ్ గోప్యతా
+      విధానం వర్తిస్తుంది.
+    </p>
+    <button class="close" type="button">Close</button>
+  </dialog>
+
+  <dialog id="terms">
+    <h2>Terms &amp; Conditions</h2>
+    <ul>
+      <li>Community content is for educational and informational purposes.</li>
+      <li>Content is not personal investment, legal, tax or financial advice.</li>
+      <li>You are responsible for your own decisions and should review information independently.</li>
+      <li>Telegram’s own terms and policies apply when you use that platform.</li>
+    </ul>
+    <p>
+      కమ్యూనిటీ సమాచారం విద్య కోసం మాత్రమే. మీ ఆర్థిక నిర్ణయాలకు మీరే బాధ్యత
+      వహిస్తారు. Telegram ఉపయోగించినప్పుడు దాని నిబంధనలు కూడా వర్తిస్తాయి.
+    </p>
+    <button class="close" type="button">Close</button>
+  </dialog>
+
+  <dialog id="disclaimer">
+    <h2>Risk Disclaimer</h2>
+    <p>
+      Stock market investing and trading involve risk, including possible loss of
+      capital. Past performance does not guarantee future results. Examples,
+      lessons and opinions are not a recommendation to buy or sell any security.
+    </p>
+    <p>
+      స్టాక్ మార్కెట్ పెట్టుబడులు మరియు ట్రేడింగ్‌లో నష్టపోయే ప్రమాదం ఉంది.
+      ఇక్కడి సమాచారం కొనుగోలు లేదా అమ్మకం సిఫార్సు కాదు.
+    </p>
+    <button class="close" type="button">Close</button>
+  </dialog>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const telegramUrl = "https://t.me/+tAtnS2UQKA4yYWI1";
+      let secondsLeft = 10;
+      let timerPaused = false;
+
+      // CTA click event
+      document.getElementById("joinBtn").addEventListener("click", function () {
+        try {
+          if (typeof window.fbq === "function") {
+            window.fbq("track", "Subscribe");
+          }
+        } catch (error) {}
+      });
+
+      // Pause the countdown while a legal dialog is open.
+      document.querySelectorAll("[data-dialog]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          const dialog = document.getElementById(button.dataset.dialog);
+          if (dialog) {
+            timerPaused = true;
+            dialog.showModal();
+          }
+        });
+      });
+
+      document.querySelectorAll("dialog").forEach(function (dialog) {
+        const closeButton = dialog.querySelector(".close");
+
+        if (closeButton) {
+          closeButton.addEventListener("click", function () {
+            dialog.close();
+          });
+        }
+
+        dialog.addEventListener("close", function () {
+          timerPaused = false;
+        });
+
+        dialog.addEventListener("click", function (event) {
+          if (event.target !== dialog) return;
+          const rect = dialog.getBoundingClientRect();
+
+          if (
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+          ) {
+            dialog.close();
+          }
+        });
+      });
+
+      const timer = setInterval(function () {
+        if (timerPaused) return;
+
+        secondsLeft -= 1;
+        document.getElementById("seconds").textContent = secondsLeft;
+        document.getElementById("secondsEnglish").textContent = secondsLeft;
+
+        if (secondsLeft <= 0) {
+          clearInterval(timer);
+          try {
+            if (typeof window.fbq === "function") {
+              window.fbq("trackCustom", "AutoRedirect");
+            }
+          } catch (error) {}
+          window.location.href = telegramUrl;
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
